@@ -1,0 +1,854 @@
+{
+  "characters": [
+    {
+      "name": "Aera Shieldborn",
+      "class": "guardian",
+      "role": "탱커",
+      "origin": "Northwatch Citadel",
+      "tags": [
+        "전사",
+        "방패"
+      ],
+      "notes": "빙설 성벽을 지키는 방패지휘관.",
+      "id": "char_001",
+      "weights": {
+        "body": 0.55,
+        "soul": 0.35,
+        "spirit": 0.1
+      }
+    },
+    {
+      "name": "Bramik Ironwall",
+      "class": "guardian",
+      "role": "탱커",
+      "origin": "Stonecradle",
+      "tags": [
+        "전사",
+        "수비"
+      ],
+      "notes": "광산 도시 주민을 위해 스스로 벽이 된다.",
+      "id": "char_002",
+      "weights": {
+        "body": 0.55,
+        "soul": 0.35,
+        "spirit": 0.1
+      }
+    },
+    {
+      "name": "Lucan Vale",
+      "class": "swordsman",
+      "role": "근딜",
+      "origin": "Silver March",
+      "tags": [
+        "전사",
+        "결투"
+      ],
+      "notes": "격식 있는 결투를 즐기지만 약자를 지킨다.",
+      "id": "char_003",
+      "weights": {
+        "body": 0.65,
+        "soul": 0.25,
+        "spirit": 0.1
+      }
+    },
+    {
+      "name": "Hyejin Glaive",
+      "class": "lancer",
+      "role": "근딜",
+      "origin": "Jeon Port",
+      "tags": [
+        "전사",
+        "교육"
+      ],
+      "notes": "항구수비대의 창술 교관.",
+      "id": "char_004",
+      "weights": {
+        "body": 0.62,
+        "soul": 0.23,
+        "spirit": 0.15
+      }
+    },
+    {
+      "name": "Renzo Lark",
+      "class": "swordsman",
+      "role": "근딜",
+      "origin": "Verdant Terrace",
+      "tags": [
+        "전사",
+        "귀족"
+      ],
+      "notes": "토너먼트 상금을 고아원에 기부한다.",
+      "id": "char_005",
+      "weights": {
+        "body": 0.65,
+        "soul": 0.25,
+        "spirit": 0.1
+      }
+    },
+    {
+      "name": "Torv Rimestone",
+      "class": "berserker",
+      "role": "근딜",
+      "origin": "Frostfall",
+      "tags": [
+        "전사",
+        "북부"
+      ],
+      "notes": "광포한 함성으로 동료를 고무한다.",
+      "id": "char_006",
+      "weights": {
+        "body": 0.7,
+        "soul": 0.15,
+        "spirit": 0.15
+      }
+    },
+    {
+      "name": "Selene Wardmist",
+      "class": "guardian",
+      "role": "탱커",
+      "origin": "Azure Bastion",
+      "tags": [
+        "전사",
+        "지휘"
+      ],
+      "notes": "바람막이 장벽을 펼쳐 대열을 지킨다.",
+      "id": "char_007",
+      "weights": {
+        "body": 0.55,
+        "soul": 0.35,
+        "spirit": 0.1
+      }
+    },
+    {
+      "name": "Yara Sunpiercer",
+      "class": "warrior",
+      "role": "근딜",
+      "origin": "Solenne Dunes",
+      "tags": [
+        "전사",
+        "유목"
+      ],
+      "notes": "사막 창술로 부족 전쟁을 중재한다.",
+      "id": "char_008",
+      "weights": {
+        "body": 0.6,
+        "soul": 0.25,
+        "spirit": 0.15
+      }
+    },
+    {
+      "name": "Liora Emberglass",
+      "class": "elementalist",
+      "role": "마딜",
+      "origin": "Pyra Collegium",
+      "tags": [
+        "마법",
+        "원소"
+      ],
+      "notes": "새로운 불정령을 계약하고 기록한다.",
+      "id": "char_009",
+      "weights": {
+        "body": 0.25,
+        "soul": 0.55,
+        "spirit": 0.2
+      }
+    },
+    {
+      "name": "Tomas Veyla",
+      "class": "wizard",
+      "role": "마딜",
+      "origin": "Duskmere",
+      "tags": [
+        "마법",
+        "연구"
+      ],
+      "notes": "꿈의 논리를 이용해 포탈을 안정화.",
+      "id": "char_010",
+      "weights": {
+        "body": 0.2,
+        "soul": 0.6,
+        "spirit": 0.2
+      }
+    },
+    {
+      "name": "Kyung Solin",
+      "class": "wizard",
+      "role": "마딜",
+      "origin": "Maru Heights",
+      "tags": [
+        "마법",
+        "스승"
+      ],
+      "notes": "실수 노트를 후학들과 공유한다.",
+      "id": "char_011",
+      "weights": {
+        "body": 0.2,
+        "soul": 0.6,
+        "spirit": 0.2
+      }
+    },
+    {
+      "name": "Petra Vial",
+      "class": "alchemist",
+      "role": "버퍼",
+      "origin": "Brass Harbor",
+      "tags": [
+        "마법",
+        "상업"
+      ],
+      "notes": "폭풍 해역을 건너는 선원에게 약을 판매.",
+      "id": "char_012",
+      "weights": {
+        "body": 0.25,
+        "soul": 0.55,
+        "spirit": 0.2
+      }
+    },
+    {
+      "name": "Oren Kett",
+      "class": "alchemist",
+      "role": "버퍼",
+      "origin": "Sunken Bazaar",
+      "tags": [
+        "마법",
+        "암시장"
+      ],
+      "notes": "감정 증폭제를 비밀리에 유통.",
+      "id": "char_013",
+      "weights": {
+        "body": 0.25,
+        "soul": 0.55,
+        "spirit": 0.2
+      }
+    },
+    {
+      "name": "Sable Moor",
+      "class": "illusionist",
+      "role": "디버퍼",
+      "origin": "Vesper Court",
+      "tags": [
+        "마법",
+        "공연"
+      ],
+      "notes": "연극과 정치 연설을 겹쳐 군중을 조종.",
+      "id": "char_014",
+      "weights": {
+        "body": 0.2,
+        "soul": 0.55,
+        "spirit": 0.25
+      }
+    },
+    {
+      "name": "Vexa Mirrorthread",
+      "class": "illusionist",
+      "role": "디버퍼",
+      "origin": "Shifting Dunes",
+      "tags": [
+        "마법",
+        "첩보"
+      ],
+      "notes": "카라반 전체를 위장시키는 전문가.",
+      "id": "char_015",
+      "weights": {
+        "body": 0.2,
+        "soul": 0.55,
+        "spirit": 0.25
+      }
+    },
+    {
+      "name": "Farid Moonquill",
+      "class": "scholar",
+      "role": "유틸",
+      "origin": "Amber Library",
+      "tags": [
+        "마법",
+        "천문"
+      ],
+      "notes": "혜성 징후를 기록해 왕실에 전달.",
+      "id": "char_016",
+      "weights": {
+        "body": 0.15,
+        "soul": 0.65,
+        "spirit": 0.2
+      }
+    },
+    {
+      "name": "Sister Amara",
+      "class": "priest",
+      "role": "힐러",
+      "origin": "Sanctum of Wells",
+      "tags": [
+        "성직",
+        "치유"
+      ],
+      "notes": "가뭄 지역의 우물을 순례하며 정화.",
+      "id": "char_017",
+      "weights": {
+        "body": 0.2,
+        "soul": 0.3,
+        "spirit": 0.5
+      }
+    },
+    {
+      "name": "Brother Ishan",
+      "class": "priest",
+      "role": "힐러",
+      "origin": "Golden Delta",
+      "tags": [
+        "성직",
+        "기록"
+      ],
+      "notes": "기적 증언을 필사해 총회에 보낸다.",
+      "id": "char_018",
+      "weights": {
+        "body": 0.2,
+        "soul": 0.3,
+        "spirit": 0.5
+      }
+    },
+    {
+      "name": "Mother Ynora",
+      "class": "druid",
+      "role": "힐러",
+      "origin": "Thorn Abbey",
+      "tags": [
+        "성직",
+        "보육"
+      ],
+      "notes": "전쟁 고아를 숲속 공동체로 이끈다.",
+      "id": "char_019",
+      "weights": {
+        "body": 0.25,
+        "soul": 0.25,
+        "spirit": 0.5
+      }
+    },
+    {
+      "name": "Sir Corian",
+      "class": "paladin",
+      "role": "탱커",
+      "origin": "Radiant Keep",
+      "tags": [
+        "성직",
+        "기사"
+      ],
+      "notes": "태양 홀을 수호한다.",
+      "id": "char_020",
+      "weights": {
+        "body": 0.4,
+        "soul": 0.2,
+        "spirit": 0.4
+      }
+    },
+    {
+      "name": "Dame Rielle",
+      "class": "paladin",
+      "role": "탱커",
+      "origin": "Lorien Plains",
+      "tags": [
+        "성직",
+        "구호"
+      ],
+      "notes": "전선 구호대를 호송.",
+      "id": "char_021",
+      "weights": {
+        "body": 0.4,
+        "soul": 0.2,
+        "spirit": 0.4
+      }
+    },
+    {
+      "name": "Neris Seerwind",
+      "class": "oracle",
+      "role": "버퍼",
+      "origin": "Crystal Sound",
+      "tags": [
+        "성직",
+        "예지"
+      ],
+      "notes": "풍경울 통해 여러 미래를 듣는다.",
+      "id": "char_022",
+      "weights": {
+        "body": 0.1,
+        "soul": 0.25,
+        "spirit": 0.65
+      }
+    },
+    {
+      "name": "Tenzin Hollowstone",
+      "class": "monk",
+      "role": "근딜/힐",
+      "origin": "Cloud Monastery",
+      "tags": [
+        "성직",
+        "수련"
+      ],
+      "notes": "지진의 리듬을 기도와 결합.",
+      "id": "char_023",
+      "weights": {
+        "body": 0.3,
+        "soul": 0.2,
+        "spirit": 0.5
+      }
+    },
+    {
+      "name": "Kael Prynn",
+      "class": "rogue",
+      "role": "근딜",
+      "origin": "Gallow Row",
+      "tags": [
+        "도적",
+        "스카우트"
+      ],
+      "notes": "귀족 음모를 폭로하는 정보상.",
+      "id": "char_024",
+      "weights": {
+        "body": 0.55,
+        "soul": 0.3,
+        "spirit": 0.15
+      }
+    },
+    {
+      "name": "Ylin Whisper",
+      "class": "shadow",
+      "role": "잠입",
+      "origin": "Umber Vault",
+      "tags": [
+        "도적",
+        "잠입"
+      ],
+      "notes": "밤마다 부패 관리의 증거를 빼낸다.",
+      "id": "char_025",
+      "weights": {
+        "body": 0.5,
+        "soul": 0.3,
+        "spirit": 0.2
+      }
+    },
+    {
+      "name": "Naki Starfall",
+      "class": "ranger",
+      "role": "원딜",
+      "origin": "Ular Archipelago",
+      "tags": [
+        "도적",
+        "해상"
+      ],
+      "notes": "폭풍 신호탄으로 항로를 지킨다.",
+      "id": "char_026",
+      "weights": {
+        "body": 0.5,
+        "soul": 0.35,
+        "spirit": 0.15
+      }
+    },
+    {
+      "name": "Imani Roarblade",
+      "class": "assassin",
+      "role": "근딜",
+      "origin": "Sable Savannah",
+      "tags": [
+        "도적",
+        "제의"
+      ],
+      "notes": "조상 영혼 앞에서만 칼을 빼든다.",
+      "id": "char_027",
+      "weights": {
+        "body": 0.6,
+        "soul": 0.2,
+        "spirit": 0.2
+      }
+    },
+    {
+      "name": "Garrick Hollow",
+      "class": "operative",
+      "role": "버퍼",
+      "origin": "Lowspire",
+      "tags": [
+        "도적",
+        "정보"
+      ],
+      "notes": "부두 노동조합의 비밀연락책.",
+      "id": "char_028",
+      "weights": {
+        "body": 0.45,
+        "soul": 0.4,
+        "spirit": 0.15
+      }
+    },
+    {
+      "name": "Asha Quickstep",
+      "class": "assassin",
+      "role": "근딜",
+      "origin": "Night Bazaar",
+      "tags": [
+        "도적",
+        "암시장"
+      ],
+      "notes": "독침으로 폭군의 경비를 무력화.",
+      "id": "char_029",
+      "weights": {
+        "body": 0.6,
+        "soul": 0.2,
+        "spirit": 0.2
+      }
+    },
+    {
+      "name": "Fen Willowstep",
+      "class": "ranger",
+      "role": "원딜",
+      "origin": "Murkfen",
+      "tags": [
+        "도적",
+        "자연"
+      ],
+      "notes": "습지 길잡이 겸 늪지감시.",
+      "id": "char_030",
+      "weights": {
+        "body": 0.5,
+        "soul": 0.35,
+        "spirit": 0.15
+      }
+    },
+    {
+      "name": "Kaori Ledger",
+      "class": "merchant",
+      "role": "버퍼",
+      "origin": "Gilded Pier",
+      "tags": [
+        "상인",
+        "외교"
+      ],
+      "notes": "라이벌 도시 간 상업조약 유지.",
+      "id": "char_031",
+      "weights": {
+        "body": 0.3,
+        "soul": 0.55,
+        "spirit": 0.15
+      }
+    },
+    {
+      "name": "Dima Velor",
+      "class": "smuggler",
+      "role": "근딜/유틸",
+      "origin": "Obsidian Bay",
+      "tags": [
+        "상인",
+        "암시장"
+      ],
+      "notes": "금서와 진실을 수송.",
+      "id": "char_032",
+      "weights": {
+        "body": 0.4,
+        "soul": 0.45,
+        "spirit": 0.15
+      }
+    },
+    {
+      "name": "Marin Solv",
+      "class": "broker",
+      "role": "버퍼",
+      "origin": "Skybridge",
+      "tags": [
+        "상인",
+        "정보"
+      ],
+      "notes": "정치 거래를 연결하는 중개인.",
+      "id": "char_033",
+      "weights": {
+        "body": 0.25,
+        "soul": 0.6,
+        "spirit": 0.15
+      }
+    },
+    {
+      "name": "Rurik Coil",
+      "class": "caravan_master",
+      "role": "서포트",
+      "origin": "Brass Dust Road",
+      "tags": [
+        "상인",
+        "물류"
+      ],
+      "notes": "사막을 가로지르는 대규모 호송대 운영.",
+      "id": "char_034",
+      "weights": {
+        "body": 0.35,
+        "soul": 0.5,
+        "spirit": 0.15
+      }
+    },
+    {
+      "name": "Hala Mirestone",
+      "class": "banker",
+      "role": "버퍼",
+      "origin": "Verdant Exchange",
+      "tags": [
+        "상인",
+        "재정"
+      ],
+      "notes": "재난 대비 기금을 설계.",
+      "id": "char_035",
+      "weights": {
+        "body": 0.25,
+        "soul": 0.5,
+        "spirit": 0.25
+      }
+    },
+    {
+      "name": "Torin Sablemark",
+      "class": "merchant",
+      "role": "버퍼",
+      "origin": "Icewine Wharf",
+      "tags": [
+        "상인",
+        "항해"
+      ],
+      "notes": "빙해 무역 노선을 개척.",
+      "id": "char_036",
+      "weights": {
+        "body": 0.3,
+        "soul": 0.55,
+        "spirit": 0.15
+      }
+    },
+    {
+      "name": "Amina Ridgecrest",
+      "class": "noble",
+      "role": "버퍼",
+      "origin": "Suncrest Plateau",
+      "tags": [
+        "귀족",
+        "중재"
+      ],
+      "notes": "수원권 협상을 이끈다.",
+      "id": "char_037",
+      "weights": {
+        "body": 0.25,
+        "soul": 0.35,
+        "spirit": 0.4
+      }
+    },
+    {
+      "name": "Brenn Talspire",
+      "class": "governor",
+      "role": "버퍼",
+      "origin": "Frostmark",
+      "tags": [
+        "귀족",
+        "지도"
+      ],
+      "notes": "빙벽 이주 계획을 감독.",
+      "id": "char_038",
+      "weights": {
+        "body": 0.3,
+        "soul": 0.3,
+        "spirit": 0.4
+      }
+    },
+    {
+      "name": "Serael Brightmarch",
+      "class": "envoy",
+      "role": "버퍼",
+      "origin": "Azure Verge",
+      "tags": [
+        "귀족",
+        "사절"
+      ],
+      "notes": "고위 의회의 명령을 전달.",
+      "id": "char_039",
+      "weights": {
+        "body": 0.2,
+        "soul": 0.5,
+        "spirit": 0.3
+      }
+    },
+    {
+      "name": "Lysa Thornvale",
+      "class": "diplomat",
+      "role": "버퍼/디버프",
+      "origin": "Elder Court",
+      "tags": [
+        "귀족",
+        "외교"
+      ],
+      "notes": "적국 회담에서 감정의 균형을 잡는다.",
+      "id": "char_040",
+      "weights": {
+        "body": 0.2,
+        "soul": 0.55,
+        "spirit": 0.25
+      }
+    },
+    {
+      "name": "Heir Corvel",
+      "class": "heir",
+      "role": "버퍼",
+      "origin": "Marble Crown",
+      "tags": [
+        "귀족",
+        "후계"
+      ],
+      "notes": "예절과 검술을 동시에 수련.",
+      "id": "char_041",
+      "weights": {
+        "body": 0.25,
+        "soul": 0.35,
+        "spirit": 0.4
+      }
+    },
+    {
+      "name": "Sirena Dawnsong",
+      "class": "envoy",
+      "role": "버퍼",
+      "origin": "Rose Dominion",
+      "tags": [
+        "귀족",
+        "문화"
+      ],
+      "notes": "축제 외교를 기획.",
+      "id": "char_042",
+      "weights": {
+        "body": 0.2,
+        "soul": 0.5,
+        "spirit": 0.3
+      }
+    },
+    {
+      "name": "Ulric Forgehand",
+      "class": "blacksmith",
+      "role": "탱커",
+      "origin": "Forgevale",
+      "tags": [
+        "장인",
+        "무기"
+      ],
+      "notes": "성물 방패를 단련.",
+      "id": "char_043",
+      "weights": {
+        "body": 0.5,
+        "soul": 0.35,
+        "spirit": 0.15
+      }
+    },
+    {
+      "name": "Yselda Sparksong",
+      "class": "engineer",
+      "role": "버퍼",
+      "origin": "Tinspire",
+      "tags": [
+        "장인",
+        "발명"
+      ],
+      "notes": "송전도로 빛나는 검을 만든다.",
+      "id": "char_044",
+      "weights": {
+        "body": 0.35,
+        "soul": 0.5,
+        "spirit": 0.15
+      }
+    },
+    {
+      "name": "Linnea Mossveil",
+      "class": "weaver",
+      "role": "버퍼",
+      "origin": "Bloomvale",
+      "tags": [
+        "장인",
+        "치유"
+      ],
+      "notes": "빛나는 치유천을 짠다.",
+      "id": "char_045",
+      "weights": {
+        "body": 0.25,
+        "soul": 0.55,
+        "spirit": 0.2
+      }
+    },
+    {
+      "name": "Sorin Myrrh",
+      "class": "weaver",
+      "role": "버퍼",
+      "origin": "Saffron Steppe",
+      "tags": [
+        "장인",
+        "향"
+      ],
+      "notes": "향으로 광폭한 짐승을 진정.",
+      "id": "char_046",
+      "weights": {
+        "body": 0.25,
+        "soul": 0.55,
+        "spirit": 0.2
+      }
+    },
+    {
+      "name": "Atreus Pillar",
+      "class": "architect",
+      "role": "서포트",
+      "origin": "Skyloom",
+      "tags": [
+        "장인",
+        "도시"
+      ],
+      "notes": "공중정원을 설계.",
+      "id": "char_047",
+      "weights": {
+        "body": 0.3,
+        "soul": 0.45,
+        "spirit": 0.25
+      }
+    },
+    {
+      "name": "Mave Stormroot",
+      "class": "artificer",
+      "role": "마딜",
+      "origin": "Tempest Ridge",
+      "tags": [
+        "장인",
+        "토템"
+      ],
+      "notes": "폭풍 토템을 마을에 나눠 준다.",
+      "id": "char_048",
+      "weights": {
+        "body": 0.35,
+        "soul": 0.4,
+        "spirit": 0.25
+      }
+    },
+    {
+      "name": "Jora Emberloom",
+      "class": "blacksmith",
+      "role": "탱커",
+      "origin": "Coalspire",
+      "tags": [
+        "장인",
+        "용암"
+      ],
+      "notes": "용암로에서 불멸의 갑옷 제작.",
+      "id": "char_049",
+      "weights": {
+        "body": 0.5,
+        "soul": 0.35,
+        "spirit": 0.15
+      }
+    },
+    {
+      "name": "Rivik Gearheart",
+      "class": "engineer",
+      "role": "버퍼",
+      "origin": "Copper Belt",
+      "tags": [
+        "장인",
+        "기계"
+      ],
+      "notes": "전술 기계를 조율.",
+      "id": "char_050",
+      "weights": {
+        "body": 0.35,
+        "soul": 0.5,
+        "spirit": 0.15
+      }
+    }
+  ]
+}
