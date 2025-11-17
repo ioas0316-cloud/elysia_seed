@@ -37,13 +37,13 @@
 
 | 계열 | 중심 축 | 주요 역할 |
 | --- | --- | --- |
-| 전사 (Warrior) | Body | 방패병, 검사, 창병, 전투 지휘관 |
-| 마법사 (Mage) | Soul | 마법사, 연금술사, 환술사, 학자 |
-| 성직자 (Priest) | Spirit | 사제, 팔라딘, 드루이드, 예언자 |
-| 도적 (Rogue) | Body/Soul 믹스 | 도적, 잠입수, 추적자, 그림자 |
-| 상인 (Merchant) | Soul | 상인, 중개인, 카르텔 운영자 |
-| 귀족 (Noble) | Spirit/Soul | 귀족, 외교관, 통치자, 사절 |
-| 장인 (Artisan) | Body/Soul | 대장장이, 기술자, 건축가, 연금장 |
+| 전사 · Aegis Vanguard | Body | 방패병, 검사, 창병, 전투 지휘관 |
+| 마법사 · Arcane Resonant | Soul | 마법사, 연금술사, 환술사, 학자 |
+| 성직자 · Lumen Keeper | Spirit | 사제, 팔라딘, 드루이드, 예언자 |
+| 도적 · Umbral Operative | Body/Soul 믹스 | 도적, 잠입수, 추적자, 그림자 |
+| 상인 · Gild Synapse | Soul | 상인, 중개인, 카르텔 운영자 |
+| 귀족 · Sovereign Envoy | Spirit/Soul | 귀족, 외교관, 통치자, 사절 |
+| 장인 · Forge Savant | Body/Soul | 대장장이, 기술자, 건축가, 연금장 |
 
 ---
 
@@ -51,11 +51,11 @@
 
 | 직업 | Body | Soul | Spirit | STR | AGI | STA | INT | WIS | 주역할 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 전사 Warrior | **0.60** | 0.25 | 0.15 | 8 | 5 | 7 | 3 | 3 | 근딜/서브탱 |
-| 방패병 Guardian | **0.55** | **0.35** | 0.10 | 7 | 4 | 9 | 2 | 3 | 탱커 |
-| 검사 Swordsman | **0.65** | 0.25 | 0.10 | 8 | 7 | 6 | 3 | 2 | 근딜 |
-| 창병 Lancer | **0.62** | 0.23 | 0.15 | 7 | 6 | 7 | 3 | 3 | 돌격/CC |
-| 광전사 Berserker | **0.70** | 0.15 | 0.15 | 9 | 5 | 6 | 2 | 3 | 버프/근딜 |
+| 전사 · Aegis Vanguard | **0.60** | 0.25 | 0.15 | 8 | 5 | 7 | 3 | 3 | 근딜/서브탱 |
+| 방패병 · Bastion Sentinel | **0.55** | **0.35** | 0.10 | 7 | 4 | 9 | 2 | 3 | 탱커 |
+| 검사 · Argent Duelist | **0.65** | 0.25 | 0.10 | 8 | 7 | 6 | 3 | 2 | 근딜 |
+| 창병 · Storm Lancer | **0.62** | 0.23 | 0.15 | 7 | 6 | 7 | 3 | 3 | 돌격/CC |
+| 광전사 · Crimson Ravager | **0.70** | 0.15 | 0.15 | 9 | 5 | 6 | 2 | 3 | 버프/근딜 |
 
 ---
 
@@ -63,11 +63,11 @@
 
 | 직업 | Body | Soul | Spirit | STR | AGI | STA | INT | WIS | 주역할 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 마법사 Wizard | 0.20 | **0.60** | 0.20 | 2 | 4 | 3 | 9 | 6 | 마딜 |
-| 연금술사 Alchemist | 0.25 | **0.55** | 0.20 | 3 | 4 | 4 | 8 | 6 | 버퍼/유틸 |
-| 환술사 Illusionist | 0.20 | **0.55** | 0.25 | 2 | 5 | 3 | 8 | 7 | 디버퍼 |
-| 학자 Scholar | 0.15 | **0.65** | 0.20 | 2 | 4 | 3 | 8 | 8 | 컨트롤 |
-| 원소술사 Elementalist | 0.25 | **0.55** | 0.20 | 3 | 4 | 4 | 9 | 6 | 광역딜 |
+| 마법사 · Ether Weaver | 0.20 | **0.60** | 0.20 | 2 | 4 | 3 | 9 | 6 | 마딜 |
+| 연금술사 · Auric Transmuter | 0.25 | **0.55** | 0.20 | 3 | 4 | 4 | 8 | 6 | 버퍼/유틸 |
+| 환술사 · Mirage Architect | 0.20 | **0.55** | 0.25 | 2 | 5 | 3 | 8 | 7 | 디버퍼 |
+| 학자 · Codex Sage | 0.15 | **0.65** | 0.20 | 2 | 4 | 3 | 8 | 8 | 컨트롤 |
+| 원소술사 · Prism Conductor | 0.25 | **0.55** | 0.20 | 3 | 4 | 4 | 9 | 6 | 광역딜 |
 
 ---
 
@@ -75,11 +75,11 @@
 
 | 직업 | Body | Soul | Spirit | STR | AGI | STA | INT | WIS | 주역할 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 성직자 Priest | 0.20 | 0.30 | **0.50** | 2 | 3 | 4 | 6 | 9 | 힐러 |
-| 팔라딘 Paladin | 0.40 | 0.20 | **0.40** | 7 | 4 | 7 | 4 | 7 | 탱커/힐 |
-| 드루이드 Druid | 0.25 | 0.25 | **0.50** | 3 | 5 | 5 | 6 | 8 | 힐/버퍼 |
-| 예언자 Oracle | 0.10 | 0.25 | **0.65** | 1 | 3 | 3 | 6 | 10 | 버퍼 |
-| 수도자 Monk | 0.30 | 0.20 | **0.50** | 6 | 6 | 6 | 4 | 7 | 근딜/힐 |
+| 성직자 · Radiant Cleric | 0.20 | 0.30 | **0.50** | 2 | 3 | 4 | 6 | 9 | 힐러 |
+| 팔라딘 · Oathbound Knight | 0.40 | 0.20 | **0.40** | 7 | 4 | 7 | 4 | 7 | 탱커/힐 |
+| 드루이드 · Verdant Keeper | 0.25 | 0.25 | **0.50** | 3 | 5 | 5 | 6 | 8 | 힐/버퍼 |
+| 예언자 · Veil Seer | 0.10 | 0.25 | **0.65** | 1 | 3 | 3 | 6 | 10 | 버퍼 |
+| 수도자 · Lotus Ascendant | 0.30 | 0.20 | **0.50** | 6 | 6 | 6 | 4 | 7 | 근딜/힐 |
 
 ---
 
@@ -87,11 +87,11 @@
 
 | 직업 | Body | Soul | Spirit | STR | AGI | STA | INT | WIS | 주역할 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 도적 Rogue | **0.55** | 0.30 | 0.15 | 6 | 8 | 5 | 4 | 3 | 근딜/유틸 |
-| 그림자 Shadow | **0.50** | 0.30 | 0.20 | 5 | 9 | 4 | 4 | 4 | 잠입 |
-| 추적자 Ranger | **0.50** | 0.35 | 0.15 | 5 | 7 | 5 | 5 | 4 | 원딜 |
-| 암살자 Assassin | **0.60** | 0.20 | 0.20 | 8 | 9 | 4 | 4 | 3 | 버스트 딜 |
-| 요원 Operative | 0.45 | **0.40** | 0.15 | 5 | 7 | 4 | 5 | 4 | 버퍼/디버프 |
+| 도적 · Shade Runner | **0.55** | 0.30 | 0.15 | 6 | 8 | 5 | 4 | 3 | 근딜/유틸 |
+| 그림자 · Nocturne Agent | **0.50** | 0.30 | 0.20 | 5 | 9 | 4 | 4 | 4 | 잠입 |
+| 추적자 · Horizon Ranger | **0.50** | 0.35 | 0.15 | 5 | 7 | 5 | 5 | 4 | 원딜 |
+| 암살자 · Eclipse Blade | **0.60** | 0.20 | 0.20 | 8 | 9 | 4 | 4 | 3 | 버스트 딜 |
+| 요원 · Cipher Operative | 0.45 | **0.40** | 0.15 | 5 | 7 | 4 | 5 | 4 | 버퍼/디버프 |
 
 ---
 
@@ -99,11 +99,11 @@
 
 | 직업 | Body | Soul | Spirit | STR | AGI | STA | INT | WIS | 주역할 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 상인 Merchant | 0.30 | **0.55** | 0.15 | 3 | 5 | 4 | 6 | 5 | 버퍼 |
-| 중개인 Broker | 0.25 | **0.60** | 0.15 | 2 | 5 | 3 | 6 | 6 | 버퍼/디버퍼 |
-| 카라반 마스터 Caravan Master | 0.35 | **0.50** | 0.15 | 4 | 5 | 5 | 5 | 5 | 서포트 |
-| 밀수업자 Smuggler | 0.40 | 0.45 | 0.15 | 5 | 6 | 4 | 4 | 4 | 근딜/유틸 |
-| 은행가 Banker | 0.25 | **0.50** | 0.25 | 2 | 4 | 3 | 7 | 7 | 버퍼 |
+| 상인 · Ledger Maven | 0.30 | **0.55** | 0.15 | 3 | 5 | 4 | 6 | 5 | 버퍼 |
+| 중개인 · Pact Broker | 0.25 | **0.60** | 0.15 | 2 | 5 | 3 | 6 | 6 | 버퍼/디버퍼 |
+| 카라반 마스터 · Caravan Marshal | 0.35 | **0.50** | 0.15 | 4 | 5 | 5 | 5 | 5 | 서포트 |
+| 밀수업자 · Night Runner | 0.40 | 0.45 | 0.15 | 5 | 6 | 4 | 4 | 4 | 근딜/유틸 |
+| 은행가 · Vault Curator | 0.25 | **0.50** | 0.25 | 2 | 4 | 3 | 7 | 7 | 버퍼 |
 
 ---
 
@@ -111,11 +111,11 @@
 
 | 직업 | Body | Soul | Spirit | STR | AGI | STA | INT | WIS | 주역할 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 귀족 Noble | 0.25 | 0.35 | **0.40** | 4 | 5 | 4 | 6 | 7 | 버퍼 |
-| 외교관 Diplomat | 0.20 | **0.55** | 0.25 | 2 | 5 | 3 | 6 | 7 | 버퍼/디버프 |
-| 지배자 Governor | 0.30 | 0.30 | **0.40** | 4 | 4 | 5 | 6 | 7 | 서포트 |
-| 사절 Envoy | 0.20 | **0.50** | 0.30 | 3 | 6 | 3 | 6 | 6 | 버퍼 |
-| 계승자 Heir | 0.25 | 0.35 | **0.40** | 4 | 5 | 4 | 5 | 7 | 버퍼/근딜 |
+| 귀족 · Crown Sovereign | 0.25 | 0.35 | **0.40** | 4 | 5 | 4 | 6 | 7 | 버퍼 |
+| 외교관 · Concord Envoy | 0.20 | **0.55** | 0.25 | 2 | 5 | 3 | 6 | 7 | 버퍼/디버프 |
+| 지배자 · Dominion Regent | 0.30 | 0.30 | **0.40** | 4 | 4 | 5 | 6 | 7 | 서포트 |
+| 사절 · Aurora Herald | 0.20 | **0.50** | 0.30 | 3 | 6 | 3 | 6 | 6 | 버퍼 |
+| 계승자 · Legacy Scion | 0.25 | 0.35 | **0.40** | 4 | 5 | 4 | 5 | 7 | 버퍼/근딜 |
 
 ---
 
@@ -123,11 +123,11 @@
 
 | 직업 | Body | Soul | Spirit | STR | AGI | STA | INT | WIS | 주역할 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 대장장이 Blacksmith | **0.50** | 0.35 | 0.15 | 7 | 4 | 7 | 4 | 4 | 서포트/탱커 |
-| 기술자 Engineer | 0.35 | **0.50** | 0.15 | 4 | 5 | 5 | 7 | 4 | 버퍼 |
-| 건축가 Architect | 0.30 | **0.45** | 0.25 | 4 | 4 | 5 | 6 | 6 | 버퍼/컨트롤 |
-| 직조사 Weaver | 0.25 | **0.55** | 0.20 | 3 | 5 | 4 | 6 | 6 | 버퍼 |
-| 연금장 Artificer | 0.35 | 0.40 | **0.25** | 4 | 5 | 5 | 7 | 6 | 마딜/버퍼 |
+| 대장장이 · Ember Smith | **0.50** | 0.35 | 0.15 | 7 | 4 | 7 | 4 | 4 | 서포트/탱커 |
+| 기술자 · Vector Engineer | 0.35 | **0.50** | 0.15 | 4 | 5 | 5 | 7 | 4 | 버퍼 |
+| 건축가 · Spire Architect | 0.30 | **0.45** | 0.25 | 4 | 4 | 5 | 6 | 6 | 버퍼/컨트롤 |
+| 직조사 · Lattice Weaver | 0.25 | **0.55** | 0.20 | 3 | 5 | 4 | 6 | 6 | 버퍼 |
+| 연금장 · Arc Relicist | 0.35 | 0.40 | **0.25** | 4 | 5 | 5 | 7 | 6 | 마딜/버퍼 |
 
 ---
 
@@ -154,7 +154,7 @@
 ```
 도제 → 마법사 → ┬─ 원소술사 ↔ 기상술사 → 태풍마도사 ⇒ ★ 자연재해의 심장
              │
-             ├─ 환술사 ↔ 마도인형師 → 환영군주 ⇒ ★ 꿈의 군단장
+             ├─ 환술사 ↔ 마도인형사 → 환영군주 ⇒ ★ 꿈의 군단장
              │
              └─ 연금술사 ↔ 기계연금술사 → 연금대현 ⇒ ★ 현자의 각성
 보조 갈래: 학자 → 대현학자 ⇒ ★ 우주의 기록자
@@ -223,7 +223,7 @@
 
 ```mermaid
 graph TD
-  subgraph Warrior
+  subgraph "전사 · Aegis Vanguard"
     W0[훈련병] --> W1[전사]
     W1 --> W2a[방패병]
     W1 --> W2b[검사]
@@ -236,14 +236,14 @@ graph TD
     W3c --> W4c(드래곤가드 ★)
   end
 
-  subgraph Mage
+  subgraph "마법사 · Arcane Resonant"
     M0[도제] --> M1[마법사]
     M1 --> M2a[원소술사] --> M3a(자연재해의 심장 ★)
     M1 --> M2b[환술사] --> M3b(꿈의 군단장 ★)
     M1 --> M2c[연금술사] --> M3c(현자의 각성 ★)
   end
 
-  subgraph Priest
+  subgraph "성직자 · Lumen Keeper"
     P0[신학생] --> P1[성직자]
     P1 --> P2a[수도자] --> P3a(무극의 현자 ★)
     P1 --> P2b[드루이드] --> P3b(세계수 사도 ★)
@@ -256,47 +256,47 @@ graph TD
 ```jsonc
 {
   "class_defaults": {
-    "warrior":   {"body": 0.60, "soul": 0.25, "spirit": 0.15},
-    "guardian":  {"body": 0.55, "soul": 0.35, "spirit": 0.10},
-    "swordsman": {"body": 0.65, "soul": 0.25, "spirit": 0.10},
-    "lancer":    {"body": 0.62, "soul": 0.23, "spirit": 0.15},
-    "berserker": {"body": 0.70, "soul": 0.15, "spirit": 0.15},
+    "aegis_vanguard":   {"body": 0.60, "soul": 0.25, "spirit": 0.15},
+    "bastion_sentinel":  {"body": 0.55, "soul": 0.35, "spirit": 0.10},
+    "argent_duelist": {"body": 0.65, "soul": 0.25, "spirit": 0.10},
+    "storm_lancer":    {"body": 0.62, "soul": 0.23, "spirit": 0.15},
+    "crimson_ravager": {"body": 0.70, "soul": 0.15, "spirit": 0.15},
 
-    "wizard":    {"body": 0.20, "soul": 0.60, "spirit": 0.20},
-    "alchemist": {"body": 0.25, "soul": 0.55, "spirit": 0.20},
-    "illusionist": {"body": 0.20, "soul": 0.55, "spirit": 0.25},
-    "scholar":   {"body": 0.15, "soul": 0.65, "spirit": 0.20},
-    "elementalist": {"body": 0.25, "soul": 0.55, "spirit": 0.20},
+    "ether_weaver":    {"body": 0.20, "soul": 0.60, "spirit": 0.20},
+    "auric_transmuter": {"body": 0.25, "soul": 0.55, "spirit": 0.20},
+    "mirage_architect": {"body": 0.20, "soul": 0.55, "spirit": 0.25},
+    "codex_sage":   {"body": 0.15, "soul": 0.65, "spirit": 0.20},
+    "prism_conductor": {"body": 0.25, "soul": 0.55, "spirit": 0.20},
 
-    "priest":    {"body": 0.20, "soul": 0.30, "spirit": 0.50},
-    "paladin":   {"body": 0.40, "soul": 0.20, "spirit": 0.40},
-    "druid":     {"body": 0.25, "soul": 0.25, "spirit": 0.50},
-    "oracle":    {"body": 0.10, "soul": 0.25, "spirit": 0.65},
-    "monk":      {"body": 0.30, "soul": 0.20, "spirit": 0.50},
+    "radiant_cleric":    {"body": 0.20, "soul": 0.30, "spirit": 0.50},
+    "oathbound_knight":   {"body": 0.40, "soul": 0.20, "spirit": 0.40},
+    "verdant_keeper":     {"body": 0.25, "soul": 0.25, "spirit": 0.50},
+    "veil_seer":    {"body": 0.10, "soul": 0.25, "spirit": 0.65},
+    "lotus_ascendant":      {"body": 0.30, "soul": 0.20, "spirit": 0.50},
 
-    "rogue":     {"body": 0.55, "soul": 0.30, "spirit": 0.15},
-    "shadow":    {"body": 0.50, "soul": 0.30, "spirit": 0.20},
-    "ranger":    {"body": 0.50, "soul": 0.35, "spirit": 0.15},
-    "assassin":  {"body": 0.60, "soul": 0.20, "spirit": 0.20},
-    "operative": {"body": 0.45, "soul": 0.40, "spirit": 0.15},
+    "shade_runner":     {"body": 0.55, "soul": 0.30, "spirit": 0.15},
+    "nocturne_agent":    {"body": 0.50, "soul": 0.30, "spirit": 0.20},
+    "horizon_ranger":    {"body": 0.50, "soul": 0.35, "spirit": 0.15},
+    "eclipse_blade":  {"body": 0.60, "soul": 0.20, "spirit": 0.20},
+    "cipher_operative": {"body": 0.45, "soul": 0.40, "spirit": 0.15},
 
-    "merchant":  {"body": 0.30, "soul": 0.55, "spirit": 0.15},
-    "broker":    {"body": 0.25, "soul": 0.60, "spirit": 0.15},
-    "caravan_master": {"body": 0.35, "soul": 0.50, "spirit": 0.15},
-    "smuggler":  {"body": 0.40, "soul": 0.45, "spirit": 0.15},
-    "banker":    {"body": 0.25, "soul": 0.50, "spirit": 0.25},
+    "ledger_maven":  {"body": 0.30, "soul": 0.55, "spirit": 0.15},
+    "pact_broker":    {"body": 0.25, "soul": 0.60, "spirit": 0.15},
+    "caravan_marshal": {"body": 0.35, "soul": 0.50, "spirit": 0.15},
+    "night_runner":  {"body": 0.40, "soul": 0.45, "spirit": 0.15},
+    "vault_curator":    {"body": 0.25, "soul": 0.50, "spirit": 0.25},
 
-    "noble":     {"body": 0.25, "soul": 0.35, "spirit": 0.40},
-    "diplomat":  {"body": 0.20, "soul": 0.55, "spirit": 0.25},
-    "governor":  {"body": 0.30, "soul": 0.30, "spirit": 0.40},
-    "envoy":     {"body": 0.20, "soul": 0.50, "spirit": 0.30},
-    "heir":      {"body": 0.25, "soul": 0.35, "spirit": 0.40},
+    "crown_sovereign":     {"body": 0.25, "soul": 0.35, "spirit": 0.40},
+    "concord_envoy":  {"body": 0.20, "soul": 0.55, "spirit": 0.25},
+    "dominion_regent":  {"body": 0.30, "soul": 0.30, "spirit": 0.40},
+    "aurora_herald":     {"body": 0.20, "soul": 0.50, "spirit": 0.30},
+    "legacy_scion":      {"body": 0.25, "soul": 0.35, "spirit": 0.40},
 
-    "blacksmith": {"body": 0.50, "soul": 0.35, "spirit": 0.15},
-    "engineer":  {"body": 0.35, "soul": 0.50, "spirit": 0.15},
-    "architect": {"body": 0.30, "soul": 0.45, "spirit": 0.25},
-    "weaver":    {"body": 0.25, "soul": 0.55, "spirit": 0.20},
-    "artificer": {"body": 0.35, "soul": 0.40, "spirit": 0.25}
+    "ember_smith": {"body": 0.50, "soul": 0.35, "spirit": 0.15},
+    "vector_engineer":  {"body": 0.35, "soul": 0.50, "spirit": 0.15},
+    "spire_architect": {"body": 0.30, "soul": 0.45, "spirit": 0.25},
+    "lattice_weaver":    {"body": 0.25, "soul": 0.55, "spirit": 0.20},
+    "arc_relicist": {"body": 0.35, "soul": 0.40, "spirit": 0.25}
   }
 }
 ```
