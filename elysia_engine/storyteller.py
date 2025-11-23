@@ -1,9 +1,87 @@
 from typing import Dict, Any
+from .entities import Entity
+from .tensor import SoulTensor
+from .math_utils import Vector3
+import math
 
 class StoryTeller:
     """
     Interprets raw physics/soul data into narrative text.
     """
+
+    @staticmethod
+    def create_intent_entity(text: str, entity_id: str = "UserIntent") -> Entity:
+        """
+        Converts text into a physical Entity with a SoulTensor.
+        The text defines the Frequency (Color) and Amplitude (Mass) of the intent.
+        """
+        text = text.lower()
+
+        # Tensor Resonance Map
+        # Format: "word": (Frequency, Amplitude, Phase_Offset)
+        lexicon = {
+            # Red / Combat (100-300 Hz)
+            "fight": (150.0, 50.0, 0.0),
+            "attack": (180.0, 60.0, 0.0),
+            "kill": (250.0, 80.0, 0.0),
+            "destroy": (200.0, 90.0, 0.0),
+            "power": (120.0, 40.0, 0.0),
+
+            # Green / Peace (20-50 Hz)
+            "love": (40.0, 50.0, 0.0),
+            "heal": (30.0, 40.0, 0.0),
+            "protect": (45.0, 70.0, 0.0),
+            "help": (35.0, 30.0, 0.0),
+            "peace": (25.0, 20.0, 0.0),
+
+            # Blue / Sorrow / Gravity (< 20 Hz)
+            "sad": (10.0, 30.0, 0.0),
+            "cry": (15.0, 40.0, 0.0),
+            "wait": (5.0, 10.0, 0.0),
+
+            # White/Violet / Magic (> 300 Hz)
+            "magic": (400.0, 30.0, math.pi),
+            "think": (350.0, 20.0, math.pi / 2),
+            "focus": (320.0, 40.0, math.pi / 4),
+            "void": (500.0, 100.0, 0.0),
+        }
+
+        total_freq = 0.0
+        total_amp = 10.0 # Base mass
+        total_phase = 0.0
+        match_count = 0
+
+        words = text.split()
+        for word in words:
+            # Simple partial matching
+            for key, (freq, amp, phase) in lexicon.items():
+                if key in word:
+                    total_freq += freq
+                    total_amp += amp
+                    total_phase += phase
+                    match_count += 1
+                    break
+
+        if match_count > 0:
+            avg_freq = total_freq / match_count
+            avg_phase = total_phase / match_count
+        else:
+            avg_freq = 10.0 # Default to noise
+            avg_phase = 0.0
+
+        # Create the SoulTensor
+        soul = SoulTensor(
+            amplitude=total_amp,
+            frequency=avg_freq,
+            phase=avg_phase,
+            spin=1.0 if avg_freq < 300 else -1.0 # High freq spins opposite? Just flavor.
+        )
+
+        # Create the Entity
+        # Position defaults to (0,0,0), will be placed by the launcher
+        entity = Entity(id=entity_id, soul=soul, role="Intent")
+
+        return entity
 
     @staticmethod
     def narrate_frame(frame_data: Dict[str, Any]) -> str:

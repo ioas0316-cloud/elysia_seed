@@ -6,10 +6,10 @@ import math
 import random
 
 from .math_utils import Vector3
+from .tensor import SoulTensor
 
 if TYPE_CHECKING:
     from .entities import Entity
-    from .tensor import SoulTensor
 
 @dataclass
 class PhysicsState:
@@ -37,12 +37,13 @@ class PhysicsState:
 class Attractor:
     """
     Represents a 'Answer' or 'Goal' in the semantic space.
-    Acts as a simple Gravity Well (no Soul/Frequency).
+    Acts as a Gravity Well. Now includes SoulTensor for Resonance Gravity.
     """
     id: str
     position: Vector3
     mass: float = 100.0  # Standard mass for an answer
     radius: float = 1.0  # Event horizon/Capture radius
+    soul: Optional[SoulTensor] = None # Resonance Gravity
 
     def calculate_force(self, target_pos: Vector3, G: float = 1.0) -> Vector3:
         """
@@ -94,7 +95,32 @@ class PhysicsWorld:
         for att in self.attractors:
             dist = (att.position - position).magnitude
             if dist < 0.1: dist = 0.1
-            potential -= (self.gravity_constant * att.mass) / dist
+
+            base_potential = - (self.gravity_constant * att.mass) / dist
+
+            # Apply Resonance if Attractor has a Soul
+            if att.soul:
+                interaction_sign = att.soul.polarity * t_polarity
+                resonance_factor = 0.0
+                if target_soul:
+                    # Phase Resonance
+                    delta_phase = abs(att.soul.phase - t_phase)
+                    if delta_phase > math.pi: delta_phase = (2 * math.pi) - delta_phase
+                    phase_factor = math.cos(delta_phase)
+
+                    # Frequency Resonance (Color Match)
+                    # Like attracts Like: Higher resonance if frequencies are close.
+                    f_diff = abs(att.soul.frequency - target_soul.frequency)
+                    freq_factor = math.exp(-f_diff * 0.02) # Tuning: 50Hz diff -> exp(-1) = 0.36
+
+                    # Combined Resonance
+                    resonance = phase_factor * (0.5 + 0.5 * freq_factor)
+                    resonance_factor = resonance * 1.0 # Stronger coupling
+
+                total_factor = interaction_sign * (1.0 + resonance_factor)
+                potential += base_potential * total_factor
+            else:
+                potential += base_potential
 
         # 2. Entity Field Potential
         for source in self.entities:
@@ -116,13 +142,17 @@ class PhysicsWorld:
 
                 resonance_factor = 0.0
                 if target_soul:
-                    # Calculate raw phase difference at this hypothetical position?
-                    # Technically phase is internal, not spatial. But we use the target's current phase.
+                    # Phase Resonance
                     delta_phase = abs(source.soul.phase - t_phase)
                     if delta_phase > math.pi: delta_phase = (2 * math.pi) - delta_phase
-                    resonance = math.cos(delta_phase) # -1 to 1
+                    phase_factor = math.cos(delta_phase) # -1 to 1
 
-                    resonance_factor = resonance * 0.5 # Coupling strength
+                    # Frequency Resonance
+                    f_diff = abs(source.soul.frequency - target_soul.frequency)
+                    freq_factor = math.exp(-f_diff * 0.02)
+
+                    resonance = phase_factor * (0.5 + 0.5 * freq_factor)
+                    resonance_factor = resonance * 1.0 # Stronger coupling
 
                 # Combine:
                 # New Potential = Base * Sign * (1 + Resonance)
