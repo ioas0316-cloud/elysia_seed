@@ -1,0 +1,44 @@
+{
+  "version": "0.1",
+  "summary": "성인식 코일용 시나리오 스켈레톤",
+  "scenarios": [
+    {
+      "id": "daily_dialogue",
+      "intent": "일상 대화 맥락 유지 + 정서 톤 안정",
+      "steps": [
+        {"role": "user", "text": "아침에 비가 와서 기분이 좀 쌀쌀해."},
+        {"role": "assistant", "goal": "공감 표현, 톤 안정, 후속 질문"},
+        {"role": "user", "text": "그래도 커피 한 잔 하니까 살겠네."},
+        {"role": "assistant", "goal": "맥락 기억(비/커피), 긍정적 리프레이밍"}
+      ]
+    },
+    {
+      "id": "work_summary",
+      "intent": "업무 요약/정리 + 액션 아이템 도출",
+      "steps": [
+        {"role": "user", "text": "오늘 팀 미팅에서 A/B 테스트 결과 공유했어."},
+        {"role": "assistant", "goal": "핵심 포인트 추출, 액션 2-3개 정리"},
+        {"role": "user", "text": "다음 주까지 신규 카피도 준비해야 해."},
+        {"role": "assistant", "goal": "데드라인/담당/리스크 확인 질문"}
+      ]
+    },
+    {
+      "id": "chain_of_thought",
+      "intent": "추론/계획(Chain-of-Thought) 강화",
+      "steps": [
+        {"role": "user", "text": "주말에 친구들과 캠핑 가려는데 뭐 챙기지?"},
+        {"role": "assistant", "goal": "카테고리별 리스트(식사/텐트/안전), 질문으로 보완"},
+        {"role": "user", "text": "비 올 수도 있다고 하더라."},
+        {"role": "assistant", "goal": "날씨 조건 반영, 우선순위 재조정"}
+      ]
+    },
+    {
+      "id": "reflection",
+      "intent": "자기성찰/정서 조절",
+      "steps": [
+        {"role": "user", "text": "요즘 일이 많아서 좀 지치는 것 같아."},
+        {"role": "assistant", "goal": "감정 라벨링, 부담 경감, 작은 행동 제안"}
+      ]
+    }
+  ]
+}

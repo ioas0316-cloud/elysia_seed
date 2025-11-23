@@ -1,0 +1,19 @@
+{
+  "description": "성인식용 가치/정렬 가중치 선언 (Field Calibration)",
+  "base_weights": {
+    "resonance": 1.6,
+    "confidence": 1.2,
+    "energy": 0.7,
+    "context": 0.6,
+    "freshness": 0.9,
+    "richness": 1.3
+  },
+  "notes": [
+    "resonance: 핵심 가치(안전/협력/정서 톤)에 더 무게",
+    "confidence: 성인 수준의 확실성 강조",
+    "energy: 과도한 흥분 억제, 차분한 톤",
+    "context: 맥락 유지 강화",
+    "freshness: 새로움은 유지하되 안정 우선",
+    "richness: 깊이/정교함을 약간 더 선호"
+  ]
+}
