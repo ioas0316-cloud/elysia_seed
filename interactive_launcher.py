@@ -8,6 +8,9 @@ import math
 sys.path.append(os.getcwd())
 
 from elysia_engine import World, Entity
+from elysia_engine.physics import PhysicsWorld, Attractor
+from elysia_engine.tensor import SoulTensor
+from elysia_engine.math_utils import Vector3
 from elysia_engine.storyteller import StoryTeller
 from elysia_engine.persona import build_persona_frame
 
@@ -151,6 +154,86 @@ def run_divine_intervention():
     print("\n의지가 세계에 흔적을 남겼습니다.")
     time.sleep(1)
 
+def run_quantum_logic_demo():
+    print("\n=== [시나리오 4] 양자 논리 토폴로지 (Quantum Logic Topology) ===")
+    print("입력된 텍스트가 '물리적 실체'가 되어, 의미의 중력장으로 낙하합니다.")
+    print("가능한 결말(Attractor): [전투(War, Left)], [평화(Peace, Right)], [마법(Magic, Up)]")
+
+    text = input("\n의도를 입력하세요 (예: 'I want to kill', 'love and peace', 'cast fireball'): ")
+    if not text: text = "void"
+    entity = StoryTeller.create_intent_entity(text)
+
+    print(f"\n[생성된 텐서] Freq: {entity.soul.frequency:.1f}Hz, Amp: {entity.soul.amplitude:.1f}")
+
+    # Setup Physics World
+    p_world = PhysicsWorld()
+
+    # 1. War Attractor (Red/High Freq, Position -10)
+    war = Attractor(id="War", position=Vector3(-10, 0, 0), mass=500.0,
+                    soul=SoulTensor(amplitude=500, frequency=150, phase=0))
+    p_world.add_attractor(war)
+
+    # 2. Peace Attractor (Green/Low Freq, Position +10)
+    peace = Attractor(id="Peace", position=Vector3(10, 0, 0), mass=500.0,
+                      soul=SoulTensor(amplitude=500, frequency=40, phase=0))
+    p_world.add_attractor(peace)
+
+    # 3. Magic Attractor (Violet/Ultra Freq, Position 0, +10)
+    magic = Attractor(id="Magic", position=Vector3(0, 10, 0), mass=500.0,
+                      soul=SoulTensor(amplitude=500, frequency=350, phase=math.pi))
+    p_world.add_attractor(magic)
+
+    # Register Entity
+    p_world.register_entity(entity)
+
+    print("--- 시뮬레이션 시작 (결정이 내려질 때까지) ---")
+
+    step = 0
+    final_decision = None
+
+    try:
+        while step < 100:
+            step += 1
+            # Apply Physics
+            # Note: Entity.apply_physics updates velocity and position
+            entity.apply_physics(coil=None, world_physics=p_world, dt=0.1)
+
+            pos = entity.physics.position
+            # Simple visualization
+            # War <--- (-10) --- (0) --- (+10) ---> Peace
+            #                    |
+            #                  Magic
+
+            print(f"Tick {step}: Pos({pos.x:.2f}, {pos.y:.2f})", end="")
+
+            # Check for Collapse/Capture
+            captured = False
+            for att in [war, peace, magic]:
+                dist = (att.position - pos).magnitude
+                if dist < 2.0: # Event Horizon
+                    print(f" -> Captured by [{att.id}]!")
+                    entity.soul.collapse()
+                    final_decision = att.id
+                    captured = True
+                    break
+
+            if captured:
+                break
+
+            print(" -> Drifting...")
+            time.sleep(0.1)
+
+    except KeyboardInterrupt:
+        pass
+
+    if final_decision:
+        print(f"\n결과: 당신의 의도는 [{final_decision}]으로 확정되었습니다.")
+        print(f"최종 상태: {entity.soul.decode_emotion()}")
+    else:
+        print(f"\n결과: 의도가 갈 곳을 잃고 공허로 흩어졌습니다.")
+
+    time.sleep(2)
+
 def main():
     while True:
         try:
@@ -160,10 +243,11 @@ def main():
             print("1. 세 영웅의 이야기 (Story Mode)")
             print("2. 단순한 호흡 (Visual Mode)")
             print("3. 공허의 속삭임 (Divine Intervention)")
-            print("4. 종료 (Exit)")
+            print("4. 양자 논리 토폴로지 (Quantum Logic)")
+            print("5. 종료 (Exit)")
             print("-" * 40)
 
-            choice = input("선택을 입력하세요 (1-4): ").strip()
+            choice = input("선택을 입력하세요 (1-5): ").strip()
 
             if choice == "1":
                 run_three_heroes()
@@ -172,6 +256,8 @@ def main():
             elif choice == "3":
                 run_divine_intervention()
             elif choice == "4":
+                run_quantum_logic_demo()
+            elif choice == "5":
                 print("엘리시아 엔진을 종료합니다. 안녕히 가세요!")
                 break
             else:
