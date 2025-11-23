@@ -30,6 +30,11 @@ Everything in the engine is defined by the **SoulTensor** (defined in `elysia_en
     *   `SpacetimeOrchestrator`: Adjusts gravity/time scale based on entropy signals (pairs with `GlobalConsciousness`).
     *   `Cymatics/Gauge Fields`: Frequency->Topology patterning (`cymatics.py`) and unified four-force helper (`gauge.py`) live in core modules; wire them through Systems when needed.
 *   **Holographic Boundary Sampling:** Favor boundary-only potential sampling (`HolographicBoundary` in `physics.py`) to approximate interior fields. Sample surfaces; interpolate inside. Do not brute-force fill 3D volumes.
+*   **Objective & Adjustment Rules:** Optimize for **low entropy / high phase alignment** (GlobalConsciousness). Adjust laws, not hardcoded logic:
+    *   Gravity: default 1.0; do not exceed ~50.0 without justification.
+    *   Time Scale: default 1.0; clamp between 0.25 and 2.0 for stability.
+    *   Torsion (Quaternion): apply transiently to escape high-entropy traps; clear when alignment recovers.
+    *   Keep law changes tied to signals (entropy/alignment), not arbitrary scripts.
 
 ### 4. Directives
 
