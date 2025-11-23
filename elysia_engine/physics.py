@@ -3,11 +3,13 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 from typing import List, Optional, TYPE_CHECKING
 import math
+import random
 
 from .math_utils import Vector3
 
 if TYPE_CHECKING:
     from .entities import Entity
+    from .tensor import SoulTensor
 
 @dataclass
 class PhysicsState:
@@ -200,11 +202,43 @@ class PhysicsWorld:
 
             spin_force = spin_force + (tangent * spin_mag)
 
+        # --- QUANTUM TUNNELING CHECK ---
+        # If the entity faces a high potential barrier (Hill) but has high energy (Frequency),
+        # it might tunnel through.
+        # Check if flow is opposing velocity (braking)
+        dot_prod = flow.dot(target_entity.physics.velocity)
+        if dot_prod < -0.1 and target_entity.soul and not target_entity.soul.is_collapsed:
+            # We are hitting a wall.
+            barrier_height = self.calculate_potential(pos + target_entity.physics.velocity.normalize(), target_entity.soul)
+
+            # Simple Tunneling Probability: P ~ exp(-2 * barrier_width * sqrt(2m(V-E)) / h_bar)
+            # Metaphorical implementation:
+            # Energy = Frequency. Barrier = Potential Difference.
+            energy_diff = target_entity.soul.frequency - barrier_height
+
+            if energy_diff > 0:
+                # Classical traversal is possible, just flow normally.
+                pass
+            else:
+                # Quantum Tunneling attempt
+                # Probability increases as barrier gets smaller or frequency gets higher
+                prob = math.exp(energy_diff * 0.1) # energy_diff is negative here
+                if random.random() < prob:
+                    # TUNNEL!
+                    # Teleport slightly forward
+                    tunnel_dist = 2.0
+                    target_entity.physics.position = target_entity.physics.position + (target_entity.physics.velocity.normalize() * tunnel_dist)
+
+                    # Log or Event?
+                    # For now just modify flow to be zero (teleported past the force)
+                    return Vector3(0,0,0)
+
         return flow + spin_force
 
     def check_dimensional_binding(self, entity: Entity) -> None:
         """
         Checks if the entity should evolve dimensionally (Point -> Line).
+        And promotes Entanglement.
         """
         if not entity.soul or entity.soul.is_collapsed:
             return
@@ -218,14 +252,28 @@ class PhysicsWorld:
             if dist < 2.0:
                 # Check Resonance
                 res = entity.soul.resonate(other.soul)
+
+                # BINDING (Fractal Evolution)
                 if res['resonance'] > 0.9: # Very high harmony
-                    # Bind them! (Abstractly for now)
-                    # In a full implementation, we would create a "Bond" object.
-                    # For now, we just log or tag them.
+                    # Bind them!
                     if other.id not in entity.bonds:
                         entity.bonds.append(other.id)
+                        # Promote Dimension if not already
+                        if entity.dimension == 0: entity.dimension = 1
+
                     if entity.id not in other.bonds:
                         other.bonds.append(entity.id)
+                        if other.dimension == 0: other.dimension = 1
+
+                    # 2D Promotion Check (Triangle)
+                    # If I have 2 bonds, I might be a Plane?
+                    if len(entity.bonds) >= 2:
+                        entity.dimension = 2
+
+                # ENTANGLEMENT (Quantum Link)
+                # If they are very close and harmonic, they entangle
+                if dist < 0.5 and res['resonance'] > 0.95:
+                    entity.soul.entangle(other.soul)
 
     def get_net_force(self, target_entity: Entity) -> Vector3:
         """

@@ -3,7 +3,6 @@ from __future__ import annotations
 from dataclasses import dataclass, field, asdict
 from typing import Any, Dict, Optional, Protocol, TYPE_CHECKING
 
-from .efp import EFPState
 from .roles import ROLE_PROFILES, RoleProfile
 from .physics import PhysicsState
 from .tensor import SoulTensor
@@ -25,36 +24,49 @@ class Entity:
     """
 
     id: str
-    state: EFPState = field(default_factory=EFPState)
     physics: PhysicsState = field(default_factory=PhysicsState)
     soul: Optional[SoulTensor] = None # Replaces QuantumDNA
     bonds: list[str] = field(default_factory=list) # IDs of bonded entities (Dimensional Evolution)
     data: Dict[str, Any] = field(default_factory=dict)
     role: Optional[str] = None
+
+    # Intrinsic components (replacing explicit force scalar)
+    # These drive the evolution of the SoulTensor (f_body -> Amp, f_soul -> Freq, f_spirit -> Phase)
     f_body: float = 0.0
     f_soul: float = 0.0
     f_spirit: float = 0.0
+
+    dimension: int = 0 # 0=Point, 1=Line, 2=Plane
 
     def update_force_components(self, world: WorldLike) -> None:
         """Subclass hook to fill f_body/f_soul/f_spirit."""
         return None
 
     def update_force(self, world: WorldLike) -> None:
+        """
+        Updates the internal drives (f_body, etc) and applies them to the SoulTensor.
+        """
         self.f_body = self.f_soul = self.f_spirit = 0.0
         self.update_force_components(world)
 
-        profile = self._get_role_profile()
-        if profile is None:
-            total = self.f_body + self.f_soul + self.f_spirit
-        else:
-            p = profile.normalized
-            total = (
-                p.w_body * self.f_body
-                + p.w_soul * self.f_soul
-                + p.w_spirit * self.f_spirit
-            )
+        # Apply forces to SoulTensor if it exists
+        if self.soul and not self.soul.is_collapsed:
+             # Scale factor for evolution speed
+            evolution_rate = 0.01
 
-        self.state.force = total
+            profile = self._get_role_profile()
+            if profile:
+                 p = profile.normalized
+                 # Weighted evolution
+                 self.soul.amplitude += self.f_body * p.w_body * evolution_rate
+                 self.soul.frequency += self.f_soul * p.w_soul * evolution_rate
+                 self.soul.phase += self.f_spirit * p.w_spirit * evolution_rate
+            else:
+                 # Raw evolution
+                 self.soul.amplitude += self.f_body * evolution_rate
+                 self.soul.frequency += self.f_soul * evolution_rate
+                 self.soul.phase += self.f_spirit * evolution_rate
+
 
     def _get_role_profile(self) -> Optional[RoleProfile]:
         if self.role is None:
@@ -85,7 +97,8 @@ class Entity:
 
     def step(self, world: WorldLike, dt: float = 1.0) -> None:
         self.update_force(world)
-        self.state.step(dt=dt)
+
+        # Soul evolution happens in update_force (which is conceptually 'force applied to soul')
         if self.soul:
             self.soul.step(dt)
 
@@ -93,7 +106,7 @@ class Entity:
         payload = {
             "id": self.id,
             "role": self.role,
-            "efp": self.state.as_dict(),
+            "dimension": self.dimension,
             "physics": asdict(self.physics),
             "force_components": {
                 "body": self.f_body,
