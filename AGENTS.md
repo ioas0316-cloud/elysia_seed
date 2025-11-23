@@ -28,6 +28,7 @@ Everything in the engine is defined by the **SoulTensor** (defined in `elysia_en
     *   `GenesisSystem`: Replication via Tensor Coils.
     *   `VoidSystem`: Entropy and cleanup.
     *   `SpacetimeOrchestrator`: Adjusts gravity/time scale based on entropy signals (pairs with `GlobalConsciousness`).
+    *   `Cymatics/Gauge Fields`: Frequency->Topology patterning (`cymatics.py`) and unified four-force helper (`gauge.py`) live in core modules; wire them through Systems when needed.
 *   **Holographic Boundary Sampling:** Favor boundary-only potential sampling (`HolographicBoundary` in `physics.py`) to approximate interior fields. Sample surfaces; interpolate inside. Do not brute-force fill 3D volumes.
 
 ### 4. Directives

@@ -85,20 +85,15 @@ class Quaternion:
 
     def rotate(self, v: Vector3) -> Vector3:
         """Rotate vector v by this quaternion."""
-        # q * v * q_conjugate
-        # Optimized implementation
         u = Vector3(self.x, self.y, self.z)
         s = self.w
 
-        # 2.0 * dot(u, v) * u
         uv_dot = u.dot(v)
         term1 = u * (2.0 * uv_dot)
 
-        # (s*s - dot(u,u)) * v
         uu_dot = u.dot(u)
-        term2 = v * (s*s - uu_dot)
+        term2 = v * (s * s - uu_dot)
 
-        # 2.0 * s * cross(u, v)
         cross_uv = u.cross(v)
         term3 = cross_uv * (2.0 * s)
 
