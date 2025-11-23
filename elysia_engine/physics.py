@@ -5,7 +5,7 @@ from typing import List, Optional, TYPE_CHECKING, Tuple
 import math
 import random
 
-from .math_utils import Vector3
+from .math_utils import Vector3, Quaternion
 from .tensor import SoulTensor
 
 if TYPE_CHECKING:
@@ -127,6 +127,7 @@ class PhysicsWorld:
         self.coupling_constant: float = 0.5 # Strength of the Soul Force (Rifling)
         self.time_scale: float = 1.0
         self.holographic_boundary: Optional[HolographicBoundary] = None
+        self.spacetime_torsion: Optional[Quaternion] = None
 
     def add_attractor(self, attractor: Attractor) -> None:
         self.attractors.append(attractor)
@@ -380,5 +381,9 @@ class PhysicsWorld:
 
         # Check for Dimensional Evolution opportunities
         self.check_dimensional_binding(target_entity)
+
+        # Apply spacetime torsion (optional rotation of the flow field)
+        if self.spacetime_torsion:
+            return self.spacetime_torsion.rotate(flow)
 
         return flow

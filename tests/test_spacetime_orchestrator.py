@@ -46,3 +46,13 @@ def test_spacetime_orchestrator_adjusts_constants():
 
     assert phys.gravity_constant > initial_g
     assert phys.time_scale < initial_time_scale
+    assert phys.spacetime_torsion is not None
+
+    # Calm the system (phases aligned) and ensure torsion relaxes
+    for ent in world.entities.values():
+        if ent.soul:
+            ent.soul.phase = 0.0
+    for _ in range(3):
+        world.step()
+
+    assert phys.spacetime_torsion is None
