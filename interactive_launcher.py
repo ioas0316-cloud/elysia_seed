@@ -104,6 +104,53 @@ def run_simple_pulse():
     except KeyboardInterrupt:
         print("\n명상이 종료되었습니다.")
 
+def run_divine_intervention():
+    print("\n=== [시나리오 3] 공허의 속삭임 (Divine Intervention) ===")
+    print("당신의 의지(Text)가 디지털 세계의 물리 법칙(Physics)을 변화시킵니다.")
+    print("무엇을 하고 싶으신가요? (예: 'I want to fight', 'Protect my friends')")
+
+    intent_text = input("\n당신의 의지를 입력하세요: ")
+    forces = StoryTeller.parse_intent(intent_text)
+
+    print(f"\n[해석된 의지] Body: {forces['body']:.2f}, Soul: {forces['soul']:.2f}, Spirit: {forces['spirit']:.2f}")
+    print("세계에 의지가 주입됩니다...\n")
+    time.sleep(1)
+
+    world = World()
+    # Create a generic avatar to receive the user's intent
+    avatar = Entity(id="UserAvatar", role="Traveler")
+    # Initialize with base values so changes are visible
+    avatar.f_body = 0.1
+    avatar.f_soul = 0.1
+    avatar.f_spirit = 0.1
+
+    # We override the update function to ADD the user's forces continuously or one-shot?
+    # For this demo, let's just set them as a bias.
+    # Since Entity doesn't have a 'bias' field by default, we'll manually set them
+    # and let them decay or persist depending on the simulation logic.
+    # However, standard Entity.update_force_components might overwrite them if it was a subclass.
+    # The base Entity class doesn't overwrite force components in update_force_components (it's empty).
+
+    avatar.f_body += forces['body']
+    avatar.f_soul += forces['soul']
+    avatar.f_spirit += forces['spirit']
+
+    world.add_entity(avatar)
+
+    print("--- 시뮬레이션 시작 (5초간 진행) ---")
+    try:
+        for _ in range(10): # 10 steps * 0.5s = 5 seconds
+            world.step(dt=0.5)
+            snap = world.export_persona_snapshot()
+            story = StoryTeller.narrate_frame(snap)
+            print(story)
+            time.sleep(0.5)
+    except KeyboardInterrupt:
+        pass
+
+    print("\n의지가 세계에 흔적을 남겼습니다.")
+    time.sleep(1)
+
 def main():
     while True:
         try:
@@ -112,16 +159,19 @@ def main():
             print("="*40)
             print("1. 세 영웅의 이야기 (Story Mode)")
             print("2. 단순한 호흡 (Visual Mode)")
-            print("3. 종료 (Exit)")
+            print("3. 공허의 속삭임 (Divine Intervention)")
+            print("4. 종료 (Exit)")
             print("-" * 40)
 
-            choice = input("선택을 입력하세요 (1-3): ").strip()
+            choice = input("선택을 입력하세요 (1-4): ").strip()
 
             if choice == "1":
                 run_three_heroes()
             elif choice == "2":
                 run_simple_pulse()
             elif choice == "3":
+                run_divine_intervention()
+            elif choice == "4":
                 print("엘리시아 엔진을 종료합니다. 안녕히 가세요!")
                 break
             else:

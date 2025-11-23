@@ -75,6 +75,41 @@ class StoryTeller:
         return prompt
 
     @staticmethod
+    def parse_intent(text: str) -> Dict[str, float]:
+        """
+        Translates natural language intent into force modifiers.
+        Input: User text (e.g. "I want to fight")
+        Output: Force modifiers {"body": 0.5, "soul": 0.0, "spirit": 0.0}
+        """
+        text = text.lower()
+        forces = {"body": 0.0, "soul": 0.0, "spirit": 0.0}
+
+        # Body Keywords: Physicality, aggression, movement
+        body_keywords = ["fight", "attack", "kill", "destroy", "run", "move", "strength", "power", "muscle", "physical"]
+        # Soul Keywords: Emotion, connection, healing, protection
+        soul_keywords = ["love", "help", "protect", "heal", "feel", "connect", "bond", "friend", "empathy", "care"]
+        # Spirit Keywords: Will, intellect, planning, magic, destiny
+        spirit_keywords = ["think", "plan", "wait", "focus", "magic", "will", "destiny", "create", "analyze", "wisdom"]
+
+        for word in body_keywords:
+            if word in text:
+                forces["body"] += 0.2
+
+        for word in soul_keywords:
+            if word in text:
+                forces["soul"] += 0.2
+
+        for word in spirit_keywords:
+            if word in text:
+                forces["spirit"] += 0.2
+
+        # Normalize to max 1.0 per axis (soft cap)
+        for key in forces:
+            forces[key] = min(forces[key], 1.0)
+
+        return forces
+
+    @staticmethod
     def _describe_state(role: str, energy: float, f_body: float, f_soul: float, f_spirit: float) -> str:
         """
         Generates a sentence based on role and physics state.
