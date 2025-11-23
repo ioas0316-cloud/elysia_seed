@@ -1,7 +1,8 @@
 from __future__ import annotations
 
 import math
-from dataclasses import dataclass
+from dataclasses import dataclass, field
+from typing import List, Optional
 
 @dataclass
 class SoulTensor:
@@ -21,6 +22,9 @@ class SoulTensor:
     polarity: float = 1.0 # Matter (1.0) vs Antimatter (-1.0)
     is_collapsed: bool = False # Wave Function Collapse State
 
+    # Quantum Properties
+    entangled_peers: List['SoulTensor'] = field(default_factory=list, repr=False)
+
     def step(self, dt: float) -> None:
         """
         Evolve the wave state over time.
@@ -30,8 +34,32 @@ class SoulTensor:
         if self.is_collapsed:
             return
 
-        self.phase += self.frequency * dt
+        delta = self.frequency * dt
+        self.phase += delta
         self.phase %= (2 * math.pi)
+
+        # Propagate phase change to entangled peers (instant action at a distance)
+        # We only push the delta to avoid infinite recursion loops if bidirectional
+        # Simplification: Only the driver updates peers? Or shared state?
+        # Better approach: Shared reference? No, Python dataclass.
+        # We just iterate and apply.
+        for peer in self.entangled_peers:
+            if not peer.is_collapsed:
+                peer.phase = self.phase
+
+    def entangle(self, other: 'SoulTensor') -> None:
+        """
+        Quantum Entanglement: Links the phase of two souls.
+        """
+        if other not in self.entangled_peers:
+            self.entangled_peers.append(other)
+        if self not in other.entangled_peers:
+            other.entangled_peers.append(self)
+
+        # Synchronize immediately
+        avg_phase = (self.phase + other.phase) / 2
+        self.phase = avg_phase
+        other.phase = avg_phase
 
     def collapse(self) -> None:
         """
@@ -53,6 +81,24 @@ class SoulTensor:
         self.frequency = 0.0
         self.is_collapsed = True
         # Phase remains fixed at its current value (The decision made)
+
+    def melt(self, external_energy: float) -> None:
+        """
+        "Burning Star" effect: Waking up a collapsed soul.
+        Requires high external energy input (Resonance/Heat).
+        """
+        if not self.is_collapsed:
+            return
+
+        # Reverse the process: Convert Mass back to Frequency
+        transfer_ratio = 10.0
+        restored_freq = (self.amplitude * 0.1) / transfer_ratio # Use 10% of mass to kickstart
+
+        if external_energy > 50.0: # Threshold to wake up
+            self.amplitude -= restored_freq * transfer_ratio
+            self.frequency = restored_freq + (external_energy * 0.1)
+            self.is_collapsed = False
+
 
     def resonate(self, other: SoulTensor) -> dict:
         """
