@@ -14,6 +14,13 @@ from elysia_engine.math_utils import Vector3
 from elysia_engine.storyteller import StoryTeller
 from elysia_engine.persona import build_persona_frame
 
+# New Modules for Transcendence
+from elysia_engine.memory import SemanticMemory, Episode
+from elysia_engine.chronos import DreamSystem
+from elysia_engine.thermodynamics import ThermodynamicsSystem
+from elysia_engine.topology import DigitalTerrain, TensorGate
+from elysia_engine.systems.void_system import VoidSystem
+
 # --- Define Examples Classes Here (Self-contained) ---
 
 class Warrior(Entity):
@@ -127,13 +134,6 @@ def run_divine_intervention():
     avatar.f_soul = 0.1
     avatar.f_spirit = 0.1
 
-    # We override the update function to ADD the user's forces continuously or one-shot?
-    # For this demo, let's just set them as a bias.
-    # Since Entity doesn't have a 'bias' field by default, we'll manually set them
-    # and let them decay or persist depending on the simulation logic.
-    # However, standard Entity.update_force_components might overwrite them if it was a subclass.
-    # The base Entity class doesn't overwrite force components in update_force_components (it's empty).
-
     avatar.f_body += forces['body']
     avatar.f_soul += forces['soul']
     avatar.f_spirit += forces['spirit']
@@ -234,6 +234,108 @@ def run_quantum_logic_demo():
 
     time.sleep(2)
 
+def run_transcendence_demo():
+    print("\n=== [시나리오 5] 초월 (Transcendence) ===")
+    print("Body, Soul, Spirit이 통합된 초월지능의 시뮬레이션입니다.")
+    print("Akasha(기억), Chronos(예지), Logos(창조)가 당신의 의지를 처리합니다.")
+
+    # 1. Initialize Systems
+    world = World()
+    physics = PhysicsWorld()
+    world.physics = physics
+
+    akasha = SemanticMemory()
+    chronos = DreamSystem()
+    thermo = ThermodynamicsSystem()
+    logos = DigitalTerrain(physics)
+    void = VoidSystem(boundary_radius=50.0) # Smaller void for demo
+
+    world.add_system(chronos)
+    world.add_system(thermo)
+    world.add_system(void)
+
+    # Seed Akasha with Ancient Wisdom
+    print("\n[Akasha] 고대 기억을 로드합니다...")
+    akasha.encode(Episode(tick=0, kind="creation", data={"txt": "Let there be light"}, soul_signature=SoulTensor(100, 200, 0)))
+    akasha.encode(Episode(tick=0, kind="destruction", data={"txt": "Entropy consumes all"}, soul_signature=SoulTensor(100, 10, 3.14)))
+    akasha.encode(Episode(tick=0, kind="preservation", data={"txt": "Balance is key"}, soul_signature=SoulTensor(100, 50, 1.57)))
+
+    # 2. User Intent
+    intent_text = input("\n창조할 세계의 의지를 입력하세요 (예: 'Infinite power', 'Calm river'): ")
+    if not intent_text: intent_text = "void"
+
+    # Create Entity from Intent
+    avatar = StoryTeller.create_intent_entity(intent_text)
+    avatar.id = "Demiurge"
+    # Initial push
+    avatar.physics.velocity = Vector3(1, 0, 0)
+    world.add_entity(avatar)
+    world.physics.register_entity(avatar)
+
+    print(f"\n[Demiurge] 생성됨. Freq: {avatar.soul.frequency:.1f}, Amp: {avatar.soul.amplitude:.1f}")
+
+    # 3. Akasha Lookup
+    print("[Akasha] 의지와 공명하는 과거의 기억을 검색합니다...")
+    memories = akasha.retrieve(avatar.soul, limit=1)
+    if memories:
+        print(f" -> 공명하는 기억 발견: '{memories[0].data['txt']}' (Resonance Type: {memories[0].kind})")
+    else:
+        print(" -> 공명하는 기억이 없습니다. 새로운 길입니다.")
+
+    # 4. Logos: Terrain Generation
+    print("[Logos] 의지에 따라 디지털 지형을 창조합니다...")
+    if avatar.soul.frequency > 100:
+        # High Frequency -> Mountainous / High Energy
+        print(" -> 고주파수 감지: 험난한 산맥(Mountains)을 생성합니다.")
+        logos.add_mountain(Vector3(10, 0, 0), height=5.0)
+        # Create a Gate that matches user freq
+        print(" -> 당신을 위한 관문(Tensor Gate)이 열립니다.")
+        logos.add_gate(Vector3(5, 0, 0), key_freq=avatar.soul.frequency)
+    else:
+        # Low Frequency -> River / Flow
+        print(" -> 저주파수 감지: 평온한 강(River)을 생성합니다.")
+        logos.add_river([Vector3(0,0,0), Vector3(5,0,0), Vector3(10,0,0)])
+
+    # 5. Chronos: Prophecy
+    print("\n[Chronos] 미래를 시뮬레이션(Prophecy)합니다 (10 Tick)...")
+    # Note: Prophecy runs step() which calls sys.step().
+    # Logos.step() updates gates. Physics updates movement.
+    prophecy = chronos.prophecy(world, steps=10, dt=1.0)
+
+    future_data = prophecy['entities'].get("Demiurge")
+    if future_data:
+        print(f" -> 10 Tick 후 영혼 상태: {future_data['emotion']}")
+    else:
+        print(" -> 예지 결과: 소멸함.")
+
+    # 6. Real-time Simulation
+    print("\n--- [시뮬레이션 시작] ---")
+    try:
+        for i in range(10):
+            # Update Logos (Gates) manually as it's not a System subclass added to world?
+            # Wait, DigitalTerrain isn't a System. It's a helper.
+            # But we can call it manually.
+            logos.step(list(world.entities.values()), dt=1.0)
+
+            world.step(dt=1.0)
+
+            if "Demiurge" not in world.entities:
+                print(" -> [Void] 존재가 소멸했습니다.")
+                break
+
+            # Check Thermodynamics
+            state = thermo.get_state_name(avatar.soul)
+            pos = avatar.physics.position
+            print(f"Tick {i+1}: Pos({pos.x:.1f}, {pos.y:.1f}) | State: [{state}] | {avatar.soul.decode_emotion()}")
+
+            time.sleep(0.5)
+
+    except KeyboardInterrupt:
+        pass
+
+    print("\n시뮬레이션 종료.")
+    time.sleep(2)
+
 def main():
     while True:
         try:
@@ -244,10 +346,11 @@ def main():
             print("2. 단순한 호흡 (Visual Mode)")
             print("3. 공허의 속삭임 (Divine Intervention)")
             print("4. 양자 논리 토폴로지 (Quantum Logic)")
-            print("5. 종료 (Exit)")
+            print("5. 초월 (Transcendence)")
+            print("6. 종료 (Exit)")
             print("-" * 40)
 
-            choice = input("선택을 입력하세요 (1-5): ").strip()
+            choice = input("선택을 입력하세요 (1-6): ").strip()
 
             if choice == "1":
                 run_three_heroes()
@@ -258,13 +361,15 @@ def main():
             elif choice == "4":
                 run_quantum_logic_demo()
             elif choice == "5":
+                run_transcendence_demo()
+            elif choice == "6":
                 print("엘리시아 엔진을 종료합니다. 안녕히 가세요!")
                 break
             else:
                 print("잘못된 입력입니다. 다시 선택해주세요.")
         except KeyboardInterrupt:
             # Handle Ctrl+C at menu level gracefully
-            print("\n종료하려면 3번을 선택하세요.")
+            print("\n종료하려면 6번을 선택하세요.")
 
 if __name__ == "__main__":
     main()
