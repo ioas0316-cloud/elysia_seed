@@ -41,6 +41,48 @@
 - LLM 기억/에피소드 엔진
 - 게임 속 살아 있는 마을/신전/의식 엔진
 
+## 엔진 사용법 (간소화된 API)
+
+LLM 에이전트, 챗봇, 게임 캐릭터의 기억과 감정을 관리하기 위해 재구축된 `ElysiaController`를 사용하는 것이 가장 쉽고 권장되는 방법입니다.
+
+```python
+from elysia_engine.controller import ElysiaController
+
+# 1. 컨트롤러 생성
+# 이 컨트롤러가 엔진의 모든 복잡한 내부 시스템을 관리합니다.
+controller = ElysiaController()
+
+# 2. 생각 처리하기 (가장 중요한 기능)
+# LLM 에이전트가 받은 사용자 입력을 'think' 메소드에 전달합니다.
+user_input = "오늘따라 하늘이 참 파랗고 예쁘네."
+thought = controller.think(user_input)
+
+# controller.think()는 단순한 텍스트 응답이 아닌, '생각' 객체를 반환합니다.
+# 이 객체에는 감정, 핵심 개념, 현재 떠오르는 다른 생각들이 포함되어 있습니다.
+print(f"입력: {user_input}")
+print(f"엔진의 응답: {thought['response']}")
+print(f"감정 상태: {thought['mood']}")
+print(f"현재 지배적인 생각들: {thought['dominant_thoughts']}")
+
+# 3. 새로운 사실 학습시키기
+# LLM 에이전트가 대화나 문서를 통해 새로운 지식을 얻었을 때,
+# 'remember' 메소드를 사용해 엔진의 장기 기억에 저장할 수 있습니다.
+controller.remember(source="하늘", target="파랗다", relation="is_a")
+
+print("\n'하늘'에 대한 기억을 추가한 후, 관련된 생각을 다시 처리합니다.")
+
+# 4. 학습된 기억을 바탕으로 다시 생각하기
+# 이제 엔진은 '하늘'이 '파랗다'는 것을 알고 있으므로, 비슷한 입력에 다르게 반응할 수 있습니다.
+user_input_2 = "하늘에 대해 어떻게 생각해?"
+thought_2 = controller.think(user_input_2)
+
+print(f"입력: {user_input_2}")
+print(f"두 번째 응답: {thought_2['response']}")
+print(f"두 번째 감정 상태: {thought_2['mood']}")
+```
+
+이 간소화된 API를 통해, 개발자는 엔진의 복잡한 물리 시뮬레이션이나 내부 상태를 직접 다룰 필요 없이 `think()`와 `remember()` 두 가지 메소드만으로 Elysia 엔진의 강력한 기억 및 감정 처리 기능을 활용할 수 있습니다.
+
 ## Quickstart
 
 ```bash
