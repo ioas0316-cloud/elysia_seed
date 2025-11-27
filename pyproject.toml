@@ -17,7 +17,7 @@ classifiers = [
 ]
 
 [project.optional-dependencies]
-dev = ["black", "mypy"]
+dev = ["black", "mypy", "pytest"]
 
 [tool.setuptools.packages.find]
 where = ["."]
