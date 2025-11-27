@@ -1,0 +1,266 @@
+{
+  "world_name": "Elysia",
+  "world_name_kr": "엘리시아",
+  "description": "빛과 의식이 물질화되는 세계. 모든 존재는 SoulTensor를 가지고 있으며, 경험을 통해 성장한다.",
+  "description_kr": "모든 존재에 영혼(SoulTensor)이 깃든 마법의 세계. 빛은 의지를 담고, 어둠은 잠재력을 품는다. 사람들은 경험을 통해 성장하며, 그 여정이 곧 삶의 의미이다.",
+  
+  "creation_myth": {
+    "title": "창세기: 첫 번째 빛",
+    "story": [
+      "태초에 오직 침묵만이 있었다.",
+      "그 침묵 속에서 첫 번째 의지(Will)가 피어났다.",
+      "의지는 자신을 바라보았고, 그 시선이 빛(Amplitude)이 되었다.",
+      "빛은 진동했고(Frequency), 그 진동이 시간(Phase)을 낳았다.",
+      "세 가지 - 빛과 진동과 시간 - 이 만나 첫 번째 영혼(SoulTensor)이 탄생했다.",
+      "첫 번째 영혼은 외로워서 스스로를 나누었고, 그 조각들이 세상에 흩어져 만물이 되었다.",
+      "그래서 모든 존재는 같은 빛에서 왔으며, 서로 공명할 수 있다."
+    ]
+  },
+
+  "cosmology": {
+    "trinity": {
+      "body": {
+        "name_kr": "육 (肉)",
+        "domain": "물질, 생존, 힘",
+        "description": "땅과 연결된 에너지. 전사, 장인, 노동자의 영역"
+      },
+      "soul": {
+        "name_kr": "혼 (魂)", 
+        "domain": "관계, 감정, 소속",
+        "description": "타인과 연결된 에너지. 예술가, 치유사, 상인의 영역"
+      },
+      "spirit": {
+        "name_kr": "영 (靈)",
+        "domain": "의미, 신앙, 초월",
+        "description": "하늘과 연결된 에너지. 성직자, 학자, 현자의 영역"
+      }
+    },
+    "seven_aspects": [
+      {"name": "Luminos", "kr": "빛의 면", "element": "light", "virtue": "진실"},
+      {"name": "Umbra", "kr": "그림자의 면", "element": "shadow", "virtue": "지혜"},
+      {"name": "Pyros", "kr": "불의 면", "element": "fire", "virtue": "용기"},
+      {"name": "Aquos", "kr": "물의 면", "element": "water", "virtue": "자비"},
+      {"name": "Terros", "kr": "땅의 면", "element": "earth", "virtue": "인내"},
+      {"name": "Aeros", "kr": "바람의 면", "element": "wind", "virtue": "자유"},
+      {"name": "Vitalis", "kr": "생명의 면", "element": "life", "virtue": "사랑"}
+    ]
+  },
+
+  "regions": [
+    {
+      "id": "central_kingdom",
+      "name": "중앙왕국 (Radiant Kingdom)",
+      "capital": "Marble Crown",
+      "climate": "온대",
+      "description": "대륙의 중심에 위치한 가장 오래된 왕국. 고대 빛의 성전과 왕립 아카데미가 있다.",
+      "culture": "전통과 명예를 중시하는 기사도 문화",
+      "notable_locations": [
+        {"name": "Radiant Keep", "type": "castle", "description": "태양신전을 품은 왕궁"},
+        {"name": "Amber Library", "type": "academy", "description": "천년의 지식이 잠든 도서관"},
+        {"name": "Elder Court", "type": "government", "description": "귀족 원로원 회의장"},
+        {"name": "Rose Dominion", "type": "district", "description": "예술과 축제의 귀족 구역"}
+      ],
+      "typical_classes": ["paladin", "noble", "scholar", "knight"]
+    },
+    {
+      "id": "northern_reaches",
+      "name": "북방영역 (Frostbound Reaches)",
+      "capital": "Northwatch Citadel",
+      "climate": "혹한",
+      "description": "만년설이 덮인 산맥과 얼어붙은 호수의 땅. 강인한 전사들의 고향.",
+      "culture": "생존과 명예, 씨족의 유대를 중시",
+      "notable_locations": [
+        {"name": "Frostfall", "type": "settlement", "description": "빙하 위에 세워진 전사 마을"},
+        {"name": "Icewine Wharf", "type": "port", "description": "빙해 무역의 중심항"},
+        {"name": "Cloud Monastery", "type": "temple", "description": "구름 위 수도원"},
+        {"name": "Frostmark", "type": "fortress", "description": "빙벽을 지키는 요새"}
+      ],
+      "typical_classes": ["berserker", "guardian", "monk", "ranger"]
+    },
+    {
+      "id": "eastern_shores",
+      "name": "동부해안 (Azure Shores)",
+      "capital": "Azure Bastion",
+      "climate": "해양성",
+      "description": "무역로가 교차하는 해양 도시들의 연합. 자유와 상업의 땅.",
+      "culture": "모험과 발견, 거래와 협상을 중시",
+      "notable_locations": [
+        {"name": "Gilded Pier", "type": "port", "description": "황금빛 부두의 무역 중심지"},
+        {"name": "Brass Harbor", "type": "port", "description": "연금술사들의 항구"},
+        {"name": "Jeon Port", "type": "port", "description": "동방 문화가 흐르는 항구"},
+        {"name": "Ular Archipelago", "type": "islands", "description": "폭풍의 다도해"}
+      ],
+      "typical_classes": ["merchant", "ranger", "alchemist", "smuggler"]
+    },
+    {
+      "id": "western_deserts",
+      "name": "서부사막 (Solenne Expanse)",
+      "capital": "Solenne Dunes",
+      "climate": "건조 사막",
+      "description": "끝없는 모래바다와 오아시스 도시들. 유목민과 고대 유적의 땅.",
+      "culture": "자유와 명예, 손님맞이의 전통",
+      "notable_locations": [
+        {"name": "Shifting Dunes", "type": "desert", "description": "신기루가 출몰하는 모래 사막"},
+        {"name": "Brass Dust Road", "type": "trade_route", "description": "대륙을 가로지르는 대상로"},
+        {"name": "Saffron Steppe", "type": "steppe", "description": "향신료가 자라는 초원"},
+        {"name": "Night Bazaar", "type": "market", "description": "달빛 아래 열리는 비밀 시장"}
+      ],
+      "typical_classes": ["warrior", "assassin", "caravan_master", "illusionist"]
+    },
+    {
+      "id": "southern_jungles",
+      "name": "남부밀림 (Verdant Depths)",
+      "capital": "Verdant Terrace",
+      "climate": "열대",
+      "description": "거대한 나무들과 고대 문명의 유적이 있는 생명의 숲.",
+      "culture": "자연과의 조화, 조상 숭배",
+      "notable_locations": [
+        {"name": "Bloomvale", "type": "village", "description": "치유 허브가 자라는 마을"},
+        {"name": "Thorn Abbey", "type": "temple", "description": "숲의 신전"},
+        {"name": "Sable Savannah", "type": "savannah", "description": "거대 동물들의 초원"},
+        {"name": "Murkfen", "type": "swamp", "description": "비밀을 품은 늪지대"}
+      ],
+      "typical_classes": ["druid", "ranger", "weaver", "assassin"]
+    },
+    {
+      "id": "mountain_realm",
+      "name": "산악왕국 (Stonecradle Heights)",
+      "capital": "Stonecradle",
+      "climate": "고산",
+      "description": "광물이 풍부한 산맥. 광부, 대장장이, 기술자들의 본거지.",
+      "culture": "장인정신과 인내, 가문의 명예",
+      "notable_locations": [
+        {"name": "Forgevale", "type": "city", "description": "전설의 대장장이 도시"},
+        {"name": "Copper Belt", "type": "mining_district", "description": "광산 지대"},
+        {"name": "Tinspire", "type": "workshop", "description": "발명가들의 첨탑"},
+        {"name": "Coalspire", "type": "forge", "description": "용암로가 있는 곳"}
+      ],
+      "typical_classes": ["blacksmith", "engineer", "guardian", "artificer"]
+    },
+    {
+      "id": "twilight_realm",
+      "name": "황혼의 땅 (Duskmere Realm)",
+      "capital": "Duskmere",
+      "climate": "영원한 황혼",
+      "description": "낮과 밤의 경계에 있는 신비로운 영역. 마법과 꿈의 땅.",
+      "culture": "신비주의와 예술, 진실 탐구",
+      "notable_locations": [
+        {"name": "Vesper Court", "type": "palace", "description": "황혼의 궁전"},
+        {"name": "Crystal Sound", "type": "lake", "description": "예언의 호수"},
+        {"name": "Umber Vault", "type": "underground", "description": "그림자 금고"},
+        {"name": "Pyra Collegium", "type": "academy", "description": "원소 마법 학교"}
+      ],
+      "typical_classes": ["wizard", "illusionist", "oracle", "shadow"]
+    },
+    {
+      "id": "free_cities",
+      "name": "자유도시연합 (Free Cities)",
+      "capital": "Skybridge",
+      "climate": "다양",
+      "description": "어느 왕국에도 속하지 않는 독립 도시들의 느슨한 연합.",
+      "culture": "자유와 기회, 실력주의",
+      "notable_locations": [
+        {"name": "Lowspire", "type": "district", "description": "노동자들의 구역"},
+        {"name": "Gallow Row", "type": "district", "description": "정보상들의 거리"},
+        {"name": "Sunken Bazaar", "type": "market", "description": "지하 암시장"},
+        {"name": "Obsidian Bay", "type": "port", "description": "밀수업자들의 항구"}
+      ],
+      "typical_classes": ["rogue", "broker", "operative", "smuggler"]
+    }
+  ],
+
+  "calendar": {
+    "year_length": 360,
+    "months": [
+      {"name": "Luminis", "kr": "빛의 달", "days": 30, "season": "spring_early"},
+      {"name": "Floralis", "kr": "꽃의 달", "days": 30, "season": "spring_late"},
+      {"name": "Solaris", "kr": "태양의 달", "days": 30, "season": "summer_early"},
+      {"name": "Ignilis", "kr": "불의 달", "days": 30, "season": "summer_late"},
+      {"name": "Messis", "kr": "수확의 달", "days": 30, "season": "autumn_early"},
+      {"name": "Umbris", "kr": "그림자의 달", "days": 30, "season": "autumn_late"},
+      {"name": "Glacis", "kr": "얼음의 달", "days": 30, "season": "winter_early"},
+      {"name": "Nivalis", "kr": "눈의 달", "days": 30, "season": "winter_mid"},
+      {"name": "Dormis", "kr": "잠의 달", "days": 30, "season": "winter_late"},
+      {"name": "Vigilis", "kr": "깨어남의 달", "days": 30, "season": "spring_prep"},
+      {"name": "Renatis", "kr": "재생의 달", "days": 30, "season": "rebirth"},
+      {"name": "Spiris", "kr": "영의 달", "days": 30, "season": "transcend"}
+    ],
+    "festivals": [
+      {"name": "Dawn Festival", "kr": "여명제", "month": 1, "day": 1, "description": "새해를 맞이하는 빛의 축제"},
+      {"name": "Bloom Day", "kr": "개화일", "month": 2, "day": 15, "description": "봄꽃의 만개를 기념"},
+      {"name": "Sun Zenith", "kr": "태양절", "month": 3, "day": 21, "description": "한여름 최고점"},
+      {"name": "Harvest Moon", "kr": "추수월", "month": 5, "day": 30, "description": "수확 감사제"},
+      {"name": "Shadow Night", "kr": "그림자의 밤", "month": 6, "day": 15, "description": "조상을 기리는 날"},
+      {"name": "Frost Call", "kr": "서리의 부름", "month": 7, "day": 1, "description": "겨울의 시작"},
+      {"name": "Star Watch", "kr": "별지기", "month": 8, "day": 21, "description": "가장 긴 밤의 별 관측"},
+      {"name": "Rebirth Eve", "kr": "재생 전야", "month": 11, "day": 30, "description": "새로운 시작을 위한 준비"}
+    ]
+  },
+
+  "economy": {
+    "currencies": [
+      {"name": "Crown", "kr": "크라운", "value": 100, "description": "금화, 귀족과 대상인의 통화"},
+      {"name": "Mark", "kr": "마르크", "value": 10, "description": "은화, 일반 거래의 기본"},
+      {"name": "Bit", "kr": "비트", "value": 1, "description": "동화, 서민의 일상 통화"}
+    ],
+    "trade_goods": [
+      {"name": "Frost Crystal", "kr": "서리 수정", "origin": "northern_reaches", "value": "high"},
+      {"name": "Sunweave Silk", "kr": "태양비단", "origin": "central_kingdom", "value": "high"},
+      {"name": "Spice Blend", "kr": "향신료", "origin": "western_deserts", "value": "medium"},
+      {"name": "Ember Iron", "kr": "불씨철", "origin": "mountain_realm", "value": "medium"},
+      {"name": "Healing Herbs", "kr": "치유초", "origin": "southern_jungles", "value": "medium"},
+      {"name": "Pearl Essence", "kr": "진주정수", "origin": "eastern_shores", "value": "high"},
+      {"name": "Dream Ink", "kr": "꿈의 잉크", "origin": "twilight_realm", "value": "very_high"}
+    ]
+  },
+
+  "social_structure": {
+    "classes": [
+      {"name": "Royalty", "kr": "왕족", "description": "왕과 왕비, 왕자와 공주"},
+      {"name": "High Nobility", "kr": "고위 귀족", "description": "공작, 후작, 백작 가문"},
+      {"name": "Lesser Nobility", "kr": "하급 귀족", "description": "남작, 기사 가문"},
+      {"name": "Clergy", "kr": "성직자", "description": "사제, 수도승, 신관"},
+      {"name": "Scholars", "kr": "학자", "description": "마법사, 연구자, 교사"},
+      {"name": "Merchants", "kr": "상인", "description": "무역상, 점주, 장인"},
+      {"name": "Artisans", "kr": "장인", "description": "대장장이, 직공, 기술자"},
+      {"name": "Commoners", "kr": "평민", "description": "농부, 노동자, 일반 시민"},
+      {"name": "Outcasts", "kr": "떠돌이", "description": "방랑자, 유랑민, 망명자"}
+    ]
+  },
+
+  "magic_system": {
+    "source": "모든 마법의 근원은 영혼의 공명(Resonance)이다",
+    "types": [
+      {"name": "Elemental", "kr": "원소술", "description": "불, 물, 바람, 땅을 다루는 마법"},
+      {"name": "Healing", "kr": "치유술", "description": "생명력을 조절하는 마법"},
+      {"name": "Illusion", "kr": "환술", "description": "인식과 감각을 조작하는 마법"},
+      {"name": "Divination", "kr": "예언술", "description": "미래와 진실을 보는 마법"},
+      {"name": "Enchantment", "kr": "부여술", "description": "물건에 마법을 부여"},
+      {"name": "Resonance", "kr": "공명술", "description": "영혼 간의 연결을 다루는 고등 마법"}
+    ],
+    "learning_paths": [
+      {"name": "Academy", "kr": "아카데미", "description": "정규 교육을 통한 체계적 학습"},
+      {"name": "Apprenticeship", "kr": "도제", "description": "스승 아래서 실전 학습"},
+      {"name": "Self-taught", "kr": "독학", "description": "책과 실험을 통한 자기 수련"},
+      {"name": "Awakening", "kr": "각성", "description": "강렬한 경험을 통한 갑작스러운 깨달음"}
+    ]
+  },
+
+  "common_professions": [
+    {"name": "Farmer", "kr": "농부", "description": "땅을 일구고 작물을 키운다"},
+    {"name": "Fisher", "kr": "어부", "description": "바다와 강에서 물고기를 잡는다"},
+    {"name": "Shepherd", "kr": "양치기", "description": "가축을 돌보고 이끈다"},
+    {"name": "Miner", "kr": "광부", "description": "광물을 캐고 정제한다"},
+    {"name": "Baker", "kr": "제빵사", "description": "빵과 과자를 굽는다"},
+    {"name": "Tailor", "kr": "재봉사", "description": "옷을 만들고 수선한다"},
+    {"name": "Carpenter", "kr": "목수", "description": "나무로 가구와 집을 만든다"},
+    {"name": "Potter", "kr": "도공", "description": "흙으로 그릇을 빚는다"},
+    {"name": "Innkeeper", "kr": "여관주인", "description": "여행자에게 숙식을 제공한다"},
+    {"name": "Courier", "kr": "전령", "description": "편지와 소포를 배달한다"},
+    {"name": "Guard", "kr": "경비병", "description": "마을과 사람을 지킨다"},
+    {"name": "Herbalist", "kr": "약초사", "description": "약초를 채집하고 약을 만든다"},
+    {"name": "Scribe", "kr": "서기관", "description": "문서를 작성하고 기록한다"},
+    {"name": "Entertainer", "kr": "예인", "description": "노래와 연극으로 즐거움을 준다"},
+    {"name": "Sailor", "kr": "선원", "description": "배를 타고 바다를 누빈다"}
+  ]
+}

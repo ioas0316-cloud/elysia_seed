@@ -849,6 +849,7006 @@
         "soul": 0.5,
         "spirit": 0.15
       }
+    },
+    {
+      "id": "char_051",
+      "name": "Zhi Seaspray",
+      "class": "tailor",
+      "role": "장인",
+      "origin": "Brass Harbor",
+      "region": "eastern_shores",
+      "tags": [
+        "재봉",
+        "제작"
+      ],
+      "notes": "항상 웃음을 잃지 않는다.",
+      "weights": {
+        "body": 0.3,
+        "soul": 0.53,
+        "spirit": 0.17
+      }
+    },
+    {
+      "id": "char_052",
+      "name": "Adaeze Lionclaw",
+      "class": "monk",
+      "role": "근딜/힐",
+      "origin": "Thorn Abbey",
+      "region": "southern_jungles",
+      "tags": [
+        "성직",
+        "수련"
+      ],
+      "notes": "낯선 이에게도 친절하다.",
+      "weights": {
+        "body": 0.34,
+        "soul": 0.23,
+        "spirit": 0.43
+      }
+    },
+    {
+      "id": "char_053",
+      "name": "Kane Quickhand",
+      "class": "archer",
+      "role": "원딜",
+      "origin": "Gallow Row",
+      "region": "free_cities",
+      "tags": [
+        "전사",
+        "사냥"
+      ],
+      "notes": "가족을 가장 소중히 여긴다.",
+      "weights": {
+        "body": 0.51,
+        "soul": 0.32,
+        "spirit": 0.17
+      }
+    },
+    {
+      "id": "char_054",
+      "name": "Evelyn Thornwood",
+      "class": "lumberjack",
+      "role": "평민",
+      "origin": "Silver March",
+      "region": "central_kingdom",
+      "tags": [
+        "벌목",
+        "숲"
+      ],
+      "notes": "항상 웃음을 잃지 않는다.",
+      "weights": {
+        "body": 0.52,
+        "soul": 0.32,
+        "spirit": 0.16
+      }
+    },
+    {
+      "id": "char_055",
+      "name": "Twilight Mistwalker",
+      "class": "monk",
+      "role": "근딜/힐",
+      "origin": "Umber Vault",
+      "region": "twilight_realm",
+      "tags": [
+        "성직",
+        "수련"
+      ],
+      "notes": "자연과 가까이 산다.",
+      "weights": {
+        "body": 0.35,
+        "soul": 0.17,
+        "spirit": 0.48
+      }
+    },
+    {
+      "id": "char_056",
+      "name": "Zara Dunerunner",
+      "class": "innkeeper",
+      "role": "상인",
+      "origin": "Brass Dust Road",
+      "region": "western_deserts",
+      "tags": [
+        "숙박",
+        "서비스"
+      ],
+      "notes": "예술적 감각이 있다.",
+      "weights": {
+        "body": 0.36,
+        "soul": 0.49,
+        "spirit": 0.16
+      }
+    },
+    {
+      "id": "char_057",
+      "name": "Thyra Ironblood",
+      "class": "scout",
+      "role": "잠입",
+      "origin": "Frostfall",
+      "region": "northern_reaches",
+      "tags": [
+        "전사",
+        "정찰"
+      ],
+      "notes": "예술적 감각이 있다.",
+      "weights": {
+        "body": 0.45,
+        "soul": 0.39,
+        "spirit": 0.16
+      }
+    },
+    {
+      "id": "char_058",
+      "name": "Rashid Stargazer",
+      "class": "weaver",
+      "role": "장인",
+      "origin": "Saffron Steppe",
+      "region": "western_deserts",
+      "tags": [
+        "직조",
+        "제작"
+      ],
+      "notes": "새로운 것을 두려워하지 않는다.",
+      "weights": {
+        "body": 0.32,
+        "soul": 0.49,
+        "spirit": 0.2
+      }
+    },
+    {
+      "id": "char_059",
+      "name": "Thane Deepmine",
+      "class": "painter",
+      "role": "예술",
+      "origin": "Stonecradle",
+      "region": "mountain_realm",
+      "tags": [
+        "미술",
+        "창작"
+      ],
+      "notes": "낯선 이에게도 친절하다.",
+      "weights": {
+        "body": 0.26,
+        "soul": 0.53,
+        "spirit": 0.22
+      }
+    },
+    {
+      "id": "char_060",
+      "name": "Faye Dreamweaver",
+      "class": "cook",
+      "role": "서비스",
+      "origin": "Duskmere",
+      "region": "twilight_realm",
+      "tags": [
+        "요리",
+        "식품"
+      ],
+      "notes": "일에 대한 자부심이 높다.",
+      "weights": {
+        "body": 0.34,
+        "soul": 0.49,
+        "spirit": 0.17
+      }
+    },
+    {
+      "id": "char_061",
+      "name": "Nyx Dreamweaver",
+      "class": "miner",
+      "role": "평민",
+      "origin": "Vesper Court",
+      "region": "twilight_realm",
+      "tags": [
+        "광업",
+        "산"
+      ],
+      "notes": "전통을 존중한다.",
+      "weights": {
+        "body": 0.55,
+        "soul": 0.28,
+        "spirit": 0.17
+      }
+    },
+    {
+      "id": "char_062",
+      "name": "Merta Granitehand",
+      "class": "teacher",
+      "role": "학자",
+      "origin": "Copper Belt",
+      "region": "mountain_realm",
+      "tags": [
+        "교육",
+        "지식"
+      ],
+      "notes": "전통을 존중한다.",
+      "weights": {
+        "body": 0.23,
+        "soul": 0.44,
+        "spirit": 0.33
+      }
+    },
+    {
+      "id": "char_063",
+      "name": "Greta Coppervein",
+      "class": "retired_soldier",
+      "role": "은퇴자",
+      "origin": "Stonecradle",
+      "region": "mountain_realm",
+      "tags": [
+        "전사",
+        "경험"
+      ],
+      "notes": "호기심이 많고 탐구적이다.",
+      "weights": {
+        "body": 0.47,
+        "soul": 0.29,
+        "spirit": 0.24
+      }
+    },
+    {
+      "id": "char_064",
+      "name": "Sage Quickhand",
+      "class": "innkeeper",
+      "role": "상인",
+      "origin": "Lowspire",
+      "region": "free_cities",
+      "tags": [
+        "숙박",
+        "서비스"
+      ],
+      "notes": "고독을 즐긴다.",
+      "weights": {
+        "body": 0.37,
+        "soul": 0.45,
+        "spirit": 0.18
+      }
+    },
+    {
+      "id": "char_065",
+      "name": "Tendai Riverwalker",
+      "class": "shepherd",
+      "role": "평민",
+      "origin": "Sable Savannah",
+      "region": "southern_jungles",
+      "tags": [
+        "목축",
+        "자연"
+      ],
+      "notes": "자연과 가까이 산다.",
+      "weights": {
+        "body": 0.39,
+        "soul": 0.39,
+        "spirit": 0.23
+      }
+    },
+    {
+      "id": "char_066",
+      "name": "Fatima Stargazer",
+      "class": "scribe",
+      "role": "학자",
+      "origin": "Shifting Dunes",
+      "region": "western_deserts",
+      "tags": [
+        "기록",
+        "문서"
+      ],
+      "notes": "리더십이 있다.",
+      "weights": {
+        "body": 0.17,
+        "soul": 0.52,
+        "spirit": 0.31
+      }
+    },
+    {
+      "id": "char_067",
+      "name": "Julia Highcastle",
+      "class": "bard",
+      "role": "예술",
+      "origin": "Lorien Plains",
+      "region": "central_kingdom",
+      "tags": [
+        "음악",
+        "공연"
+      ],
+      "notes": "항상 웃음을 잃지 않는다.",
+      "weights": {
+        "body": 0.28,
+        "soul": 0.55,
+        "spirit": 0.17
+      }
+    },
+    {
+      "id": "char_068",
+      "name": "Blake Streetwise",
+      "class": "scout",
+      "role": "잠입",
+      "origin": "Obsidian Bay",
+      "region": "free_cities",
+      "tags": [
+        "전사",
+        "정찰"
+      ],
+      "notes": "말보다 행동으로 보여준다.",
+      "weights": {
+        "body": 0.46,
+        "soul": 0.3,
+        "spirit": 0.23
+      }
+    },
+    {
+      "id": "char_069",
+      "name": "Beatrice Silverton",
+      "class": "herbalist",
+      "role": "학자",
+      "origin": "Radiant Keep",
+      "region": "central_kingdom",
+      "tags": [
+        "약초",
+        "치유"
+      ],
+      "notes": "성실하고 꼼꼼하다.",
+      "weights": {
+        "body": 0.28,
+        "soul": 0.4,
+        "spirit": 0.32
+      }
+    },
+    {
+      "id": "char_070",
+      "name": "Rashid Sandwalker",
+      "class": "miner",
+      "role": "평민",
+      "origin": "Solenne Dunes",
+      "region": "western_deserts",
+      "tags": [
+        "광업",
+        "산"
+      ],
+      "notes": "예술적 감각이 있다.",
+      "weights": {
+        "body": 0.6,
+        "soul": 0.29,
+        "spirit": 0.12
+      }
+    },
+    {
+      "id": "char_071",
+      "name": "Elwyn Moonshadow",
+      "class": "courier",
+      "role": "서비스",
+      "origin": "Umber Vault",
+      "region": "twilight_realm",
+      "tags": [
+        "배달",
+        "이동"
+      ],
+      "notes": "예술적 감각이 있다.",
+      "weights": {
+        "body": 0.49,
+        "soul": 0.37,
+        "spirit": 0.14
+      }
+    },
+    {
+      "id": "char_072",
+      "name": "Helga Ironblood",
+      "class": "lumberjack",
+      "role": "평민",
+      "origin": "Frostfall",
+      "region": "northern_reaches",
+      "tags": [
+        "벌목",
+        "숲"
+      ],
+      "notes": "자연과 가까이 산다.",
+      "weights": {
+        "body": 0.57,
+        "soul": 0.25,
+        "spirit": 0.18
+      }
+    },
+    {
+      "id": "char_073",
+      "name": "Feng Coralheart",
+      "class": "healer",
+      "role": "힐러",
+      "origin": "Ular Archipelago",
+      "region": "eastern_shores",
+      "tags": [
+        "마법",
+        "치유"
+      ],
+      "notes": "성실하고 꼼꼼하다.",
+      "weights": {
+        "body": 0.23,
+        "soul": 0.38,
+        "spirit": 0.39
+      }
+    },
+    {
+      "id": "char_074",
+      "name": "Seraphina Mistwalker",
+      "class": "potter",
+      "role": "장인",
+      "origin": "Duskmere",
+      "region": "twilight_realm",
+      "tags": [
+        "도예",
+        "예술"
+      ],
+      "notes": "성실하고 꼼꼼하다.",
+      "weights": {
+        "body": 0.37,
+        "soul": 0.41,
+        "spirit": 0.22
+      }
+    },
+    {
+      "id": "char_075",
+      "name": "Shade Moonshadow",
+      "class": "bard",
+      "role": "예술",
+      "origin": "Vesper Court",
+      "region": "twilight_realm",
+      "tags": [
+        "음악",
+        "공연"
+      ],
+      "notes": "유머 감각이 뛰어나다.",
+      "weights": {
+        "body": 0.24,
+        "soul": 0.54,
+        "spirit": 0.22
+      }
+    },
+    {
+      "id": "char_076",
+      "name": "Aurora Dreamweaver",
+      "class": "knight",
+      "role": "근딜",
+      "origin": "Duskmere",
+      "region": "twilight_realm",
+      "tags": [
+        "전사",
+        "기사"
+      ],
+      "notes": "인내심이 강하다.",
+      "weights": {
+        "body": 0.53,
+        "soul": 0.35,
+        "spirit": 0.12
+      }
+    },
+    {
+      "id": "char_077",
+      "name": "Dorn Ironforge",
+      "class": "beggar",
+      "role": "빈민",
+      "origin": "Coalspire",
+      "region": "mountain_realm",
+      "tags": [
+        "방랑",
+        "생존"
+      ],
+      "notes": "항상 웃음을 잃지 않는다.",
+      "weights": {
+        "body": 0.37,
+        "soul": 0.38,
+        "spirit": 0.25
+      }
+    },
+    {
+      "id": "char_078",
+      "name": "Eclipse Starfall",
+      "class": "baker",
+      "role": "장인",
+      "origin": "Crystal Sound",
+      "region": "twilight_realm",
+      "tags": [
+        "제빵",
+        "식품"
+      ],
+      "notes": "과묵하지만 신뢰할 수 있다.",
+      "weights": {
+        "body": 0.36,
+        "soul": 0.49,
+        "spirit": 0.15
+      }
+    },
+    {
+      "id": "char_079",
+      "name": "Mira Moonshadow",
+      "class": "priest",
+      "role": "힐러",
+      "origin": "Vesper Court",
+      "region": "twilight_realm",
+      "tags": [
+        "성직",
+        "신앙"
+      ],
+      "notes": "동물을 사랑한다.",
+      "weights": {
+        "body": 0.18,
+        "soul": 0.29,
+        "spirit": 0.53
+      }
+    },
+    {
+      "id": "char_080",
+      "name": "Hana Wavecrest",
+      "class": "tailor",
+      "role": "장인",
+      "origin": "Brass Harbor",
+      "region": "eastern_shores",
+      "tags": [
+        "재봉",
+        "제작"
+      ],
+      "notes": "고독을 즐긴다.",
+      "weights": {
+        "body": 0.29,
+        "soul": 0.55,
+        "spirit": 0.16
+      }
+    },
+    {
+      "id": "char_081",
+      "name": "Olaf Icehammer",
+      "class": "mage",
+      "role": "마딜",
+      "origin": "Icewine Wharf",
+      "region": "northern_reaches",
+      "tags": [
+        "마법",
+        "학자"
+      ],
+      "notes": "일에 대한 자부심이 높다.",
+      "weights": {
+        "body": 0.19,
+        "soul": 0.55,
+        "spirit": 0.26
+      }
+    },
+    {
+      "id": "char_082",
+      "name": "Locke Streetwise",
+      "class": "mage",
+      "role": "마딜",
+      "origin": "Gallow Row",
+      "region": "free_cities",
+      "tags": [
+        "마법",
+        "학자"
+      ],
+      "notes": "예술적 감각이 있다.",
+      "weights": {
+        "body": 0.22,
+        "soul": 0.52,
+        "spirit": 0.26
+      }
+    },
+    {
+      "id": "char_083",
+      "name": "Wei Wavecrest",
+      "class": "baker",
+      "role": "장인",
+      "origin": "Azure Bastion",
+      "region": "eastern_shores",
+      "tags": [
+        "제빵",
+        "식품"
+      ],
+      "notes": "고독을 즐긴다.",
+      "weights": {
+        "body": 0.32,
+        "soul": 0.49,
+        "spirit": 0.2
+      }
+    },
+    {
+      "id": "char_084",
+      "name": "Thora Ironforge",
+      "class": "enchanter",
+      "role": "버퍼",
+      "origin": "Copper Belt",
+      "region": "mountain_realm",
+      "tags": [
+        "마법",
+        "부여"
+      ],
+      "notes": "전통을 존중한다.",
+      "weights": {
+        "body": 0.23,
+        "soul": 0.56,
+        "spirit": 0.21
+      }
+    },
+    {
+      "id": "char_085",
+      "name": "Catherine Westbrook",
+      "class": "blacksmith",
+      "role": "장인",
+      "origin": "Elder Court",
+      "region": "central_kingdom",
+      "tags": [
+        "대장",
+        "제작"
+      ],
+      "notes": "가족을 가장 소중히 여긴다.",
+      "weights": {
+        "body": 0.49,
+        "soul": 0.36,
+        "spirit": 0.16
+      }
+    },
+    {
+      "id": "char_086",
+      "name": "Kord Granitehand",
+      "class": "fisher",
+      "role": "평민",
+      "origin": "Forgevale",
+      "region": "mountain_realm",
+      "tags": [
+        "어업",
+        "바다"
+      ],
+      "notes": "어려운 이웃을 돕는다.",
+      "weights": {
+        "body": 0.45,
+        "soul": 0.32,
+        "spirit": 0.22
+      }
+    },
+    {
+      "id": "char_087",
+      "name": "Nadia Oasiskeeper",
+      "class": "jeweler",
+      "role": "장인",
+      "origin": "Night Bazaar",
+      "region": "western_deserts",
+      "tags": [
+        "보석",
+        "예술"
+      ],
+      "notes": "새로운 것을 두려워하지 않는다.",
+      "weights": {
+        "body": 0.22,
+        "soul": 0.58,
+        "spirit": 0.2
+      }
+    },
+    {
+      "id": "char_088",
+      "name": "Amira Miragecaller",
+      "class": "knight",
+      "role": "근딜",
+      "origin": "Brass Dust Road",
+      "region": "western_deserts",
+      "tags": [
+        "전사",
+        "기사"
+      ],
+      "notes": "고독을 즐긴다.",
+      "weights": {
+        "body": 0.52,
+        "soul": 0.32,
+        "spirit": 0.16
+      }
+    },
+    {
+      "id": "char_089",
+      "name": "Tariq Sandwalker",
+      "class": "street_vendor",
+      "role": "상인",
+      "origin": "Solenne Dunes",
+      "region": "western_deserts",
+      "tags": [
+        "노점",
+        "거래"
+      ],
+      "notes": "호기심이 많고 탐구적이다.",
+      "weights": {
+        "body": 0.37,
+        "soul": 0.48,
+        "spirit": 0.15
+      }
+    },
+    {
+      "id": "char_090",
+      "name": "Aether Moonshadow",
+      "class": "baker",
+      "role": "장인",
+      "origin": "Duskmere",
+      "region": "twilight_realm",
+      "tags": [
+        "제빵",
+        "식품"
+      ],
+      "notes": "일에 대한 자부심이 높다.",
+      "weights": {
+        "body": 0.37,
+        "soul": 0.47,
+        "spirit": 0.16
+      }
+    },
+    {
+      "id": "char_091",
+      "name": "Locke Swiftblade",
+      "class": "healer",
+      "role": "힐러",
+      "origin": "Lowspire",
+      "region": "free_cities",
+      "tags": [
+        "마법",
+        "치유"
+      ],
+      "notes": "새로운 것을 두려워하지 않는다.",
+      "weights": {
+        "body": 0.19,
+        "soul": 0.41,
+        "spirit": 0.4
+      }
+    },
+    {
+      "id": "char_092",
+      "name": "Ryu Coralheart",
+      "class": "soldier",
+      "role": "근딜",
+      "origin": "Maru Heights",
+      "region": "eastern_shores",
+      "tags": [
+        "전사",
+        "군인"
+      ],
+      "notes": "유머 감각이 뛰어나다.",
+      "weights": {
+        "body": 0.6,
+        "soul": 0.24,
+        "spirit": 0.16
+      }
+    },
+    {
+      "id": "char_093",
+      "name": "Leif Coldforge",
+      "class": "knight",
+      "role": "근딜",
+      "origin": "Frostmark",
+      "region": "northern_reaches",
+      "tags": [
+        "전사",
+        "기사"
+      ],
+      "notes": "리더십이 있다.",
+      "weights": {
+        "body": 0.55,
+        "soul": 0.28,
+        "spirit": 0.17
+      }
+    },
+    {
+      "id": "char_094",
+      "name": "Ragnar Frostborn",
+      "class": "sailor",
+      "role": "선원",
+      "origin": "Cloud Monastery",
+      "region": "northern_reaches",
+      "tags": [
+        "항해",
+        "바다"
+      ],
+      "notes": "성실하고 꼼꼼하다.",
+      "weights": {
+        "body": 0.5,
+        "soul": 0.35,
+        "spirit": 0.15
+      }
+    },
+    {
+      "id": "char_095",
+      "name": "Jamila Vinecaller",
+      "class": "painter",
+      "role": "예술",
+      "origin": "Thorn Abbey",
+      "region": "southern_jungles",
+      "tags": [
+        "미술",
+        "창작"
+      ],
+      "notes": "사람들 사이에서 에너지를 얻는다.",
+      "weights": {
+        "body": 0.27,
+        "soul": 0.5,
+        "spirit": 0.22
+      }
+    },
+    {
+      "id": "char_096",
+      "name": "Bram Ironforge",
+      "class": "baker",
+      "role": "장인",
+      "origin": "Copper Belt",
+      "region": "mountain_realm",
+      "tags": [
+        "제빵",
+        "식품"
+      ],
+      "notes": "항상 웃음을 잃지 않는다.",
+      "weights": {
+        "body": 0.32,
+        "soul": 0.53,
+        "spirit": 0.14
+      }
+    },
+    {
+      "id": "char_097",
+      "name": "Sigrid Ironblood",
+      "class": "midwife",
+      "role": "산파",
+      "origin": "Cloud Monastery",
+      "region": "northern_reaches",
+      "tags": [
+        "출산",
+        "치유"
+      ],
+      "notes": "항상 웃음을 잃지 않는다.",
+      "weights": {
+        "body": 0.31,
+        "soul": 0.47,
+        "spirit": 0.22
+      }
+    },
+    {
+      "id": "char_098",
+      "name": "Rashid Sunrider",
+      "class": "teacher",
+      "role": "학자",
+      "origin": "Shifting Dunes",
+      "region": "western_deserts",
+      "tags": [
+        "교육",
+        "지식"
+      ],
+      "notes": "고독을 즐긴다.",
+      "weights": {
+        "body": 0.17,
+        "soul": 0.44,
+        "spirit": 0.39
+      }
+    },
+    {
+      "id": "char_099",
+      "name": "Gerald Oakenshield",
+      "class": "miner",
+      "role": "평민",
+      "origin": "Silver March",
+      "region": "central_kingdom",
+      "tags": [
+        "광업",
+        "산"
+      ],
+      "notes": "말보다 행동으로 보여준다.",
+      "weights": {
+        "body": 0.52,
+        "soul": 0.3,
+        "spirit": 0.19
+      }
+    },
+    {
+      "id": "char_100",
+      "name": "Ife Lionclaw",
+      "class": "shepherd",
+      "role": "평민",
+      "origin": "Murkfen",
+      "region": "southern_jungles",
+      "tags": [
+        "목축",
+        "자연"
+      ],
+      "notes": "말보다 행동으로 보여준다.",
+      "weights": {
+        "body": 0.42,
+        "soul": 0.36,
+        "spirit": 0.23
+      }
+    },
+    {
+      "id": "char_101",
+      "name": "Grom Stonehammer",
+      "class": "tailor",
+      "role": "장인",
+      "origin": "Tinspire",
+      "region": "mountain_realm",
+      "tags": [
+        "재봉",
+        "제작"
+      ],
+      "notes": "항상 웃음을 잃지 않는다.",
+      "weights": {
+        "body": 0.3,
+        "soul": 0.53,
+        "spirit": 0.17
+      }
+    },
+    {
+      "id": "char_102",
+      "name": "Bram Steelborn",
+      "class": "monk",
+      "role": "근딜/힐",
+      "origin": "Tinspire",
+      "region": "mountain_realm",
+      "tags": [
+        "성직",
+        "수련"
+      ],
+      "notes": "항상 웃음을 잃지 않는다.",
+      "weights": {
+        "body": 0.35,
+        "soul": 0.17,
+        "spirit": 0.48
+      }
+    },
+    {
+      "id": "char_103",
+      "name": "Chidi Fernheart",
+      "class": "shepherd",
+      "role": "평민",
+      "origin": "Murkfen",
+      "region": "southern_jungles",
+      "tags": [
+        "목축",
+        "자연"
+      ],
+      "notes": "항상 웃음을 잃지 않는다.",
+      "weights": {
+        "body": 0.42,
+        "soul": 0.42,
+        "spirit": 0.16
+      }
+    },
+    {
+      "id": "char_104",
+      "name": "Kord Coppervein",
+      "class": "servant",
+      "role": "서비스",
+      "origin": "Copper Belt",
+      "region": "mountain_realm",
+      "tags": [
+        "시중",
+        "가사"
+      ],
+      "notes": "일에 대한 자부심이 높다.",
+      "weights": {
+        "body": 0.34,
+        "soul": 0.46,
+        "spirit": 0.19
+      }
+    },
+    {
+      "id": "char_105",
+      "name": "Drew Silvertongue",
+      "class": "knight",
+      "role": "근딜",
+      "origin": "Gallow Row",
+      "region": "free_cities",
+      "tags": [
+        "전사",
+        "기사"
+      ],
+      "notes": "말보다 행동으로 보여준다.",
+      "weights": {
+        "body": 0.56,
+        "soul": 0.31,
+        "spirit": 0.13
+      }
+    },
+    {
+      "id": "char_106",
+      "name": "Jamila Junglestrider",
+      "class": "lumberjack",
+      "role": "평민",
+      "origin": "Murkfen",
+      "region": "southern_jungles",
+      "tags": [
+        "벌목",
+        "숲"
+      ],
+      "notes": "리더십이 있다.",
+      "weights": {
+        "body": 0.54,
+        "soul": 0.35,
+        "spirit": 0.11
+      }
+    },
+    {
+      "id": "char_107",
+      "name": "Elwyn Nightwhisper",
+      "class": "healer",
+      "role": "힐러",
+      "origin": "Umber Vault",
+      "region": "twilight_realm",
+      "tags": [
+        "마법",
+        "치유"
+      ],
+      "notes": "일에 대한 자부심이 높다.",
+      "weights": {
+        "body": 0.2,
+        "soul": 0.41,
+        "spirit": 0.4
+      }
+    },
+    {
+      "id": "char_108",
+      "name": "Thora Deepmine",
+      "class": "street_vendor",
+      "role": "상인",
+      "origin": "Tinspire",
+      "region": "mountain_realm",
+      "tags": [
+        "노점",
+        "거래"
+      ],
+      "notes": "인내심이 강하다.",
+      "weights": {
+        "body": 0.34,
+        "soul": 0.53,
+        "spirit": 0.13
+      }
+    },
+    {
+      "id": "char_109",
+      "name": "Azizi Junglestrider",
+      "class": "priest",
+      "role": "힐러",
+      "origin": "Murkfen",
+      "region": "southern_jungles",
+      "tags": [
+        "성직",
+        "신앙"
+      ],
+      "notes": "정의감이 강하다.",
+      "weights": {
+        "body": 0.21,
+        "soul": 0.3,
+        "spirit": 0.49
+      }
+    },
+    {
+      "id": "char_110",
+      "name": "Grom Ironforge",
+      "class": "midwife",
+      "role": "산파",
+      "origin": "Coalspire",
+      "region": "mountain_realm",
+      "tags": [
+        "출산",
+        "치유"
+      ],
+      "notes": "과묵하지만 신뢰할 수 있다.",
+      "weights": {
+        "body": 0.31,
+        "soul": 0.47,
+        "spirit": 0.22
+      }
+    },
+    {
+      "id": "char_111",
+      "name": "Freya Frostborn",
+      "class": "mage",
+      "role": "마딜",
+      "origin": "Frostmark",
+      "region": "northern_reaches",
+      "tags": [
+        "마법",
+        "학자"
+      ],
+      "notes": "일에 대한 자부심이 높다.",
+      "weights": {
+        "body": 0.2,
+        "soul": 0.53,
+        "spirit": 0.26
+      }
+    },
+    {
+      "id": "char_112",
+      "name": "Miko Pearlmist",
+      "class": "glassblower",
+      "role": "장인",
+      "origin": "Jeon Port",
+      "region": "eastern_shores",
+      "tags": [
+        "유리",
+        "예술"
+      ],
+      "notes": "정의감이 강하다.",
+      "weights": {
+        "body": 0.4,
+        "soul": 0.44,
+        "spirit": 0.15
+      }
+    },
+    {
+      "id": "char_113",
+      "name": "Layla Sandwalker",
+      "class": "painter",
+      "role": "예술",
+      "origin": "Solenne Dunes",
+      "region": "western_deserts",
+      "tags": [
+        "미술",
+        "창작"
+      ],
+      "notes": "새로운 것을 두려워하지 않는다.",
+      "weights": {
+        "body": 0.24,
+        "soul": 0.48,
+        "spirit": 0.27
+      }
+    },
+    {
+      "id": "char_114",
+      "name": "Samira Dunerunner",
+      "class": "beggar",
+      "role": "빈민",
+      "origin": "Night Bazaar",
+      "region": "western_deserts",
+      "tags": [
+        "방랑",
+        "생존"
+      ],
+      "notes": "전통을 존중한다.",
+      "weights": {
+        "body": 0.44,
+        "soul": 0.39,
+        "spirit": 0.17
+      }
+    },
+    {
+      "id": "char_115",
+      "name": "Harold Westbrook",
+      "class": "servant",
+      "role": "서비스",
+      "origin": "Amber Library",
+      "region": "central_kingdom",
+      "tags": [
+        "시중",
+        "가사"
+      ],
+      "notes": "가족을 가장 소중히 여긴다.",
+      "weights": {
+        "body": 0.36,
+        "soul": 0.44,
+        "spirit": 0.21
+      }
+    },
+    {
+      "id": "char_116",
+      "name": "Hana Seaspray",
+      "class": "bard",
+      "role": "예술",
+      "origin": "Maru Heights",
+      "region": "eastern_shores",
+      "tags": [
+        "음악",
+        "공연"
+      ],
+      "notes": "일에 대한 자부심이 높다.",
+      "weights": {
+        "body": 0.29,
+        "soul": 0.52,
+        "spirit": 0.19
+      }
+    },
+    {
+      "id": "char_117",
+      "name": "Olaf Snowpeak",
+      "class": "cook",
+      "role": "서비스",
+      "origin": "Cloud Monastery",
+      "region": "northern_reaches",
+      "tags": [
+        "요리",
+        "식품"
+      ],
+      "notes": "말보다 행동으로 보여준다.",
+      "weights": {
+        "body": 0.36,
+        "soul": 0.52,
+        "spirit": 0.12
+      }
+    },
+    {
+      "id": "char_118",
+      "name": "Hassan Sandwalker",
+      "class": "baker",
+      "role": "장인",
+      "origin": "Solenne Dunes",
+      "region": "western_deserts",
+      "tags": [
+        "제빵",
+        "식품"
+      ],
+      "notes": "가족을 가장 소중히 여긴다.",
+      "weights": {
+        "body": 0.35,
+        "soul": 0.51,
+        "spirit": 0.15
+      }
+    },
+    {
+      "id": "char_119",
+      "name": "Sigrid Winterhold",
+      "class": "leatherworker",
+      "role": "장인",
+      "origin": "Cloud Monastery",
+      "region": "northern_reaches",
+      "tags": [
+        "가죽",
+        "제작"
+      ],
+      "notes": "전통을 존중한다.",
+      "weights": {
+        "body": 0.45,
+        "soul": 0.37,
+        "spirit": 0.19
+      }
+    },
+    {
+      "id": "char_120",
+      "name": "Ragnar Ironblood",
+      "class": "knight",
+      "role": "근딜",
+      "origin": "Frostfall",
+      "region": "northern_reaches",
+      "tags": [
+        "전사",
+        "기사"
+      ],
+      "notes": "리더십이 있다.",
+      "weights": {
+        "body": 0.59,
+        "soul": 0.31,
+        "spirit": 0.11
+      }
+    },
+    {
+      "id": "char_121",
+      "name": "Zuri Vinecaller",
+      "class": "stablehand",
+      "role": "서비스",
+      "origin": "Thorn Abbey",
+      "region": "southern_jungles",
+      "tags": [
+        "마구간",
+        "동물"
+      ],
+      "notes": "낯선 이에게도 친절하다.",
+      "weights": {
+        "body": 0.42,
+        "soul": 0.39,
+        "spirit": 0.19
+      }
+    },
+    {
+      "id": "char_122",
+      "name": "Vesper Dreamweaver",
+      "class": "beggar",
+      "role": "빈민",
+      "origin": "Crystal Sound",
+      "region": "twilight_realm",
+      "tags": [
+        "방랑",
+        "생존"
+      ],
+      "notes": "호기심이 많고 탐구적이다.",
+      "weights": {
+        "body": 0.39,
+        "soul": 0.37,
+        "spirit": 0.24
+      }
+    },
+    {
+      "id": "char_123",
+      "name": "Eclipse Veilkeeper",
+      "class": "knight",
+      "role": "근딜",
+      "origin": "Vesper Court",
+      "region": "twilight_realm",
+      "tags": [
+        "전사",
+        "기사"
+      ],
+      "notes": "유머 감각이 뛰어나다.",
+      "weights": {
+        "body": 0.56,
+        "soul": 0.33,
+        "spirit": 0.1
+      }
+    },
+    {
+      "id": "char_124",
+      "name": "Stella Nightwhisper",
+      "class": "guard",
+      "role": "경비",
+      "origin": "Umber Vault",
+      "region": "twilight_realm",
+      "tags": [
+        "경비",
+        "치안"
+      ],
+      "notes": "예술적 감각이 있다.",
+      "weights": {
+        "body": 0.55,
+        "soul": 0.35,
+        "spirit": 0.1
+      }
+    },
+    {
+      "id": "char_125",
+      "name": "Ife Lionclaw",
+      "class": "merchant",
+      "role": "상인",
+      "origin": "Bloomvale",
+      "region": "southern_jungles",
+      "tags": [
+        "무역",
+        "거래"
+      ],
+      "notes": "새로운 것을 두려워하지 않는다.",
+      "weights": {
+        "body": 0.28,
+        "soul": 0.59,
+        "spirit": 0.12
+      }
+    },
+    {
+      "id": "char_126",
+      "name": "Samir Dunerunner",
+      "class": "fisher",
+      "role": "평민",
+      "origin": "Solenne Dunes",
+      "region": "western_deserts",
+      "tags": [
+        "어업",
+        "바다"
+      ],
+      "notes": "가족을 가장 소중히 여긴다.",
+      "weights": {
+        "body": 0.44,
+        "soul": 0.37,
+        "spirit": 0.19
+      }
+    },
+    {
+      "id": "char_127",
+      "name": "Nadia Stargazer",
+      "class": "potter",
+      "role": "장인",
+      "origin": "Solenne Dunes",
+      "region": "western_deserts",
+      "tags": [
+        "도예",
+        "예술"
+      ],
+      "notes": "성실하고 꼼꼼하다.",
+      "weights": {
+        "body": 0.35,
+        "soul": 0.47,
+        "spirit": 0.18
+      }
+    },
+    {
+      "id": "char_128",
+      "name": "Marcus Brightwood",
+      "class": "tavern_keeper",
+      "role": "상인",
+      "origin": "Amber Library",
+      "region": "central_kingdom",
+      "tags": [
+        "주점",
+        "서비스"
+      ],
+      "notes": "고독을 즐긴다.",
+      "weights": {
+        "body": 0.35,
+        "soul": 0.52,
+        "spirit": 0.13
+      }
+    },
+    {
+      "id": "char_129",
+      "name": "Edmund Brightwood",
+      "class": "beggar",
+      "role": "빈민",
+      "origin": "Lorien Plains",
+      "region": "central_kingdom",
+      "tags": [
+        "방랑",
+        "생존"
+      ],
+      "notes": "호기심이 많고 탐구적이다.",
+      "weights": {
+        "body": 0.39,
+        "soul": 0.42,
+        "spirit": 0.2
+      }
+    },
+    {
+      "id": "char_130",
+      "name": "Luna Veilkeeper",
+      "class": "scout",
+      "role": "잠입",
+      "origin": "Pyra Collegium",
+      "region": "twilight_realm",
+      "tags": [
+        "전사",
+        "정찰"
+      ],
+      "notes": "성실하고 꼼꼼하다.",
+      "weights": {
+        "body": 0.42,
+        "soul": 0.39,
+        "spirit": 0.19
+      }
+    },
+    {
+      "id": "char_131",
+      "name": "Feng Pearlmist",
+      "class": "mage",
+      "role": "마딜",
+      "origin": "Gilded Pier",
+      "region": "eastern_shores",
+      "tags": [
+        "마법",
+        "학자"
+      ],
+      "notes": "가족을 가장 소중히 여긴다.",
+      "weights": {
+        "body": 0.19,
+        "soul": 0.56,
+        "spirit": 0.24
+      }
+    },
+    {
+      "id": "char_132",
+      "name": "Dayo Thornweaver",
+      "class": "potter",
+      "role": "장인",
+      "origin": "Verdant Terrace",
+      "region": "southern_jungles",
+      "tags": [
+        "도예",
+        "예술"
+      ],
+      "notes": "성실하고 꼼꼼하다.",
+      "weights": {
+        "body": 0.32,
+        "soul": 0.47,
+        "spirit": 0.21
+      }
+    },
+    {
+      "id": "char_133",
+      "name": "Julia Thornwood",
+      "class": "bard",
+      "role": "예술",
+      "origin": "Lorien Plains",
+      "region": "central_kingdom",
+      "tags": [
+        "음악",
+        "공연"
+      ],
+      "notes": "유머 감각이 뛰어나다.",
+      "weights": {
+        "body": 0.24,
+        "soul": 0.56,
+        "spirit": 0.19
+      }
+    },
+    {
+      "id": "char_134",
+      "name": "Shade Starfall",
+      "class": "herbalist",
+      "role": "학자",
+      "origin": "Pyra Collegium",
+      "region": "twilight_realm",
+      "tags": [
+        "약초",
+        "치유"
+      ],
+      "notes": "동물을 사랑한다.",
+      "weights": {
+        "body": 0.31,
+        "soul": 0.37,
+        "spirit": 0.32
+      }
+    },
+    {
+      "id": "char_135",
+      "name": "Sakura Wavecrest",
+      "class": "midwife",
+      "role": "산파",
+      "origin": "Brass Harbor",
+      "region": "eastern_shores",
+      "tags": [
+        "출산",
+        "치유"
+      ],
+      "notes": "동물을 사랑한다.",
+      "weights": {
+        "body": 0.3,
+        "soul": 0.49,
+        "spirit": 0.21
+      }
+    },
+    {
+      "id": "char_136",
+      "name": "Azizi Vinecaller",
+      "class": "healer",
+      "role": "힐러",
+      "origin": "Bloomvale",
+      "region": "southern_jungles",
+      "tags": [
+        "마법",
+        "치유"
+      ],
+      "notes": "어려운 이웃을 돕는다.",
+      "weights": {
+        "body": 0.15,
+        "soul": 0.41,
+        "spirit": 0.44
+      }
+    },
+    {
+      "id": "char_137",
+      "name": "Yun Seaspray",
+      "class": "blacksmith",
+      "role": "장인",
+      "origin": "Brass Harbor",
+      "region": "eastern_shores",
+      "tags": [
+        "대장",
+        "제작"
+      ],
+      "notes": "새로운 것을 두려워하지 않는다.",
+      "weights": {
+        "body": 0.47,
+        "soul": 0.35,
+        "spirit": 0.18
+      }
+    },
+    {
+      "id": "char_138",
+      "name": "Bram Ironforge",
+      "class": "sailor",
+      "role": "선원",
+      "origin": "Stonecradle",
+      "region": "mountain_realm",
+      "tags": [
+        "항해",
+        "바다"
+      ],
+      "notes": "예술적 감각이 있다.",
+      "weights": {
+        "body": 0.54,
+        "soul": 0.34,
+        "spirit": 0.12
+      }
+    },
+    {
+      "id": "char_139",
+      "name": "Cedric Whitehall",
+      "class": "blacksmith",
+      "role": "장인",
+      "origin": "Radiant Keep",
+      "region": "central_kingdom",
+      "tags": [
+        "대장",
+        "제작"
+      ],
+      "notes": "리더십이 있다.",
+      "weights": {
+        "body": 0.52,
+        "soul": 0.35,
+        "spirit": 0.13
+      }
+    },
+    {
+      "id": "char_140",
+      "name": "Arthur Oakenshield",
+      "class": "priest",
+      "role": "힐러",
+      "origin": "Radiant Keep",
+      "region": "central_kingdom",
+      "tags": [
+        "성직",
+        "신앙"
+      ],
+      "notes": "자연과 가까이 산다.",
+      "weights": {
+        "body": 0.2,
+        "soul": 0.29,
+        "spirit": 0.51
+      }
+    },
+    {
+      "id": "char_141",
+      "name": "Vesper Moonshadow",
+      "class": "weaver",
+      "role": "장인",
+      "origin": "Umber Vault",
+      "region": "twilight_realm",
+      "tags": [
+        "직조",
+        "제작"
+      ],
+      "notes": "예술적 감각이 있다.",
+      "weights": {
+        "body": 0.31,
+        "soul": 0.49,
+        "spirit": 0.2
+      }
+    },
+    {
+      "id": "char_142",
+      "name": "Samira Sandwalker",
+      "class": "blacksmith",
+      "role": "장인",
+      "origin": "Solenne Dunes",
+      "region": "western_deserts",
+      "tags": [
+        "대장",
+        "제작"
+      ],
+      "notes": "호기심이 많고 탐구적이다.",
+      "weights": {
+        "body": 0.56,
+        "soul": 0.33,
+        "spirit": 0.11
+      }
+    },
+    {
+      "id": "char_143",
+      "name": "Dusk Moonshadow",
+      "class": "carpenter",
+      "role": "장인",
+      "origin": "Crystal Sound",
+      "region": "twilight_realm",
+      "tags": [
+        "목공",
+        "제작"
+      ],
+      "notes": "호기심이 많고 탐구적이다.",
+      "weights": {
+        "body": 0.46,
+        "soul": 0.4,
+        "spirit": 0.14
+      }
+    },
+    {
+      "id": "char_144",
+      "name": "Thane Granitehand",
+      "class": "cook",
+      "role": "서비스",
+      "origin": "Tinspire",
+      "region": "mountain_realm",
+      "tags": [
+        "요리",
+        "식품"
+      ],
+      "notes": "새로운 것을 두려워하지 않는다.",
+      "weights": {
+        "body": 0.38,
+        "soul": 0.51,
+        "spirit": 0.11
+      }
+    },
+    {
+      "id": "char_145",
+      "name": "Catherine Silverton",
+      "class": "jeweler",
+      "role": "장인",
+      "origin": "Rose Dominion",
+      "region": "central_kingdom",
+      "tags": [
+        "보석",
+        "예술"
+      ],
+      "notes": "호기심이 많고 탐구적이다.",
+      "weights": {
+        "body": 0.26,
+        "soul": 0.51,
+        "spirit": 0.23
+      }
+    },
+    {
+      "id": "char_146",
+      "name": "Astrid Snowpeak",
+      "class": "mage",
+      "role": "마딜",
+      "origin": "Frostmark",
+      "region": "northern_reaches",
+      "tags": [
+        "마법",
+        "학자"
+      ],
+      "notes": "고독을 즐긴다.",
+      "weights": {
+        "body": 0.2,
+        "soul": 0.53,
+        "spirit": 0.27
+      }
+    },
+    {
+      "id": "char_147",
+      "name": "Samira Oasiskeeper",
+      "class": "archer",
+      "role": "원딜",
+      "origin": "Night Bazaar",
+      "region": "western_deserts",
+      "tags": [
+        "전사",
+        "사냥"
+      ],
+      "notes": "성실하고 꼼꼼하다.",
+      "weights": {
+        "body": 0.52,
+        "soul": 0.32,
+        "spirit": 0.16
+      }
+    },
+    {
+      "id": "char_148",
+      "name": "Ryu Wavecrest",
+      "class": "potter",
+      "role": "장인",
+      "origin": "Maru Heights",
+      "region": "eastern_shores",
+      "tags": [
+        "도예",
+        "예술"
+      ],
+      "notes": "호기심이 많고 탐구적이다.",
+      "weights": {
+        "body": 0.34,
+        "soul": 0.42,
+        "spirit": 0.23
+      }
+    },
+    {
+      "id": "char_149",
+      "name": "Fatima Sunrider",
+      "class": "tailor",
+      "role": "장인",
+      "origin": "Brass Dust Road",
+      "region": "western_deserts",
+      "tags": [
+        "재봉",
+        "제작"
+      ],
+      "notes": "성실하고 꼼꼼하다.",
+      "weights": {
+        "body": 0.29,
+        "soul": 0.46,
+        "spirit": 0.25
+      }
+    },
+    {
+      "id": "char_150",
+      "name": "Dante Shadowstep",
+      "class": "servant",
+      "role": "서비스",
+      "origin": "Skybridge",
+      "region": "free_cities",
+      "tags": [
+        "시중",
+        "가사"
+      ],
+      "notes": "고독을 즐긴다.",
+      "weights": {
+        "body": 0.35,
+        "soul": 0.5,
+        "spirit": 0.16
+      }
+    },
+    {
+      "id": "char_151",
+      "name": "Dusk Veilkeeper",
+      "class": "retired_soldier",
+      "role": "은퇴자",
+      "origin": "Umber Vault",
+      "region": "twilight_realm",
+      "tags": [
+        "전사",
+        "경험"
+      ],
+      "notes": "어려운 이웃을 돕는다.",
+      "weights": {
+        "body": 0.51,
+        "soul": 0.28,
+        "spirit": 0.22
+      }
+    },
+    {
+      "id": "char_152",
+      "name": "Zuri Vinecaller",
+      "class": "mage",
+      "role": "마딜",
+      "origin": "Thorn Abbey",
+      "region": "southern_jungles",
+      "tags": [
+        "마법",
+        "학자"
+      ],
+      "notes": "호기심이 많고 탐구적이다.",
+      "weights": {
+        "body": 0.16,
+        "soul": 0.59,
+        "spirit": 0.24
+      }
+    },
+    {
+      "id": "char_153",
+      "name": "Sakura Tidebringer",
+      "class": "glassblower",
+      "role": "장인",
+      "origin": "Ular Archipelago",
+      "region": "eastern_shores",
+      "tags": [
+        "유리",
+        "예술"
+      ],
+      "notes": "정의감이 강하다.",
+      "weights": {
+        "body": 0.32,
+        "soul": 0.47,
+        "spirit": 0.22
+      }
+    },
+    {
+      "id": "char_154",
+      "name": "Yasmin Sandwalker",
+      "class": "archer",
+      "role": "원딜",
+      "origin": "Solenne Dunes",
+      "region": "western_deserts",
+      "tags": [
+        "전사",
+        "사냥"
+      ],
+      "notes": "호기심이 많고 탐구적이다.",
+      "weights": {
+        "body": 0.53,
+        "soul": 0.3,
+        "spirit": 0.17
+      }
+    },
+    {
+      "id": "char_155",
+      "name": "Quinn Swiftblade",
+      "class": "servant",
+      "role": "서비스",
+      "origin": "Sunken Bazaar",
+      "region": "free_cities",
+      "tags": [
+        "시중",
+        "가사"
+      ],
+      "notes": "가족을 가장 소중히 여긴다.",
+      "weights": {
+        "body": 0.35,
+        "soul": 0.43,
+        "spirit": 0.22
+      }
+    },
+    {
+      "id": "char_156",
+      "name": "Cedric Thornwood",
+      "class": "archer",
+      "role": "원딜",
+      "origin": "Radiant Keep",
+      "region": "central_kingdom",
+      "tags": [
+        "전사",
+        "사냥"
+      ],
+      "notes": "리더십이 있다.",
+      "weights": {
+        "body": 0.51,
+        "soul": 0.29,
+        "spirit": 0.2
+      }
+    },
+    {
+      "id": "char_157",
+      "name": "Bram Deepmine",
+      "class": "street_vendor",
+      "role": "상인",
+      "origin": "Coalspire",
+      "region": "mountain_realm",
+      "tags": [
+        "노점",
+        "거래"
+      ],
+      "notes": "새로운 것을 두려워하지 않는다.",
+      "weights": {
+        "body": 0.34,
+        "soul": 0.47,
+        "spirit": 0.19
+      }
+    },
+    {
+      "id": "char_158",
+      "name": "Erik Ironblood",
+      "class": "healer",
+      "role": "힐러",
+      "origin": "Frostmark",
+      "region": "northern_reaches",
+      "tags": [
+        "마법",
+        "치유"
+      ],
+      "notes": "호기심이 많고 탐구적이다.",
+      "weights": {
+        "body": 0.21,
+        "soul": 0.39,
+        "spirit": 0.39
+      }
+    },
+    {
+      "id": "char_159",
+      "name": "Grom Granitehand",
+      "class": "gravedigger",
+      "role": "묘지기",
+      "origin": "Stonecradle",
+      "region": "mountain_realm",
+      "tags": [
+        "장례",
+        "죽음"
+      ],
+      "notes": "일에 대한 자부심이 높다.",
+      "weights": {
+        "body": 0.38,
+        "soul": 0.29,
+        "spirit": 0.34
+      }
+    },
+    {
+      "id": "char_160",
+      "name": "Nia Vinecaller",
+      "class": "miner",
+      "role": "평민",
+      "origin": "Verdant Terrace",
+      "region": "southern_jungles",
+      "tags": [
+        "광업",
+        "산"
+      ],
+      "notes": "사람들 사이에서 에너지를 얻는다.",
+      "weights": {
+        "body": 0.53,
+        "soul": 0.27,
+        "spirit": 0.19
+      }
+    },
+    {
+      "id": "char_161",
+      "name": "Eclipse Mistwalker",
+      "class": "teacher",
+      "role": "학자",
+      "origin": "Umber Vault",
+      "region": "twilight_realm",
+      "tags": [
+        "교육",
+        "지식"
+      ],
+      "notes": "호기심이 많고 탐구적이다.",
+      "weights": {
+        "body": 0.22,
+        "soul": 0.46,
+        "spirit": 0.32
+      }
+    },
+    {
+      "id": "char_162",
+      "name": "Yasmin Oasiskeeper",
+      "class": "innkeeper",
+      "role": "상인",
+      "origin": "Saffron Steppe",
+      "region": "western_deserts",
+      "tags": [
+        "숙박",
+        "서비스"
+      ],
+      "notes": "정의감이 강하다.",
+      "weights": {
+        "body": 0.36,
+        "soul": 0.49,
+        "spirit": 0.15
+      }
+    },
+    {
+      "id": "char_163",
+      "name": "Amir Stargazer",
+      "class": "gravedigger",
+      "role": "묘지기",
+      "origin": "Brass Dust Road",
+      "region": "western_deserts",
+      "tags": [
+        "장례",
+        "죽음"
+      ],
+      "notes": "낯선 이에게도 친절하다.",
+      "weights": {
+        "body": 0.38,
+        "soul": 0.28,
+        "spirit": 0.34
+      }
+    },
+    {
+      "id": "char_164",
+      "name": "Kara Ironblood",
+      "class": "shepherd",
+      "role": "평민",
+      "origin": "Cloud Monastery",
+      "region": "northern_reaches",
+      "tags": [
+        "목축",
+        "자연"
+      ],
+      "notes": "낯선 이에게도 친절하다.",
+      "weights": {
+        "body": 0.41,
+        "soul": 0.4,
+        "spirit": 0.2
+      }
+    },
+    {
+      "id": "char_165",
+      "name": "Ragnar Snowpeak",
+      "class": "carpenter",
+      "role": "장인",
+      "origin": "Tempest Ridge",
+      "region": "northern_reaches",
+      "tags": [
+        "목공",
+        "제작"
+      ],
+      "notes": "호기심이 많고 탐구적이다.",
+      "weights": {
+        "body": 0.42,
+        "soul": 0.43,
+        "spirit": 0.16
+      }
+    },
+    {
+      "id": "char_166",
+      "name": "Marcus Brightwood",
+      "class": "healer",
+      "role": "힐러",
+      "origin": "Amber Library",
+      "region": "central_kingdom",
+      "tags": [
+        "마법",
+        "치유"
+      ],
+      "notes": "예술적 감각이 있다.",
+      "weights": {
+        "body": 0.2,
+        "soul": 0.39,
+        "spirit": 0.41
+      }
+    },
+    {
+      "id": "char_167",
+      "name": "Lin Wavecrest",
+      "class": "archer",
+      "role": "원딜",
+      "origin": "Ular Archipelago",
+      "region": "eastern_shores",
+      "tags": [
+        "전사",
+        "사냥"
+      ],
+      "notes": "새로운 것을 두려워하지 않는다.",
+      "weights": {
+        "body": 0.49,
+        "soul": 0.29,
+        "spirit": 0.22
+      }
+    },
+    {
+      "id": "char_168",
+      "name": "Quinn Streetwise",
+      "class": "farmer",
+      "role": "평민",
+      "origin": "Skybridge",
+      "region": "free_cities",
+      "tags": [
+        "농업",
+        "생산"
+      ],
+      "notes": "인내심이 강하다.",
+      "weights": {
+        "body": 0.45,
+        "soul": 0.37,
+        "spirit": 0.18
+      }
+    },
+    {
+      "id": "char_169",
+      "name": "Taro Saltwind",
+      "class": "street_vendor",
+      "role": "상인",
+      "origin": "Jeon Port",
+      "region": "eastern_shores",
+      "tags": [
+        "노점",
+        "거래"
+      ],
+      "notes": "자연과 가까이 산다.",
+      "weights": {
+        "body": 0.35,
+        "soul": 0.5,
+        "spirit": 0.15
+      }
+    },
+    {
+      "id": "char_170",
+      "name": "Luna Starfall",
+      "class": "courier",
+      "role": "서비스",
+      "origin": "Pyra Collegium",
+      "region": "twilight_realm",
+      "tags": [
+        "배달",
+        "이동"
+      ],
+      "notes": "전통을 존중한다.",
+      "weights": {
+        "body": 0.46,
+        "soul": 0.36,
+        "spirit": 0.18
+      }
+    },
+    {
+      "id": "char_171",
+      "name": "Sigrun Coppervein",
+      "class": "courier",
+      "role": "서비스",
+      "origin": "Coalspire",
+      "region": "mountain_realm",
+      "tags": [
+        "배달",
+        "이동"
+      ],
+      "notes": "유머 감각이 뛰어나다.",
+      "weights": {
+        "body": 0.45,
+        "soul": 0.38,
+        "spirit": 0.17
+      }
+    },
+    {
+      "id": "char_172",
+      "name": "Thora Deepmine",
+      "class": "stablehand",
+      "role": "서비스",
+      "origin": "Stonecradle",
+      "region": "mountain_realm",
+      "tags": [
+        "마구간",
+        "동물"
+      ],
+      "notes": "리더십이 있다.",
+      "weights": {
+        "body": 0.45,
+        "soul": 0.38,
+        "spirit": 0.17
+      }
+    },
+    {
+      "id": "char_173",
+      "name": "Zaid Sandwalker",
+      "class": "fisher",
+      "role": "평민",
+      "origin": "Solenne Dunes",
+      "region": "western_deserts",
+      "tags": [
+        "어업",
+        "바다"
+      ],
+      "notes": "정의감이 강하다.",
+      "weights": {
+        "body": 0.42,
+        "soul": 0.34,
+        "spirit": 0.24
+      }
+    },
+    {
+      "id": "char_174",
+      "name": "Yuki Coralheart",
+      "class": "courier",
+      "role": "서비스",
+      "origin": "Jeon Port",
+      "region": "eastern_shores",
+      "tags": [
+        "배달",
+        "이동"
+      ],
+      "notes": "전통을 존중한다.",
+      "weights": {
+        "body": 0.41,
+        "soul": 0.41,
+        "spirit": 0.19
+      }
+    },
+    {
+      "id": "char_175",
+      "name": "Leif Icehammer",
+      "class": "beggar",
+      "role": "빈민",
+      "origin": "Frostmark",
+      "region": "northern_reaches",
+      "tags": [
+        "방랑",
+        "생존"
+      ],
+      "notes": "새로운 것을 두려워하지 않는다.",
+      "weights": {
+        "body": 0.38,
+        "soul": 0.42,
+        "spirit": 0.19
+      }
+    },
+    {
+      "id": "char_176",
+      "name": "Mei Saltwind",
+      "class": "mage",
+      "role": "마딜",
+      "origin": "Gilded Pier",
+      "region": "eastern_shores",
+      "tags": [
+        "마법",
+        "학자"
+      ],
+      "notes": "과묵하지만 신뢰할 수 있다.",
+      "weights": {
+        "body": 0.18,
+        "soul": 0.54,
+        "spirit": 0.28
+      }
+    },
+    {
+      "id": "char_177",
+      "name": "Morgan Swiftblade",
+      "class": "cook",
+      "role": "서비스",
+      "origin": "Obsidian Bay",
+      "region": "free_cities",
+      "tags": [
+        "요리",
+        "식품"
+      ],
+      "notes": "전통을 존중한다.",
+      "weights": {
+        "body": 0.34,
+        "soul": 0.53,
+        "spirit": 0.13
+      }
+    },
+    {
+      "id": "char_178",
+      "name": "Locke Shadowstep",
+      "class": "servant",
+      "role": "서비스",
+      "origin": "Lowspire",
+      "region": "free_cities",
+      "tags": [
+        "시중",
+        "가사"
+      ],
+      "notes": "항상 웃음을 잃지 않는다.",
+      "weights": {
+        "body": 0.37,
+        "soul": 0.45,
+        "spirit": 0.18
+      }
+    },
+    {
+      "id": "char_179",
+      "name": "Amira Stargazer",
+      "class": "lumberjack",
+      "role": "평민",
+      "origin": "Solenne Dunes",
+      "region": "western_deserts",
+      "tags": [
+        "벌목",
+        "숲"
+      ],
+      "notes": "낯선 이에게도 친절하다.",
+      "weights": {
+        "body": 0.54,
+        "soul": 0.34,
+        "spirit": 0.12
+      }
+    },
+    {
+      "id": "char_180",
+      "name": "Zaid Oasiskeeper",
+      "class": "tailor",
+      "role": "장인",
+      "origin": "Brass Dust Road",
+      "region": "western_deserts",
+      "tags": [
+        "재봉",
+        "제작"
+      ],
+      "notes": "일에 대한 자부심이 높다.",
+      "weights": {
+        "body": 0.28,
+        "soul": 0.51,
+        "spirit": 0.21
+      }
+    },
+    {
+      "id": "char_181",
+      "name": "Olaf Winterhold",
+      "class": "orphan",
+      "role": "고아",
+      "origin": "Tempest Ridge",
+      "region": "northern_reaches",
+      "tags": [
+        "방랑",
+        "성장"
+      ],
+      "notes": "동물을 사랑한다.",
+      "weights": {
+        "body": 0.37,
+        "soul": 0.36,
+        "spirit": 0.27
+      }
+    },
+    {
+      "id": "char_182",
+      "name": "Quinn Quickhand",
+      "class": "soldier",
+      "role": "근딜",
+      "origin": "Obsidian Bay",
+      "region": "free_cities",
+      "tags": [
+        "전사",
+        "군인"
+      ],
+      "notes": "사람들 사이에서 에너지를 얻는다.",
+      "weights": {
+        "body": 0.63,
+        "soul": 0.26,
+        "spirit": 0.11
+      }
+    },
+    {
+      "id": "char_183",
+      "name": "Edmund Goldmere",
+      "class": "bard",
+      "role": "예술",
+      "origin": "Lorien Plains",
+      "region": "central_kingdom",
+      "tags": [
+        "음악",
+        "공연"
+      ],
+      "notes": "전통을 존중한다.",
+      "weights": {
+        "body": 0.21,
+        "soul": 0.58,
+        "spirit": 0.21
+      }
+    },
+    {
+      "id": "char_184",
+      "name": "Kenji Moonbay",
+      "class": "priest",
+      "role": "힐러",
+      "origin": "Ular Archipelago",
+      "region": "eastern_shores",
+      "tags": [
+        "성직",
+        "신앙"
+      ],
+      "notes": "리더십이 있다.",
+      "weights": {
+        "body": 0.15,
+        "soul": 0.32,
+        "spirit": 0.53
+      }
+    },
+    {
+      "id": "char_185",
+      "name": "Sigrun Coppervein",
+      "class": "archer",
+      "role": "원딜",
+      "origin": "Copper Belt",
+      "region": "mountain_realm",
+      "tags": [
+        "전사",
+        "사냥"
+      ],
+      "notes": "고독을 즐긴다.",
+      "weights": {
+        "body": 0.52,
+        "soul": 0.26,
+        "spirit": 0.22
+      }
+    },
+    {
+      "id": "char_186",
+      "name": "Rashid Miragecaller",
+      "class": "farmer",
+      "role": "평민",
+      "origin": "Shifting Dunes",
+      "region": "western_deserts",
+      "tags": [
+        "농업",
+        "생산"
+      ],
+      "notes": "고독을 즐긴다.",
+      "weights": {
+        "body": 0.55,
+        "soul": 0.32,
+        "spirit": 0.14
+      }
+    },
+    {
+      "id": "char_187",
+      "name": "Raven Quickhand",
+      "class": "courier",
+      "role": "서비스",
+      "origin": "Skybridge",
+      "region": "free_cities",
+      "tags": [
+        "배달",
+        "이동"
+      ],
+      "notes": "동물을 사랑한다.",
+      "weights": {
+        "body": 0.49,
+        "soul": 0.37,
+        "spirit": 0.14
+      }
+    },
+    {
+      "id": "char_188",
+      "name": "Dusk Dreamweaver",
+      "class": "miner",
+      "role": "평민",
+      "origin": "Duskmere",
+      "region": "twilight_realm",
+      "tags": [
+        "광업",
+        "산"
+      ],
+      "notes": "정의감이 강하다.",
+      "weights": {
+        "body": 0.54,
+        "soul": 0.34,
+        "spirit": 0.12
+      }
+    },
+    {
+      "id": "char_189",
+      "name": "Mord Granitehand",
+      "class": "street_vendor",
+      "role": "상인",
+      "origin": "Stonecradle",
+      "region": "mountain_realm",
+      "tags": [
+        "노점",
+        "거래"
+      ],
+      "notes": "정의감이 강하다.",
+      "weights": {
+        "body": 0.34,
+        "soul": 0.52,
+        "spirit": 0.14
+      }
+    },
+    {
+      "id": "char_190",
+      "name": "Mord Ironforge",
+      "class": "lumberjack",
+      "role": "평민",
+      "origin": "Coalspire",
+      "region": "mountain_realm",
+      "tags": [
+        "벌목",
+        "숲"
+      ],
+      "notes": "말보다 행동으로 보여준다.",
+      "weights": {
+        "body": 0.55,
+        "soul": 0.32,
+        "spirit": 0.13
+      }
+    },
+    {
+      "id": "char_191",
+      "name": "Catherine Whitehall",
+      "class": "weaver",
+      "role": "장인",
+      "origin": "Radiant Keep",
+      "region": "central_kingdom",
+      "tags": [
+        "직조",
+        "제작"
+      ],
+      "notes": "어려운 이웃을 돕는다.",
+      "weights": {
+        "body": 0.27,
+        "soul": 0.55,
+        "spirit": 0.18
+      }
+    },
+    {
+      "id": "char_192",
+      "name": "Sigrid Frostborn",
+      "class": "teacher",
+      "role": "학자",
+      "origin": "Icewine Wharf",
+      "region": "northern_reaches",
+      "tags": [
+        "교육",
+        "지식"
+      ],
+      "notes": "전통을 존중한다.",
+      "weights": {
+        "body": 0.2,
+        "soul": 0.43,
+        "spirit": 0.37
+      }
+    },
+    {
+      "id": "char_193",
+      "name": "Victor Whitehall",
+      "class": "knight",
+      "role": "근딜",
+      "origin": "Rose Dominion",
+      "region": "central_kingdom",
+      "tags": [
+        "전사",
+        "기사"
+      ],
+      "notes": "어려운 이웃을 돕는다.",
+      "weights": {
+        "body": 0.58,
+        "soul": 0.3,
+        "spirit": 0.13
+      }
+    },
+    {
+      "id": "char_194",
+      "name": "Ingrid Ironblood",
+      "class": "servant",
+      "role": "서비스",
+      "origin": "Tempest Ridge",
+      "region": "northern_reaches",
+      "tags": [
+        "시중",
+        "가사"
+      ],
+      "notes": "자연과 가까이 산다.",
+      "weights": {
+        "body": 0.35,
+        "soul": 0.47,
+        "spirit": 0.18
+      }
+    },
+    {
+      "id": "char_195",
+      "name": "Zaid Sunrider",
+      "class": "cook",
+      "role": "서비스",
+      "origin": "Solenne Dunes",
+      "region": "western_deserts",
+      "tags": [
+        "요리",
+        "식품"
+      ],
+      "notes": "고독을 즐긴다.",
+      "weights": {
+        "body": 0.33,
+        "soul": 0.5,
+        "spirit": 0.17
+      }
+    },
+    {
+      "id": "char_196",
+      "name": "Riley Streetwise",
+      "class": "soldier",
+      "role": "근딜",
+      "origin": "Obsidian Bay",
+      "region": "free_cities",
+      "tags": [
+        "전사",
+        "군인"
+      ],
+      "notes": "고독을 즐긴다.",
+      "weights": {
+        "body": 0.61,
+        "soul": 0.25,
+        "spirit": 0.14
+      }
+    },
+    {
+      "id": "char_197",
+      "name": "Victor Highcastle",
+      "class": "orphan",
+      "role": "고아",
+      "origin": "Amber Library",
+      "region": "central_kingdom",
+      "tags": [
+        "방랑",
+        "성장"
+      ],
+      "notes": "일에 대한 자부심이 높다.",
+      "weights": {
+        "body": 0.33,
+        "soul": 0.37,
+        "spirit": 0.3
+      }
+    },
+    {
+      "id": "char_198",
+      "name": "Hakon Coldforge",
+      "class": "weaver",
+      "role": "장인",
+      "origin": "Cloud Monastery",
+      "region": "northern_reaches",
+      "tags": [
+        "직조",
+        "제작"
+      ],
+      "notes": "인내심이 강하다.",
+      "weights": {
+        "body": 0.31,
+        "soul": 0.51,
+        "spirit": 0.17
+      }
+    },
+    {
+      "id": "char_199",
+      "name": "Greta Stonehammer",
+      "class": "hunter",
+      "role": "평민",
+      "origin": "Copper Belt",
+      "region": "mountain_realm",
+      "tags": [
+        "사냥",
+        "자연"
+      ],
+      "notes": "전통을 존중한다.",
+      "weights": {
+        "body": 0.52,
+        "soul": 0.28,
+        "spirit": 0.2
+      }
+    },
+    {
+      "id": "char_200",
+      "name": "Riley Silvertongue",
+      "class": "tailor",
+      "role": "장인",
+      "origin": "Gallow Row",
+      "region": "free_cities",
+      "tags": [
+        "재봉",
+        "제작"
+      ],
+      "notes": "호기심이 많고 탐구적이다.",
+      "weights": {
+        "body": 0.34,
+        "soul": 0.5,
+        "spirit": 0.16
+      }
+    },
+    {
+      "id": "char_201",
+      "name": "Chen Saltwind",
+      "class": "blacksmith",
+      "role": "장인",
+      "origin": "Azure Bastion",
+      "region": "eastern_shores",
+      "tags": [
+        "대장",
+        "제작"
+      ],
+      "notes": "예술적 감각이 있다.",
+      "weights": {
+        "body": 0.52,
+        "soul": 0.3,
+        "spirit": 0.17
+      }
+    },
+    {
+      "id": "char_202",
+      "name": "Cedric Highcastle",
+      "class": "painter",
+      "role": "예술",
+      "origin": "Marble Crown",
+      "region": "central_kingdom",
+      "tags": [
+        "미술",
+        "창작"
+      ],
+      "notes": "어려운 이웃을 돕는다.",
+      "weights": {
+        "body": 0.27,
+        "soul": 0.48,
+        "spirit": 0.26
+      }
+    },
+    {
+      "id": "char_203",
+      "name": "Erik Frostborn",
+      "class": "priest",
+      "role": "힐러",
+      "origin": "Cloud Monastery",
+      "region": "northern_reaches",
+      "tags": [
+        "성직",
+        "신앙"
+      ],
+      "notes": "사람들 사이에서 에너지를 얻는다.",
+      "weights": {
+        "body": 0.21,
+        "soul": 0.3,
+        "spirit": 0.49
+      }
+    },
+    {
+      "id": "char_204",
+      "name": "Dusk Nightwhisper",
+      "class": "retired_soldier",
+      "role": "은퇴자",
+      "origin": "Duskmere",
+      "region": "twilight_realm",
+      "tags": [
+        "전사",
+        "경험"
+      ],
+      "notes": "고독을 즐긴다.",
+      "weights": {
+        "body": 0.45,
+        "soul": 0.35,
+        "spirit": 0.21
+      }
+    },
+    {
+      "id": "char_205",
+      "name": "Layla Stargazer",
+      "class": "scribe",
+      "role": "학자",
+      "origin": "Brass Dust Road",
+      "region": "western_deserts",
+      "tags": [
+        "기록",
+        "문서"
+      ],
+      "notes": "낯선 이에게도 친절하다.",
+      "weights": {
+        "body": 0.17,
+        "soul": 0.54,
+        "spirit": 0.3
+      }
+    },
+    {
+      "id": "char_206",
+      "name": "Morgan Shadowstep",
+      "class": "mage",
+      "role": "마딜",
+      "origin": "Skybridge",
+      "region": "free_cities",
+      "tags": [
+        "마법",
+        "학자"
+      ],
+      "notes": "가족을 가장 소중히 여긴다.",
+      "weights": {
+        "body": 0.21,
+        "soul": 0.57,
+        "spirit": 0.22
+      }
+    },
+    {
+      "id": "char_207",
+      "name": "Quinn Truthseeker",
+      "class": "leatherworker",
+      "role": "장인",
+      "origin": "Sunken Bazaar",
+      "region": "free_cities",
+      "tags": [
+        "가죽",
+        "제작"
+      ],
+      "notes": "어려운 이웃을 돕는다.",
+      "weights": {
+        "body": 0.43,
+        "soul": 0.41,
+        "spirit": 0.16
+      }
+    },
+    {
+      "id": "char_208",
+      "name": "Karim Sandwalker",
+      "class": "street_vendor",
+      "role": "상인",
+      "origin": "Night Bazaar",
+      "region": "western_deserts",
+      "tags": [
+        "노점",
+        "거래"
+      ],
+      "notes": "자연과 가까이 산다.",
+      "weights": {
+        "body": 0.32,
+        "soul": 0.51,
+        "spirit": 0.17
+      }
+    },
+    {
+      "id": "char_209",
+      "name": "Sage Silvertongue",
+      "class": "painter",
+      "role": "예술",
+      "origin": "Lowspire",
+      "region": "free_cities",
+      "tags": [
+        "미술",
+        "창작"
+      ],
+      "notes": "일에 대한 자부심이 높다.",
+      "weights": {
+        "body": 0.29,
+        "soul": 0.5,
+        "spirit": 0.21
+      }
+    },
+    {
+      "id": "char_210",
+      "name": "Stella Starfall",
+      "class": "mage",
+      "role": "마딜",
+      "origin": "Umber Vault",
+      "region": "twilight_realm",
+      "tags": [
+        "마법",
+        "학자"
+      ],
+      "notes": "어려운 이웃을 돕는다.",
+      "weights": {
+        "body": 0.2,
+        "soul": 0.53,
+        "spirit": 0.26
+      }
+    },
+    {
+      "id": "char_211",
+      "name": "Sade Lionclaw",
+      "class": "orphan",
+      "role": "고아",
+      "origin": "Verdant Terrace",
+      "region": "southern_jungles",
+      "tags": [
+        "방랑",
+        "성장"
+      ],
+      "notes": "자연과 가까이 산다.",
+      "weights": {
+        "body": 0.35,
+        "soul": 0.39,
+        "spirit": 0.26
+      }
+    },
+    {
+      "id": "char_212",
+      "name": "Dayo Thornweaver",
+      "class": "street_vendor",
+      "role": "상인",
+      "origin": "Verdant Terrace",
+      "region": "southern_jungles",
+      "tags": [
+        "노점",
+        "거래"
+      ],
+      "notes": "사람들 사이에서 에너지를 얻는다.",
+      "weights": {
+        "body": 0.37,
+        "soul": 0.48,
+        "spirit": 0.14
+      }
+    },
+    {
+      "id": "char_213",
+      "name": "Zola Lionclaw",
+      "class": "jeweler",
+      "role": "장인",
+      "origin": "Bloomvale",
+      "region": "southern_jungles",
+      "tags": [
+        "보석",
+        "예술"
+      ],
+      "notes": "고독을 즐긴다.",
+      "weights": {
+        "body": 0.26,
+        "soul": 0.54,
+        "spirit": 0.2
+      }
+    },
+    {
+      "id": "char_214",
+      "name": "Sora Coralheart",
+      "class": "retired_soldier",
+      "role": "은퇴자",
+      "origin": "Maru Heights",
+      "region": "eastern_shores",
+      "tags": [
+        "전사",
+        "경험"
+      ],
+      "notes": "전통을 존중한다.",
+      "weights": {
+        "body": 0.46,
+        "soul": 0.33,
+        "spirit": 0.21
+      }
+    },
+    {
+      "id": "char_215",
+      "name": "Freya Frostborn",
+      "class": "beggar",
+      "role": "빈민",
+      "origin": "Tempest Ridge",
+      "region": "northern_reaches",
+      "tags": [
+        "방랑",
+        "생존"
+      ],
+      "notes": "고독을 즐긴다.",
+      "weights": {
+        "body": 0.38,
+        "soul": 0.4,
+        "spirit": 0.22
+      }
+    },
+    {
+      "id": "char_216",
+      "name": "Fatima Sandwalker",
+      "class": "merchant",
+      "role": "상인",
+      "origin": "Shifting Dunes",
+      "region": "western_deserts",
+      "tags": [
+        "무역",
+        "거래"
+      ],
+      "notes": "일에 대한 자부심이 높다.",
+      "weights": {
+        "body": 0.31,
+        "soul": 0.58,
+        "spirit": 0.11
+      }
+    },
+    {
+      "id": "char_217",
+      "name": "Sefu Vinecaller",
+      "class": "baker",
+      "role": "장인",
+      "origin": "Bloomvale",
+      "region": "southern_jungles",
+      "tags": [
+        "제빵",
+        "식품"
+      ],
+      "notes": "유머 감각이 뛰어나다.",
+      "weights": {
+        "body": 0.32,
+        "soul": 0.5,
+        "spirit": 0.18
+      }
+    },
+    {
+      "id": "char_218",
+      "name": "Bjorn Coldforge",
+      "class": "midwife",
+      "role": "산파",
+      "origin": "Northwatch Citadel",
+      "region": "northern_reaches",
+      "tags": [
+        "출산",
+        "치유"
+      ],
+      "notes": "일에 대한 자부심이 높다.",
+      "weights": {
+        "body": 0.26,
+        "soul": 0.45,
+        "spirit": 0.28
+      }
+    },
+    {
+      "id": "char_219",
+      "name": "Cole Shadowstep",
+      "class": "beggar",
+      "role": "빈민",
+      "origin": "Skybridge",
+      "region": "free_cities",
+      "tags": [
+        "방랑",
+        "생존"
+      ],
+      "notes": "새로운 것을 두려워하지 않는다.",
+      "weights": {
+        "body": 0.41,
+        "soul": 0.44,
+        "spirit": 0.16
+      }
+    },
+    {
+      "id": "char_220",
+      "name": "Grey Quickhand",
+      "class": "gravedigger",
+      "role": "묘지기",
+      "origin": "Lowspire",
+      "region": "free_cities",
+      "tags": [
+        "장례",
+        "죽음"
+      ],
+      "notes": "전통을 존중한다.",
+      "weights": {
+        "body": 0.41,
+        "soul": 0.33,
+        "spirit": 0.26
+      }
+    },
+    {
+      "id": "char_221",
+      "name": "Kofi Thornweaver",
+      "class": "cook",
+      "role": "서비스",
+      "origin": "Murkfen",
+      "region": "southern_jungles",
+      "tags": [
+        "요리",
+        "식품"
+      ],
+      "notes": "정의감이 강하다.",
+      "weights": {
+        "body": 0.35,
+        "soul": 0.51,
+        "spirit": 0.14
+      }
+    },
+    {
+      "id": "char_222",
+      "name": "Chidi Riverwalker",
+      "class": "guard",
+      "role": "경비",
+      "origin": "Murkfen",
+      "region": "southern_jungles",
+      "tags": [
+        "경비",
+        "치안"
+      ],
+      "notes": "유머 감각이 뛰어나다.",
+      "weights": {
+        "body": 0.51,
+        "soul": 0.35,
+        "spirit": 0.13
+      }
+    },
+    {
+      "id": "char_223",
+      "name": "Eleanor Highcastle",
+      "class": "knight",
+      "role": "근딜",
+      "origin": "Silver March",
+      "region": "central_kingdom",
+      "tags": [
+        "전사",
+        "기사"
+      ],
+      "notes": "과묵하지만 신뢰할 수 있다.",
+      "weights": {
+        "body": 0.55,
+        "soul": 0.27,
+        "spirit": 0.18
+      }
+    },
+    {
+      "id": "char_224",
+      "name": "Ivar Winterhold",
+      "class": "sailor",
+      "role": "선원",
+      "origin": "Northwatch Citadel",
+      "region": "northern_reaches",
+      "tags": [
+        "항해",
+        "바다"
+      ],
+      "notes": "일에 대한 자부심이 높다.",
+      "weights": {
+        "body": 0.51,
+        "soul": 0.35,
+        "spirit": 0.14
+      }
+    },
+    {
+      "id": "char_225",
+      "name": "Ragnar Icehammer",
+      "class": "courier",
+      "role": "서비스",
+      "origin": "Tempest Ridge",
+      "region": "northern_reaches",
+      "tags": [
+        "배달",
+        "이동"
+      ],
+      "notes": "항상 웃음을 잃지 않는다.",
+      "weights": {
+        "body": 0.45,
+        "soul": 0.39,
+        "spirit": 0.16
+      }
+    },
+    {
+      "id": "char_226",
+      "name": "Gunnar Winterhold",
+      "class": "merchant",
+      "role": "상인",
+      "origin": "Icewine Wharf",
+      "region": "northern_reaches",
+      "tags": [
+        "무역",
+        "거래"
+      ],
+      "notes": "가족을 가장 소중히 여긴다.",
+      "weights": {
+        "body": 0.28,
+        "soul": 0.55,
+        "spirit": 0.17
+      }
+    },
+    {
+      "id": "char_227",
+      "name": "Manu Lionclaw",
+      "class": "carpenter",
+      "role": "장인",
+      "origin": "Sable Savannah",
+      "region": "southern_jungles",
+      "tags": [
+        "목공",
+        "제작"
+      ],
+      "notes": "인내심이 강하다.",
+      "weights": {
+        "body": 0.4,
+        "soul": 0.43,
+        "spirit": 0.17
+      }
+    },
+    {
+      "id": "char_228",
+      "name": "Magnus Icehammer",
+      "class": "midwife",
+      "role": "산파",
+      "origin": "Northwatch Citadel",
+      "region": "northern_reaches",
+      "tags": [
+        "출산",
+        "치유"
+      ],
+      "notes": "항상 웃음을 잃지 않는다.",
+      "weights": {
+        "body": 0.34,
+        "soul": 0.44,
+        "spirit": 0.22
+      }
+    },
+    {
+      "id": "char_229",
+      "name": "Amir Oasiskeeper",
+      "class": "knight",
+      "role": "근딜",
+      "origin": "Shifting Dunes",
+      "region": "western_deserts",
+      "tags": [
+        "전사",
+        "기사"
+      ],
+      "notes": "일에 대한 자부심이 높다.",
+      "weights": {
+        "body": 0.55,
+        "soul": 0.33,
+        "spirit": 0.12
+      }
+    },
+    {
+      "id": "char_230",
+      "name": "Ryu Tidebringer",
+      "class": "soldier",
+      "role": "근딜",
+      "origin": "Azure Bastion",
+      "region": "eastern_shores",
+      "tags": [
+        "전사",
+        "군인"
+      ],
+      "notes": "말보다 행동으로 보여준다.",
+      "weights": {
+        "body": 0.57,
+        "soul": 0.28,
+        "spirit": 0.15
+      }
+    },
+    {
+      "id": "char_231",
+      "name": "Stella Mistwalker",
+      "class": "hunter",
+      "role": "평민",
+      "origin": "Duskmere",
+      "region": "twilight_realm",
+      "tags": [
+        "사냥",
+        "자연"
+      ],
+      "notes": "성실하고 꼼꼼하다.",
+      "weights": {
+        "body": 0.51,
+        "soul": 0.28,
+        "spirit": 0.21
+      }
+    },
+    {
+      "id": "char_232",
+      "name": "Gunnar Stormcaller",
+      "class": "miner",
+      "role": "평민",
+      "origin": "Northwatch Citadel",
+      "region": "northern_reaches",
+      "tags": [
+        "광업",
+        "산"
+      ],
+      "notes": "새로운 것을 두려워하지 않는다.",
+      "weights": {
+        "body": 0.55,
+        "soul": 0.34,
+        "spirit": 0.11
+      }
+    },
+    {
+      "id": "char_233",
+      "name": "Grom Deepmine",
+      "class": "sailor",
+      "role": "선원",
+      "origin": "Tinspire",
+      "region": "mountain_realm",
+      "tags": [
+        "항해",
+        "바다"
+      ],
+      "notes": "어려운 이웃을 돕는다.",
+      "weights": {
+        "body": 0.52,
+        "soul": 0.31,
+        "spirit": 0.17
+      }
+    },
+    {
+      "id": "char_234",
+      "name": "Diana Silverton",
+      "class": "archer",
+      "role": "원딜",
+      "origin": "Silver March",
+      "region": "central_kingdom",
+      "tags": [
+        "전사",
+        "사냥"
+      ],
+      "notes": "고독을 즐긴다.",
+      "weights": {
+        "body": 0.51,
+        "soul": 0.29,
+        "spirit": 0.2
+      }
+    },
+    {
+      "id": "char_235",
+      "name": "Vorn Coppervein",
+      "class": "healer",
+      "role": "힐러",
+      "origin": "Tinspire",
+      "region": "mountain_realm",
+      "tags": [
+        "마법",
+        "치유"
+      ],
+      "notes": "예술적 감각이 있다.",
+      "weights": {
+        "body": 0.21,
+        "soul": 0.39,
+        "spirit": 0.4
+      }
+    },
+    {
+      "id": "char_236",
+      "name": "Bjorn Icehammer",
+      "class": "priest",
+      "role": "힐러",
+      "origin": "Tempest Ridge",
+      "region": "northern_reaches",
+      "tags": [
+        "성직",
+        "신앙"
+      ],
+      "notes": "성실하고 꼼꼼하다.",
+      "weights": {
+        "body": 0.17,
+        "soul": 0.34,
+        "spirit": 0.48
+      }
+    },
+    {
+      "id": "char_237",
+      "name": "Kane Truthseeker",
+      "class": "carpenter",
+      "role": "장인",
+      "origin": "Skybridge",
+      "region": "free_cities",
+      "tags": [
+        "목공",
+        "제작"
+      ],
+      "notes": "동물을 사랑한다.",
+      "weights": {
+        "body": 0.49,
+        "soul": 0.38,
+        "spirit": 0.12
+      }
+    },
+    {
+      "id": "char_238",
+      "name": "Locke Swiftblade",
+      "class": "bard",
+      "role": "예술",
+      "origin": "Gallow Row",
+      "region": "free_cities",
+      "tags": [
+        "음악",
+        "공연"
+      ],
+      "notes": "예술적 감각이 있다.",
+      "weights": {
+        "body": 0.24,
+        "soul": 0.57,
+        "spirit": 0.19
+      }
+    },
+    {
+      "id": "char_239",
+      "name": "Emeka Vinecaller",
+      "class": "hunter",
+      "role": "평민",
+      "origin": "Bloomvale",
+      "region": "southern_jungles",
+      "tags": [
+        "사냥",
+        "자연"
+      ],
+      "notes": "사람들 사이에서 에너지를 얻는다.",
+      "weights": {
+        "body": 0.49,
+        "soul": 0.29,
+        "spirit": 0.22
+      }
+    },
+    {
+      "id": "char_240",
+      "name": "Wei Pearlmist",
+      "class": "leatherworker",
+      "role": "장인",
+      "origin": "Maru Heights",
+      "region": "eastern_shores",
+      "tags": [
+        "가죽",
+        "제작"
+      ],
+      "notes": "정의감이 강하다.",
+      "weights": {
+        "body": 0.39,
+        "soul": 0.38,
+        "spirit": 0.23
+      }
+    },
+    {
+      "id": "char_241",
+      "name": "Nova Dreamweaver",
+      "class": "scribe",
+      "role": "학자",
+      "origin": "Umber Vault",
+      "region": "twilight_realm",
+      "tags": [
+        "기록",
+        "문서"
+      ],
+      "notes": "고독을 즐긴다.",
+      "weights": {
+        "body": 0.17,
+        "soul": 0.5,
+        "spirit": 0.33
+      }
+    },
+    {
+      "id": "char_242",
+      "name": "Sven Stormcaller",
+      "class": "leatherworker",
+      "role": "장인",
+      "origin": "Frostmark",
+      "region": "northern_reaches",
+      "tags": [
+        "가죽",
+        "제작"
+      ],
+      "notes": "리더십이 있다.",
+      "weights": {
+        "body": 0.41,
+        "soul": 0.4,
+        "spirit": 0.2
+      }
+    },
+    {
+      "id": "char_243",
+      "name": "Kofi Fernheart",
+      "class": "baker",
+      "role": "장인",
+      "origin": "Bloomvale",
+      "region": "southern_jungles",
+      "tags": [
+        "제빵",
+        "식품"
+      ],
+      "notes": "전통을 존중한다.",
+      "weights": {
+        "body": 0.35,
+        "soul": 0.53,
+        "spirit": 0.12
+      }
+    },
+    {
+      "id": "char_244",
+      "name": "Lin Coralheart",
+      "class": "painter",
+      "role": "예술",
+      "origin": "Azure Bastion",
+      "region": "eastern_shores",
+      "tags": [
+        "미술",
+        "창작"
+      ],
+      "notes": "말보다 행동으로 보여준다.",
+      "weights": {
+        "body": 0.27,
+        "soul": 0.47,
+        "spirit": 0.26
+      }
+    },
+    {
+      "id": "char_245",
+      "name": "Arthur Whitehall",
+      "class": "stablehand",
+      "role": "서비스",
+      "origin": "Marble Crown",
+      "region": "central_kingdom",
+      "tags": [
+        "마구간",
+        "동물"
+      ],
+      "notes": "성실하고 꼼꼼하다.",
+      "weights": {
+        "body": 0.43,
+        "soul": 0.42,
+        "spirit": 0.14
+      }
+    },
+    {
+      "id": "char_246",
+      "name": "Sakura Coralheart",
+      "class": "teacher",
+      "role": "학자",
+      "origin": "Azure Bastion",
+      "region": "eastern_shores",
+      "tags": [
+        "교육",
+        "지식"
+      ],
+      "notes": "인내심이 강하다.",
+      "weights": {
+        "body": 0.2,
+        "soul": 0.44,
+        "spirit": 0.36
+      }
+    },
+    {
+      "id": "char_247",
+      "name": "Nyx Nightwhisper",
+      "class": "servant",
+      "role": "서비스",
+      "origin": "Duskmere",
+      "region": "twilight_realm",
+      "tags": [
+        "시중",
+        "가사"
+      ],
+      "notes": "동물을 사랑한다.",
+      "weights": {
+        "body": 0.38,
+        "soul": 0.46,
+        "spirit": 0.16
+      }
+    },
+    {
+      "id": "char_248",
+      "name": "Mei Coralheart",
+      "class": "enchanter",
+      "role": "버퍼",
+      "origin": "Azure Bastion",
+      "region": "eastern_shores",
+      "tags": [
+        "마법",
+        "부여"
+      ],
+      "notes": "전통을 존중한다.",
+      "weights": {
+        "body": 0.24,
+        "soul": 0.54,
+        "spirit": 0.23
+      }
+    },
+    {
+      "id": "char_249",
+      "name": "Kara Snowpeak",
+      "class": "enchanter",
+      "role": "버퍼",
+      "origin": "Cloud Monastery",
+      "region": "northern_reaches",
+      "tags": [
+        "마법",
+        "부여"
+      ],
+      "notes": "전통을 존중한다.",
+      "weights": {
+        "body": 0.24,
+        "soul": 0.46,
+        "spirit": 0.3
+      }
+    },
+    {
+      "id": "char_250",
+      "name": "Feng Coralheart",
+      "class": "potter",
+      "role": "장인",
+      "origin": "Gilded Pier",
+      "region": "eastern_shores",
+      "tags": [
+        "도예",
+        "예술"
+      ],
+      "notes": "예술적 감각이 있다.",
+      "weights": {
+        "body": 0.32,
+        "soul": 0.49,
+        "spirit": 0.19
+      }
+    },
+    {
+      "id": "char_051",
+      "name": "Olaf Icehammer",
+      "class": "farmer",
+      "role": "평민",
+      "origin": "Icewine Wharf",
+      "region": "northern_reaches",
+      "tags": [
+        "농업"
+      ],
+      "notes": "인내심이 강하다.",
+      "weights": {
+        "body": 0.49,
+        "soul": 0.33,
+        "spirit": 0.18
+      }
+    },
+    {
+      "id": "char_052",
+      "name": "Erik Frostborn",
+      "class": "priest",
+      "role": "힐러",
+      "origin": "Cloud Monastery",
+      "region": "northern_reaches",
+      "tags": [
+        "성직"
+      ],
+      "notes": "인내심이 강하다.",
+      "weights": {
+        "body": 0.17,
+        "soul": 0.29,
+        "spirit": 0.54
+      }
+    },
+    {
+      "id": "char_053",
+      "name": "Samira Dunerunner",
+      "class": "cook",
+      "role": "서비스",
+      "origin": "Night Bazaar",
+      "region": "western_deserts",
+      "tags": [
+        "요리"
+      ],
+      "notes": "호기심이 많다.",
+      "weights": {
+        "body": 0.34,
+        "soul": 0.47,
+        "spirit": 0.19
+      }
+    },
+    {
+      "id": "char_054",
+      "name": "Faye Mistwalker",
+      "class": "merchant",
+      "role": "상인",
+      "origin": "Vesper Court",
+      "region": "twilight_realm",
+      "tags": [
+        "무역"
+      ],
+      "notes": "항상 웃음을 잃지 않는다.",
+      "weights": {
+        "body": 0.35,
+        "soul": 0.54,
+        "spirit": 0.11
+      }
+    },
+    {
+      "id": "char_055",
+      "name": "Sigrun Ironforge",
+      "class": "innkeeper",
+      "role": "상인",
+      "origin": "Copper Belt",
+      "region": "mountain_realm",
+      "tags": [
+        "숙박"
+      ],
+      "notes": "낯선 이에게도 친절하다.",
+      "weights": {
+        "body": 0.35,
+        "soul": 0.47,
+        "spirit": 0.18
+      }
+    },
+    {
+      "id": "char_056",
+      "name": "Freya Winterhold",
+      "class": "healer",
+      "role": "힐러",
+      "origin": "Icewine Wharf",
+      "region": "northern_reaches",
+      "tags": [
+        "치유"
+      ],
+      "notes": "가족을 소중히 여긴다.",
+      "weights": {
+        "body": 0.18,
+        "soul": 0.38,
+        "spirit": 0.44
+      }
+    },
+    {
+      "id": "char_057",
+      "name": "Helga Snowpeak",
+      "class": "tailor",
+      "role": "장인",
+      "origin": "Northwatch Citadel",
+      "region": "northern_reaches",
+      "tags": [
+        "재봉"
+      ],
+      "notes": "일에 자부심이 높다.",
+      "weights": {
+        "body": 0.3,
+        "soul": 0.54,
+        "spirit": 0.17
+      }
+    },
+    {
+      "id": "char_058",
+      "name": "Hassan Sunrider",
+      "class": "herbalist",
+      "role": "학자",
+      "origin": "Shifting Dunes",
+      "region": "western_deserts",
+      "tags": [
+        "약초"
+      ],
+      "notes": "말보다 행동으로 보여준다.",
+      "weights": {
+        "body": 0.32,
+        "soul": 0.41,
+        "spirit": 0.28
+      }
+    },
+    {
+      "id": "char_059",
+      "name": "Shade Veilkeeper",
+      "class": "baker",
+      "role": "장인",
+      "origin": "Crystal Sound",
+      "region": "twilight_realm",
+      "tags": [
+        "제빵"
+      ],
+      "notes": "과묵하지만 신뢰할 수 있다.",
+      "weights": {
+        "body": 0.34,
+        "soul": 0.55,
+        "spirit": 0.11
+      }
+    },
+    {
+      "id": "char_060",
+      "name": "Dorn Stonehammer",
+      "class": "guard",
+      "role": "경비",
+      "origin": "Copper Belt",
+      "region": "mountain_realm",
+      "tags": [
+        "치안"
+      ],
+      "notes": "정의감이 강하다.",
+      "weights": {
+        "body": 0.51,
+        "soul": 0.33,
+        "spirit": 0.16
+      }
+    },
+    {
+      "id": "char_061",
+      "name": "Flynn Silvertongue",
+      "class": "guard",
+      "role": "경비",
+      "origin": "Sunken Bazaar",
+      "region": "free_cities",
+      "tags": [
+        "치안"
+      ],
+      "notes": "자연과 가까이 산다.",
+      "weights": {
+        "body": 0.47,
+        "soul": 0.38,
+        "spirit": 0.16
+      }
+    },
+    {
+      "id": "char_062",
+      "name": "Eclipse Mistwalker",
+      "class": "priest",
+      "role": "힐러",
+      "origin": "Vesper Court",
+      "region": "twilight_realm",
+      "tags": [
+        "성직"
+      ],
+      "notes": "과묵하지만 신뢰할 수 있다.",
+      "weights": {
+        "body": 0.25,
+        "soul": 0.26,
+        "spirit": 0.49
+      }
+    },
+    {
+      "id": "char_063",
+      "name": "Ingrid Winterhold",
+      "class": "hunter",
+      "role": "평민",
+      "origin": "Frostfall",
+      "region": "northern_reaches",
+      "tags": [
+        "사냥"
+      ],
+      "notes": "인내심이 강하다.",
+      "weights": {
+        "body": 0.46,
+        "soul": 0.29,
+        "spirit": 0.25
+      }
+    },
+    {
+      "id": "char_064",
+      "name": "Emeka Vinecaller",
+      "class": "healer",
+      "role": "힐러",
+      "origin": "Verdant Terrace",
+      "region": "southern_jungles",
+      "tags": [
+        "치유"
+      ],
+      "notes": "일에 자부심이 높다.",
+      "weights": {
+        "body": 0.22,
+        "soul": 0.39,
+        "spirit": 0.39
+      }
+    },
+    {
+      "id": "char_065",
+      "name": "Leif Stormcaller",
+      "class": "potter",
+      "role": "장인",
+      "origin": "Cloud Monastery",
+      "region": "northern_reaches",
+      "tags": [
+        "도예"
+      ],
+      "notes": "인내심이 강하다.",
+      "weights": {
+        "body": 0.3,
+        "soul": 0.47,
+        "spirit": 0.22
+      }
+    },
+    {
+      "id": "char_066",
+      "name": "Kenji Moonbay",
+      "class": "mage",
+      "role": "마딜",
+      "origin": "Azure Bastion",
+      "region": "eastern_shores",
+      "tags": [
+        "마법"
+      ],
+      "notes": "호기심이 많다.",
+      "weights": {
+        "body": 0.22,
+        "soul": 0.57,
+        "spirit": 0.22
+      }
+    },
+    {
+      "id": "char_067",
+      "name": "Florence Brightwood",
+      "class": "bard",
+      "role": "예술",
+      "origin": "Amber Library",
+      "region": "central_kingdom",
+      "tags": [
+        "음악"
+      ],
+      "notes": "가족을 소중히 여긴다.",
+      "weights": {
+        "body": 0.21,
+        "soul": 0.54,
+        "spirit": 0.25
+      }
+    },
+    {
+      "id": "char_068",
+      "name": "Hassan Sandwalker",
+      "class": "fisher",
+      "role": "평민",
+      "origin": "Solenne Dunes",
+      "region": "western_deserts",
+      "tags": [
+        "어업"
+      ],
+      "notes": "인내심이 강하다.",
+      "weights": {
+        "body": 0.43,
+        "soul": 0.35,
+        "spirit": 0.22
+      }
+    },
+    {
+      "id": "char_069",
+      "name": "Hana Tidebringer",
+      "class": "hunter",
+      "role": "평민",
+      "origin": "Jeon Port",
+      "region": "eastern_shores",
+      "tags": [
+        "사냥"
+      ],
+      "notes": "정의감이 강하다.",
+      "weights": {
+        "body": 0.47,
+        "soul": 0.34,
+        "spirit": 0.19
+      }
+    },
+    {
+      "id": "char_070",
+      "name": "Nadia Miragecaller",
+      "class": "cook",
+      "role": "서비스",
+      "origin": "Shifting Dunes",
+      "region": "western_deserts",
+      "tags": [
+        "요리"
+      ],
+      "notes": "항상 웃음을 잃지 않는다.",
+      "weights": {
+        "body": 0.36,
+        "soul": 0.49,
+        "spirit": 0.15
+      }
+    },
+    {
+      "id": "char_071",
+      "name": "Fatima Sandwalker",
+      "class": "tailor",
+      "role": "장인",
+      "origin": "Solenne Dunes",
+      "region": "western_deserts",
+      "tags": [
+        "재봉"
+      ],
+      "notes": "항상 웃음을 잃지 않는다.",
+      "weights": {
+        "body": 0.32,
+        "soul": 0.5,
+        "spirit": 0.18
+      }
+    },
+    {
+      "id": "char_072",
+      "name": "Cedric Thornwood",
+      "class": "tailor",
+      "role": "장인",
+      "origin": "Marble Crown",
+      "region": "central_kingdom",
+      "tags": [
+        "재봉"
+      ],
+      "notes": "정의감이 강하다.",
+      "weights": {
+        "body": 0.27,
+        "soul": 0.5,
+        "spirit": 0.23
+      }
+    },
+    {
+      "id": "char_073",
+      "name": "Zhi Moonbay",
+      "class": "servant",
+      "role": "서비스",
+      "origin": "Jeon Port",
+      "region": "eastern_shores",
+      "tags": [
+        "시중"
+      ],
+      "notes": "동물을 사랑한다.",
+      "weights": {
+        "body": 0.37,
+        "soul": 0.47,
+        "spirit": 0.17
+      }
+    },
+    {
+      "id": "char_074",
+      "name": "Nova Nightwhisper",
+      "class": "innkeeper",
+      "role": "상인",
+      "origin": "Vesper Court",
+      "region": "twilight_realm",
+      "tags": [
+        "숙박"
+      ],
+      "notes": "동물을 사랑한다.",
+      "weights": {
+        "body": 0.38,
+        "soul": 0.45,
+        "spirit": 0.16
+      }
+    },
+    {
+      "id": "char_075",
+      "name": "Astrid Coldforge",
+      "class": "fisher",
+      "role": "평민",
+      "origin": "Cloud Monastery",
+      "region": "northern_reaches",
+      "tags": [
+        "어업"
+      ],
+      "notes": "말보다 행동으로 보여준다.",
+      "weights": {
+        "body": 0.5,
+        "soul": 0.33,
+        "spirit": 0.17
+      }
+    },
+    {
+      "id": "char_076",
+      "name": "Hiro Seaspray",
+      "class": "soldier",
+      "role": "근딜",
+      "origin": "Gilded Pier",
+      "region": "eastern_shores",
+      "tags": [
+        "전사"
+      ],
+      "notes": "인내심이 강하다.",
+      "weights": {
+        "body": 0.57,
+        "soul": 0.29,
+        "spirit": 0.14
+      }
+    },
+    {
+      "id": "char_077",
+      "name": "Gunnar Coldforge",
+      "class": "fisher",
+      "role": "평민",
+      "origin": "Northwatch Citadel",
+      "region": "northern_reaches",
+      "tags": [
+        "어업"
+      ],
+      "notes": "정의감이 강하다.",
+      "weights": {
+        "body": 0.48,
+        "soul": 0.32,
+        "spirit": 0.2
+      }
+    },
+    {
+      "id": "char_078",
+      "name": "Mira Dreamweaver",
+      "class": "fisher",
+      "role": "평민",
+      "origin": "Duskmere",
+      "region": "twilight_realm",
+      "tags": [
+        "어업"
+      ],
+      "notes": "말보다 행동으로 보여준다.",
+      "weights": {
+        "body": 0.47,
+        "soul": 0.31,
+        "spirit": 0.22
+      }
+    },
+    {
+      "id": "char_079",
+      "name": "Kofi Junglestrider",
+      "class": "soldier",
+      "role": "근딜",
+      "origin": "Murkfen",
+      "region": "southern_jungles",
+      "tags": [
+        "전사"
+      ],
+      "notes": "인내심이 강하다.",
+      "weights": {
+        "body": 0.56,
+        "soul": 0.29,
+        "spirit": 0.15
+      }
+    },
+    {
+      "id": "char_080",
+      "name": "Cedric Brightwood",
+      "class": "servant",
+      "role": "서비스",
+      "origin": "Amber Library",
+      "region": "central_kingdom",
+      "tags": [
+        "시중"
+      ],
+      "notes": "호기심이 많다.",
+      "weights": {
+        "body": 0.34,
+        "soul": 0.43,
+        "spirit": 0.23
+      }
+    },
+    {
+      "id": "char_081",
+      "name": "Marcus Goldmere",
+      "class": "mage",
+      "role": "마딜",
+      "origin": "Marble Crown",
+      "region": "central_kingdom",
+      "tags": [
+        "마법"
+      ],
+      "notes": "항상 웃음을 잃지 않는다.",
+      "weights": {
+        "body": 0.21,
+        "soul": 0.57,
+        "spirit": 0.22
+      }
+    },
+    {
+      "id": "char_082",
+      "name": "Farid Sunrider",
+      "class": "priest",
+      "role": "힐러",
+      "origin": "Night Bazaar",
+      "region": "western_deserts",
+      "tags": [
+        "성직"
+      ],
+      "notes": "일에 자부심이 높다.",
+      "weights": {
+        "body": 0.16,
+        "soul": 0.32,
+        "spirit": 0.52
+      }
+    },
+    {
+      "id": "char_083",
+      "name": "Sefu Lionclaw",
+      "class": "carpenter",
+      "role": "장인",
+      "origin": "Thorn Abbey",
+      "region": "southern_jungles",
+      "tags": [
+        "목공"
+      ],
+      "notes": "일에 자부심이 높다.",
+      "weights": {
+        "body": 0.45,
+        "soul": 0.42,
+        "spirit": 0.13
+      }
+    },
+    {
+      "id": "char_084",
+      "name": "Hakon Frostborn",
+      "class": "farmer",
+      "role": "평민",
+      "origin": "Cloud Monastery",
+      "region": "northern_reaches",
+      "tags": [
+        "농업"
+      ],
+      "notes": "일에 자부심이 높다.",
+      "weights": {
+        "body": 0.52,
+        "soul": 0.36,
+        "spirit": 0.12
+      }
+    },
+    {
+      "id": "char_085",
+      "name": "Sven Icehammer",
+      "class": "tailor",
+      "role": "장인",
+      "origin": "Icewine Wharf",
+      "region": "northern_reaches",
+      "tags": [
+        "재봉"
+      ],
+      "notes": "동물을 사랑한다.",
+      "weights": {
+        "body": 0.3,
+        "soul": 0.52,
+        "spirit": 0.18
+      }
+    },
+    {
+      "id": "char_086",
+      "name": "Arthur Goldmere",
+      "class": "herbalist",
+      "role": "학자",
+      "origin": "Silver March",
+      "region": "central_kingdom",
+      "tags": [
+        "약초"
+      ],
+      "notes": "항상 웃음을 잃지 않는다.",
+      "weights": {
+        "body": 0.35,
+        "soul": 0.38,
+        "spirit": 0.27
+      }
+    },
+    {
+      "id": "char_087",
+      "name": "Miko Tidebringer",
+      "class": "baker",
+      "role": "장인",
+      "origin": "Brass Harbor",
+      "region": "eastern_shores",
+      "tags": [
+        "제빵"
+      ],
+      "notes": "가족을 소중히 여긴다.",
+      "weights": {
+        "body": 0.37,
+        "soul": 0.47,
+        "spirit": 0.16
+      }
+    },
+    {
+      "id": "char_088",
+      "name": "Cole Truthseeker",
+      "class": "baker",
+      "role": "장인",
+      "origin": "Skybridge",
+      "region": "free_cities",
+      "tags": [
+        "제빵"
+      ],
+      "notes": "호기심이 많다.",
+      "weights": {
+        "body": 0.37,
+        "soul": 0.52,
+        "spirit": 0.11
+      }
+    },
+    {
+      "id": "char_089",
+      "name": "Nia Thornweaver",
+      "class": "blacksmith",
+      "role": "장인",
+      "origin": "Murkfen",
+      "region": "southern_jungles",
+      "tags": [
+        "대장"
+      ],
+      "notes": "호기심이 많다.",
+      "weights": {
+        "body": 0.48,
+        "soul": 0.32,
+        "spirit": 0.2
+      }
+    },
+    {
+      "id": "char_090",
+      "name": "Helena Highcastle",
+      "class": "innkeeper",
+      "role": "상인",
+      "origin": "Silver March",
+      "region": "central_kingdom",
+      "tags": [
+        "숙박"
+      ],
+      "notes": "과묵하지만 신뢰할 수 있다.",
+      "weights": {
+        "body": 0.37,
+        "soul": 0.49,
+        "spirit": 0.15
+      }
+    },
+    {
+      "id": "char_091",
+      "name": "Hilda Ironforge",
+      "class": "carpenter",
+      "role": "장인",
+      "origin": "Forgevale",
+      "region": "mountain_realm",
+      "tags": [
+        "목공"
+      ],
+      "notes": "성실하고 꼼꼼하다.",
+      "weights": {
+        "body": 0.42,
+        "soul": 0.39,
+        "spirit": 0.18
+      }
+    },
+    {
+      "id": "char_092",
+      "name": "Wei Seaspray",
+      "class": "tailor",
+      "role": "장인",
+      "origin": "Gilded Pier",
+      "region": "eastern_shores",
+      "tags": [
+        "재봉"
+      ],
+      "notes": "낯선 이에게도 친절하다.",
+      "weights": {
+        "body": 0.26,
+        "soul": 0.55,
+        "spirit": 0.19
+      }
+    },
+    {
+      "id": "char_093",
+      "name": "Karim Oasiskeeper",
+      "class": "baker",
+      "role": "장인",
+      "origin": "Solenne Dunes",
+      "region": "western_deserts",
+      "tags": [
+        "제빵"
+      ],
+      "notes": "말보다 행동으로 보여준다.",
+      "weights": {
+        "body": 0.37,
+        "soul": 0.51,
+        "spirit": 0.12
+      }
+    },
+    {
+      "id": "char_094",
+      "name": "Kord Ironforge",
+      "class": "potter",
+      "role": "장인",
+      "origin": "Forgevale",
+      "region": "mountain_realm",
+      "tags": [
+        "도예"
+      ],
+      "notes": "항상 웃음을 잃지 않는다.",
+      "weights": {
+        "body": 0.37,
+        "soul": 0.45,
+        "spirit": 0.18
+      }
+    },
+    {
+      "id": "char_095",
+      "name": "Adaeze Fernheart",
+      "class": "innkeeper",
+      "role": "상인",
+      "origin": "Murkfen",
+      "region": "southern_jungles",
+      "tags": [
+        "숙박"
+      ],
+      "notes": "가족을 소중히 여긴다.",
+      "weights": {
+        "body": 0.32,
+        "soul": 0.56,
+        "spirit": 0.12
+      }
+    },
+    {
+      "id": "char_096",
+      "name": "Diana Thornwood",
+      "class": "miner",
+      "role": "평민",
+      "origin": "Silver March",
+      "region": "central_kingdom",
+      "tags": [
+        "광업"
+      ],
+      "notes": "인내심이 강하다.",
+      "weights": {
+        "body": 0.56,
+        "soul": 0.28,
+        "spirit": 0.16
+      }
+    },
+    {
+      "id": "char_097",
+      "name": "Ragnar Frostborn",
+      "class": "guard",
+      "role": "경비",
+      "origin": "Frostfall",
+      "region": "northern_reaches",
+      "tags": [
+        "치안"
+      ],
+      "notes": "인내심이 강하다.",
+      "weights": {
+        "body": 0.51,
+        "soul": 0.3,
+        "spirit": 0.19
+      }
+    },
+    {
+      "id": "char_098",
+      "name": "Hassan Miragecaller",
+      "class": "innkeeper",
+      "role": "상인",
+      "origin": "Shifting Dunes",
+      "region": "western_deserts",
+      "tags": [
+        "숙박"
+      ],
+      "notes": "항상 웃음을 잃지 않는다.",
+      "weights": {
+        "body": 0.37,
+        "soul": 0.48,
+        "spirit": 0.16
+      }
+    },
+    {
+      "id": "char_099",
+      "name": "Nia Lionclaw",
+      "class": "mage",
+      "role": "마딜",
+      "origin": "Thorn Abbey",
+      "region": "southern_jungles",
+      "tags": [
+        "마법"
+      ],
+      "notes": "낯선 이에게도 친절하다.",
+      "weights": {
+        "body": 0.2,
+        "soul": 0.57,
+        "spirit": 0.23
+      }
+    },
+    {
+      "id": "char_100",
+      "name": "Luna Starfall",
+      "class": "herbalist",
+      "role": "학자",
+      "origin": "Crystal Sound",
+      "region": "twilight_realm",
+      "tags": [
+        "약초"
+      ],
+      "notes": "가족을 소중히 여긴다.",
+      "weights": {
+        "body": 0.3,
+        "soul": 0.38,
+        "spirit": 0.32
+      }
+    },
+    {
+      "id": "char_101",
+      "name": "Adaeze Riverwalker",
+      "class": "carpenter",
+      "role": "장인",
+      "origin": "Murkfen",
+      "region": "southern_jungles",
+      "tags": [
+        "목공"
+      ],
+      "notes": "자연과 가까이 산다.",
+      "weights": {
+        "body": 0.44,
+        "soul": 0.41,
+        "spirit": 0.15
+      }
+    },
+    {
+      "id": "char_102",
+      "name": "Kenji Coralheart",
+      "class": "herbalist",
+      "role": "학자",
+      "origin": "Azure Bastion",
+      "region": "eastern_shores",
+      "tags": [
+        "약초"
+      ],
+      "notes": "정의감이 강하다.",
+      "weights": {
+        "body": 0.32,
+        "soul": 0.42,
+        "spirit": 0.26
+      }
+    },
+    {
+      "id": "char_103",
+      "name": "Kofi Fernheart",
+      "class": "tailor",
+      "role": "장인",
+      "origin": "Bloomvale",
+      "region": "southern_jungles",
+      "tags": [
+        "재봉"
+      ],
+      "notes": "항상 웃음을 잃지 않는다.",
+      "weights": {
+        "body": 0.25,
+        "soul": 0.54,
+        "spirit": 0.21
+      }
+    },
+    {
+      "id": "char_104",
+      "name": "Drew Streetwise",
+      "class": "soldier",
+      "role": "근딜",
+      "origin": "Lowspire",
+      "region": "free_cities",
+      "tags": [
+        "전사"
+      ],
+      "notes": "항상 웃음을 잃지 않는다.",
+      "weights": {
+        "body": 0.61,
+        "soul": 0.22,
+        "spirit": 0.17
+      }
+    },
+    {
+      "id": "char_105",
+      "name": "Seraphina Dreamweaver",
+      "class": "tailor",
+      "role": "장인",
+      "origin": "Duskmere",
+      "region": "twilight_realm",
+      "tags": [
+        "재봉"
+      ],
+      "notes": "호기심이 많다.",
+      "weights": {
+        "body": 0.3,
+        "soul": 0.54,
+        "spirit": 0.16
+      }
+    },
+    {
+      "id": "char_106",
+      "name": "Morgan Swiftblade",
+      "class": "herbalist",
+      "role": "학자",
+      "origin": "Gallow Row",
+      "region": "free_cities",
+      "tags": [
+        "약초"
+      ],
+      "notes": "인내심이 강하다.",
+      "weights": {
+        "body": 0.31,
+        "soul": 0.41,
+        "spirit": 0.28
+      }
+    },
+    {
+      "id": "char_107",
+      "name": "Morgan Silvertongue",
+      "class": "blacksmith",
+      "role": "장인",
+      "origin": "Sunken Bazaar",
+      "region": "free_cities",
+      "tags": [
+        "대장"
+      ],
+      "notes": "인내심이 강하다.",
+      "weights": {
+        "body": 0.51,
+        "soul": 0.37,
+        "spirit": 0.12
+      }
+    },
+    {
+      "id": "char_108",
+      "name": "Locke Streetwise",
+      "class": "scribe",
+      "role": "학자",
+      "origin": "Lowspire",
+      "region": "free_cities",
+      "tags": [
+        "기록"
+      ],
+      "notes": "일에 자부심이 높다.",
+      "weights": {
+        "body": 0.17,
+        "soul": 0.52,
+        "spirit": 0.3
+      }
+    },
+    {
+      "id": "char_109",
+      "name": "Olaf Stormcaller",
+      "class": "hunter",
+      "role": "평민",
+      "origin": "Frostfall",
+      "region": "northern_reaches",
+      "tags": [
+        "사냥"
+      ],
+      "notes": "낯선 이에게도 친절하다.",
+      "weights": {
+        "body": 0.52,
+        "soul": 0.32,
+        "spirit": 0.16
+      }
+    },
+    {
+      "id": "char_110",
+      "name": "Tor Ironforge",
+      "class": "healer",
+      "role": "힐러",
+      "origin": "Coalspire",
+      "region": "mountain_realm",
+      "tags": [
+        "치유"
+      ],
+      "notes": "성실하고 꼼꼼하다.",
+      "weights": {
+        "body": 0.17,
+        "soul": 0.39,
+        "spirit": 0.44
+      }
+    },
+    {
+      "id": "char_111",
+      "name": "Catherine Whitehall",
+      "class": "sailor",
+      "role": "선원",
+      "origin": "Silver March",
+      "region": "central_kingdom",
+      "tags": [
+        "항해"
+      ],
+      "notes": "낯선 이에게도 친절하다.",
+      "weights": {
+        "body": 0.47,
+        "soul": 0.35,
+        "spirit": 0.18
+      }
+    },
+    {
+      "id": "char_112",
+      "name": "Zaid Oasiskeeper",
+      "class": "archer",
+      "role": "원딜",
+      "origin": "Solenne Dunes",
+      "region": "western_deserts",
+      "tags": [
+        "사냥"
+      ],
+      "notes": "낯선 이에게도 친절하다.",
+      "weights": {
+        "body": 0.5,
+        "soul": 0.29,
+        "spirit": 0.22
+      }
+    },
+    {
+      "id": "char_113",
+      "name": "Miko Coralheart",
+      "class": "knight",
+      "role": "근딜",
+      "origin": "Gilded Pier",
+      "region": "eastern_shores",
+      "tags": [
+        "기사"
+      ],
+      "notes": "과묵하지만 신뢰할 수 있다.",
+      "weights": {
+        "body": 0.53,
+        "soul": 0.31,
+        "spirit": 0.16
+      }
+    },
+    {
+      "id": "char_114",
+      "name": "Ivar Coldforge",
+      "class": "scribe",
+      "role": "학자",
+      "origin": "Cloud Monastery",
+      "region": "northern_reaches",
+      "tags": [
+        "기록"
+      ],
+      "notes": "정의감이 강하다.",
+      "weights": {
+        "body": 0.21,
+        "soul": 0.48,
+        "spirit": 0.31
+      }
+    },
+    {
+      "id": "char_115",
+      "name": "Drew Silvertongue",
+      "class": "merchant",
+      "role": "상인",
+      "origin": "Gallow Row",
+      "region": "free_cities",
+      "tags": [
+        "무역"
+      ],
+      "notes": "항상 웃음을 잃지 않는다.",
+      "weights": {
+        "body": 0.31,
+        "soul": 0.56,
+        "spirit": 0.12
+      }
+    },
+    {
+      "id": "char_116",
+      "name": "Casey Shadowstep",
+      "class": "farmer",
+      "role": "평민",
+      "origin": "Skybridge",
+      "region": "free_cities",
+      "tags": [
+        "농업"
+      ],
+      "notes": "과묵하지만 신뢰할 수 있다.",
+      "weights": {
+        "body": 0.49,
+        "soul": 0.36,
+        "spirit": 0.16
+      }
+    },
+    {
+      "id": "char_117",
+      "name": "Omar Dunerunner",
+      "class": "carpenter",
+      "role": "장인",
+      "origin": "Solenne Dunes",
+      "region": "western_deserts",
+      "tags": [
+        "목공"
+      ],
+      "notes": "정의감이 강하다.",
+      "weights": {
+        "body": 0.42,
+        "soul": 0.42,
+        "spirit": 0.16
+      }
+    },
+    {
+      "id": "char_118",
+      "name": "Casey Shadowstep",
+      "class": "cook",
+      "role": "서비스",
+      "origin": "Gallow Row",
+      "region": "free_cities",
+      "tags": [
+        "요리"
+      ],
+      "notes": "호기심이 많다.",
+      "weights": {
+        "body": 0.33,
+        "soul": 0.51,
+        "spirit": 0.16
+      }
+    },
+    {
+      "id": "char_119",
+      "name": "Zola Thornweaver",
+      "class": "miner",
+      "role": "평민",
+      "origin": "Verdant Terrace",
+      "region": "southern_jungles",
+      "tags": [
+        "광업"
+      ],
+      "notes": "자연과 가까이 산다.",
+      "weights": {
+        "body": 0.54,
+        "soul": 0.33,
+        "spirit": 0.13
+      }
+    },
+    {
+      "id": "char_120",
+      "name": "Tariq Sandwalker",
+      "class": "shepherd",
+      "role": "평민",
+      "origin": "Night Bazaar",
+      "region": "western_deserts",
+      "tags": [
+        "목축"
+      ],
+      "notes": "항상 웃음을 잃지 않는다.",
+      "weights": {
+        "body": 0.41,
+        "soul": 0.37,
+        "spirit": 0.21
+      }
+    },
+    {
+      "id": "char_121",
+      "name": "Diana Thornwood",
+      "class": "innkeeper",
+      "role": "상인",
+      "origin": "Silver March",
+      "region": "central_kingdom",
+      "tags": [
+        "숙박"
+      ],
+      "notes": "낯선 이에게도 친절하다.",
+      "weights": {
+        "body": 0.33,
+        "soul": 0.56,
+        "spirit": 0.11
+      }
+    },
+    {
+      "id": "char_122",
+      "name": "Casey Truthseeker",
+      "class": "miner",
+      "role": "평민",
+      "origin": "Sunken Bazaar",
+      "region": "free_cities",
+      "tags": [
+        "광업"
+      ],
+      "notes": "호기심이 많다.",
+      "weights": {
+        "body": 0.59,
+        "soul": 0.3,
+        "spirit": 0.12
+      }
+    },
+    {
+      "id": "char_123",
+      "name": "Sade Riverwalker",
+      "class": "bard",
+      "role": "예술",
+      "origin": "Murkfen",
+      "region": "southern_jungles",
+      "tags": [
+        "음악"
+      ],
+      "notes": "정의감이 강하다.",
+      "weights": {
+        "body": 0.28,
+        "soul": 0.55,
+        "spirit": 0.18
+      }
+    },
+    {
+      "id": "char_124",
+      "name": "Olaf Coldforge",
+      "class": "baker",
+      "role": "장인",
+      "origin": "Cloud Monastery",
+      "region": "northern_reaches",
+      "tags": [
+        "제빵"
+      ],
+      "notes": "과묵하지만 신뢰할 수 있다.",
+      "weights": {
+        "body": 0.35,
+        "soul": 0.51,
+        "spirit": 0.14
+      }
+    },
+    {
+      "id": "char_125",
+      "name": "Quinn Shadowstep",
+      "class": "merchant",
+      "role": "상인",
+      "origin": "Lowspire",
+      "region": "free_cities",
+      "tags": [
+        "무역"
+      ],
+      "notes": "성실하고 꼼꼼하다.",
+      "weights": {
+        "body": 0.3,
+        "soul": 0.56,
+        "spirit": 0.14
+      }
+    },
+    {
+      "id": "char_126",
+      "name": "Zuri Junglestrider",
+      "class": "healer",
+      "role": "힐러",
+      "origin": "Verdant Terrace",
+      "region": "southern_jungles",
+      "tags": [
+        "치유"
+      ],
+      "notes": "정의감이 강하다.",
+      "weights": {
+        "body": 0.16,
+        "soul": 0.43,
+        "spirit": 0.41
+      }
+    },
+    {
+      "id": "char_127",
+      "name": "Morgan Quickhand",
+      "class": "scribe",
+      "role": "학자",
+      "origin": "Sunken Bazaar",
+      "region": "free_cities",
+      "tags": [
+        "기록"
+      ],
+      "notes": "가족을 소중히 여긴다.",
+      "weights": {
+        "body": 0.17,
+        "soul": 0.5,
+        "spirit": 0.34
+      }
+    },
+    {
+      "id": "char_128",
+      "name": "Tor Steelborn",
+      "class": "archer",
+      "role": "원딜",
+      "origin": "Copper Belt",
+      "region": "mountain_realm",
+      "tags": [
+        "사냥"
+      ],
+      "notes": "가족을 소중히 여긴다.",
+      "weights": {
+        "body": 0.51,
+        "soul": 0.29,
+        "spirit": 0.2
+      }
+    },
+    {
+      "id": "char_129",
+      "name": "Obi Lionclaw",
+      "class": "tailor",
+      "role": "장인",
+      "origin": "Verdant Terrace",
+      "region": "southern_jungles",
+      "tags": [
+        "재봉"
+      ],
+      "notes": "호기심이 많다.",
+      "weights": {
+        "body": 0.26,
+        "soul": 0.51,
+        "spirit": 0.23
+      }
+    },
+    {
+      "id": "char_130",
+      "name": "Zara Stargazer",
+      "class": "carpenter",
+      "role": "장인",
+      "origin": "Night Bazaar",
+      "region": "western_deserts",
+      "tags": [
+        "목공"
+      ],
+      "notes": "가족을 소중히 여긴다.",
+      "weights": {
+        "body": 0.44,
+        "soul": 0.42,
+        "spirit": 0.14
+      }
+    },
+    {
+      "id": "char_131",
+      "name": "Olaf Snowpeak",
+      "class": "carpenter",
+      "role": "장인",
+      "origin": "Icewine Wharf",
+      "region": "northern_reaches",
+      "tags": [
+        "목공"
+      ],
+      "notes": "가족을 소중히 여긴다.",
+      "weights": {
+        "body": 0.45,
+        "soul": 0.38,
+        "spirit": 0.17
+      }
+    },
+    {
+      "id": "char_132",
+      "name": "Arthur Highcastle",
+      "class": "fisher",
+      "role": "평민",
+      "origin": "Silver March",
+      "region": "central_kingdom",
+      "tags": [
+        "어업"
+      ],
+      "notes": "과묵하지만 신뢰할 수 있다.",
+      "weights": {
+        "body": 0.46,
+        "soul": 0.38,
+        "spirit": 0.16
+      }
+    },
+    {
+      "id": "char_133",
+      "name": "Sade Lionclaw",
+      "class": "archer",
+      "role": "원딜",
+      "origin": "Murkfen",
+      "region": "southern_jungles",
+      "tags": [
+        "사냥"
+      ],
+      "notes": "말보다 행동으로 보여준다.",
+      "weights": {
+        "body": 0.48,
+        "soul": 0.26,
+        "spirit": 0.25
+      }
+    },
+    {
+      "id": "char_134",
+      "name": "Sigrid Frostborn",
+      "class": "shepherd",
+      "role": "평민",
+      "origin": "Cloud Monastery",
+      "region": "northern_reaches",
+      "tags": [
+        "목축"
+      ],
+      "notes": "성실하고 꼼꼼하다.",
+      "weights": {
+        "body": 0.41,
+        "soul": 0.42,
+        "spirit": 0.17
+      }
+    },
+    {
+      "id": "char_135",
+      "name": "Emeka Thornweaver",
+      "class": "shepherd",
+      "role": "평민",
+      "origin": "Bloomvale",
+      "region": "southern_jungles",
+      "tags": [
+        "목축"
+      ],
+      "notes": "정의감이 강하다.",
+      "weights": {
+        "body": 0.4,
+        "soul": 0.39,
+        "spirit": 0.21
+      }
+    },
+    {
+      "id": "char_136",
+      "name": "Aurora Starfall",
+      "class": "knight",
+      "role": "근딜",
+      "origin": "Vesper Court",
+      "region": "twilight_realm",
+      "tags": [
+        "기사"
+      ],
+      "notes": "성실하고 꼼꼼하다.",
+      "weights": {
+        "body": 0.58,
+        "soul": 0.27,
+        "spirit": 0.16
+      }
+    },
+    {
+      "id": "char_137",
+      "name": "Magnus Snowpeak",
+      "class": "sailor",
+      "role": "선원",
+      "origin": "Frostfall",
+      "region": "northern_reaches",
+      "tags": [
+        "항해"
+      ],
+      "notes": "항상 웃음을 잃지 않는다.",
+      "weights": {
+        "body": 0.54,
+        "soul": 0.33,
+        "spirit": 0.12
+      }
+    },
+    {
+      "id": "char_138",
+      "name": "Xia Pearlmist",
+      "class": "farmer",
+      "role": "평민",
+      "origin": "Jeon Port",
+      "region": "eastern_shores",
+      "tags": [
+        "농업"
+      ],
+      "notes": "자연과 가까이 산다.",
+      "weights": {
+        "body": 0.53,
+        "soul": 0.34,
+        "spirit": 0.13
+      }
+    },
+    {
+      "id": "char_139",
+      "name": "Dayo Vinecaller",
+      "class": "cook",
+      "role": "서비스",
+      "origin": "Murkfen",
+      "region": "southern_jungles",
+      "tags": [
+        "요리"
+      ],
+      "notes": "성실하고 꼼꼼하다.",
+      "weights": {
+        "body": 0.33,
+        "soul": 0.49,
+        "spirit": 0.18
+      }
+    },
+    {
+      "id": "char_140",
+      "name": "Tariq Miragecaller",
+      "class": "soldier",
+      "role": "근딜",
+      "origin": "Solenne Dunes",
+      "region": "western_deserts",
+      "tags": [
+        "전사"
+      ],
+      "notes": "과묵하지만 신뢰할 수 있다.",
+      "weights": {
+        "body": 0.62,
+        "soul": 0.25,
+        "spirit": 0.13
+      }
+    },
+    {
+      "id": "char_141",
+      "name": "Xia Wavecrest",
+      "class": "potter",
+      "role": "장인",
+      "origin": "Brass Harbor",
+      "region": "eastern_shores",
+      "tags": [
+        "도예"
+      ],
+      "notes": "가족을 소중히 여긴다.",
+      "weights": {
+        "body": 0.36,
+        "soul": 0.44,
+        "spirit": 0.2
+      }
+    },
+    {
+      "id": "char_142",
+      "name": "Blake Streetwise",
+      "class": "knight",
+      "role": "근딜",
+      "origin": "Skybridge",
+      "region": "free_cities",
+      "tags": [
+        "기사"
+      ],
+      "notes": "정의감이 강하다.",
+      "weights": {
+        "body": 0.58,
+        "soul": 0.31,
+        "spirit": 0.1
+      }
+    },
+    {
+      "id": "char_143",
+      "name": "Iris Brightwood",
+      "class": "sailor",
+      "role": "선원",
+      "origin": "Amber Library",
+      "region": "central_kingdom",
+      "tags": [
+        "항해"
+      ],
+      "notes": "말보다 행동으로 보여준다.",
+      "weights": {
+        "body": 0.53,
+        "soul": 0.32,
+        "spirit": 0.15
+      }
+    },
+    {
+      "id": "char_144",
+      "name": "Thandi Fernheart",
+      "class": "blacksmith",
+      "role": "장인",
+      "origin": "Murkfen",
+      "region": "southern_jungles",
+      "tags": [
+        "대장"
+      ],
+      "notes": "항상 웃음을 잃지 않는다.",
+      "weights": {
+        "body": 0.51,
+        "soul": 0.35,
+        "spirit": 0.14
+      }
+    },
+    {
+      "id": "char_145",
+      "name": "Yuki Saltwind",
+      "class": "merchant",
+      "role": "상인",
+      "origin": "Jeon Port",
+      "region": "eastern_shores",
+      "tags": [
+        "무역"
+      ],
+      "notes": "과묵하지만 신뢰할 수 있다.",
+      "weights": {
+        "body": 0.31,
+        "soul": 0.52,
+        "spirit": 0.17
+      }
+    },
+    {
+      "id": "char_146",
+      "name": "Locke Silvertongue",
+      "class": "shepherd",
+      "role": "평민",
+      "origin": "Gallow Row",
+      "region": "free_cities",
+      "tags": [
+        "목축"
+      ],
+      "notes": "과묵하지만 신뢰할 수 있다.",
+      "weights": {
+        "body": 0.35,
+        "soul": 0.42,
+        "spirit": 0.23
+      }
+    },
+    {
+      "id": "char_147",
+      "name": "Jax Swiftblade",
+      "class": "soldier",
+      "role": "근딜",
+      "origin": "Skybridge",
+      "region": "free_cities",
+      "tags": [
+        "전사"
+      ],
+      "notes": "과묵하지만 신뢰할 수 있다.",
+      "weights": {
+        "body": 0.57,
+        "soul": 0.27,
+        "spirit": 0.16
+      }
+    },
+    {
+      "id": "char_148",
+      "name": "Omar Stargazer",
+      "class": "baker",
+      "role": "장인",
+      "origin": "Night Bazaar",
+      "region": "western_deserts",
+      "tags": [
+        "제빵"
+      ],
+      "notes": "동물을 사랑한다.",
+      "weights": {
+        "body": 0.35,
+        "soul": 0.53,
+        "spirit": 0.11
+      }
+    },
+    {
+      "id": "char_149",
+      "name": "Amira Sunrider",
+      "class": "cook",
+      "role": "서비스",
+      "origin": "Solenne Dunes",
+      "region": "western_deserts",
+      "tags": [
+        "요리"
+      ],
+      "notes": "항상 웃음을 잃지 않는다.",
+      "weights": {
+        "body": 0.33,
+        "soul": 0.54,
+        "spirit": 0.13
+      }
+    },
+    {
+      "id": "char_150",
+      "name": "Quinn Truthseeker",
+      "class": "miner",
+      "role": "평민",
+      "origin": "Lowspire",
+      "region": "free_cities",
+      "tags": [
+        "광업"
+      ],
+      "notes": "말보다 행동으로 보여준다.",
+      "weights": {
+        "body": 0.53,
+        "soul": 0.32,
+        "spirit": 0.14
+      }
+    },
+    {
+      "id": "char_151",
+      "name": "Sage Shadowstep",
+      "class": "tailor",
+      "role": "장인",
+      "origin": "Sunken Bazaar",
+      "region": "free_cities",
+      "tags": [
+        "재봉"
+      ],
+      "notes": "호기심이 많다.",
+      "weights": {
+        "body": 0.28,
+        "soul": 0.53,
+        "spirit": 0.19
+      }
+    },
+    {
+      "id": "char_152",
+      "name": "Astrid Coldforge",
+      "class": "baker",
+      "role": "장인",
+      "origin": "Cloud Monastery",
+      "region": "northern_reaches",
+      "tags": [
+        "제빵"
+      ],
+      "notes": "가족을 소중히 여긴다.",
+      "weights": {
+        "body": 0.35,
+        "soul": 0.53,
+        "spirit": 0.13
+      }
+    },
+    {
+      "id": "char_153",
+      "name": "Sage Streetwise",
+      "class": "hunter",
+      "role": "평민",
+      "origin": "Sunken Bazaar",
+      "region": "free_cities",
+      "tags": [
+        "사냥"
+      ],
+      "notes": "말보다 행동으로 보여준다.",
+      "weights": {
+        "body": 0.49,
+        "soul": 0.31,
+        "spirit": 0.21
+      }
+    },
+    {
+      "id": "char_154",
+      "name": "Greta Coppervein",
+      "class": "carpenter",
+      "role": "장인",
+      "origin": "Forgevale",
+      "region": "mountain_realm",
+      "tags": [
+        "목공"
+      ],
+      "notes": "자연과 가까이 산다.",
+      "weights": {
+        "body": 0.44,
+        "soul": 0.45,
+        "spirit": 0.11
+      }
+    },
+    {
+      "id": "char_155",
+      "name": "Drew Truthseeker",
+      "class": "cook",
+      "role": "서비스",
+      "origin": "Sunken Bazaar",
+      "region": "free_cities",
+      "tags": [
+        "요리"
+      ],
+      "notes": "과묵하지만 신뢰할 수 있다.",
+      "weights": {
+        "body": 0.38,
+        "soul": 0.51,
+        "spirit": 0.11
+      }
+    },
+    {
+      "id": "char_156",
+      "name": "Lei Moonbay",
+      "class": "mage",
+      "role": "마딜",
+      "origin": "Brass Harbor",
+      "region": "eastern_shores",
+      "tags": [
+        "마법"
+      ],
+      "notes": "과묵하지만 신뢰할 수 있다.",
+      "weights": {
+        "body": 0.23,
+        "soul": 0.49,
+        "spirit": 0.28
+      }
+    },
+    {
+      "id": "char_157",
+      "name": "Jin Seaspray",
+      "class": "soldier",
+      "role": "근딜",
+      "origin": "Gilded Pier",
+      "region": "eastern_shores",
+      "tags": [
+        "전사"
+      ],
+      "notes": "낯선 이에게도 친절하다.",
+      "weights": {
+        "body": 0.62,
+        "soul": 0.22,
+        "spirit": 0.16
+      }
+    },
+    {
+      "id": "char_158",
+      "name": "Astrid Ironblood",
+      "class": "merchant",
+      "role": "상인",
+      "origin": "Cloud Monastery",
+      "region": "northern_reaches",
+      "tags": [
+        "무역"
+      ],
+      "notes": "과묵하지만 신뢰할 수 있다.",
+      "weights": {
+        "body": 0.3,
+        "soul": 0.53,
+        "spirit": 0.17
+      }
+    },
+    {
+      "id": "char_159",
+      "name": "Olaf Ironblood",
+      "class": "tailor",
+      "role": "장인",
+      "origin": "Icewine Wharf",
+      "region": "northern_reaches",
+      "tags": [
+        "재봉"
+      ],
+      "notes": "자연과 가까이 산다.",
+      "weights": {
+        "body": 0.25,
+        "soul": 0.53,
+        "spirit": 0.22
+      }
+    },
+    {
+      "id": "char_160",
+      "name": "Sven Frostborn",
+      "class": "knight",
+      "role": "근딜",
+      "origin": "Frostfall",
+      "region": "northern_reaches",
+      "tags": [
+        "기사"
+      ],
+      "notes": "일에 자부심이 높다.",
+      "weights": {
+        "body": 0.52,
+        "soul": 0.34,
+        "spirit": 0.13
+      }
+    },
+    {
+      "id": "char_161",
+      "name": "Nova Starfall",
+      "class": "hunter",
+      "role": "평민",
+      "origin": "Duskmere",
+      "region": "twilight_realm",
+      "tags": [
+        "사냥"
+      ],
+      "notes": "성실하고 꼼꼼하다.",
+      "weights": {
+        "body": 0.54,
+        "soul": 0.28,
+        "spirit": 0.18
+      }
+    },
+    {
+      "id": "char_162",
+      "name": "Shade Nightwhisper",
+      "class": "bard",
+      "role": "예술",
+      "origin": "Crystal Sound",
+      "region": "twilight_realm",
+      "tags": [
+        "음악"
+      ],
+      "notes": "가족을 소중히 여긴다.",
+      "weights": {
+        "body": 0.29,
+        "soul": 0.51,
+        "spirit": 0.2
+      }
+    },
+    {
+      "id": "char_163",
+      "name": "Morgan Silvertongue",
+      "class": "baker",
+      "role": "장인",
+      "origin": "Skybridge",
+      "region": "free_cities",
+      "tags": [
+        "제빵"
+      ],
+      "notes": "일에 자부심이 높다.",
+      "weights": {
+        "body": 0.38,
+        "soul": 0.48,
+        "spirit": 0.15
+      }
+    },
+    {
+      "id": "char_164",
+      "name": "Tendai Riverwalker",
+      "class": "scribe",
+      "role": "학자",
+      "origin": "Murkfen",
+      "region": "southern_jungles",
+      "tags": [
+        "기록"
+      ],
+      "notes": "말보다 행동으로 보여준다.",
+      "weights": {
+        "body": 0.24,
+        "soul": 0.47,
+        "spirit": 0.29
+      }
+    },
+    {
+      "id": "char_165",
+      "name": "Freya Winterhold",
+      "class": "tailor",
+      "role": "장인",
+      "origin": "Cloud Monastery",
+      "region": "northern_reaches",
+      "tags": [
+        "재봉"
+      ],
+      "notes": "동물을 사랑한다.",
+      "weights": {
+        "body": 0.29,
+        "soul": 0.55,
+        "spirit": 0.16
+      }
+    },
+    {
+      "id": "char_166",
+      "name": "Caelan Starfall",
+      "class": "baker",
+      "role": "장인",
+      "origin": "Duskmere",
+      "region": "twilight_realm",
+      "tags": [
+        "제빵"
+      ],
+      "notes": "정의감이 강하다.",
+      "weights": {
+        "body": 0.34,
+        "soul": 0.49,
+        "spirit": 0.17
+      }
+    },
+    {
+      "id": "char_167",
+      "name": "Greta Deepmine",
+      "class": "tailor",
+      "role": "장인",
+      "origin": "Forgevale",
+      "region": "mountain_realm",
+      "tags": [
+        "재봉"
+      ],
+      "notes": "호기심이 많다.",
+      "weights": {
+        "body": 0.3,
+        "soul": 0.49,
+        "spirit": 0.2
+      }
+    },
+    {
+      "id": "char_168",
+      "name": "Sven Coldforge",
+      "class": "scribe",
+      "role": "학자",
+      "origin": "Northwatch Citadel",
+      "region": "northern_reaches",
+      "tags": [
+        "기록"
+      ],
+      "notes": "항상 웃음을 잃지 않는다.",
+      "weights": {
+        "body": 0.19,
+        "soul": 0.5,
+        "spirit": 0.32
+      }
+    },
+    {
+      "id": "char_169",
+      "name": "Manu Junglestrider",
+      "class": "merchant",
+      "role": "상인",
+      "origin": "Murkfen",
+      "region": "southern_jungles",
+      "tags": [
+        "무역"
+      ],
+      "notes": "인내심이 강하다.",
+      "weights": {
+        "body": 0.26,
+        "soul": 0.55,
+        "spirit": 0.19
+      }
+    },
+    {
+      "id": "char_170",
+      "name": "Thandi Lionclaw",
+      "class": "blacksmith",
+      "role": "장인",
+      "origin": "Thorn Abbey",
+      "region": "southern_jungles",
+      "tags": [
+        "대장"
+      ],
+      "notes": "항상 웃음을 잃지 않는다.",
+      "weights": {
+        "body": 0.54,
+        "soul": 0.34,
+        "spirit": 0.11
+      }
+    },
+    {
+      "id": "char_171",
+      "name": "Mei Moonbay",
+      "class": "sailor",
+      "role": "선원",
+      "origin": "Gilded Pier",
+      "region": "eastern_shores",
+      "tags": [
+        "항해"
+      ],
+      "notes": "과묵하지만 신뢰할 수 있다.",
+      "weights": {
+        "body": 0.51,
+        "soul": 0.32,
+        "spirit": 0.17
+      }
+    },
+    {
+      "id": "char_172",
+      "name": "Sade Lionclaw",
+      "class": "healer",
+      "role": "힐러",
+      "origin": "Verdant Terrace",
+      "region": "southern_jungles",
+      "tags": [
+        "치유"
+      ],
+      "notes": "동물을 사랑한다.",
+      "weights": {
+        "body": 0.21,
+        "soul": 0.4,
+        "spirit": 0.39
+      }
+    },
+    {
+      "id": "char_173",
+      "name": "Vorn Ironforge",
+      "class": "miner",
+      "role": "평민",
+      "origin": "Forgevale",
+      "region": "mountain_realm",
+      "tags": [
+        "광업"
+      ],
+      "notes": "성실하고 꼼꼼하다.",
+      "weights": {
+        "body": 0.54,
+        "soul": 0.33,
+        "spirit": 0.13
+      }
+    },
+    {
+      "id": "char_174",
+      "name": "Yasmin Miragecaller",
+      "class": "scribe",
+      "role": "학자",
+      "origin": "Solenne Dunes",
+      "region": "western_deserts",
+      "tags": [
+        "기록"
+      ],
+      "notes": "과묵하지만 신뢰할 수 있다.",
+      "weights": {
+        "body": 0.19,
+        "soul": 0.52,
+        "spirit": 0.28
+      }
+    },
+    {
+      "id": "char_175",
+      "name": "Emeka Junglestrider",
+      "class": "archer",
+      "role": "원딜",
+      "origin": "Verdant Terrace",
+      "region": "southern_jungles",
+      "tags": [
+        "사냥"
+      ],
+      "notes": "동물을 사랑한다.",
+      "weights": {
+        "body": 0.54,
+        "soul": 0.26,
+        "spirit": 0.2
+      }
+    },
+    {
+      "id": "char_176",
+      "name": "Faye Nightwhisper",
+      "class": "priest",
+      "role": "힐러",
+      "origin": "Crystal Sound",
+      "region": "twilight_realm",
+      "tags": [
+        "성직"
+      ],
+      "notes": "가족을 소중히 여긴다.",
+      "weights": {
+        "body": 0.2,
+        "soul": 0.31,
+        "spirit": 0.48
+      }
+    },
+    {
+      "id": "char_177",
+      "name": "Roland Whitehall",
+      "class": "cook",
+      "role": "서비스",
+      "origin": "Amber Library",
+      "region": "central_kingdom",
+      "tags": [
+        "요리"
+      ],
+      "notes": "동물을 사랑한다.",
+      "weights": {
+        "body": 0.36,
+        "soul": 0.5,
+        "spirit": 0.14
+      }
+    },
+    {
+      "id": "char_178",
+      "name": "Bram Coppervein",
+      "class": "healer",
+      "role": "힐러",
+      "origin": "Copper Belt",
+      "region": "mountain_realm",
+      "tags": [
+        "치유"
+      ],
+      "notes": "말보다 행동으로 보여준다.",
+      "weights": {
+        "body": 0.17,
+        "soul": 0.42,
+        "spirit": 0.42
+      }
+    },
+    {
+      "id": "char_179",
+      "name": "Bjorn Frostborn",
+      "class": "herbalist",
+      "role": "학자",
+      "origin": "Frostfall",
+      "region": "northern_reaches",
+      "tags": [
+        "약초"
+      ],
+      "notes": "성실하고 꼼꼼하다.",
+      "weights": {
+        "body": 0.34,
+        "soul": 0.39,
+        "spirit": 0.27
+      }
+    },
+    {
+      "id": "char_180",
+      "name": "Samir Sunrider",
+      "class": "shepherd",
+      "role": "평민",
+      "origin": "Night Bazaar",
+      "region": "western_deserts",
+      "tags": [
+        "목축"
+      ],
+      "notes": "호기심이 많다.",
+      "weights": {
+        "body": 0.37,
+        "soul": 0.44,
+        "spirit": 0.18
+      }
+    },
+    {
+      "id": "char_181",
+      "name": "Harold Silverton",
+      "class": "baker",
+      "role": "장인",
+      "origin": "Radiant Keep",
+      "region": "central_kingdom",
+      "tags": [
+        "제빵"
+      ],
+      "notes": "호기심이 많다.",
+      "weights": {
+        "body": 0.37,
+        "soul": 0.45,
+        "spirit": 0.18
+      }
+    },
+    {
+      "id": "char_182",
+      "name": "Iris Thornwood",
+      "class": "innkeeper",
+      "role": "상인",
+      "origin": "Radiant Keep",
+      "region": "central_kingdom",
+      "tags": [
+        "숙박"
+      ],
+      "notes": "낯선 이에게도 친절하다.",
+      "weights": {
+        "body": 0.34,
+        "soul": 0.53,
+        "spirit": 0.13
+      }
+    },
+    {
+      "id": "char_183",
+      "name": "Sigrid Stormcaller",
+      "class": "servant",
+      "role": "서비스",
+      "origin": "Northwatch Citadel",
+      "region": "northern_reaches",
+      "tags": [
+        "시중"
+      ],
+      "notes": "인내심이 강하다.",
+      "weights": {
+        "body": 0.38,
+        "soul": 0.46,
+        "spirit": 0.16
+      }
+    },
+    {
+      "id": "char_184",
+      "name": "Amira Oasiskeeper",
+      "class": "bard",
+      "role": "예술",
+      "origin": "Solenne Dunes",
+      "region": "western_deserts",
+      "tags": [
+        "음악"
+      ],
+      "notes": "낯선 이에게도 친절하다.",
+      "weights": {
+        "body": 0.26,
+        "soul": 0.49,
+        "spirit": 0.25
+      }
+    },
+    {
+      "id": "char_185",
+      "name": "Stella Veilkeeper",
+      "class": "herbalist",
+      "role": "학자",
+      "origin": "Duskmere",
+      "region": "twilight_realm",
+      "tags": [
+        "약초"
+      ],
+      "notes": "성실하고 꼼꼼하다.",
+      "weights": {
+        "body": 0.36,
+        "soul": 0.37,
+        "spirit": 0.27
+      }
+    },
+    {
+      "id": "char_186",
+      "name": "Hiro Coralheart",
+      "class": "shepherd",
+      "role": "평민",
+      "origin": "Gilded Pier",
+      "region": "eastern_shores",
+      "tags": [
+        "목축"
+      ],
+      "notes": "성실하고 꼼꼼하다.",
+      "weights": {
+        "body": 0.41,
+        "soul": 0.4,
+        "spirit": 0.18
+      }
+    },
+    {
+      "id": "char_187",
+      "name": "Emeka Vinecaller",
+      "class": "knight",
+      "role": "근딜",
+      "origin": "Murkfen",
+      "region": "southern_jungles",
+      "tags": [
+        "기사"
+      ],
+      "notes": "인내심이 강하다.",
+      "weights": {
+        "body": 0.5,
+        "soul": 0.31,
+        "spirit": 0.19
+      }
+    },
+    {
+      "id": "char_188",
+      "name": "Tariq Oasiskeeper",
+      "class": "soldier",
+      "role": "근딜",
+      "origin": "Shifting Dunes",
+      "region": "western_deserts",
+      "tags": [
+        "전사"
+      ],
+      "notes": "항상 웃음을 잃지 않는다.",
+      "weights": {
+        "body": 0.6,
+        "soul": 0.25,
+        "spirit": 0.15
+      }
+    },
+    {
+      "id": "char_189",
+      "name": "Hilda Deepmine",
+      "class": "soldier",
+      "role": "근딜",
+      "origin": "Copper Belt",
+      "region": "mountain_realm",
+      "tags": [
+        "전사"
+      ],
+      "notes": "항상 웃음을 잃지 않는다.",
+      "weights": {
+        "body": 0.59,
+        "soul": 0.22,
+        "spirit": 0.19
+      }
+    },
+    {
+      "id": "char_190",
+      "name": "Ingrid Frostborn",
+      "class": "shepherd",
+      "role": "평민",
+      "origin": "Northwatch Citadel",
+      "region": "northern_reaches",
+      "tags": [
+        "목축"
+      ],
+      "notes": "과묵하지만 신뢰할 수 있다.",
+      "weights": {
+        "body": 0.44,
+        "soul": 0.4,
+        "spirit": 0.17
+      }
+    },
+    {
+      "id": "char_191",
+      "name": "Tor Deepmine",
+      "class": "herbalist",
+      "role": "학자",
+      "origin": "Stonecradle",
+      "region": "mountain_realm",
+      "tags": [
+        "약초"
+      ],
+      "notes": "자연과 가까이 산다.",
+      "weights": {
+        "body": 0.31,
+        "soul": 0.41,
+        "spirit": 0.27
+      }
+    },
+    {
+      "id": "char_192",
+      "name": "Arthur Thornwood",
+      "class": "potter",
+      "role": "장인",
+      "origin": "Silver March",
+      "region": "central_kingdom",
+      "tags": [
+        "도예"
+      ],
+      "notes": "말보다 행동으로 보여준다.",
+      "weights": {
+        "body": 0.33,
+        "soul": 0.49,
+        "spirit": 0.18
+      }
+    },
+    {
+      "id": "char_193",
+      "name": "Layla Sandwalker",
+      "class": "miner",
+      "role": "평민",
+      "origin": "Shifting Dunes",
+      "region": "western_deserts",
+      "tags": [
+        "광업"
+      ],
+      "notes": "인내심이 강하다.",
+      "weights": {
+        "body": 0.54,
+        "soul": 0.29,
+        "spirit": 0.17
+      }
+    },
+    {
+      "id": "char_194",
+      "name": "Aldric Highcastle",
+      "class": "bard",
+      "role": "예술",
+      "origin": "Amber Library",
+      "region": "central_kingdom",
+      "tags": [
+        "음악"
+      ],
+      "notes": "일에 자부심이 높다.",
+      "weights": {
+        "body": 0.22,
+        "soul": 0.55,
+        "spirit": 0.23
+      }
+    },
+    {
+      "id": "char_195",
+      "name": "Iris Westbrook",
+      "class": "blacksmith",
+      "role": "장인",
+      "origin": "Radiant Keep",
+      "region": "central_kingdom",
+      "tags": [
+        "대장"
+      ],
+      "notes": "항상 웃음을 잃지 않는다.",
+      "weights": {
+        "body": 0.44,
+        "soul": 0.36,
+        "spirit": 0.19
+      }
+    },
+    {
+      "id": "char_196",
+      "name": "Yasmin Stargazer",
+      "class": "guard",
+      "role": "경비",
+      "origin": "Shifting Dunes",
+      "region": "western_deserts",
+      "tags": [
+        "치안"
+      ],
+      "notes": "성실하고 꼼꼼하다.",
+      "weights": {
+        "body": 0.5,
+        "soul": 0.36,
+        "spirit": 0.14
+      }
+    },
+    {
+      "id": "char_197",
+      "name": "Leif Coldforge",
+      "class": "fisher",
+      "role": "평민",
+      "origin": "Frostfall",
+      "region": "northern_reaches",
+      "tags": [
+        "어업"
+      ],
+      "notes": "동물을 사랑한다.",
+      "weights": {
+        "body": 0.46,
+        "soul": 0.37,
+        "spirit": 0.18
+      }
+    },
+    {
+      "id": "char_198",
+      "name": "Seraphina Nightwhisper",
+      "class": "archer",
+      "role": "원딜",
+      "origin": "Crystal Sound",
+      "region": "twilight_realm",
+      "tags": [
+        "사냥"
+      ],
+      "notes": "낯선 이에게도 친절하다.",
+      "weights": {
+        "body": 0.5,
+        "soul": 0.34,
+        "spirit": 0.17
+      }
+    },
+    {
+      "id": "char_199",
+      "name": "Thyra Ironblood",
+      "class": "potter",
+      "role": "장인",
+      "origin": "Cloud Monastery",
+      "region": "northern_reaches",
+      "tags": [
+        "도예"
+      ],
+      "notes": "과묵하지만 신뢰할 수 있다.",
+      "weights": {
+        "body": 0.33,
+        "soul": 0.42,
+        "spirit": 0.25
+      }
+    },
+    {
+      "id": "char_200",
+      "name": "Roland Highcastle",
+      "class": "carpenter",
+      "role": "장인",
+      "origin": "Amber Library",
+      "region": "central_kingdom",
+      "tags": [
+        "목공"
+      ],
+      "notes": "말보다 행동으로 보여준다.",
+      "weights": {
+        "body": 0.49,
+        "soul": 0.39,
+        "spirit": 0.12
+      }
+    },
+    {
+      "id": "char_201",
+      "name": "Mira Starfall",
+      "class": "blacksmith",
+      "role": "장인",
+      "origin": "Duskmere",
+      "region": "twilight_realm",
+      "tags": [
+        "대장"
+      ],
+      "notes": "일에 자부심이 높다.",
+      "weights": {
+        "body": 0.49,
+        "soul": 0.33,
+        "spirit": 0.17
+      }
+    },
+    {
+      "id": "char_202",
+      "name": "Ingrid Frostborn",
+      "class": "guard",
+      "role": "경비",
+      "origin": "Northwatch Citadel",
+      "region": "northern_reaches",
+      "tags": [
+        "치안"
+      ],
+      "notes": "낯선 이에게도 친절하다.",
+      "weights": {
+        "body": 0.53,
+        "soul": 0.33,
+        "spirit": 0.14
+      }
+    },
+    {
+      "id": "char_203",
+      "name": "Nova Moonshadow",
+      "class": "cook",
+      "role": "서비스",
+      "origin": "Crystal Sound",
+      "region": "twilight_realm",
+      "tags": [
+        "요리"
+      ],
+      "notes": "성실하고 꼼꼼하다.",
+      "weights": {
+        "body": 0.35,
+        "soul": 0.5,
+        "spirit": 0.15
+      }
+    },
+    {
+      "id": "char_204",
+      "name": "Cole Streetwise",
+      "class": "cook",
+      "role": "서비스",
+      "origin": "Gallow Row",
+      "region": "free_cities",
+      "tags": [
+        "요리"
+      ],
+      "notes": "인내심이 강하다.",
+      "weights": {
+        "body": 0.38,
+        "soul": 0.47,
+        "spirit": 0.16
+      }
+    },
+    {
+      "id": "char_205",
+      "name": "Astrid Icehammer",
+      "class": "guard",
+      "role": "경비",
+      "origin": "Icewine Wharf",
+      "region": "northern_reaches",
+      "tags": [
+        "치안"
+      ],
+      "notes": "항상 웃음을 잃지 않는다.",
+      "weights": {
+        "body": 0.51,
+        "soul": 0.33,
+        "spirit": 0.16
+      }
+    },
+    {
+      "id": "char_206",
+      "name": "Layla Miragecaller",
+      "class": "sailor",
+      "role": "선원",
+      "origin": "Shifting Dunes",
+      "region": "western_deserts",
+      "tags": [
+        "항해"
+      ],
+      "notes": "항상 웃음을 잃지 않는다.",
+      "weights": {
+        "body": 0.53,
+        "soul": 0.36,
+        "spirit": 0.11
+      }
+    },
+    {
+      "id": "char_207",
+      "name": "Wei Coralheart",
+      "class": "baker",
+      "role": "장인",
+      "origin": "Gilded Pier",
+      "region": "eastern_shores",
+      "tags": [
+        "제빵"
+      ],
+      "notes": "동물을 사랑한다.",
+      "weights": {
+        "body": 0.33,
+        "soul": 0.55,
+        "spirit": 0.11
+      }
+    },
+    {
+      "id": "char_208",
+      "name": "Alex Truthseeker",
+      "class": "knight",
+      "role": "근딜",
+      "origin": "Sunken Bazaar",
+      "region": "free_cities",
+      "tags": [
+        "기사"
+      ],
+      "notes": "동물을 사랑한다.",
+      "weights": {
+        "body": 0.55,
+        "soul": 0.3,
+        "spirit": 0.15
+      }
+    },
+    {
+      "id": "char_209",
+      "name": "Ife Thornweaver",
+      "class": "baker",
+      "role": "장인",
+      "origin": "Verdant Terrace",
+      "region": "southern_jungles",
+      "tags": [
+        "제빵"
+      ],
+      "notes": "일에 자부심이 높다.",
+      "weights": {
+        "body": 0.34,
+        "soul": 0.55,
+        "spirit": 0.11
+      }
+    },
+    {
+      "id": "char_210",
+      "name": "Zuri Riverwalker",
+      "class": "shepherd",
+      "role": "평민",
+      "origin": "Verdant Terrace",
+      "region": "southern_jungles",
+      "tags": [
+        "목축"
+      ],
+      "notes": "과묵하지만 신뢰할 수 있다.",
+      "weights": {
+        "body": 0.38,
+        "soul": 0.39,
+        "spirit": 0.22
+      }
+    },
+    {
+      "id": "char_211",
+      "name": "Alex Swiftblade",
+      "class": "priest",
+      "role": "힐러",
+      "origin": "Lowspire",
+      "region": "free_cities",
+      "tags": [
+        "성직"
+      ],
+      "notes": "항상 웃음을 잃지 않는다.",
+      "weights": {
+        "body": 0.22,
+        "soul": 0.29,
+        "spirit": 0.5
+      }
+    },
+    {
+      "id": "char_212",
+      "name": "Berta Steelborn",
+      "class": "cook",
+      "role": "서비스",
+      "origin": "Stonecradle",
+      "region": "mountain_realm",
+      "tags": [
+        "요리"
+      ],
+      "notes": "말보다 행동으로 보여준다.",
+      "weights": {
+        "body": 0.34,
+        "soul": 0.51,
+        "spirit": 0.15
+      }
+    },
+    {
+      "id": "char_213",
+      "name": "Kenji Seaspray",
+      "class": "innkeeper",
+      "role": "상인",
+      "origin": "Brass Harbor",
+      "region": "eastern_shores",
+      "tags": [
+        "숙박"
+      ],
+      "notes": "동물을 사랑한다.",
+      "weights": {
+        "body": 0.35,
+        "soul": 0.49,
+        "spirit": 0.16
+      }
+    },
+    {
+      "id": "char_214",
+      "name": "Dorn Granitehand",
+      "class": "shepherd",
+      "role": "평민",
+      "origin": "Copper Belt",
+      "region": "mountain_realm",
+      "tags": [
+        "목축"
+      ],
+      "notes": "동물을 사랑한다.",
+      "weights": {
+        "body": 0.41,
+        "soul": 0.37,
+        "spirit": 0.22
+      }
+    },
+    {
+      "id": "char_215",
+      "name": "Sora Pearlmist",
+      "class": "merchant",
+      "role": "상인",
+      "origin": "Azure Bastion",
+      "region": "eastern_shores",
+      "tags": [
+        "무역"
+      ],
+      "notes": "자연과 가까이 산다.",
+      "weights": {
+        "body": 0.27,
+        "soul": 0.54,
+        "spirit": 0.2
+      }
+    },
+    {
+      "id": "char_216",
+      "name": "Dusk Moonshadow",
+      "class": "hunter",
+      "role": "평민",
+      "origin": "Crystal Sound",
+      "region": "twilight_realm",
+      "tags": [
+        "사냥"
+      ],
+      "notes": "호기심이 많다.",
+      "weights": {
+        "body": 0.5,
+        "soul": 0.31,
+        "spirit": 0.18
+      }
+    },
+    {
+      "id": "char_217",
+      "name": "Thyra Snowpeak",
+      "class": "scribe",
+      "role": "학자",
+      "origin": "Cloud Monastery",
+      "region": "northern_reaches",
+      "tags": [
+        "기록"
+      ],
+      "notes": "일에 자부심이 높다.",
+      "weights": {
+        "body": 0.16,
+        "soul": 0.49,
+        "spirit": 0.35
+      }
+    },
+    {
+      "id": "char_218",
+      "name": "Flynn Shadowstep",
+      "class": "carpenter",
+      "role": "장인",
+      "origin": "Lowspire",
+      "region": "free_cities",
+      "tags": [
+        "목공"
+      ],
+      "notes": "인내심이 강하다.",
+      "weights": {
+        "body": 0.43,
+        "soul": 0.46,
+        "spirit": 0.12
+      }
+    },
+    {
+      "id": "char_219",
+      "name": "Julia Highcastle",
+      "class": "herbalist",
+      "role": "학자",
+      "origin": "Amber Library",
+      "region": "central_kingdom",
+      "tags": [
+        "약초"
+      ],
+      "notes": "자연과 가까이 산다.",
+      "weights": {
+        "body": 0.33,
+        "soul": 0.39,
+        "spirit": 0.28
+      }
+    },
+    {
+      "id": "char_220",
+      "name": "Feng Seaspray",
+      "class": "servant",
+      "role": "서비스",
+      "origin": "Jeon Port",
+      "region": "eastern_shores",
+      "tags": [
+        "시중"
+      ],
+      "notes": "성실하고 꼼꼼하다.",
+      "weights": {
+        "body": 0.32,
+        "soul": 0.45,
+        "spirit": 0.23
+      }
+    },
+    {
+      "id": "char_221",
+      "name": "Sefu Thornweaver",
+      "class": "sailor",
+      "role": "선원",
+      "origin": "Murkfen",
+      "region": "southern_jungles",
+      "tags": [
+        "항해"
+      ],
+      "notes": "정의감이 강하다.",
+      "weights": {
+        "body": 0.45,
+        "soul": 0.38,
+        "spirit": 0.17
+      }
+    },
+    {
+      "id": "char_222",
+      "name": "Vorn Deepmine",
+      "class": "herbalist",
+      "role": "학자",
+      "origin": "Coalspire",
+      "region": "mountain_realm",
+      "tags": [
+        "약초"
+      ],
+      "notes": "호기심이 많다.",
+      "weights": {
+        "body": 0.32,
+        "soul": 0.39,
+        "spirit": 0.29
+      }
+    },
+    {
+      "id": "char_223",
+      "name": "Zaid Sandwalker",
+      "class": "bard",
+      "role": "예술",
+      "origin": "Solenne Dunes",
+      "region": "western_deserts",
+      "tags": [
+        "음악"
+      ],
+      "notes": "항상 웃음을 잃지 않는다.",
+      "weights": {
+        "body": 0.25,
+        "soul": 0.56,
+        "spirit": 0.19
+      }
+    },
+    {
+      "id": "char_224",
+      "name": "Leif Snowpeak",
+      "class": "potter",
+      "role": "장인",
+      "origin": "Northwatch Citadel",
+      "region": "northern_reaches",
+      "tags": [
+        "도예"
+      ],
+      "notes": "항상 웃음을 잃지 않는다.",
+      "weights": {
+        "body": 0.34,
+        "soul": 0.44,
+        "spirit": 0.23
+      }
+    },
+    {
+      "id": "char_225",
+      "name": "Amir Oasiskeeper",
+      "class": "knight",
+      "role": "근딜",
+      "origin": "Shifting Dunes",
+      "region": "western_deserts",
+      "tags": [
+        "기사"
+      ],
+      "notes": "항상 웃음을 잃지 않는다.",
+      "weights": {
+        "body": 0.54,
+        "soul": 0.32,
+        "spirit": 0.13
+      }
+    },
+    {
+      "id": "char_226",
+      "name": "Thane Ironforge",
+      "class": "tailor",
+      "role": "장인",
+      "origin": "Stonecradle",
+      "region": "mountain_realm",
+      "tags": [
+        "재봉"
+      ],
+      "notes": "호기심이 많다.",
+      "weights": {
+        "body": 0.31,
+        "soul": 0.48,
+        "spirit": 0.21
+      }
+    },
+    {
+      "id": "char_227",
+      "name": "Harold Whitehall",
+      "class": "potter",
+      "role": "장인",
+      "origin": "Rose Dominion",
+      "region": "central_kingdom",
+      "tags": [
+        "도예"
+      ],
+      "notes": "가족을 소중히 여긴다.",
+      "weights": {
+        "body": 0.38,
+        "soul": 0.44,
+        "spirit": 0.17
+      }
+    },
+    {
+      "id": "char_228",
+      "name": "Samira Sandwalker",
+      "class": "hunter",
+      "role": "평민",
+      "origin": "Night Bazaar",
+      "region": "western_deserts",
+      "tags": [
+        "사냥"
+      ],
+      "notes": "정의감이 강하다.",
+      "weights": {
+        "body": 0.55,
+        "soul": 0.28,
+        "spirit": 0.17
+      }
+    },
+    {
+      "id": "char_229",
+      "name": "Seraphina Dreamweaver",
+      "class": "scribe",
+      "role": "학자",
+      "origin": "Crystal Sound",
+      "region": "twilight_realm",
+      "tags": [
+        "기록"
+      ],
+      "notes": "과묵하지만 신뢰할 수 있다.",
+      "weights": {
+        "body": 0.16,
+        "soul": 0.53,
+        "spirit": 0.31
+      }
+    },
+    {
+      "id": "char_230",
+      "name": "Amira Oasiskeeper",
+      "class": "cook",
+      "role": "서비스",
+      "origin": "Solenne Dunes",
+      "region": "western_deserts",
+      "tags": [
+        "요리"
+      ],
+      "notes": "호기심이 많다.",
+      "weights": {
+        "body": 0.32,
+        "soul": 0.51,
+        "spirit": 0.17
+      }
+    },
+    {
+      "id": "char_231",
+      "name": "Gunnar Winterhold",
+      "class": "mage",
+      "role": "마딜",
+      "origin": "Icewine Wharf",
+      "region": "northern_reaches",
+      "tags": [
+        "마법"
+      ],
+      "notes": "과묵하지만 신뢰할 수 있다.",
+      "weights": {
+        "body": 0.2,
+        "soul": 0.56,
+        "spirit": 0.24
+      }
+    },
+    {
+      "id": "char_232",
+      "name": "Mira Moonshadow",
+      "class": "archer",
+      "role": "원딜",
+      "origin": "Duskmere",
+      "region": "twilight_realm",
+      "tags": [
+        "사냥"
+      ],
+      "notes": "일에 자부심이 높다.",
+      "weights": {
+        "body": 0.5,
+        "soul": 0.26,
+        "spirit": 0.24
+      }
+    },
+    {
+      "id": "char_233",
+      "name": "Karim Sunrider",
+      "class": "servant",
+      "role": "서비스",
+      "origin": "Night Bazaar",
+      "region": "western_deserts",
+      "tags": [
+        "시중"
+      ],
+      "notes": "인내심이 강하다.",
+      "weights": {
+        "body": 0.39,
+        "soul": 0.45,
+        "spirit": 0.16
+      }
+    },
+    {
+      "id": "char_234",
+      "name": "Thora Steelborn",
+      "class": "scribe",
+      "role": "학자",
+      "origin": "Forgevale",
+      "region": "mountain_realm",
+      "tags": [
+        "기록"
+      ],
+      "notes": "호기심이 많다.",
+      "weights": {
+        "body": 0.19,
+        "soul": 0.5,
+        "spirit": 0.3
+      }
+    },
+    {
+      "id": "char_235",
+      "name": "Erik Snowpeak",
+      "class": "cook",
+      "role": "서비스",
+      "origin": "Cloud Monastery",
+      "region": "northern_reaches",
+      "tags": [
+        "요리"
+      ],
+      "notes": "일에 자부심이 높다.",
+      "weights": {
+        "body": 0.31,
+        "soul": 0.51,
+        "spirit": 0.18
+      }
+    },
+    {
+      "id": "char_236",
+      "name": "Thandi Lionclaw",
+      "class": "mage",
+      "role": "마딜",
+      "origin": "Murkfen",
+      "region": "southern_jungles",
+      "tags": [
+        "마법"
+      ],
+      "notes": "과묵하지만 신뢰할 수 있다.",
+      "weights": {
+        "body": 0.16,
+        "soul": 0.6,
+        "spirit": 0.24
+      }
+    },
+    {
+      "id": "char_237",
+      "name": "Sigrun Deepmine",
+      "class": "baker",
+      "role": "장인",
+      "origin": "Stonecradle",
+      "region": "mountain_realm",
+      "tags": [
+        "제빵"
+      ],
+      "notes": "낯선 이에게도 친절하다.",
+      "weights": {
+        "body": 0.35,
+        "soul": 0.5,
+        "spirit": 0.15
+      }
+    },
+    {
+      "id": "char_238",
+      "name": "Merta Coppervein",
+      "class": "blacksmith",
+      "role": "장인",
+      "origin": "Coalspire",
+      "region": "mountain_realm",
+      "tags": [
+        "대장"
+      ],
+      "notes": "항상 웃음을 잃지 않는다.",
+      "weights": {
+        "body": 0.49,
+        "soul": 0.38,
+        "spirit": 0.13
+      }
+    },
+    {
+      "id": "char_239",
+      "name": "Luna Starfall",
+      "class": "shepherd",
+      "role": "평민",
+      "origin": "Vesper Court",
+      "region": "twilight_realm",
+      "tags": [
+        "목축"
+      ],
+      "notes": "가족을 소중히 여긴다.",
+      "weights": {
+        "body": 0.41,
+        "soul": 0.39,
+        "spirit": 0.2
+      }
+    },
+    {
+      "id": "char_240",
+      "name": "Manu Vinecaller",
+      "class": "knight",
+      "role": "근딜",
+      "origin": "Murkfen",
+      "region": "southern_jungles",
+      "tags": [
+        "기사"
+      ],
+      "notes": "일에 자부심이 높다.",
+      "weights": {
+        "body": 0.54,
+        "soul": 0.29,
+        "spirit": 0.17
+      }
+    },
+    {
+      "id": "char_241",
+      "name": "Caelan Dreamweaver",
+      "class": "baker",
+      "role": "장인",
+      "origin": "Crystal Sound",
+      "region": "twilight_realm",
+      "tags": [
+        "제빵"
+      ],
+      "notes": "자연과 가까이 산다.",
+      "weights": {
+        "body": 0.36,
+        "soul": 0.49,
+        "spirit": 0.15
+      }
+    },
+    {
+      "id": "char_242",
+      "name": "Miko Pearlmist",
+      "class": "farmer",
+      "role": "평민",
+      "origin": "Gilded Pier",
+      "region": "eastern_shores",
+      "tags": [
+        "농업"
+      ],
+      "notes": "동물을 사랑한다.",
+      "weights": {
+        "body": 0.56,
+        "soul": 0.32,
+        "spirit": 0.11
+      }
+    },
+    {
+      "id": "char_243",
+      "name": "Greta Ironforge",
+      "class": "innkeeper",
+      "role": "상인",
+      "origin": "Coalspire",
+      "region": "mountain_realm",
+      "tags": [
+        "숙박"
+      ],
+      "notes": "일에 자부심이 높다.",
+      "weights": {
+        "body": 0.34,
+        "soul": 0.48,
+        "spirit": 0.18
+      }
+    },
+    {
+      "id": "char_244",
+      "name": "Flynn Swiftblade",
+      "class": "sailor",
+      "role": "선원",
+      "origin": "Skybridge",
+      "region": "free_cities",
+      "tags": [
+        "항해"
+      ],
+      "notes": "항상 웃음을 잃지 않는다.",
+      "weights": {
+        "body": 0.51,
+        "soul": 0.35,
+        "spirit": 0.14
+      }
+    },
+    {
+      "id": "char_245",
+      "name": "Florence Westbrook",
+      "class": "servant",
+      "role": "서비스",
+      "origin": "Radiant Keep",
+      "region": "central_kingdom",
+      "tags": [
+        "시중"
+      ],
+      "notes": "자연과 가까이 산다.",
+      "weights": {
+        "body": 0.38,
+        "soul": 0.4,
+        "spirit": 0.22
+      }
+    },
+    {
+      "id": "char_246",
+      "name": "Quinn Shadowstep",
+      "class": "carpenter",
+      "role": "장인",
+      "origin": "Gallow Row",
+      "region": "free_cities",
+      "tags": [
+        "목공"
+      ],
+      "notes": "자연과 가까이 산다.",
+      "weights": {
+        "body": 0.42,
+        "soul": 0.44,
+        "spirit": 0.15
+      }
+    },
+    {
+      "id": "char_247",
+      "name": "Casey Truthseeker",
+      "class": "shepherd",
+      "role": "평민",
+      "origin": "Gallow Row",
+      "region": "free_cities",
+      "tags": [
+        "목축"
+      ],
+      "notes": "호기심이 많다.",
+      "weights": {
+        "body": 0.36,
+        "soul": 0.4,
+        "spirit": 0.24
+      }
+    },
+    {
+      "id": "char_248",
+      "name": "Lei Tidebringer",
+      "class": "innkeeper",
+      "role": "상인",
+      "origin": "Gilded Pier",
+      "region": "eastern_shores",
+      "tags": [
+        "숙박"
+      ],
+      "notes": "일에 자부심이 높다.",
+      "weights": {
+        "body": 0.38,
+        "soul": 0.47,
+        "spirit": 0.15
+      }
+    },
+    {
+      "id": "char_249",
+      "name": "Greta Ironforge",
+      "class": "knight",
+      "role": "근딜",
+      "origin": "Forgevale",
+      "region": "mountain_realm",
+      "tags": [
+        "기사"
+      ],
+      "notes": "말보다 행동으로 보여준다.",
+      "weights": {
+        "body": 0.52,
+        "soul": 0.3,
+        "spirit": 0.18
+      }
+    },
+    {
+      "id": "char_250",
+      "name": "Dusk Mistwalker",
+      "class": "sailor",
+      "role": "선원",
+      "origin": "Vesper Court",
+      "region": "twilight_realm",
+      "tags": [
+        "항해"
+      ],
+      "notes": "동물을 사랑한다.",
+      "weights": {
+        "body": 0.52,
+        "soul": 0.34,
+        "spirit": 0.14
+      }
     }
   ]
 }
