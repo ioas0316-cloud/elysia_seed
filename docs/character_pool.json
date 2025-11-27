@@ -4451,7 +4451,7 @@
       }
     },
     {
-      "id": "char_051",
+      "id": "char_251",
       "name": "Olaf Icehammer",
       "class": "farmer",
       "role": "평민",
@@ -4468,7 +4468,7 @@
       }
     },
     {
-      "id": "char_052",
+      "id": "char_252",
       "name": "Erik Frostborn",
       "class": "priest",
       "role": "힐러",
@@ -4485,7 +4485,7 @@
       }
     },
     {
-      "id": "char_053",
+      "id": "char_253",
       "name": "Samira Dunerunner",
       "class": "cook",
       "role": "서비스",
@@ -4502,7 +4502,7 @@
       }
     },
     {
-      "id": "char_054",
+      "id": "char_254",
       "name": "Faye Mistwalker",
       "class": "merchant",
       "role": "상인",
@@ -4519,7 +4519,7 @@
       }
     },
     {
-      "id": "char_055",
+      "id": "char_255",
       "name": "Sigrun Ironforge",
       "class": "innkeeper",
       "role": "상인",
@@ -4536,7 +4536,7 @@
       }
     },
     {
-      "id": "char_056",
+      "id": "char_256",
       "name": "Freya Winterhold",
       "class": "healer",
       "role": "힐러",
@@ -4553,7 +4553,7 @@
       }
     },
     {
-      "id": "char_057",
+      "id": "char_257",
       "name": "Helga Snowpeak",
       "class": "tailor",
       "role": "장인",
@@ -4570,7 +4570,7 @@
       }
     },
     {
-      "id": "char_058",
+      "id": "char_258",
       "name": "Hassan Sunrider",
       "class": "herbalist",
       "role": "학자",
@@ -4587,7 +4587,7 @@
       }
     },
     {
-      "id": "char_059",
+      "id": "char_259",
       "name": "Shade Veilkeeper",
       "class": "baker",
       "role": "장인",
@@ -4604,7 +4604,7 @@
       }
     },
     {
-      "id": "char_060",
+      "id": "char_260",
       "name": "Dorn Stonehammer",
       "class": "guard",
       "role": "경비",
@@ -4621,7 +4621,7 @@
       }
     },
     {
-      "id": "char_061",
+      "id": "char_261",
       "name": "Flynn Silvertongue",
       "class": "guard",
       "role": "경비",
@@ -4638,7 +4638,7 @@
       }
     },
     {
-      "id": "char_062",
+      "id": "char_262",
       "name": "Eclipse Mistwalker",
       "class": "priest",
       "role": "힐러",
@@ -4655,7 +4655,7 @@
       }
     },
     {
-      "id": "char_063",
+      "id": "char_263",
       "name": "Ingrid Winterhold",
       "class": "hunter",
       "role": "평민",
@@ -4672,7 +4672,7 @@
       }
     },
     {
-      "id": "char_064",
+      "id": "char_264",
       "name": "Emeka Vinecaller",
       "class": "healer",
       "role": "힐러",
@@ -4689,7 +4689,7 @@
       }
     },
     {
-      "id": "char_065",
+      "id": "char_265",
       "name": "Leif Stormcaller",
       "class": "potter",
       "role": "장인",
@@ -4706,7 +4706,7 @@
       }
     },
     {
-      "id": "char_066",
+      "id": "char_266",
       "name": "Kenji Moonbay",
       "class": "mage",
       "role": "마딜",
@@ -4723,7 +4723,7 @@
       }
     },
     {
-      "id": "char_067",
+      "id": "char_267",
       "name": "Florence Brightwood",
       "class": "bard",
       "role": "예술",
@@ -4740,7 +4740,7 @@
       }
     },
     {
-      "id": "char_068",
+      "id": "char_268",
       "name": "Hassan Sandwalker",
       "class": "fisher",
       "role": "평민",
@@ -4757,7 +4757,7 @@
       }
     },
     {
-      "id": "char_069",
+      "id": "char_269",
       "name": "Hana Tidebringer",
       "class": "hunter",
       "role": "평민",
@@ -4774,7 +4774,7 @@
       }
     },
     {
-      "id": "char_070",
+      "id": "char_270",
       "name": "Nadia Miragecaller",
       "class": "cook",
       "role": "서비스",
@@ -4791,7 +4791,7 @@
       }
     },
     {
-      "id": "char_071",
+      "id": "char_271",
       "name": "Fatima Sandwalker",
       "class": "tailor",
       "role": "장인",
@@ -4808,7 +4808,7 @@
       }
     },
     {
-      "id": "char_072",
+      "id": "char_272",
       "name": "Cedric Thornwood",
       "class": "tailor",
       "role": "장인",
@@ -4825,7 +4825,7 @@
       }
     },
     {
-      "id": "char_073",
+      "id": "char_273",
       "name": "Zhi Moonbay",
       "class": "servant",
       "role": "서비스",
@@ -4842,7 +4842,7 @@
       }
     },
     {
-      "id": "char_074",
+      "id": "char_274",
       "name": "Nova Nightwhisper",
       "class": "innkeeper",
       "role": "상인",
@@ -4859,7 +4859,7 @@
       }
     },
     {
-      "id": "char_075",
+      "id": "char_275",
       "name": "Astrid Coldforge",
       "class": "fisher",
       "role": "평민",
@@ -4876,7 +4876,7 @@
       }
     },
     {
-      "id": "char_076",
+      "id": "char_276",
       "name": "Hiro Seaspray",
       "class": "soldier",
       "role": "근딜",
@@ -4893,7 +4893,7 @@
       }
     },
     {
-      "id": "char_077",
+      "id": "char_277",
       "name": "Gunnar Coldforge",
       "class": "fisher",
       "role": "평민",
@@ -4910,7 +4910,7 @@
       }
     },
     {
-      "id": "char_078",
+      "id": "char_278",
       "name": "Mira Dreamweaver",
       "class": "fisher",
       "role": "평민",
@@ -4927,7 +4927,7 @@
       }
     },
     {
-      "id": "char_079",
+      "id": "char_279",
       "name": "Kofi Junglestrider",
       "class": "soldier",
       "role": "근딜",
@@ -4944,7 +4944,7 @@
       }
     },
     {
-      "id": "char_080",
+      "id": "char_280",
       "name": "Cedric Brightwood",
       "class": "servant",
       "role": "서비스",
@@ -4961,7 +4961,7 @@
       }
     },
     {
-      "id": "char_081",
+      "id": "char_281",
       "name": "Marcus Goldmere",
       "class": "mage",
       "role": "마딜",
@@ -4978,7 +4978,7 @@
       }
     },
     {
-      "id": "char_082",
+      "id": "char_282",
       "name": "Farid Sunrider",
       "class": "priest",
       "role": "힐러",
@@ -4995,7 +4995,7 @@
       }
     },
     {
-      "id": "char_083",
+      "id": "char_283",
       "name": "Sefu Lionclaw",
       "class": "carpenter",
       "role": "장인",
@@ -5012,7 +5012,7 @@
       }
     },
     {
-      "id": "char_084",
+      "id": "char_284",
       "name": "Hakon Frostborn",
       "class": "farmer",
       "role": "평민",
@@ -5029,7 +5029,7 @@
       }
     },
     {
-      "id": "char_085",
+      "id": "char_285",
       "name": "Sven Icehammer",
       "class": "tailor",
       "role": "장인",
@@ -5046,7 +5046,7 @@
       }
     },
     {
-      "id": "char_086",
+      "id": "char_286",
       "name": "Arthur Goldmere",
       "class": "herbalist",
       "role": "학자",
@@ -5063,7 +5063,7 @@
       }
     },
     {
-      "id": "char_087",
+      "id": "char_287",
       "name": "Miko Tidebringer",
       "class": "baker",
       "role": "장인",
@@ -5080,7 +5080,7 @@
       }
     },
     {
-      "id": "char_088",
+      "id": "char_288",
       "name": "Cole Truthseeker",
       "class": "baker",
       "role": "장인",
@@ -5097,7 +5097,7 @@
       }
     },
     {
-      "id": "char_089",
+      "id": "char_289",
       "name": "Nia Thornweaver",
       "class": "blacksmith",
       "role": "장인",
@@ -5114,7 +5114,7 @@
       }
     },
     {
-      "id": "char_090",
+      "id": "char_290",
       "name": "Helena Highcastle",
       "class": "innkeeper",
       "role": "상인",
@@ -5131,7 +5131,7 @@
       }
     },
     {
-      "id": "char_091",
+      "id": "char_291",
       "name": "Hilda Ironforge",
       "class": "carpenter",
       "role": "장인",
@@ -5148,7 +5148,7 @@
       }
     },
     {
-      "id": "char_092",
+      "id": "char_292",
       "name": "Wei Seaspray",
       "class": "tailor",
       "role": "장인",
@@ -5165,7 +5165,7 @@
       }
     },
     {
-      "id": "char_093",
+      "id": "char_293",
       "name": "Karim Oasiskeeper",
       "class": "baker",
       "role": "장인",
@@ -5182,7 +5182,7 @@
       }
     },
     {
-      "id": "char_094",
+      "id": "char_294",
       "name": "Kord Ironforge",
       "class": "potter",
       "role": "장인",
@@ -5199,7 +5199,7 @@
       }
     },
     {
-      "id": "char_095",
+      "id": "char_295",
       "name": "Adaeze Fernheart",
       "class": "innkeeper",
       "role": "상인",
@@ -5216,7 +5216,7 @@
       }
     },
     {
-      "id": "char_096",
+      "id": "char_296",
       "name": "Diana Thornwood",
       "class": "miner",
       "role": "평민",
@@ -5233,7 +5233,7 @@
       }
     },
     {
-      "id": "char_097",
+      "id": "char_297",
       "name": "Ragnar Frostborn",
       "class": "guard",
       "role": "경비",
@@ -5250,7 +5250,7 @@
       }
     },
     {
-      "id": "char_098",
+      "id": "char_298",
       "name": "Hassan Miragecaller",
       "class": "innkeeper",
       "role": "상인",
@@ -5267,7 +5267,7 @@
       }
     },
     {
-      "id": "char_099",
+      "id": "char_299",
       "name": "Nia Lionclaw",
       "class": "mage",
       "role": "마딜",
@@ -5284,7 +5284,7 @@
       }
     },
     {
-      "id": "char_100",
+      "id": "char_300",
       "name": "Luna Starfall",
       "class": "herbalist",
       "role": "학자",
@@ -5301,7 +5301,7 @@
       }
     },
     {
-      "id": "char_101",
+      "id": "char_301",
       "name": "Adaeze Riverwalker",
       "class": "carpenter",
       "role": "장인",
@@ -5318,7 +5318,7 @@
       }
     },
     {
-      "id": "char_102",
+      "id": "char_302",
       "name": "Kenji Coralheart",
       "class": "herbalist",
       "role": "학자",
@@ -5335,7 +5335,7 @@
       }
     },
     {
-      "id": "char_103",
+      "id": "char_303",
       "name": "Kofi Fernheart",
       "class": "tailor",
       "role": "장인",
@@ -5352,7 +5352,7 @@
       }
     },
     {
-      "id": "char_104",
+      "id": "char_304",
       "name": "Drew Streetwise",
       "class": "soldier",
       "role": "근딜",
@@ -5369,7 +5369,7 @@
       }
     },
     {
-      "id": "char_105",
+      "id": "char_305",
       "name": "Seraphina Dreamweaver",
       "class": "tailor",
       "role": "장인",
@@ -5386,7 +5386,7 @@
       }
     },
     {
-      "id": "char_106",
+      "id": "char_306",
       "name": "Morgan Swiftblade",
       "class": "herbalist",
       "role": "학자",
@@ -5403,7 +5403,7 @@
       }
     },
     {
-      "id": "char_107",
+      "id": "char_307",
       "name": "Morgan Silvertongue",
       "class": "blacksmith",
       "role": "장인",
@@ -5420,7 +5420,7 @@
       }
     },
     {
-      "id": "char_108",
+      "id": "char_308",
       "name": "Locke Streetwise",
       "class": "scribe",
       "role": "학자",
@@ -5437,7 +5437,7 @@
       }
     },
     {
-      "id": "char_109",
+      "id": "char_309",
       "name": "Olaf Stormcaller",
       "class": "hunter",
       "role": "평민",
@@ -5454,7 +5454,7 @@
       }
     },
     {
-      "id": "char_110",
+      "id": "char_310",
       "name": "Tor Ironforge",
       "class": "healer",
       "role": "힐러",
@@ -5471,7 +5471,7 @@
       }
     },
     {
-      "id": "char_111",
+      "id": "char_311",
       "name": "Catherine Whitehall",
       "class": "sailor",
       "role": "선원",
@@ -5488,7 +5488,7 @@
       }
     },
     {
-      "id": "char_112",
+      "id": "char_312",
       "name": "Zaid Oasiskeeper",
       "class": "archer",
       "role": "원딜",
@@ -5505,7 +5505,7 @@
       }
     },
     {
-      "id": "char_113",
+      "id": "char_313",
       "name": "Miko Coralheart",
       "class": "knight",
       "role": "근딜",
@@ -5522,7 +5522,7 @@
       }
     },
     {
-      "id": "char_114",
+      "id": "char_314",
       "name": "Ivar Coldforge",
       "class": "scribe",
       "role": "학자",
@@ -5539,7 +5539,7 @@
       }
     },
     {
-      "id": "char_115",
+      "id": "char_315",
       "name": "Drew Silvertongue",
       "class": "merchant",
       "role": "상인",
@@ -5556,7 +5556,7 @@
       }
     },
     {
-      "id": "char_116",
+      "id": "char_316",
       "name": "Casey Shadowstep",
       "class": "farmer",
       "role": "평민",
@@ -5573,7 +5573,7 @@
       }
     },
     {
-      "id": "char_117",
+      "id": "char_317",
       "name": "Omar Dunerunner",
       "class": "carpenter",
       "role": "장인",
@@ -5590,7 +5590,7 @@
       }
     },
     {
-      "id": "char_118",
+      "id": "char_318",
       "name": "Casey Shadowstep",
       "class": "cook",
       "role": "서비스",
@@ -5607,7 +5607,7 @@
       }
     },
     {
-      "id": "char_119",
+      "id": "char_319",
       "name": "Zola Thornweaver",
       "class": "miner",
       "role": "평민",
@@ -5624,7 +5624,7 @@
       }
     },
     {
-      "id": "char_120",
+      "id": "char_320",
       "name": "Tariq Sandwalker",
       "class": "shepherd",
       "role": "평민",
@@ -5641,7 +5641,7 @@
       }
     },
     {
-      "id": "char_121",
+      "id": "char_321",
       "name": "Diana Thornwood",
       "class": "innkeeper",
       "role": "상인",
@@ -5658,7 +5658,7 @@
       }
     },
     {
-      "id": "char_122",
+      "id": "char_322",
       "name": "Casey Truthseeker",
       "class": "miner",
       "role": "평민",
@@ -5675,7 +5675,7 @@
       }
     },
     {
-      "id": "char_123",
+      "id": "char_323",
       "name": "Sade Riverwalker",
       "class": "bard",
       "role": "예술",
@@ -5692,7 +5692,7 @@
       }
     },
     {
-      "id": "char_124",
+      "id": "char_324",
       "name": "Olaf Coldforge",
       "class": "baker",
       "role": "장인",
@@ -5709,7 +5709,7 @@
       }
     },
     {
-      "id": "char_125",
+      "id": "char_325",
       "name": "Quinn Shadowstep",
       "class": "merchant",
       "role": "상인",
@@ -5726,7 +5726,7 @@
       }
     },
     {
-      "id": "char_126",
+      "id": "char_326",
       "name": "Zuri Junglestrider",
       "class": "healer",
       "role": "힐러",
@@ -5743,7 +5743,7 @@
       }
     },
     {
-      "id": "char_127",
+      "id": "char_327",
       "name": "Morgan Quickhand",
       "class": "scribe",
       "role": "학자",
@@ -5760,7 +5760,7 @@
       }
     },
     {
-      "id": "char_128",
+      "id": "char_328",
       "name": "Tor Steelborn",
       "class": "archer",
       "role": "원딜",
@@ -5777,7 +5777,7 @@
       }
     },
     {
-      "id": "char_129",
+      "id": "char_329",
       "name": "Obi Lionclaw",
       "class": "tailor",
       "role": "장인",
@@ -5794,7 +5794,7 @@
       }
     },
     {
-      "id": "char_130",
+      "id": "char_330",
       "name": "Zara Stargazer",
       "class": "carpenter",
       "role": "장인",
@@ -5811,7 +5811,7 @@
       }
     },
     {
-      "id": "char_131",
+      "id": "char_331",
       "name": "Olaf Snowpeak",
       "class": "carpenter",
       "role": "장인",
@@ -5828,7 +5828,7 @@
       }
     },
     {
-      "id": "char_132",
+      "id": "char_332",
       "name": "Arthur Highcastle",
       "class": "fisher",
       "role": "평민",
@@ -5845,7 +5845,7 @@
       }
     },
     {
-      "id": "char_133",
+      "id": "char_333",
       "name": "Sade Lionclaw",
       "class": "archer",
       "role": "원딜",
@@ -5862,7 +5862,7 @@
       }
     },
     {
-      "id": "char_134",
+      "id": "char_334",
       "name": "Sigrid Frostborn",
       "class": "shepherd",
       "role": "평민",
@@ -5879,7 +5879,7 @@
       }
     },
     {
-      "id": "char_135",
+      "id": "char_335",
       "name": "Emeka Thornweaver",
       "class": "shepherd",
       "role": "평민",
@@ -5896,7 +5896,7 @@
       }
     },
     {
-      "id": "char_136",
+      "id": "char_336",
       "name": "Aurora Starfall",
       "class": "knight",
       "role": "근딜",
@@ -5913,7 +5913,7 @@
       }
     },
     {
-      "id": "char_137",
+      "id": "char_337",
       "name": "Magnus Snowpeak",
       "class": "sailor",
       "role": "선원",
@@ -5930,7 +5930,7 @@
       }
     },
     {
-      "id": "char_138",
+      "id": "char_338",
       "name": "Xia Pearlmist",
       "class": "farmer",
       "role": "평민",
@@ -5947,7 +5947,7 @@
       }
     },
     {
-      "id": "char_139",
+      "id": "char_339",
       "name": "Dayo Vinecaller",
       "class": "cook",
       "role": "서비스",
@@ -5964,7 +5964,7 @@
       }
     },
     {
-      "id": "char_140",
+      "id": "char_340",
       "name": "Tariq Miragecaller",
       "class": "soldier",
       "role": "근딜",
@@ -5981,7 +5981,7 @@
       }
     },
     {
-      "id": "char_141",
+      "id": "char_341",
       "name": "Xia Wavecrest",
       "class": "potter",
       "role": "장인",
@@ -5998,7 +5998,7 @@
       }
     },
     {
-      "id": "char_142",
+      "id": "char_342",
       "name": "Blake Streetwise",
       "class": "knight",
       "role": "근딜",
@@ -6015,7 +6015,7 @@
       }
     },
     {
-      "id": "char_143",
+      "id": "char_343",
       "name": "Iris Brightwood",
       "class": "sailor",
       "role": "선원",
@@ -6032,7 +6032,7 @@
       }
     },
     {
-      "id": "char_144",
+      "id": "char_344",
       "name": "Thandi Fernheart",
       "class": "blacksmith",
       "role": "장인",
@@ -6049,7 +6049,7 @@
       }
     },
     {
-      "id": "char_145",
+      "id": "char_345",
       "name": "Yuki Saltwind",
       "class": "merchant",
       "role": "상인",
@@ -6066,7 +6066,7 @@
       }
     },
     {
-      "id": "char_146",
+      "id": "char_346",
       "name": "Locke Silvertongue",
       "class": "shepherd",
       "role": "평민",
@@ -6083,7 +6083,7 @@
       }
     },
     {
-      "id": "char_147",
+      "id": "char_347",
       "name": "Jax Swiftblade",
       "class": "soldier",
       "role": "근딜",
@@ -6100,7 +6100,7 @@
       }
     },
     {
-      "id": "char_148",
+      "id": "char_348",
       "name": "Omar Stargazer",
       "class": "baker",
       "role": "장인",
@@ -6117,7 +6117,7 @@
       }
     },
     {
-      "id": "char_149",
+      "id": "char_349",
       "name": "Amira Sunrider",
       "class": "cook",
       "role": "서비스",
@@ -6134,7 +6134,7 @@
       }
     },
     {
-      "id": "char_150",
+      "id": "char_350",
       "name": "Quinn Truthseeker",
       "class": "miner",
       "role": "평민",
@@ -6151,7 +6151,7 @@
       }
     },
     {
-      "id": "char_151",
+      "id": "char_351",
       "name": "Sage Shadowstep",
       "class": "tailor",
       "role": "장인",
@@ -6168,7 +6168,7 @@
       }
     },
     {
-      "id": "char_152",
+      "id": "char_352",
       "name": "Astrid Coldforge",
       "class": "baker",
       "role": "장인",
@@ -6185,7 +6185,7 @@
       }
     },
     {
-      "id": "char_153",
+      "id": "char_353",
       "name": "Sage Streetwise",
       "class": "hunter",
       "role": "평민",
@@ -6202,7 +6202,7 @@
       }
     },
     {
-      "id": "char_154",
+      "id": "char_354",
       "name": "Greta Coppervein",
       "class": "carpenter",
       "role": "장인",
@@ -6219,7 +6219,7 @@
       }
     },
     {
-      "id": "char_155",
+      "id": "char_355",
       "name": "Drew Truthseeker",
       "class": "cook",
       "role": "서비스",
@@ -6236,7 +6236,7 @@
       }
     },
     {
-      "id": "char_156",
+      "id": "char_356",
       "name": "Lei Moonbay",
       "class": "mage",
       "role": "마딜",
@@ -6253,7 +6253,7 @@
       }
     },
     {
-      "id": "char_157",
+      "id": "char_357",
       "name": "Jin Seaspray",
       "class": "soldier",
       "role": "근딜",
@@ -6270,7 +6270,7 @@
       }
     },
     {
-      "id": "char_158",
+      "id": "char_358",
       "name": "Astrid Ironblood",
       "class": "merchant",
       "role": "상인",
@@ -6287,7 +6287,7 @@
       }
     },
     {
-      "id": "char_159",
+      "id": "char_359",
       "name": "Olaf Ironblood",
       "class": "tailor",
       "role": "장인",
@@ -6304,7 +6304,7 @@
       }
     },
     {
-      "id": "char_160",
+      "id": "char_360",
       "name": "Sven Frostborn",
       "class": "knight",
       "role": "근딜",
@@ -6321,7 +6321,7 @@
       }
     },
     {
-      "id": "char_161",
+      "id": "char_361",
       "name": "Nova Starfall",
       "class": "hunter",
       "role": "평민",
@@ -6338,7 +6338,7 @@
       }
     },
     {
-      "id": "char_162",
+      "id": "char_362",
       "name": "Shade Nightwhisper",
       "class": "bard",
       "role": "예술",
@@ -6355,7 +6355,7 @@
       }
     },
     {
-      "id": "char_163",
+      "id": "char_363",
       "name": "Morgan Silvertongue",
       "class": "baker",
       "role": "장인",
@@ -6372,7 +6372,7 @@
       }
     },
     {
-      "id": "char_164",
+      "id": "char_364",
       "name": "Tendai Riverwalker",
       "class": "scribe",
       "role": "학자",
@@ -6389,7 +6389,7 @@
       }
     },
     {
-      "id": "char_165",
+      "id": "char_365",
       "name": "Freya Winterhold",
       "class": "tailor",
       "role": "장인",
@@ -6406,7 +6406,7 @@
       }
     },
     {
-      "id": "char_166",
+      "id": "char_366",
       "name": "Caelan Starfall",
       "class": "baker",
       "role": "장인",
@@ -6423,7 +6423,7 @@
       }
     },
     {
-      "id": "char_167",
+      "id": "char_367",
       "name": "Greta Deepmine",
       "class": "tailor",
       "role": "장인",
@@ -6440,7 +6440,7 @@
       }
     },
     {
-      "id": "char_168",
+      "id": "char_368",
       "name": "Sven Coldforge",
       "class": "scribe",
       "role": "학자",
@@ -6457,7 +6457,7 @@
       }
     },
     {
-      "id": "char_169",
+      "id": "char_369",
       "name": "Manu Junglestrider",
       "class": "merchant",
       "role": "상인",
@@ -6474,7 +6474,7 @@
       }
     },
     {
-      "id": "char_170",
+      "id": "char_370",
       "name": "Thandi Lionclaw",
       "class": "blacksmith",
       "role": "장인",
@@ -6491,7 +6491,7 @@
       }
     },
     {
-      "id": "char_171",
+      "id": "char_371",
       "name": "Mei Moonbay",
       "class": "sailor",
       "role": "선원",
@@ -6508,7 +6508,7 @@
       }
     },
     {
-      "id": "char_172",
+      "id": "char_372",
       "name": "Sade Lionclaw",
       "class": "healer",
       "role": "힐러",
@@ -6525,7 +6525,7 @@
       }
     },
     {
-      "id": "char_173",
+      "id": "char_373",
       "name": "Vorn Ironforge",
       "class": "miner",
       "role": "평민",
@@ -6542,7 +6542,7 @@
       }
     },
     {
-      "id": "char_174",
+      "id": "char_374",
       "name": "Yasmin Miragecaller",
       "class": "scribe",
       "role": "학자",
@@ -6559,7 +6559,7 @@
       }
     },
     {
-      "id": "char_175",
+      "id": "char_375",
       "name": "Emeka Junglestrider",
       "class": "archer",
       "role": "원딜",
@@ -6576,7 +6576,7 @@
       }
     },
     {
-      "id": "char_176",
+      "id": "char_376",
       "name": "Faye Nightwhisper",
       "class": "priest",
       "role": "힐러",
@@ -6593,7 +6593,7 @@
       }
     },
     {
-      "id": "char_177",
+      "id": "char_377",
       "name": "Roland Whitehall",
       "class": "cook",
       "role": "서비스",
@@ -6610,7 +6610,7 @@
       }
     },
     {
-      "id": "char_178",
+      "id": "char_378",
       "name": "Bram Coppervein",
       "class": "healer",
       "role": "힐러",
@@ -6627,7 +6627,7 @@
       }
     },
     {
-      "id": "char_179",
+      "id": "char_379",
       "name": "Bjorn Frostborn",
       "class": "herbalist",
       "role": "학자",
@@ -6644,7 +6644,7 @@
       }
     },
     {
-      "id": "char_180",
+      "id": "char_380",
       "name": "Samir Sunrider",
       "class": "shepherd",
       "role": "평민",
@@ -6661,7 +6661,7 @@
       }
     },
     {
-      "id": "char_181",
+      "id": "char_381",
       "name": "Harold Silverton",
       "class": "baker",
       "role": "장인",
@@ -6678,7 +6678,7 @@
       }
     },
     {
-      "id": "char_182",
+      "id": "char_382",
       "name": "Iris Thornwood",
       "class": "innkeeper",
       "role": "상인",
@@ -6695,7 +6695,7 @@
       }
     },
     {
-      "id": "char_183",
+      "id": "char_383",
       "name": "Sigrid Stormcaller",
       "class": "servant",
       "role": "서비스",
@@ -6712,7 +6712,7 @@
       }
     },
     {
-      "id": "char_184",
+      "id": "char_384",
       "name": "Amira Oasiskeeper",
       "class": "bard",
       "role": "예술",
@@ -6729,7 +6729,7 @@
       }
     },
     {
-      "id": "char_185",
+      "id": "char_385",
       "name": "Stella Veilkeeper",
       "class": "herbalist",
       "role": "학자",
@@ -6746,7 +6746,7 @@
       }
     },
     {
-      "id": "char_186",
+      "id": "char_386",
       "name": "Hiro Coralheart",
       "class": "shepherd",
       "role": "평민",
@@ -6763,7 +6763,7 @@
       }
     },
     {
-      "id": "char_187",
+      "id": "char_387",
       "name": "Emeka Vinecaller",
       "class": "knight",
       "role": "근딜",
@@ -6780,7 +6780,7 @@
       }
     },
     {
-      "id": "char_188",
+      "id": "char_388",
       "name": "Tariq Oasiskeeper",
       "class": "soldier",
       "role": "근딜",
@@ -6797,7 +6797,7 @@
       }
     },
     {
-      "id": "char_189",
+      "id": "char_389",
       "name": "Hilda Deepmine",
       "class": "soldier",
       "role": "근딜",
@@ -6814,7 +6814,7 @@
       }
     },
     {
-      "id": "char_190",
+      "id": "char_390",
       "name": "Ingrid Frostborn",
       "class": "shepherd",
       "role": "평민",
@@ -6831,7 +6831,7 @@
       }
     },
     {
-      "id": "char_191",
+      "id": "char_391",
       "name": "Tor Deepmine",
       "class": "herbalist",
       "role": "학자",
@@ -6848,7 +6848,7 @@
       }
     },
     {
-      "id": "char_192",
+      "id": "char_392",
       "name": "Arthur Thornwood",
       "class": "potter",
       "role": "장인",
@@ -6865,7 +6865,7 @@
       }
     },
     {
-      "id": "char_193",
+      "id": "char_393",
       "name": "Layla Sandwalker",
       "class": "miner",
       "role": "평민",
@@ -6882,7 +6882,7 @@
       }
     },
     {
-      "id": "char_194",
+      "id": "char_394",
       "name": "Aldric Highcastle",
       "class": "bard",
       "role": "예술",
@@ -6899,7 +6899,7 @@
       }
     },
     {
-      "id": "char_195",
+      "id": "char_395",
       "name": "Iris Westbrook",
       "class": "blacksmith",
       "role": "장인",
@@ -6916,7 +6916,7 @@
       }
     },
     {
-      "id": "char_196",
+      "id": "char_396",
       "name": "Yasmin Stargazer",
       "class": "guard",
       "role": "경비",
@@ -6933,7 +6933,7 @@
       }
     },
     {
-      "id": "char_197",
+      "id": "char_397",
       "name": "Leif Coldforge",
       "class": "fisher",
       "role": "평민",
@@ -6950,7 +6950,7 @@
       }
     },
     {
-      "id": "char_198",
+      "id": "char_398",
       "name": "Seraphina Nightwhisper",
       "class": "archer",
       "role": "원딜",
@@ -6967,7 +6967,7 @@
       }
     },
     {
-      "id": "char_199",
+      "id": "char_399",
       "name": "Thyra Ironblood",
       "class": "potter",
       "role": "장인",
@@ -6984,7 +6984,7 @@
       }
     },
     {
-      "id": "char_200",
+      "id": "char_400",
       "name": "Roland Highcastle",
       "class": "carpenter",
       "role": "장인",
@@ -7001,7 +7001,7 @@
       }
     },
     {
-      "id": "char_201",
+      "id": "char_401",
       "name": "Mira Starfall",
       "class": "blacksmith",
       "role": "장인",
@@ -7018,7 +7018,7 @@
       }
     },
     {
-      "id": "char_202",
+      "id": "char_402",
       "name": "Ingrid Frostborn",
       "class": "guard",
       "role": "경비",
@@ -7035,7 +7035,7 @@
       }
     },
     {
-      "id": "char_203",
+      "id": "char_403",
       "name": "Nova Moonshadow",
       "class": "cook",
       "role": "서비스",
@@ -7052,7 +7052,7 @@
       }
     },
     {
-      "id": "char_204",
+      "id": "char_404",
       "name": "Cole Streetwise",
       "class": "cook",
       "role": "서비스",
@@ -7069,7 +7069,7 @@
       }
     },
     {
-      "id": "char_205",
+      "id": "char_405",
       "name": "Astrid Icehammer",
       "class": "guard",
       "role": "경비",
@@ -7086,7 +7086,7 @@
       }
     },
     {
-      "id": "char_206",
+      "id": "char_406",
       "name": "Layla Miragecaller",
       "class": "sailor",
       "role": "선원",
@@ -7103,7 +7103,7 @@
       }
     },
     {
-      "id": "char_207",
+      "id": "char_407",
       "name": "Wei Coralheart",
       "class": "baker",
       "role": "장인",
@@ -7120,7 +7120,7 @@
       }
     },
     {
-      "id": "char_208",
+      "id": "char_408",
       "name": "Alex Truthseeker",
       "class": "knight",
       "role": "근딜",
@@ -7137,7 +7137,7 @@
       }
     },
     {
-      "id": "char_209",
+      "id": "char_409",
       "name": "Ife Thornweaver",
       "class": "baker",
       "role": "장인",
@@ -7154,7 +7154,7 @@
       }
     },
     {
-      "id": "char_210",
+      "id": "char_410",
       "name": "Zuri Riverwalker",
       "class": "shepherd",
       "role": "평민",
@@ -7171,7 +7171,7 @@
       }
     },
     {
-      "id": "char_211",
+      "id": "char_411",
       "name": "Alex Swiftblade",
       "class": "priest",
       "role": "힐러",
@@ -7188,7 +7188,7 @@
       }
     },
     {
-      "id": "char_212",
+      "id": "char_412",
       "name": "Berta Steelborn",
       "class": "cook",
       "role": "서비스",
@@ -7205,7 +7205,7 @@
       }
     },
     {
-      "id": "char_213",
+      "id": "char_413",
       "name": "Kenji Seaspray",
       "class": "innkeeper",
       "role": "상인",
@@ -7222,7 +7222,7 @@
       }
     },
     {
-      "id": "char_214",
+      "id": "char_414",
       "name": "Dorn Granitehand",
       "class": "shepherd",
       "role": "평민",
@@ -7239,7 +7239,7 @@
       }
     },
     {
-      "id": "char_215",
+      "id": "char_415",
       "name": "Sora Pearlmist",
       "class": "merchant",
       "role": "상인",
@@ -7256,7 +7256,7 @@
       }
     },
     {
-      "id": "char_216",
+      "id": "char_416",
       "name": "Dusk Moonshadow",
       "class": "hunter",
       "role": "평민",
@@ -7273,7 +7273,7 @@
       }
     },
     {
-      "id": "char_217",
+      "id": "char_417",
       "name": "Thyra Snowpeak",
       "class": "scribe",
       "role": "학자",
@@ -7290,7 +7290,7 @@
       }
     },
     {
-      "id": "char_218",
+      "id": "char_418",
       "name": "Flynn Shadowstep",
       "class": "carpenter",
       "role": "장인",
@@ -7307,7 +7307,7 @@
       }
     },
     {
-      "id": "char_219",
+      "id": "char_419",
       "name": "Julia Highcastle",
       "class": "herbalist",
       "role": "학자",
@@ -7324,7 +7324,7 @@
       }
     },
     {
-      "id": "char_220",
+      "id": "char_420",
       "name": "Feng Seaspray",
       "class": "servant",
       "role": "서비스",
@@ -7341,7 +7341,7 @@
       }
     },
     {
-      "id": "char_221",
+      "id": "char_421",
       "name": "Sefu Thornweaver",
       "class": "sailor",
       "role": "선원",
@@ -7358,7 +7358,7 @@
       }
     },
     {
-      "id": "char_222",
+      "id": "char_422",
       "name": "Vorn Deepmine",
       "class": "herbalist",
       "role": "학자",
@@ -7375,7 +7375,7 @@
       }
     },
     {
-      "id": "char_223",
+      "id": "char_423",
       "name": "Zaid Sandwalker",
       "class": "bard",
       "role": "예술",
@@ -7392,7 +7392,7 @@
       }
     },
     {
-      "id": "char_224",
+      "id": "char_424",
       "name": "Leif Snowpeak",
       "class": "potter",
       "role": "장인",
@@ -7409,7 +7409,7 @@
       }
     },
     {
-      "id": "char_225",
+      "id": "char_425",
       "name": "Amir Oasiskeeper",
       "class": "knight",
       "role": "근딜",
@@ -7426,7 +7426,7 @@
       }
     },
     {
-      "id": "char_226",
+      "id": "char_426",
       "name": "Thane Ironforge",
       "class": "tailor",
       "role": "장인",
@@ -7443,7 +7443,7 @@
       }
     },
     {
-      "id": "char_227",
+      "id": "char_427",
       "name": "Harold Whitehall",
       "class": "potter",
       "role": "장인",
@@ -7460,7 +7460,7 @@
       }
     },
     {
-      "id": "char_228",
+      "id": "char_428",
       "name": "Samira Sandwalker",
       "class": "hunter",
       "role": "평민",
@@ -7477,7 +7477,7 @@
       }
     },
     {
-      "id": "char_229",
+      "id": "char_429",
       "name": "Seraphina Dreamweaver",
       "class": "scribe",
       "role": "학자",
@@ -7494,7 +7494,7 @@
       }
     },
     {
-      "id": "char_230",
+      "id": "char_430",
       "name": "Amira Oasiskeeper",
       "class": "cook",
       "role": "서비스",
@@ -7511,7 +7511,7 @@
       }
     },
     {
-      "id": "char_231",
+      "id": "char_431",
       "name": "Gunnar Winterhold",
       "class": "mage",
       "role": "마딜",
@@ -7528,7 +7528,7 @@
       }
     },
     {
-      "id": "char_232",
+      "id": "char_432",
       "name": "Mira Moonshadow",
       "class": "archer",
       "role": "원딜",
@@ -7545,7 +7545,7 @@
       }
     },
     {
-      "id": "char_233",
+      "id": "char_433",
       "name": "Karim Sunrider",
       "class": "servant",
       "role": "서비스",
@@ -7562,7 +7562,7 @@
       }
     },
     {
-      "id": "char_234",
+      "id": "char_434",
       "name": "Thora Steelborn",
       "class": "scribe",
       "role": "학자",
@@ -7579,7 +7579,7 @@
       }
     },
     {
-      "id": "char_235",
+      "id": "char_435",
       "name": "Erik Snowpeak",
       "class": "cook",
       "role": "서비스",
@@ -7596,7 +7596,7 @@
       }
     },
     {
-      "id": "char_236",
+      "id": "char_436",
       "name": "Thandi Lionclaw",
       "class": "mage",
       "role": "마딜",
@@ -7613,7 +7613,7 @@
       }
     },
     {
-      "id": "char_237",
+      "id": "char_437",
       "name": "Sigrun Deepmine",
       "class": "baker",
       "role": "장인",
@@ -7630,7 +7630,7 @@
       }
     },
     {
-      "id": "char_238",
+      "id": "char_438",
       "name": "Merta Coppervein",
       "class": "blacksmith",
       "role": "장인",
@@ -7647,7 +7647,7 @@
       }
     },
     {
-      "id": "char_239",
+      "id": "char_439",
       "name": "Luna Starfall",
       "class": "shepherd",
       "role": "평민",
@@ -7664,7 +7664,7 @@
       }
     },
     {
-      "id": "char_240",
+      "id": "char_440",
       "name": "Manu Vinecaller",
       "class": "knight",
       "role": "근딜",
@@ -7681,7 +7681,7 @@
       }
     },
     {
-      "id": "char_241",
+      "id": "char_441",
       "name": "Caelan Dreamweaver",
       "class": "baker",
       "role": "장인",
@@ -7698,7 +7698,7 @@
       }
     },
     {
-      "id": "char_242",
+      "id": "char_442",
       "name": "Miko Pearlmist",
       "class": "farmer",
       "role": "평민",
@@ -7715,7 +7715,7 @@
       }
     },
     {
-      "id": "char_243",
+      "id": "char_443",
       "name": "Greta Ironforge",
       "class": "innkeeper",
       "role": "상인",
@@ -7732,7 +7732,7 @@
       }
     },
     {
-      "id": "char_244",
+      "id": "char_444",
       "name": "Flynn Swiftblade",
       "class": "sailor",
       "role": "선원",
@@ -7749,7 +7749,7 @@
       }
     },
     {
-      "id": "char_245",
+      "id": "char_445",
       "name": "Florence Westbrook",
       "class": "servant",
       "role": "서비스",
@@ -7766,7 +7766,7 @@
       }
     },
     {
-      "id": "char_246",
+      "id": "char_446",
       "name": "Quinn Shadowstep",
       "class": "carpenter",
       "role": "장인",
@@ -7783,7 +7783,7 @@
       }
     },
     {
-      "id": "char_247",
+      "id": "char_447",
       "name": "Casey Truthseeker",
       "class": "shepherd",
       "role": "평민",
@@ -7800,7 +7800,7 @@
       }
     },
     {
-      "id": "char_248",
+      "id": "char_448",
       "name": "Lei Tidebringer",
       "class": "innkeeper",
       "role": "상인",
@@ -7817,7 +7817,7 @@
       }
     },
     {
-      "id": "char_249",
+      "id": "char_449",
       "name": "Greta Ironforge",
       "class": "knight",
       "role": "근딜",
@@ -7834,7 +7834,7 @@
       }
     },
     {
-      "id": "char_250",
+      "id": "char_450",
       "name": "Dusk Mistwalker",
       "class": "sailor",
       "role": "선원",
