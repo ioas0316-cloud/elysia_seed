@@ -132,7 +132,7 @@ def create_alice_story() -> list[dict]:
         },
         {
             "age": 19,
-            "event": "동료들과 함께 서니 두려움이 사라졌다. 혼자가 아니다.",
+            "event": "동료들과 함께 서있으니 두려움이 사라졌다. 혼자가 아니다.",
             "intensity": 1.5,
             "body": 0.1, "soul": 0.5, "spirit": 0.2
         },
