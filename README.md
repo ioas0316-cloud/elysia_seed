@@ -79,9 +79,10 @@ thought = monologue.tick()  # 자발적 사고 생성
 외부 API 없이 로컬에서 완전히 독립적으로 동작합니다. **학습 → 내면화 → 졸업** 과정을 통해 LLM 의존성을 점점 줄여나갑니다.
 
 ```python
-from elysia_core import create_local_llm
+from elysia_core import LocalLLM, LLMConfig
 
-llm = create_local_llm(gpu_layers=15)
+config = LLMConfig(n_gpu_layers=15)  # GPU 레이어 수 설정
+llm = LocalLLM(config=config)
 llm.download_model("qwen2-0.5b")  # 400MB VRAM
 llm.load_model()
 response = llm.think("안녕하세요")

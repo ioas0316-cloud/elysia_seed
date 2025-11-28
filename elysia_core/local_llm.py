@@ -168,7 +168,10 @@ class LocalLLM:
             error_msg = str(e).lower()
             logger.error(f"모델 로드 실패: {e}")
             if any(kw in error_msg for kw in ["cuda", "memory", "vram", "gpu", "out of"]):
-                logger.info(f"💡 VRAM 부족: config.n_gpu_layers를 줄여보세요 (현재: {self.config.n_gpu_layers})")
+                logger.info(f"💡 메모리 부족 가능성:")
+                logger.info(f"   - GPU 레이어 줄이기: config.n_gpu_layers (현재: {self.config.n_gpu_layers})")
+                logger.info(f"   - 더 작은 모델 사용: smollm (300MB VRAM)")
+                logger.info(f"   - CPU 전용 모드: config.n_gpu_layers=0")
             return False
     
     def _find_existing_model(self) -> Optional[Path]:
@@ -224,8 +227,12 @@ class LocalLLM:
     
     def _download_progress(self, count, block_size, total_size):
         """다운로드 진행률 표시"""
-        percent = int(count * block_size * 100 / total_size)
-        print(f"\r다운로드: {percent}%", end="", flush=True)
+        if total_size > 0:
+            percent = int(count * block_size * 100 / total_size)
+            print(f"\r다운로드: {percent}%", end="", flush=True)
+        else:
+            downloaded_mb = count * block_size / (1024 * 1024)
+            print(f"\r다운로드: {downloaded_mb:.1f}MB", end="", flush=True)
     
     def think(
         self,

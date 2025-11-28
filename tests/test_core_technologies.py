@@ -178,8 +178,11 @@ class TestInnerMonologue:
         for _ in range(50):
             monologue.tick()
         
-        # 에너지가 변화해야 함 (자연 회복 or 사고로 소모)
-        assert monologue.mental_state.energy != initial_energy or monologue.mental_state.energy == 1.0
+        # 에너지는 사고로 소모되거나 자연 회복됨
+        # 초기값(1.0)에서 변화가 있거나, 회복되어 1.0을 유지할 수 있음
+        final_energy = monologue.mental_state.energy
+        # 에너지는 항상 0.1 ~ 1.0 범위 내에 있어야 함
+        assert 0.1 <= final_energy <= 1.0
     
     def test_thought_types_coverage(self):
         """다양한 생각 유형 생성 확인"""
