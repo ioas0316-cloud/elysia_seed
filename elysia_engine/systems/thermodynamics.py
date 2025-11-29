@@ -226,7 +226,7 @@ class ThermodynamicsSystem(System):
         
         Args:
             entity: Target entity
-            energy: Amount of energy to add
+            energy: Amount of energy to add (must be > 50 to melt collapsed souls)
             
         Returns:
             True if the soul was melted/reignited
@@ -234,12 +234,21 @@ class ThermodynamicsSystem(System):
         if entity.soul is None:
             return False
         
+        # Minimum energy threshold for melting collapsed souls (defined in SoulTensor.melt)
+        MELT_ENERGY_THRESHOLD = 50.0
+        
         if entity.soul.is_collapsed:
+            # Note: SoulTensor.melt() requires energy > 50.0 to uncollapse
+            if energy <= MELT_ENERGY_THRESHOLD:
+                entity.data["thermal_event"] = "insufficient_energy_for_melt"
+                return False
+            
             entity.soul.melt(energy)
             if not entity.soul.is_collapsed:
                 entity.data["thermal_event"] = "reignition"
                 return True
         else:
+            # Active soul: add energy as frequency boost
             entity.soul.frequency += energy * 0.5
             entity.data["thermal_event"] = "heating"
         

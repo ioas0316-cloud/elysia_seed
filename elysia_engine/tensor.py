@@ -404,21 +404,30 @@ class SoulTensor:
         Returns:
             The new split-off soul, or None if insufficient energy
         """
-        if self.amplitude < 20:
+        # Minimum amplitude required for splitting
+        MIN_SPLIT_AMPLITUDE = 20
+        
+        # Child inherits fraction of parent's properties
+        CHILD_AMPLITUDE_RATIO = 0.4
+        PARENT_AMPLITUDE_AFTER_SPLIT = 0.6
+        # Child inherits half coherence because quantum state is partially disrupted by splitting
+        CHILD_COHERENCE_RATIO = 0.5
+        
+        if self.amplitude < MIN_SPLIT_AMPLITUDE:
             return None  # Not enough energy to split
         
-        # Create child with half the properties
+        # Create child with inherited properties
         child = SoulTensor(
-            amplitude=self.amplitude * 0.4,
+            amplitude=self.amplitude * CHILD_AMPLITUDE_RATIO,
             frequency=self.frequency,
             phase=(self.phase + math.pi) % (2 * math.pi),  # Opposite phase
-            spin=self.spin * -1,  # Opposite spin
+            spin=self.spin * -1,  # Opposite spin (conservation)
             polarity=self.polarity,
-            coherence=self.coherence * 0.5
+            coherence=self.coherence * CHILD_COHERENCE_RATIO
         )
         
         # Parent loses energy
-        self.amplitude *= 0.6
+        self.amplitude *= PARENT_AMPLITUDE_AFTER_SPLIT
         
         return child
 
@@ -442,12 +451,17 @@ class SoulTensor:
         # Calculate frequency ratio
         ratio = max(self.frequency, other.frequency) / min(self.frequency, other.frequency)
         
-        # Perfect harmonics: 1:1, 2:1, 3:2, 4:3, 5:4
-        perfect_ratios = [1.0, 2.0, 1.5, 1.333, 1.25]
+        # Perfect harmonic ratios from music theory:
+        # - 1:1 = Unison (same pitch)
+        # - 2:1 = Octave (doubling frequency)
+        # - 3:2 = Perfect Fifth (1.5)
+        # - 4:3 = Perfect Fourth (1.333...)
+        # - 5:4 = Major Third (1.25)
+        HARMONIC_RATIOS = [1.0, 2.0, 1.5, 1.333, 1.25]
         
         # Find closest perfect ratio
         min_distance = float('inf')
-        for pr in perfect_ratios:
+        for pr in HARMONIC_RATIOS:
             dist = abs(ratio - pr) / pr
             if dist < min_distance:
                 min_distance = dist

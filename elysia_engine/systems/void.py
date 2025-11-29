@@ -62,6 +62,9 @@ class VoidSystem(System):
         
         # Activity tracking
         self._last_activity: dict = {}  # entity_id -> last active tick
+        
+        # Minimum velocity to be considered "active" (not dormant)
+        self._activity_velocity_threshold: float = 0.01
 
     def step(self, world: World, dt: float) -> None:
         """Execute void operations."""
@@ -86,8 +89,9 @@ class VoidSystem(System):
                 continue
             
             # Activity defined as: non-zero velocity OR non-collapsed
+            # Entities with velocity above threshold are considered moving
             is_active = (
-                entity.physics.velocity.magnitude > 0.01 or
+                entity.physics.velocity.magnitude > self._activity_velocity_threshold or
                 not entity.soul.is_collapsed
             )
             
