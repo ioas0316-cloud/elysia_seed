@@ -1,1 +1,90 @@
 __pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual Environment
+venv/
+.venv/
+env/
+.env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Build artifacts
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Test artifacts
+.pytest_cache/
+.coverage
+htmlcov/
+
+# ==============================================================================
+# LLM Model Files (Large File Exclusions)
+# ==============================================================================
+# GGUF format (llama.cpp, ollama, etc.)
+*.gguf
+*.ggml
+
+# PyTorch/Hugging Face models
+*.bin
+*.safetensors
+*.pt
+*.pth
+*.ckpt
+
+# TensorFlow models
+*.pb
+*.h5
+*.keras
+
+# ONNX models
+*.onnx
+
+# Model directories (common naming patterns)
+models/
+model_cache/
+llm_models/
+local_models/
+huggingface_cache/
+
+# Ollama models (default location varies, but exclude any local copies)
+.ollama/
+
+# ==============================================================================
+# Data Files (Large datasets, embeddings, etc.)
+# ==============================================================================
+*.parquet
+*.arrow
+*.feather
+embeddings/
+vectors/
+*.npy
+*.npz
+
+# Log files
+*.log
+logs/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# macOS
+.DS_Store
+
+# ==============================================================================
+# Git LFS pointer files should still be tracked
+# If you need to track large files, use Git LFS:
+#   git lfs install
+#   git lfs track "*.gguf"
+#   git lfs track "*.safetensors"
+# ==============================================================================

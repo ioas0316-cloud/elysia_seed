@@ -11,6 +11,8 @@ Key Components:
 - EmotionalPalette: Emotion mixing and analysis
 - Hippocampus: Causal memory graph with fractal loops
 - WaveInput/Thought: Core data structures for consciousness
+- LocalLLM: Local LLM integration with learning → independence evolution
+- InnerMonologue: Self-reflective thought generation system
 
 Usage:
     from elysia_core import ElysiaSoul, WaveInput
@@ -19,6 +21,15 @@ Usage:
     response = soul.process("Hello, how are you?")
     emotion = soul.get_emotion()
     context = soul.export_for_llm()
+    
+    # Local LLM integration
+    from elysia_core import LocalLLM, create_local_llm
+    llm = create_local_llm(resonance_engine=soul.resonance_engine)
+    
+    # Inner Monologue
+    from elysia_core import InnerMonologue
+    monologue = InnerMonologue(identity_core={"name": "Elysia"})
+    thought = monologue.tick()  # Spontaneous thought generation
 """
 
 from .hyper_qubit import HyperQubit, QubitState
@@ -29,8 +40,11 @@ from .hippocampus import Hippocampus
 from .wave import WaveInput
 from .thought import Thought
 from .soul import ElysiaSoul
+from .local_llm import LocalLLM, LLMConfig, ConsciousnessMode, create_local_llm, quick_setup
+from .inner_monologue import InnerMonologue, InnerThought, MentalState, ThoughtType
 
 __all__ = [
+    # Core consciousness
     "HyperQubit",
     "QubitState",
     "ResonanceEngine",
@@ -42,4 +56,15 @@ __all__ = [
     "WaveInput",
     "Thought",
     "ElysiaSoul",
+    # Local LLM
+    "LocalLLM",
+    "LLMConfig",
+    "ConsciousnessMode",
+    "create_local_llm",
+    "quick_setup",
+    # Inner Monologue
+    "InnerMonologue",
+    "InnerThought",
+    "MentalState",
+    "ThoughtType",
 ]
