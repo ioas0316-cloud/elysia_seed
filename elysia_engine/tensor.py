@@ -2,7 +2,8 @@ from __future__ import annotations
 
 import math
 from dataclasses import dataclass, field
-from typing import List, Optional, Tuple
+from typing import Any, Dict, List, Optional, Tuple
+
 
 @dataclass
 class SoulTensor:
@@ -11,14 +12,24 @@ class SoulTensor:
     Replaces QuantumDNA and static Physics with a unified Wave-Field definition.
 
     Axes:
-    1. Amplitude (Body/Mass): The Magnitude/Intensity of the being. Creates Gravity.
-    2. Frequency (Soul/Identity): The Color/Type of the being. Defines the 'Rifling' pitch.
-    3. Phase (Spirit/Timing): The Alignment/Rhythm. Defines interaction chemistry.
+        1. Amplitude (Body/Mass): The Magnitude/Intensity of the being. Creates Gravity.
+        2. Frequency (Soul/Identity): The Color/Type of the being. Defines the 'Rifling' pitch.
+        3. Phase (Spirit/Timing): The Alignment/Rhythm. Defines interaction chemistry.
     
     Additional Properties:
-    - Coherence: Quantum coherence (0-1), how "quantum" vs "classical" the state is
-    - Temperature: Derived from frequency, used for thermodynamic calculations
+        - Coherence: Quantum coherence (0-1), how "quantum" vs "classical" the state is
+        - Temperature: Derived from frequency, used for thermodynamic calculations
+    
+    Attributes:
+        amplitude: Body/Mass - Energy intensity (float)
+        frequency: Soul/Identity - Vibration rate (float)
+        phase: Spirit/Timing - Phase angle in radians (0 to 2π)
+        spin: Direction of spiral (+1 or -1)
+        polarity: Matter (1.0) vs Antimatter (-1.0)
+        is_collapsed: Wave function collapse state
+        coherence: Quantum coherence (1.0 = pure quantum, 0.0 = classical)
     """
+    
     amplitude: float  # Body: Mass, Energy, Intensity
     frequency: float  # Soul: Emotion, Identity, Vibration Rate
     phase: float      # Spirit: Timing, Perspective (0 to 2pi)
@@ -28,8 +39,8 @@ class SoulTensor:
     coherence: float = 1.0 # Quantum coherence (1.0 = pure quantum, 0.0 = classical)
 
     # Quantum Properties
-    entangled_peers: List['SoulTensor'] = field(default_factory=list, repr=False)
-    superposition_states: List[Tuple['SoulTensor', float]] = field(default_factory=list, repr=False)
+    entangled_peers: List[SoulTensor] = field(default_factory=list, repr=False)
+    superposition_states: List[Tuple[SoulTensor, float]] = field(default_factory=list, repr=False)
 
     def step(self, dt: float) -> None:
         """
@@ -158,10 +169,19 @@ class SoulTensor:
             self.is_collapsed = False
 
 
-    def resonate(self, other: SoulTensor) -> dict:
+    def resonate(self, other: SoulTensor) -> Dict[str, Any]:
         """
         Calculates the 'Chemistry' between two souls.
-        Returns a dict describing the interaction.
+        
+        Args:
+            other: The other SoulTensor to resonate with
+            
+        Returns:
+            Dictionary describing the interaction with keys:
+                - resonance: float (-1.0 to 1.0)
+                - delta_phase: float
+                - is_harmonic: bool
+                - type: str
         """
         # Phase Difference (Spirit Alignment)
         delta_phase = abs(self.phase - other.phase)
@@ -227,7 +247,13 @@ class SoulTensor:
 
         return f"{intensity} {base}"
 
-    def as_dict(self) -> dict:
+    def as_dict(self) -> Dict[str, Any]:
+        """
+        Convert the tensor to a dictionary representation.
+        
+        Returns:
+            Dictionary with all tensor properties
+        """
         return {
             "amplitude": self.amplitude,
             "frequency": self.frequency,
