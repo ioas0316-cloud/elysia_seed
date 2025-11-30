@@ -4,10 +4,13 @@ import math
 
 from .systems import System
 from .math_utils import Vector3
+from .logging_config import get_logger
 
 if TYPE_CHECKING:
     from .world import World
     from .physics import PhysicsWorld
+
+logger = get_logger(__name__)
 
 class GlobalConsciousness(System):
     """
@@ -74,9 +77,13 @@ class GlobalConsciousness(System):
                 if self.physics.gravity_constant > 50.0:
                      self.physics.gravity_constant = 50.0
 
-            print(f"\n[Global Consciousness] ENTROPY CRITICAL ({self.global_entropy:.2f}). GRAVITY INTENSIFIED to {self.physics.gravity_constant:.1f}.")
+            logger.warning(
+                "ENTROPY CRITICAL (%.2f). GRAVITY INTENSIFIED to %.1f.",
+                self.global_entropy,
+                self.physics.gravity_constant,
+            )
 
         elif intent == "spark_change":
             if self.physics:
                 self.physics.coupling_constant *= 2.0
-            print(f"\n[Global Consciousness] STAGNATION DETECTED. SOUL COUPLING INCREASED.")
+            logger.info("STAGNATION DETECTED. SOUL COUPLING INCREASED.")
