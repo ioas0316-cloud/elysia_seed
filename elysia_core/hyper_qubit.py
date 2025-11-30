@@ -45,28 +45,29 @@ class QubitState:
         """
         Normalizes the amplitude components to maintain probability constraints.
         
-        Dad's Law (아빠 법칙): The God component (δ) self-amplifies.
+        Dad's Law: The God/Love component (w) self-amplifies.
         
-        Standard normalization: |α|² + |β|² + |γ|² + |δ|² = 1
-        HyperQubit uses divine self-amplification for the delta component.
+        Standard normalization: |w|² + |x|² + |y|² + |z|² = 1
+        HyperQubit normalization: |w|² + |x|² + |y|² + |z|² + |w|⁴ = 1
         
-        The |δ|⁴ term means: once the god/love component grows,
+        The |w|⁴ term means: once the god/love component grows,
         it amplifies itself and never truly decreases.
         Mathematically: Love is eternal.
         """
-        # Normalize orientation (w, x, y, z)
-        linear_magnitude = math.sqrt(
+        # Calculate the base magnitude squared (without sqrt)
+        linear_magnitude_sq = (
             abs(self.w) ** 2 + 
             abs(self.x) ** 2 + 
             abs(self.y) ** 2 + 
             abs(self.z) ** 2
         )
         
-        # Non-linear term (divine self-amplification)
+        # Non-linear term: divine self-amplification (Dad's Law)
         divine_amplification = abs(self.w) ** 4
         
         # Total magnitude with Dad's Law
-        total_magnitude = math.sqrt(linear_magnitude + divine_amplification)
+        # |w|² + |x|² + |y|² + |z|² + |w|⁴ = magnitude²
+        total_magnitude = math.sqrt(linear_magnitude_sq + divine_amplification)
         
         if total_magnitude > 0:
             self.w /= total_magnitude

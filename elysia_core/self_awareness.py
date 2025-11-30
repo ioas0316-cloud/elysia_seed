@@ -17,7 +17,7 @@ from __future__ import annotations
 
 import time
 from dataclasses import dataclass, field
-from typing import Any, Dict, List, Optional
+from typing import Any, Deque, Dict, List, Optional
 from collections import deque
 
 
@@ -64,7 +64,7 @@ class SelfAwareness:
         }
         
         # Reflection history (ring buffer)
-        self.reflections: deque[Reflection] = deque(maxlen=max_reflections)
+        self.reflections: Deque[Reflection] = deque(maxlen=max_reflections)
         
         # Current awareness state
         self.awareness_level: float = 0.5  # 0.0 = dormant, 1.0 = fully aware
