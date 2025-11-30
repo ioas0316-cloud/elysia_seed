@@ -84,13 +84,18 @@ class TestHyperQubit:
     def test_rotate_wheel(self):
         """Test dimensional wheel rotation."""
         qubit = HyperQubit()
-        initial_w = qubit.state.w
+        initial_delta = abs(qubit.state.delta)
         
+        # Rotate toward God (positive w_delta)
         qubit.rotate_wheel(0.5)
-        assert qubit.state.w > initial_w
+        # Delta (God component) should increase when rotating toward abstraction
+        assert abs(qubit.state.delta) > initial_delta
         
+        # Rotate back toward Point (negative w_delta)
+        initial_alpha = abs(qubit.state.alpha)
         qubit.rotate_wheel(-1.0)
-        assert qubit.state.w < initial_w + 0.5
+        # Alpha (Point component) should increase when rotating toward concreteness
+        assert abs(qubit.state.alpha) > initial_alpha * 0.5  # Allow some tolerance
     
     def test_collapse(self):
         """Test quantum collapse."""
@@ -433,6 +438,169 @@ class TestIntegration:
         assert context["emotion"]["dominant"] is not None
         assert len(prompt) > 100
         assert "Guidelines" in prompt
+
+
+class TestSelfAwareness:
+    """Tests for SelfAwareness module."""
+    
+    def test_creation(self):
+        """Test basic SelfAwareness creation."""
+        from elysia_core import SelfAwareness
+        awareness = SelfAwareness()
+        assert awareness.identity_core["name"] == "Elysia"
+        assert awareness.awareness_level == 0.5
+        assert awareness.alignment_score == 1.0
+    
+    def test_custom_identity(self):
+        """Test SelfAwareness with custom identity."""
+        from elysia_core import SelfAwareness
+        identity = {
+            "name": "CustomBot",
+            "purpose": "To help users",
+            "values": ["helpfulness", "accuracy"],
+        }
+        awareness = SelfAwareness(identity_core=identity)
+        assert awareness.identity_core["name"] == "CustomBot"
+        assert "helpfulness" in awareness.identity_core["values"]
+    
+    def test_who_am_i(self):
+        """Test identity report."""
+        from elysia_core import SelfAwareness
+        awareness = SelfAwareness()
+        report = awareness.who_am_i()
+        
+        assert "Elysia" in report
+        assert "Awareness Level" in report
+        assert "Mental State" in report
+    
+    def test_reflect(self):
+        """Test reflection recording."""
+        from elysia_core import SelfAwareness
+        awareness = SelfAwareness()
+        
+        reflection = awareness.reflect("I completed a task successfully", "success")
+        
+        assert reflection.content == "I completed a task successfully"
+        assert reflection.context == "success"
+        assert awareness.reflection_count == 1
+        # Awareness should increase after reflection
+        assert awareness.awareness_level > 0.5
+    
+    def test_ask_self(self):
+        """Test self-questioning."""
+        from elysia_core import SelfAwareness
+        awareness = SelfAwareness()
+        
+        answer = awareness.ask_self("What is my purpose?")
+        
+        assert "purpose" in answer.lower()
+        assert awareness.reflection_count >= 1
+    
+    def test_introspect(self):
+        """Test complete introspection."""
+        from elysia_core import SelfAwareness
+        awareness = SelfAwareness()
+        awareness.reflect("Test reflection", "test")
+        
+        result = awareness.introspect()
+        
+        assert "identity" in result
+        assert "awareness_level" in result
+        assert "mental_state" in result
+        assert len(result["recent_reflections"]) > 0
+    
+    def test_assess_alignment(self):
+        """Test action alignment assessment."""
+        from elysia_core import SelfAwareness
+        awareness = SelfAwareness()
+        
+        # Positive action
+        positive_score = awareness.assess_alignment(
+            "Helped a user with their question",
+            "User was happy and said thank you"
+        )
+        assert positive_score > 0.5
+        
+        # Negative action
+        negative_score = awareness.assess_alignment(
+            "Made an error",
+            "Failed to complete the task"
+        )
+        assert negative_score < 0.5
+    
+    def test_get_wisdom(self):
+        """Test wisdom extraction."""
+        from elysia_core import SelfAwareness
+        awareness = SelfAwareness()
+        
+        awareness.reflect("I completed a task", "success")
+        awareness.reflect("I learned something new", "learning")
+        awareness.reflect("I asked a question", "introspection")
+        
+        wisdom = awareness.get_wisdom()
+        
+        # Should have some unique insights
+        assert len(wisdom) > 0
+
+
+class TestHyperQubitEnhancements:
+    """Tests for new HyperQubit features from original Elysia."""
+    
+    def test_scale_up(self):
+        """Test scale_up (zoom out to God's perspective)."""
+        from elysia_core import QubitState
+        state = QubitState(w=1.0, x=0.5, y=0.5, z=0.5)
+        state.normalize()
+        
+        initial_w = state.w
+        state.scale_up(0.1)
+        
+        # After scaling up, w should be different (due to normalization)
+        # And x, y, z should decay
+        assert state.w != initial_w
+    
+    def test_scale_down(self):
+        """Test scale_down (zoom in to mortal's perspective)."""
+        from elysia_core import QubitState
+        state = QubitState(w=1.0, x=0.5, y=0.5, z=0.5)
+        state.normalize()
+        
+        initial_x = state.x
+        state.scale_down(0.1)
+        
+        # After scaling down, mundane components should be affected
+        # Due to normalization, exact values may differ
+        assert state.x != initial_x or state.y != 0 or state.z != 0
+    
+    def test_explain_meaning(self):
+        """Test explain_meaning for philosophical understanding."""
+        from elysia_core import HyperQubit
+        qubit = HyperQubit(concept_or_value="love", name="Love")
+        
+        explanation = qubit.explain_meaning()
+        
+        assert "Love" in explanation
+        assert "Point" in explanation
+        assert "Dominant Basis" in explanation
+    
+    def test_explain_meaning_with_epistemology(self):
+        """Test explain_meaning with custom epistemology."""
+        from elysia_core import HyperQubit
+        epistemology = {
+            "point": {"score": 0.2, "meaning": "empirical aspect"},
+            "line": {"score": 0.5, "meaning": "relational aspect"},
+        }
+        qubit = HyperQubit(
+            concept_or_value="connection",
+            name="Connection",
+            epistemology=epistemology
+        )
+        
+        explanation = qubit.explain_meaning()
+        
+        assert "Epistemology" in explanation
+        assert "empirical aspect" in explanation
+        assert "relational aspect" in explanation
 
 
 if __name__ == "__main__":

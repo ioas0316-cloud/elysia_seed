@@ -21,4 +21,4 @@ dev = ["black", "mypy", "pytest"]
 
 [tool.setuptools.packages.find]
 where = ["."]
-include = ["elysia_engine*", "examples", "docs"]
+include = ["elysia_engine*", "elysia_core*", "examples", "docs"]

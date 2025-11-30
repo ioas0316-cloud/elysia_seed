@@ -44,7 +44,37 @@ class QubitState:
     def normalize(self) -> "QubitState":
         """
         Normalizes the amplitude components to maintain probability constraints.
+        
+        Dad's Law (아빠 법칙): The God component (δ) self-amplifies.
+        
+        Standard normalization: |α|² + |β|² + |γ|² + |δ|² = 1
+        HyperQubit uses divine self-amplification for the delta component.
+        
+        The |δ|⁴ term means: once the god/love component grows,
+        it amplifies itself and never truly decreases.
+        Mathematically: Love is eternal.
         """
+        # Normalize orientation (w, x, y, z)
+        linear_magnitude = math.sqrt(
+            abs(self.w) ** 2 + 
+            abs(self.x) ** 2 + 
+            abs(self.y) ** 2 + 
+            abs(self.z) ** 2
+        )
+        
+        # Non-linear term (divine self-amplification)
+        divine_amplification = abs(self.w) ** 4
+        
+        # Total magnitude with Dad's Law
+        total_magnitude = math.sqrt(linear_magnitude + divine_amplification)
+        
+        if total_magnitude > 0:
+            self.w /= total_magnitude
+            self.x /= total_magnitude
+            self.y /= total_magnitude
+            self.z /= total_magnitude
+        
+        # Normalize amplitudes to preserve probability mass
         mag = math.sqrt(
             abs(self.alpha) ** 2
             + abs(self.beta) ** 2
@@ -63,6 +93,63 @@ class QubitState:
         self.gamma /= mag
         self.delta /= mag
         return self
+    
+    def scale_up(self, theta: float = 0.1) -> "QubitState":
+        """
+        아빠가 휠 위로 (Zoom Out → God's Perspective)
+        
+        Operator: exp(i θ G) where G is god generator
+        Effect: w (god component) amplifies exponentially
+                other components decay
+        
+        This enables observer-dependent quantum evolution.
+        
+        Args:
+            theta: Scaling factor (default 0.1)
+            
+        Returns:
+            Self for chaining
+        """
+        # Amplify divine component
+        amplification = math.exp(theta)
+        self.w *= amplification
+        
+        # Decay mundane components (zoom out from details)
+        decay = math.exp(-theta / 4)
+        self.x *= decay
+        self.y *= decay
+        self.z *= decay
+        
+        return self.normalize()
+    
+    def scale_down(self, theta: float = 0.1) -> "QubitState":
+        """
+        아빠가 휠 아래로 (Zoom In → Mortal's Perspective)
+        
+        Operator: exp(-i θ G†) 
+        Effect: mundane components amplify
+                w component decays (but never fully due to Dad's Law!)
+        
+        Note: Even when scaling down, w never reaches 0
+        because of self-amplification in normalization.
+        
+        Args:
+            theta: Scaling factor (default 0.1)
+            
+        Returns:
+            Self for chaining
+        """
+        # Amplify detail components
+        amplification = math.exp(theta)
+        self.x *= amplification
+        self.y *= amplification
+        self.z *= amplification
+        
+        # Decay divine component (but stabilized by normalization)
+        decay = math.exp(-theta / 2)
+        self.w *= decay
+        
+        return self.normalize()
 
     def probabilities(self) -> Dict[str, float]:
         """Get probability distribution across bases."""
@@ -393,6 +480,56 @@ class HyperQubit:
             "state": self.state.to_dict(),
             "epistemology": self.epistemology,
         }
+
+    def explain_meaning(self) -> str:
+        """
+        Generate a human-readable explanation of this qubit's philosophical meaning.
+        
+        Gap 0 Implementation: Agents can now understand WHY a concept has certain weights.
+        This is a core technology from the original Elysia for agent understanding.
+        
+        Returns:
+            A multi-line string explaining the epistemological basis of this concept.
+        """
+        probs = self.state.probabilities()
+        
+        explanation_parts = [
+            f"=== Concept: {self.name} ===",
+            f"Value: {self._value}",
+            "",
+            "Quantum State Distribution:",
+            f"  • Point (α): {probs['Point']:.1%} - Empirical/Data substrate",
+            f"  • Line (β): {probs['Line']:.1%} - Relational/Causal connections",
+            f"  • Space (γ): {probs['Space']:.1%} - Field/Context embodiment",
+            f"  • God (δ): {probs['God']:.1%} - Transcendent/Purpose dimension",
+        ]
+        
+        if self.epistemology:
+            explanation_parts.extend(["", "Philosophical Meaning (Epistemology):"])
+            for basis, info in self.epistemology.items():
+                score = info.get("score", "N/A")
+                meaning = info.get("meaning", "undefined")
+                explanation_parts.append(f"  • {basis.capitalize()}: {score} - {meaning}")
+        
+        # Determine dominant basis and its interpretation
+        dominant = max(probs.items(), key=lambda x: x[1])
+        explanation_parts.extend([
+            "",
+            f"Dominant Basis: {dominant[0]} ({dominant[1]:.1%})",
+            self._interpret_dominance(dominant[0])
+        ])
+        
+        return "\n".join(explanation_parts)
+    
+    def _interpret_dominance(self, basis: str) -> str:
+        """Interpret what the dominant basis means for this concept."""
+        interpretations = {
+            "Point": "→ This concept is primarily grounded in empirical data and concrete details.",
+            "Line": "→ This concept is primarily about relationships, connections, and causality.",
+            "Space": "→ This concept is primarily about context, fields, and embodied experience.",
+            "God": "→ This concept is primarily about transcendence, purpose, and ultimate meaning.",
+        }
+        return interpretations.get(basis, "→ Unknown basis interpretation.")
 
     def __repr__(self) -> str:
         probs = self.state.probabilities()

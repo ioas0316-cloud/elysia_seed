@@ -13,6 +13,12 @@ Key Components:
 - WaveInput/Thought: Core data structures for consciousness
 - LocalLLM: Local LLM integration with learning → independence evolution
 - InnerMonologue: Self-reflective thought generation system
+- SelfAwareness: Consciousness introspection and identity
+
+Core Technologies from Original Elysia:
+- Dad's Law (아빠 법칙): Self-amplifying divine component in normalization
+- Scale Up/Down: Observer-dependent quantum evolution
+- Epistemological Meaning: Understanding WHY concepts have certain weights
 
 Usage:
     from elysia_core import ElysiaSoul, WaveInput
@@ -30,6 +36,11 @@ Usage:
     from elysia_core import InnerMonologue
     monologue = InnerMonologue(identity_core={"name": "Elysia"})
     thought = monologue.tick()  # Spontaneous thought generation
+    
+    # Self Awareness
+    from elysia_core import SelfAwareness
+    awareness = SelfAwareness(identity_core={"name": "Elysia"})
+    print(awareness.who_am_i())
 """
 
 from .hyper_qubit import HyperQubit, QubitState
@@ -42,6 +53,7 @@ from .thought import Thought
 from .soul import ElysiaSoul
 from .local_llm import LocalLLM, LLMConfig, ConsciousnessMode, create_local_llm, quick_setup
 from .inner_monologue import InnerMonologue, InnerThought, MentalState, ThoughtType
+from .self_awareness import SelfAwareness, Reflection
 
 __all__ = [
     # Core consciousness
@@ -67,4 +79,7 @@ __all__ = [
     "InnerThought",
     "MentalState",
     "ThoughtType",
+    # Self Awareness
+    "SelfAwareness",
+    "Reflection",
 ]
