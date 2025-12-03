@@ -12,6 +12,7 @@ Elysia Engine Evaluation Module
 2. 관계성 평가 (Relationship Evaluation): 의존성 및 연결성 분석
 3. 품질 지표 (Quality Metrics): 코드 품질 및 아키텍처 평가
 4. 개선 사항 도출 (Improvement Suggestions): 자동화된 보완점 분석
+5. 복잡도 분석 (Complexity Analysis): 순환 복잡도 및 메트릭 계산
 """
 
 from __future__ import annotations
@@ -19,6 +20,7 @@ from __future__ import annotations
 import ast
 import json
 import os
+import codecs
 from dataclasses import dataclass, field
 from enum import Enum
 from typing import Any, Dict, List, Optional, Set, Tuple
@@ -49,6 +51,15 @@ class QualityLevel(Enum):
 
 
 @dataclass
+class ComplexityMetrics:
+    """복잡도 메트릭"""
+    cyclomatic_complexity: int = 0  # 순환 복잡도
+    cognitive_complexity: int = 0   # 인지 복잡도
+    max_nesting_depth: int = 0      # 최대 중첩 깊이
+    avg_function_length: float = 0.0  # 평균 함수 길이
+
+
+@dataclass
 class ModuleInfo:
     """모듈 정보"""
     name: str
@@ -60,6 +71,9 @@ class ModuleInfo:
     class_count: int = 0
     function_count: int = 0
     docstring_coverage: float = 0.0
+    
+    # 복잡도 메트릭
+    complexity: ComplexityMetrics = field(default_factory=ComplexityMetrics)
     
     # 관계성
     imports: List[str] = field(default_factory=list)
@@ -156,11 +170,34 @@ class StructureExtractor:
                 subpackage_name = f"{package_name}.{item}"
                 self._analyze_package(item_path, subpackage_name)
     
-    def _analyze_module(self, file_path: str, module_name: str) -> None:
-        """모듈 분석"""
+    def _read_file_content(self, file_path: str) -> str:
+        """파일 내용 읽기 (BOM 문자 처리 포함)"""
+        # 먼저 utf-8-sig로 시도 (BOM 자동 처리)
+        try:
+            with codecs.open(file_path, "r", encoding="utf-8-sig") as f:
+                return f.read()
+        except UnicodeDecodeError:
+            pass
+        
+        # utf-8로 시도
         try:
             with open(file_path, "r", encoding="utf-8") as f:
                 content = f.read()
+                # BOM 수동 제거
+                if content.startswith('\ufeff'):
+                    content = content[1:]
+                return content
+        except UnicodeDecodeError:
+            pass
+        
+        # latin-1로 폴백
+        with open(file_path, "r", encoding="latin-1") as f:
+            return f.read()
+    
+    def _analyze_module(self, file_path: str, module_name: str) -> None:
+        """모듈 분석"""
+        try:
+            content = self._read_file_content(file_path)
                 
             tree = ast.parse(content)
             
@@ -185,6 +222,9 @@ class StructureExtractor:
             description = ast.get_docstring(tree) or ""
             if len(description) > 200:
                 description = description[:200] + "..."
+            
+            # 복잡도 분석
+            complexity = self._calculate_complexity(tree)
                 
             module_info = ModuleInfo(
                 name=module_name,
@@ -194,6 +234,7 @@ class StructureExtractor:
                 class_count=class_count,
                 function_count=func_count,
                 docstring_coverage=docstring_coverage,
+                complexity=complexity,
                 imports=imports,
                 description=description
             )
@@ -202,6 +243,115 @@ class StructureExtractor:
             
         except Exception as e:
             logger.warning(f"모듈 분석 실패 {module_name}: {e}")
+    
+    def _calculate_complexity(self, tree: ast.AST) -> ComplexityMetrics:
+        """복잡도 메트릭 계산"""
+        total_cyclomatic = 0
+        total_cognitive = 0
+        max_depth = 0
+        function_lengths: List[int] = []
+        
+        for node in ast.walk(tree):
+            if isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef)):
+                # 순환 복잡도 계산
+                cyclomatic = self._calculate_cyclomatic_complexity(node)
+                total_cyclomatic += cyclomatic
+                
+                # 인지 복잡도 계산
+                cognitive = self._calculate_cognitive_complexity(node)
+                total_cognitive += cognitive
+                
+                # 함수 길이
+                if hasattr(node, 'end_lineno') and hasattr(node, 'lineno'):
+                    func_length = node.end_lineno - node.lineno + 1
+                    function_lengths.append(func_length)
+                
+                # 중첩 깊이
+                depth = self._calculate_nesting_depth(node)
+                max_depth = max(max_depth, depth)
+        
+        avg_func_length = sum(function_lengths) / len(function_lengths) if function_lengths else 0.0
+        
+        return ComplexityMetrics(
+            cyclomatic_complexity=total_cyclomatic,
+            cognitive_complexity=total_cognitive,
+            max_nesting_depth=max_depth,
+            avg_function_length=avg_func_length
+        )
+    
+    def _calculate_cyclomatic_complexity(self, node: ast.AST) -> int:
+        """순환 복잡도 계산 (McCabe)"""
+        complexity = 1  # 기본 경로
+        
+        # 중첩된 함수 정의는 제외하고 순회
+        for child in ast.iter_child_nodes(node):
+            # 중첩 함수는 별도로 분석되므로 건너뜀
+            if isinstance(child, (ast.FunctionDef, ast.AsyncFunctionDef)):
+                continue
+            
+            # 현재 노드의 복잡도 계산
+            complexity += self._count_complexity_nodes(child)
+        
+        return complexity
+    
+    def _count_complexity_nodes(self, node: ast.AST) -> int:
+        """복잡도에 기여하는 노드 개수 계산 (재귀적으로, 중첩 함수 제외)"""
+        count = 0
+        
+        # 분기문
+        if isinstance(node, (ast.If, ast.While, ast.For, ast.AsyncFor)):
+            count += 1
+        # 예외 처리
+        elif isinstance(node, ast.ExceptHandler):
+            count += 1
+        # 논리 연산자
+        elif isinstance(node, ast.BoolOp):
+            count += len(node.values) - 1
+        # 조건부 표현식
+        elif isinstance(node, ast.IfExp):
+            count += 1
+        # 컴프리헨션
+        elif isinstance(node, (ast.ListComp, ast.SetComp, ast.DictComp, ast.GeneratorExp)):
+            count += sum(1 for _ in node.generators)
+        
+        # 자식 노드 재귀 순회 (중첩 함수 제외)
+        for child in ast.iter_child_nodes(node):
+            if not isinstance(child, (ast.FunctionDef, ast.AsyncFunctionDef)):
+                count += self._count_complexity_nodes(child)
+        
+        return count
+    
+    def _calculate_cognitive_complexity(self, node: ast.AST, nesting: int = 0) -> int:
+        """인지 복잡도 계산"""
+        complexity = 0
+        
+        for child in ast.iter_child_nodes(node):
+            if isinstance(child, (ast.If, ast.While, ast.For, ast.AsyncFor)):
+                complexity += 1 + nesting
+                complexity += self._calculate_cognitive_complexity(child, nesting + 1)
+            elif isinstance(child, (ast.FunctionDef, ast.AsyncFunctionDef, ast.Lambda)):
+                # 중첩 함수는 nesting을 증가시키지 않고 별도로 분석
+                complexity += self._calculate_cognitive_complexity(child, 0)
+            elif isinstance(child, ast.BoolOp):
+                complexity += 1
+            else:
+                complexity += self._calculate_cognitive_complexity(child, nesting)
+        
+        return complexity
+    
+    def _calculate_nesting_depth(self, node: ast.AST, current_depth: int = 0) -> int:
+        """최대 중첩 깊이 계산"""
+        max_depth = current_depth
+        
+        for child in ast.iter_child_nodes(node):
+            if isinstance(child, (ast.If, ast.While, ast.For, ast.AsyncFor, ast.With, ast.Try)):
+                child_depth = self._calculate_nesting_depth(child, current_depth + 1)
+                max_depth = max(max_depth, child_depth)
+            else:
+                child_depth = self._calculate_nesting_depth(child, current_depth)
+                max_depth = max(max_depth, child_depth)
+        
+        return max_depth
     
     def _calculate_docstring_coverage(self, tree: ast.AST) -> float:
         """독스트링 커버리지 계산"""
@@ -382,18 +532,32 @@ class QualityEvaluator:
             
             # 1. 적절한 모듈 크기 (50-500 LOC = 좋음)
             if 50 <= module.lines_of_code <= 500:
-                module_score += 0.3
+                module_score += 0.25
             elif module.lines_of_code < 50:
-                module_score += 0.2
+                module_score += 0.15
             else:
                 module_score += 0.1
                 
             # 2. 클래스/함수 비율
             if module.class_count > 0 and module.function_count > 0:
-                module_score += 0.3
-                
+                module_score += 0.25
+            
             # 3. 독스트링 커버리지
-            module_score += module.docstring_coverage * 0.4
+            module_score += module.docstring_coverage * 0.3
+            
+            # 4. 복잡도 평가 (낮은 복잡도 = 높은 점수)
+            complexity_score = 0.0
+            if module.complexity.cyclomatic_complexity > 0:
+                # 순환 복잡도가 10 이하면 좋음, 20 이상이면 나쁨
+                if module.complexity.cyclomatic_complexity <= 10:
+                    complexity_score = 0.2
+                elif module.complexity.cyclomatic_complexity <= 20:
+                    complexity_score = 0.1
+                else:
+                    complexity_score = 0.05
+            else:
+                complexity_score = 0.15  # 복잡도 정보 없으면 중간 점수
+            module_score += complexity_score
             
             scores.append(module_score)
             module.quality_score = module_score
@@ -735,6 +899,12 @@ class StructureVisualizer:
                     "function_count": m.function_count,
                     "docstring_coverage": m.docstring_coverage,
                     "quality_score": m.quality_score,
+                    "complexity": {
+                        "cyclomatic": m.complexity.cyclomatic_complexity,
+                        "cognitive": m.complexity.cognitive_complexity,
+                        "max_nesting_depth": m.complexity.max_nesting_depth,
+                        "avg_function_length": m.complexity.avg_function_length
+                    },
                     "dependencies": m.dependencies,
                     "dependents": m.dependents
                 }

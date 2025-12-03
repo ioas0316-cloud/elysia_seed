@@ -28,6 +28,7 @@ from .evaluation import (
     ModuleInfo,
     ModuleCategory,
     QualityLevel,
+    ComplexityMetrics,
 )
 
 __all__ = [
@@ -72,4 +73,5 @@ __all__ = [
     "ModuleInfo",
     "ModuleCategory",
     "QualityLevel",
+    "ComplexityMetrics",
 ]

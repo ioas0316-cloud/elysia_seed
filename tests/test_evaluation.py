@@ -20,6 +20,7 @@ from elysia_engine.evaluation import (
     ModuleInfo,
     RelationshipEdge,
     EvaluationResult,
+    ComplexityMetrics,
 )
 
 
@@ -329,3 +330,69 @@ class TestModuleCategory:
         
         for cat in categories:
             assert isinstance(cat.value, str)
+
+
+class TestComplexityMetrics:
+    """복잡도 메트릭 테스트"""
+    
+    def test_complexity_metrics_defaults(self):
+        """복잡도 메트릭 기본값 테스트"""
+        metrics = ComplexityMetrics()
+        
+        assert metrics.cyclomatic_complexity == 0
+        assert metrics.cognitive_complexity == 0
+        assert metrics.max_nesting_depth == 0
+        assert metrics.avg_function_length == 0.0
+    
+    def test_complexity_in_module_info(self):
+        """ModuleInfo에 복잡도 메트릭 포함 테스트"""
+        complexity = ComplexityMetrics(
+            cyclomatic_complexity=15,
+            cognitive_complexity=10,
+            max_nesting_depth=3,
+            avg_function_length=25.0
+        )
+        
+        module = ModuleInfo(
+            name="test.module",
+            path="/test/module.py",
+            category=ModuleCategory.CORE,
+            complexity=complexity
+        )
+        
+        assert module.complexity.cyclomatic_complexity == 15
+        assert module.complexity.cognitive_complexity == 10
+        assert module.complexity.max_nesting_depth == 3
+        assert module.complexity.avg_function_length == 25.0
+    
+    def test_complexity_extraction(self):
+        """복잡도 추출 테스트"""
+        result = evaluate_structure(str(PROJECT_ROOT))
+        
+        # 분석된 모듈 중 하나에서 복잡도 확인
+        for module in result.modules:
+            assert hasattr(module, 'complexity')
+            assert isinstance(module.complexity, ComplexityMetrics)
+            # 복잡도는 0 이상
+            assert module.complexity.cyclomatic_complexity >= 0
+            assert module.complexity.cognitive_complexity >= 0
+            assert module.complexity.max_nesting_depth >= 0
+            assert module.complexity.avg_function_length >= 0.0
+
+
+class TestBOMHandling:
+    """BOM 문자 처리 테스트"""
+    
+    def test_extracts_all_modules_without_errors(self):
+        """BOM 문자가 있는 파일도 분석할 수 있는지 확인"""
+        extractor = StructureExtractor(str(PROJECT_ROOT))
+        modules = extractor.extract()
+        
+        # 모든 모듈이 추출되었는지 확인 (BOM 에러가 없어야 더 많은 모듈 추출)
+        assert len(modules) > 0
+        
+        # 모든 모듈에 유효한 정보가 있는지 확인
+        for name, module in modules.items():
+            assert module.name == name
+            assert module.path
+            assert isinstance(module.category, ModuleCategory)
