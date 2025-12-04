@@ -9,9 +9,9 @@
 - **총 브랜치 수**: 34개
 - **main 브랜치**: 1개
 - **삭제 가능 (이미 병합됨)**: 4개
-- **아이디어만 보존 후 삭제 권장**: 21개
+- **아이디어만 보존 후 삭제 권장**: 27개
 - **검토 필요 (열린 PR)**: 2개
-- **현재 작업 중**: 1개
+- **현재 작업 중**: 1개 (이 PR)
 
 ---
 
@@ -193,7 +193,7 @@ echo "🎉 정리 완료!"
 3. **로컬 정리**: 원격 브랜치 삭제 후 로컬도 정리
    ```bash
    git fetch --prune
-   git branch -vv | grep 'origin/.*: gone]' | awk '{print $1}' | xargs git branch -d
+   git branch -vv | grep '\[origin/.*: gone\]' | awk '{print $1}' | xargs git branch -d
    ```
 
 ---

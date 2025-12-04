@@ -8,10 +8,10 @@ The following branches were reviewed for merge into `main`. They carry strong co
 
 | Category | Count |
 |----------|-------|
-| Already Merged (Safe to Delete) | 6 |
-| Archived Ideas (Delete Recommended) | 15 |
+| Already Merged (Safe to Delete) | 4 |
+| Archived Ideas (Delete Recommended) | 27 |
 | Pending Review PRs | 2 |
-| Active Branch | 1 (main) |
+| Active Branch | 1 (main + current work) |
 | **Total Branches** | **34** |
 
 ---
