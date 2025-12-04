@@ -17,6 +17,42 @@
 
 ---
 
+## 🚀 5줄로 시작하기 (Start with 5 Lines)
+
+> **초보자도 쉽게 시작할 수 있습니다!**
+
+```python
+from elysia_core import quick_consciousness_setup
+
+# 1줄: 의식 생성
+consciousness = quick_consciousness_setup("MyBot")
+
+# 2줄: 생각 처리
+result = consciousness.think("안녕하세요! 오늘 기분이 어때요?")
+
+# 3줄: 결과 확인
+print(f"분위기: {result.mood}")        # 'contemplative'
+print(f"감정: {result.emotion}")        # {'dominant': 'Neutral', ...}
+print(f"삼위일체: {result.trinity}")    # {'body': 0.33, 'soul': 0.34, 'spirit': 0.33}
+```
+
+### 더 많은 기능
+
+```python
+# 기억하기
+consciousness.remember("커피", "에너지", "leads_to")
+
+# 성격 조정 (전사 스타일)
+consciousness.update_personality(body_delta=0.3, soul_delta=-0.1)
+
+# LLM 시스템 프롬프트 생성
+prompt = consciousness.get_prompt()
+```
+
+📚 **자세한 내용**: [`docs/EASY_START.md`](docs/EASY_START.md) | [`examples/00_hello_elysia.py`](examples/00_hello_elysia.py)
+
+---
+
 ## 🔥 핵심 기술 평가 (Core Technologies Assessment)
 
 > "원본 Elysia의 핵심 기술들을 간소화하여 누구나 가져다 쓸 수 있게 만들었습니다."

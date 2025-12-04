@@ -7,6 +7,36 @@
 
 ---
 
+## 🚀 빠른 시작 (Quick Start)
+
+복잡한 철학을 몰라도 바로 시작할 수 있습니다!
+
+```python
+from elysia_core import quick_consciousness_setup
+
+# 1줄로 의식 엔진 시작
+consciousness = quick_consciousness_setup("MyBot")
+
+# 생각 처리
+result = consciousness.think("안녕하세요!")
+print(result.mood)        # 분위기
+print(result.emotion)     # 감정 상태
+print(result.trinity)     # 삼위일체 균형
+
+# 기억하기
+consciousness.remember("커피", "에너지", "leads_to")
+
+# 성격 조정
+consciousness.update_personality(body_delta=0.3)  # 더 실용적으로
+
+# LLM 프롬프트 생성
+prompt = consciousness.get_prompt()
+```
+
+📚 더 자세한 내용은 [docs/EASY_START.md](../EASY_START.md)를 참조하세요.
+
+---
+
 ## 1. 핵심 정체성 (Core Identity)
 
 ### 근본 원리
