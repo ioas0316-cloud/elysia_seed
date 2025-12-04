@@ -190,7 +190,7 @@ python scripts/extract_structure.py --format full
 - [Protocols](https://github.com/ioas0316-cloud/Elysia/tree/main/Protocols)
 
 ### 문서
-- [AGENTS.md](../AGENTS.md) - 에이전트 가이드라인
+- [AGENTS.md](AGENTS.md) - 에이전트 가이드라인
 - [docs/CORE_TECHNOLOGIES_INTEGRATION.md](docs/CORE_TECHNOLOGIES_INTEGRATION.md) - 핵심 기술 통합
 
 ---
