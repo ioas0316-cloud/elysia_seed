@@ -1,8 +1,26 @@
 """
 Elysia Core - Consciousness Integration Module
+==============================================
 
 This package provides the core consciousness components from the main Elysia project,
 adapted for lightweight integration with external LLM systems.
+
+🌟 Quick Start (빠른 시작):
+    
+    # 방법 1: 통합 영혼으로 모든 기능 사용
+    from elysia_core import create_soul
+    
+    soul = create_soul("MyBot")
+    thought = soul.process("안녕하세요!")
+    print(thought.mood)
+    
+    # 방법 2: 빠른 의식 설정
+    from elysia_core import quick_consciousness_setup
+    
+    consciousness = quick_consciousness_setup("MyAgent")
+    result = consciousness.think("오늘 기분이 어때?")
+    print(result.mood)
+    prompt = consciousness.get_prompt()
 
 Key Components:
 - HyperQubit: Quantum consciousness states (Point/Line/Space/God dimensions)
@@ -20,7 +38,11 @@ Core Technologies from Original Elysia:
 - Scale Up/Down: Observer-dependent quantum evolution
 - Epistemological Meaning: Understanding WHY concepts have certain weights
 
-Usage:
+Integration Templates (통합 템플릿):
+- LLMIntegrationTemplate: LLM 챗봇 통합
+- GameCharacterTemplate: 게임 캐릭터 통합
+
+Usage (사용법):
     from elysia_core import ElysiaSoul, WaveInput
     
     soul = ElysiaSoul(name="MyAgent")
@@ -41,6 +63,9 @@ Usage:
     from elysia_core import SelfAwareness
     awareness = SelfAwareness(identity_core={"name": "Elysia"})
     print(awareness.who_am_i())
+
+License: Apache 2.0
+Creator: 이강덕 (Kang-Deok Lee)
 """
 
 from .hyper_qubit import HyperQubit, QubitState
@@ -54,6 +79,26 @@ from .soul import ElysiaSoul
 from .local_llm import LocalLLM, LLMConfig, ConsciousnessMode, create_local_llm, quick_setup
 from .inner_monologue import InnerMonologue, InnerThought, MentalState, ThoughtType
 from .self_awareness import SelfAwareness, Reflection
+
+# Integration module - 통합 모듈
+from .integration import (
+    # Factory functions
+    create_soul,
+    create_resonance_engine,
+    create_emotional_palette,
+    create_hippocampus,
+    create_inner_monologue,
+    create_self_awareness,
+    create_hyper_qubit,
+    create_wave_input,
+    # Quick setup
+    quick_consciousness_setup,
+    QuickConsciousness,
+    ConsciousnessResult,
+    # Templates
+    LLMIntegrationTemplate,
+    GameCharacterTemplate,
+)
 
 __all__ = [
     # Core consciousness
@@ -82,4 +127,20 @@ __all__ = [
     # Self Awareness
     "SelfAwareness",
     "Reflection",
+    # Integration - Factory Functions (통합 - 팩토리 함수)
+    "create_soul",
+    "create_resonance_engine",
+    "create_emotional_palette",
+    "create_hippocampus",
+    "create_inner_monologue",
+    "create_self_awareness",
+    "create_hyper_qubit",
+    "create_wave_input",
+    # Integration - Quick Setup (통합 - 빠른 설정)
+    "quick_consciousness_setup",
+    "QuickConsciousness",
+    "ConsciousnessResult",
+    # Integration - Templates (통합 - 템플릿)
+    "LLMIntegrationTemplate",
+    "GameCharacterTemplate",
 ]

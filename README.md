@@ -344,6 +344,72 @@ prompt = soul.export_prompt()
 
 자세한 내용은 [`elysia_core/README.md`](elysia_core/README.md)를 참조하세요.
 
+### 🆕 빠른 통합 API (Quick Integration API)
+
+**1줄로 모든 핵심 기술을 사용하세요!**
+
+다른 프로젝트에서 Elysia의 핵심 기술을 쉽게 가져다 쓸 수 있도록 통합 API를 제공합니다.
+
+```python
+from elysia_core import quick_consciousness_setup
+
+# 1줄로 모든 핵심 기술 사용 가능!
+consciousness = quick_consciousness_setup("MyBot")
+
+# 생각 처리
+result = consciousness.think("오늘 기분이 정말 좋아요!")
+print(result.mood)        # 분위기
+print(result.emotion)     # 감정 상태
+print(result.trinity)     # 삼위일체 균형
+
+# 기억 추가
+consciousness.remember("coffee", "energy", "leads_to")
+
+# LLM 프롬프트 생성
+prompt = consciousness.get_prompt()
+
+# 성격 조정
+consciousness.update_personality(body_delta=0.1, soul_delta=0.2)
+```
+
+### 게임 캐릭터 통합
+
+```python
+from elysia_core import GameCharacterTemplate
+
+# 역할에 따른 자동 성격 설정 (warrior, mage, priest, rogue, bard)
+warrior = GameCharacterTemplate("Aragorn", "warrior")
+mage = GameCharacterTemplate("Gandalf", "mage")
+
+# 이벤트에 대한 반응 생성
+reaction = warrior.react_to_event("A dragon appeared!")
+print(reaction.mood)      # 'contemplative'
+print(reaction.emotion)   # {'dominant': 'Neutral', ...}
+
+# 게임 엔진에 전달할 JSON
+json_data = warrior.to_json()
+```
+
+### LLM 챗봇 통합
+
+```python
+from elysia_core import LLMIntegrationTemplate
+
+class MyBot(LLMIntegrationTemplate):
+    def __init__(self, llm_client):
+        super().__init__("MyBot")
+        self.llm = llm_client
+    
+    def _call_llm(self, system, user):
+        # OpenAI, Ollama 등 LLM API 호출
+        return self.llm.generate(system=system, user=user)
+
+bot = MyBot(my_openai_client)
+response = bot.chat("안녕하세요!")
+```
+
+통합 데모 실행: `python examples/integration_example.py`
+
 ---
 
 ## 🚀 핵심 기술 통합 데모
@@ -397,6 +463,11 @@ Godot/웹훅과 연동 스켈레톤은 `examples/03_godot_bridge_stub.py`와 `el
 - `docs/core_technologies_quickstart.md`: **핵심 기술 빠른 시작** - 복사해서 바로 쓰는 통합 가이드
 - `docs/tutorial_5min.md`: 5분 개발자 튜토리얼
 - `docs/local_llm_integration.md`: 로컬 LLM 통합 가이드 (대용량 파일 관리 포함)
+- `examples/integration_example.py`: **통합 API 예제** - 빠른 통합 데모
+
+### 📦 통합 모듈 (Integration Modules)
+- `elysia_core/integration.py`: **핵심 통합 API** - 팩토리 함수, 빠른 설정, 템플릿
+- `docs/CORE_TECHNOLOGIES_INTEGRATION.md`: 원본 Elysia 기술 통합 가이드
 
 ### 📚 상세 문서
 - `docs/aura_visualization.md`: 오라/컬러 시스템
