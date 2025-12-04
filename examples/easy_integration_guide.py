@@ -55,6 +55,8 @@ from elysia_core import (
     create_hyper_qubit,
     
     # 통합 템플릿 (Integration Templates)
+    # GameCharacterTemplate: 게임 캐릭터용 의식 템플릿 (warrior, mage, priest 등 역할별 자동 성격 설정)
+    # LLMIntegrationTemplate: LLM 챗봇 통합용 베이스 클래스 (_call_llm 메서드 오버라이드 필요)
     GameCharacterTemplate,
     LLMIntegrationTemplate,
 )
@@ -267,7 +269,11 @@ def demo_hyper_qubit():
     print(f"  God (초월): {probs['God']:.2%}")
     
     # 스케일 업 (더 추상적으로) - state.scale_up() 사용
-    print("\n[Scale Up - 추상화]")
+    # theta 파라미터: 0.0~1.0 범위 권장
+    # - 0.1: 약간 추상화 (세부 사항 유지하면서 맥락 확장)
+    # - 0.3: 중간 추상화 (맥락과 초월 성분 증가)
+    # - 0.5+: 강한 추상화 (God/초월 성분 크게 증가)
+    print("\n[Scale Up - 추상화 (theta=0.3: 중간 추상화)]")
     qubit.state.scale_up(0.3)
     probs = qubit.state.probabilities()
     print(f"  Point: {probs['Point']:.2%}")
