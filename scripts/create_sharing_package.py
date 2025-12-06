@@ -67,13 +67,15 @@ def create_sharing_package(output_dir: str, include_examples: bool = True,
     
     # Additional docs
     if not minimal:
-        essential_docs.extend([
-            ("EASY_START.md", "Easy start guide") if (project_root / "docs" / "EASY_START.md").exists() else None,
+        additional_docs = [
             ("CONTRIBUTING.md", "Contribution guide"),
             ("AGENTS.md", "Agent guidelines"),
-        ])
-        # Filter out None
-        essential_docs = [doc for doc in essential_docs if doc]
+        ]
+        # Only add if exists
+        if (project_root / "docs" / "EASY_START.md").exists():
+            additional_docs.insert(0, ("EASY_START.md", "Easy start guide"))
+        
+        essential_docs.extend(additional_docs)
     
     # Copy core components
     print("📁 Copying core components...")

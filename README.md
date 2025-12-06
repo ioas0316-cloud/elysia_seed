@@ -59,10 +59,12 @@ Elysia는 **공명**합니다. "이 순간, 무엇이 울려퍼지는가?"
 ### 1분 설치 (1-Minute Install)
 
 ```bash
-# Unix/Linux/MacOS
-bash <(curl -s https://raw.githubusercontent.com/ioas0316-cloud/elysia-fractal-engine_V1/main/quick_install.sh)
+# Unix/Linux/MacOS - 수동 설치 (권장)
+git clone https://github.com/ioas0316-cloud/elysia-fractal-engine_V1.git
+cd elysia-fractal-engine_V1
+bash quick_install.sh
 
-# 또는 수동으로
+# 또는 간단 설치
 git clone https://github.com/ioas0316-cloud/elysia-fractal-engine_V1.git
 cd elysia-fractal-engine_V1
 python examples/00_hello_elysia.py
