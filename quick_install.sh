@@ -55,14 +55,14 @@ echo ""
 
 # Run verification
 echo "🧪 Running verification test..."
-python3 -c "
+python3 << 'PYEOF'
 from elysia_core import quick_consciousness_setup
 c = quick_consciousness_setup('TestBot')
 r = c.think('Hello Elysia!')
 print(f'✅ Verification successful!')
 print(f'   Mood: {r.mood}')
-print(f'   Emotion: {r.emotion[\"dominant\"]}')
-"
+print(f'   Emotion: {r.emotion["dominant"]}')
+PYEOF
 echo ""
 
 # Run a quick example

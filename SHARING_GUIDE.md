@@ -279,20 +279,13 @@ python scripts/create_sharing_package.py --output my_elysia_package
 
 ```python
 # 예: 공명 엔진만 필요하다면
-from scripts.extract_module import extract_resonance_engine
-
-extract_resonance_engine(output_dir="my_project/resonance")
+# elysia_core 폴더에서 필요한 모듈만 복사
+cp elysia_core/resonance_engine.py my_project/
+cp elysia_core/hyper_qubit.py my_project/
+cp elysia_core/wave.py my_project/
 ```
 
-### 3. 프로젝트 템플릿 생성
-
-```bash
-# LLM 통합 템플릿
-python scripts/create_template.py --type llm --output my_llm_bot
-
-# 게임 캐릭터 템플릿
-python scripts/create_template.py --type game --output my_game_npc
-```
+### 3. 프로젝트 템플릿 직접 작성
 
 ---
 

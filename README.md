@@ -561,9 +561,11 @@ Godot/웹훅과 연동 스켈레톤은 `examples/03_godot_bridge_stub.py`와 `el
 - 🆕 **[`QUICK_SHARE.md`](QUICK_SHARE.md)**: ⚡ **1분 빠른 공유** - 가장 빠른 시작 방법
 - 🆕 **[`SHARING_GUIDE.md`](SHARING_GUIDE.md)**: 💝 **공유의 철학** - 낭만적이고 영감 넘치는 공유 가이드
 - 🆕 **[`PHILOSOPHY.md`](PHILOSOPHY.md)**: 🌌 **엔진의 철학** - 왜 공명인가? 왜 낭만인가?
+- 🆕 **[`SNIPPETS.md`](SNIPPETS.md)**: 📋 **코드 스니펫 모음** - 20개 복사-붙여넣기 예제
 - [`docs/EASY_START.md`](docs/EASY_START.md): **초보자 가이드** - 5분 안에 시작하기
 - [`docs/core_technologies_quickstart.md`](docs/core_technologies_quickstart.md): **핵심 기술 빠른 시작** - 복사해서 바로 쓰는 통합 가이드
 - [`docs/tutorial_5min.md`](docs/tutorial_5min.md): 5분 개발자 튜토리얼
+- [`examples/standalone_demo.py`](examples/standalone_demo.py): **🆕 독립 실행 데모** - 단일 파일 전체 기능 체험
 - [`examples/integration_example.py`](examples/integration_example.py): **통합 API 예제** - 빠른 통합 데모
 
 ### 🏛️ 아키텍처 이해 (Architecture)

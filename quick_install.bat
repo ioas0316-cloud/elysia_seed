@@ -54,7 +54,7 @@ echo.
 
 REM Run verification
 echo Running verification test...
-python -c "from elysia_core import quick_consciousness_setup; c = quick_consciousness_setup('TestBot'); r = c.think('Hello Elysia!'); print(f'Verification successful!\nMood: {r.mood}\nEmotion: {r.emotion[\"dominant\"]}')"
+python -c "from elysia_core import quick_consciousness_setup; c = quick_consciousness_setup('TestBot'); r = c.think('Hello Elysia!'); print('Verification successful!\nMood: ' + r.mood + '\nEmotion: ' + r.emotion['dominant'])"
 if errorlevel 1 (
     echo Verification failed
     pause
