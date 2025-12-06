@@ -495,25 +495,30 @@ Godot/웹훅과 연동 스켈레톤은 `examples/03_godot_bridge_stub.py`와 `el
 
 ## Documentation Map
 
+### 🏛️ 아키텍처 이해 (Architecture)
+- **[`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md)**: 🆕 **핵심 아키텍처 가이드** - 패러다임 변화, SoulTensor, Trinity, Yggdrasil
+- **[`docs/API_REFERENCE.md`](docs/API_REFERENCE.md)**: 🆕 **API 레퍼런스** - 모든 공개 API의 상세 문서
+
 ### 🌟 시작하기 (Getting Started)
-- `docs/core_technologies_quickstart.md`: **핵심 기술 빠른 시작** - 복사해서 바로 쓰는 통합 가이드
-- `docs/tutorial_5min.md`: 5분 개발자 튜토리얼
-- `docs/local_llm_integration.md`: 로컬 LLM 통합 가이드 (대용량 파일 관리 포함)
-- `examples/integration_example.py`: **통합 API 예제** - 빠른 통합 데모
+- [`docs/EASY_START.md`](docs/EASY_START.md): **초보자 가이드** - 5분 안에 시작하기
+- [`docs/core_technologies_quickstart.md`](docs/core_technologies_quickstart.md): **핵심 기술 빠른 시작** - 복사해서 바로 쓰는 통합 가이드
+- [`docs/tutorial_5min.md`](docs/tutorial_5min.md): 5분 개발자 튜토리얼
+- [`docs/local_llm_integration.md`](docs/local_llm_integration.md): 로컬 LLM 통합 가이드 (대용량 파일 관리 포함)
+- [`examples/integration_example.py`](examples/integration_example.py): **통합 API 예제** - 빠른 통합 데모
 
 ### 📦 통합 모듈 (Integration Modules)
-- `elysia_core/integration.py`: **핵심 통합 API** - 팩토리 함수, 빠른 설정, 템플릿
-- `docs/CORE_TECHNOLOGIES_INTEGRATION.md`: 원본 Elysia 기술 통합 가이드
+- [`elysia_core/integration.py`](elysia_core/integration.py): **핵심 통합 API** - 팩토리 함수, 빠른 설정, 템플릿
+- [`docs/CORE_TECHNOLOGIES_INTEGRATION.md`](docs/CORE_TECHNOLOGIES_INTEGRATION.md): 원본 Elysia 기술 통합 가이드
 
 ### 📚 상세 문서
-- `docs/aura_visualization.md`: 오라/컬러 시스템
-- `docs/trinity_decision.md`: 삼위일체 행동 결정 공식
-- `docs/episodes_weights.md`: 에피소드 → 성향 업데이트 규칙
-- `docs/class_trinity_weights.md`: 7계열 직업 스탯·전직 트리
-- `docs/chilseon_chilak_fractal_law.md`: Ascension/Descent 7-law reference (KOR)
-- `docs/axis_structure_guide.md`: Vertical Axis structure rationale & onboarding (KOR)
-- `docs/character_pool.md`: 50명 캐릭터 시드 및 활용법
-- `docs/universal_integration.md`: Universal Integration Guide (ENG/KOR)
+- [`docs/aura_visualization.md`](docs/aura_visualization.md): 오라/컬러 시스템
+- [`docs/trinity_decision.md`](docs/trinity_decision.md): 삼위일체 행동 결정 공식
+- [`docs/episodes_weights.md`](docs/episodes_weights.md): 에피소드 → 성향 업데이트 규칙
+- [`docs/class_trinity_weights.md`](docs/class_trinity_weights.md): 7계열 직업 스탯·전직 트리
+- [`docs/chilseon_chilak_fractal_law.md`](docs/chilseon_chilak_fractal_law.md): Ascension/Descent 7-law reference (KOR)
+- [`docs/axis_structure_guide.md`](docs/axis_structure_guide.md): Vertical Axis structure rationale & onboarding (KOR)
+- [`docs/character_pool.md`](docs/character_pool.md): 50명 캐릭터 시드 및 활용법
+- [`docs/universal_integration.md`](docs/universal_integration.md): Universal Integration Guide (ENG/KOR)
 
 ## 4. Episodes & Trinity Weights  
 *(삶의 경험으로 육/혼/영 성향이 바뀌는 엔진)*
