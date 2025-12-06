@@ -1,5 +1,4 @@
-# 🏛️ Elysia Fractal Engine V1 - 아키텍처 가이드
-# Architecture Guide
+# 🏛️ Elysia Fractal Engine V1 - 아키텍처 가이드 (Architecture Guide)
 
 > "모든 구조는 씨앗이다." - Every structure is a seed.
 
@@ -86,6 +85,7 @@ if emotion == "happy":
     response = get_happy_response()
 
 # ✅ Elysia: 물리 법칙 기반
+input_text = "오늘 정말 기쁜 일이 있었어요!"
 soul.process(input_text)  # 공명, 중력, 에너지 최소화로 자연스럽게 반응
 ```
 

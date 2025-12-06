@@ -1,5 +1,4 @@
-# 📖 Elysia Fractal Engine V1 - API 레퍼런스
-# API Reference
+# 📖 Elysia Fractal Engine V1 - API 레퍼런스 (API Reference)
 
 > 이 문서는 Elysia Fractal Engine V1의 모든 공개 API를 설명합니다.
 
@@ -163,9 +162,9 @@ soul.remember("커피", "에너지", "leads_to", 0.9)
 def recall(self, concept: str) -> Dict[str, Any]:
     """
     Returns:
-        Dict with keys:
+        Dict[str, Any] with keys:
         - concept: str
-        - context: Dict
+        - context: Dict[str, Any]
         - related: Dict[str, float]
         - stellar_type: str
         - frequency: int
