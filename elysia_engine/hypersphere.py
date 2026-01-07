@@ -5,7 +5,7 @@ import time
 from dataclasses import dataclass, field
 from typing import Any, Dict, List, Optional, Tuple, Union
 
-from elysia_engine.math_utils import Vector4
+from elysia_engine.math_utils import Quaternion
 from elysia_engine.tensor import SoulTensor
 
 
@@ -26,14 +26,15 @@ class HypersphericalCoord:
     theta3: float  # Intent
     r: float       # Depth
 
-    def to_cartesian(self) -> Vector4:
+    def to_quaternion(self) -> Quaternion:
         """
-        Convert to 4D Cartesian coordinates (x, y, z, w).
+        Convert to Quaternion (w, x, y, z).
 
-        x = r * sin(t1) * sin(t2) * sin(t3)
-        y = r * cos(t1) * sin(t2) * sin(t3)
-        z = r * cos(t2) * sin(t3)
+        Mapping Hyperspherical (r, t1, t2, t3) to Quaternion Space:
         w = r * cos(t3)
+        z = r * sin(t3) * cos(t2)
+        y = r * sin(t3) * sin(t2) * cos(t1)
+        x = r * sin(t3) * sin(t2) * sin(t1)
         """
         sin_t1 = math.sin(self.theta1)
         cos_t1 = math.cos(self.theta1)
@@ -42,34 +43,42 @@ class HypersphericalCoord:
         sin_t3 = math.sin(self.theta3)
         cos_t3 = math.cos(self.theta3)
 
-        x = self.r * sin_t1 * sin_t2 * sin_t3
-        y = self.r * cos_t1 * sin_t2 * sin_t3
-        z = self.r * cos_t2 * sin_t3
-        w = self.r * cos_t3
+        # Standard Hyperspherical to 4D Cartesian mapping
+        # x1 = r * cos(phi1)
+        # x2 = r * sin(phi1) * cos(phi2)
+        # x3 = r * sin(phi1) * sin(phi2) * cos(phi3)
+        # x4 = r * sin(phi1) * sin(phi2) * sin(phi3)
 
-        return Vector4(x, y, z, w)
+        # Mapping to Quaternion (w, x, y, z)
+        # Let t3 be the primary angle from w-axis
+        w = self.r * cos_t3
+        z = self.r * sin_t3 * cos_t2
+        y = self.r * sin_t3 * sin_t2 * cos_t1
+        x = self.r * sin_t3 * sin_t2 * sin_t1
+
+        return Quaternion(w, x, y, z)
 
     def distance_to(self, other: 'HypersphericalCoord') -> float:
         """
-        Calculate distance to another coordinate.
-        Using Cartesian distance for simplicity in 4D space.
+        Calculate 'Resonance Distance' to another coordinate.
+        Uses Quaternion Angular Distance (0 to pi).
+        0 means identical phase/direction.
         """
-        p1 = self.to_cartesian()
-        p2 = other.to_cartesian()
-        return p1.distance_to(p2)
+        q1 = self.to_quaternion()
+        q2 = other.to_quaternion()
+        return q1.angular_distance(q2)
 
     @classmethod
-    def from_cartesian(cls, v: Vector4) -> 'HypersphericalCoord':
+    def from_quaternion(cls, q: Quaternion) -> 'HypersphericalCoord':
         """
-        Convert from 4D Cartesian to Hyperspherical.
-        Note: This is complex and ambiguous; simplified here.
+        Convert from Quaternion to Hyperspherical.
+        Note: This is a simplified reconstruction.
         """
-        r = v.magnitude
+        r = math.sqrt(q.w**2 + q.x**2 + q.y**2 + q.z**2)
         if r == 0:
             return cls(0, 0, 0, 0)
 
-        # Simplified reconstruction (not fully reversible without care)
-        # For now, we rely primarily on creating via spherical coords.
+        # Simplified for now as we mostly project OUT from the mapper
         return cls(0, 0, 0, r)
 
     def __repr__(self) -> str:

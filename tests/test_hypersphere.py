@@ -1,6 +1,6 @@
 import math
 import pytest
-from elysia_engine.math_utils import Vector4
+from elysia_engine.math_utils import Quaternion
 from elysia_engine.tensor import SoulTensor
 from elysia_engine.hypersphere import (
     HypersphericalCoord,
@@ -9,42 +9,59 @@ from elysia_engine.hypersphere import (
     MemoryPattern
 )
 
-def test_hyperspherical_coord_to_cartesian():
+def test_hyperspherical_coord_to_quaternion():
     # Test origin
     c = HypersphericalCoord(0, 0, 0, 0)
-    v = c.to_cartesian()
-    assert v.magnitude == 0
+    q = c.to_quaternion()
+    assert q.w == 0 and q.x == 0 and q.y == 0 and q.z == 0
 
-    # Test unit vector along one axis
-    # x = r * sin(t1) * sin(t2) * sin(t3)
-    # y = r * cos(t1) * sin(t2) * sin(t3)
-    # z = r * cos(t2) * sin(t3)
-    # w = r * cos(t3)
-
-    # Let's try to get w=1 (r=1, cos(t3)=1 -> t3=0)
+    # Test unit quaternion along w axis (Identity rotation)
+    # w = r * cos(t3). If t3=0, w=r. x,y,z depend on sin(t3)=0 -> 0.
     c = HypersphericalCoord(0, 0, 0, 1.0)
-    v = c.to_cartesian()
-    # w = 1*1 = 1, z=0, y=0, x=0
-    assert abs(v.w - 1.0) < 1e-6
-    assert abs(v.x) < 1e-6
+    q = c.to_quaternion()
+    assert abs(q.w - 1.0) < 1e-6
+    assert abs(q.x) < 1e-6
 
-def test_distance():
-    c1 = HypersphericalCoord(0, 0, 0, 1.0) # w=1
-    c2 = HypersphericalCoord(math.pi, 0, 0, 1.0) # t1=pi
-    # Wait, if t3=0, sin(t3)=0, so x,y,z depend on sin(t3) which is 0.
-    # So both c1 and c2 map to (0,0,0,1).
-    # t1, t2 don't matter if t3=0 (Gimbal lock analogy)
-    assert c1.distance_to(c2) < 1e-6
+def test_distance_angular():
+    # c1: t3=0 -> w=1 (Identity)
+    c1 = HypersphericalCoord(0, 0, 0, 1.0)
 
-    # Try different points
-    c3 = HypersphericalCoord(0, 0, math.pi/2, 1.0)
-    # t3=pi/2 -> cos=0 (w=0), sin=1. z=r*cos(t2)*1. Let t2=0 -> z=1.
-    # So c3 is (0,0,1,0)
-    v3 = c3.to_cartesian()
-    assert abs(v3.z - 1.0) < 1e-6
+    # c2: t3=pi/2 -> w=0. z=1*1*cos(0)=1. x,y=0.
+    # So c2 is (w=0, z=1, y=0, x=0) -> 90 degree rotation around z-axis?
+    # q2 = (0, 0, 0, 1) or similar.
+    c2 = HypersphericalCoord(0, 0, math.pi/2, 1.0)
 
-    # Distance between (0,0,0,1) and (0,0,1,0) is sqrt(2)
-    assert abs(c1.distance_to(c3) - math.sqrt(2)) < 1e-6
+    q1 = c1.to_quaternion()
+    q2 = c2.to_quaternion()
+
+    # Dot product: (1*0 + 0*0 + 0*0 + 0*1) = 0
+    # acos(0) = pi/2
+
+    dist = c1.distance_to(c2)
+    assert abs(dist - math.pi/2) < 1e-6
+
+    # c3: t3=pi -> w=-1. x,y,z=0.
+    c3 = HypersphericalCoord(0, 0, math.pi, 1.0)
+    # Dot product: 1*-1 = -1
+    # acos(-1) = pi
+    dist_pi = c1.distance_to(c3)
+    assert abs(dist_pi - math.pi) < 1e-6
+
+def test_distance_angular_with_depth():
+    # Test identical points with r=0.5 (Depth != 1)
+    c1 = HypersphericalCoord(0, 0, 0, 0.5)
+    c2 = HypersphericalCoord(0, 0, 0, 0.5)
+
+    # Distance should be 0 (same angle)
+    dist = c1.distance_to(c2)
+    assert abs(dist) < 1e-6
+
+    # Test orthogonal points with r=2.0
+    c3 = HypersphericalCoord(0, 0, 0, 2.0)      # w axis
+    c4 = HypersphericalCoord(0, 0, math.pi/2, 2.0) # z axis
+
+    dist_ortho = c3.distance_to(c4)
+    assert abs(dist_ortho - math.pi/2) < 1e-6
 
 def test_psychology_mapper():
     # Joy (+1) -> theta2 = 0
