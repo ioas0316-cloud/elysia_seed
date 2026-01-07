@@ -24,6 +24,16 @@ The engine is modularized into two distinct layers:
 - **The Core Engine (`elysia_engine`)**: The fundamental physics simulation layer (PhysicsWorld, SoulTensor, Yggdrasil).
 - **The Living Soul Plugin (`elysia_core`)**: The optional sentient layer (ResonanceEngine, Chronos, Hippocampus).
 
+### 🧠 Feature Spotlight: Hypersphere Memory
+
+Elysia now features **Hypersphere Memory**, a 4D associative memory system that organizes data by **Meaning** (Logic, Emotion, Intent) rather than address.
+
+*   **No Linear Vectors:** Uses **Quaternions** for coordinate representation.
+*   **Resonance Retrieval:** Finds data based on "Musical Harmony" (Phase/Frequency match).
+*   **Psychology Mapping:** Automatically maps human intent to 4D coordinates.
+
+[👉 Read the Hypersphere Memory Doctrine](docs/03_System/HYPERSPHERE_MEMORY.md)
+
 ### 🚀 Quick Start
 
 **Interactive Launcher:**
@@ -113,8 +123,12 @@ Files are organized in `docs/`:
 1. **[01_Concept](docs/01_Concept/)**: 철학과 비전 (Philosophy & Vision)
 2. **[02_Start](docs/02_Start/)**: 시작 가이드 (Quick Starts & Guides)
 3. **[03_System](docs/03_System/)**: 시스템 구조 (Architecture & API)
+    *   [Hypersphere Memory](docs/03_System/HYPERSPHERE_MEMORY.md) 🆕
+    *   [System Map](docs/SYSTEM_MAP.md) 🆕
 4. **[04_Soul](docs/04_Soul/)**: 심층 분석 (Deep Dive into Soul)
 5. **[05_Archive](docs/05_Archive/)**: 아카이브 (Legacy & History)
+
+Please also refer to **[AGENTS.md](AGENTS.md)** for coding standards and philosophical axioms.
 
 ---
 

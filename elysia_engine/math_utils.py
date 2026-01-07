@@ -158,5 +158,34 @@ class Quaternion:
 
         return term1 + term2 + term3
 
+    def dot(self, other: Quaternion) -> float:
+        """Calculate the dot product with another quaternion."""
+        return self.w * other.w + self.x * other.x + self.y * other.y + self.z * other.z
+
+    def angular_distance(self, other: Quaternion) -> float:
+        """
+        Calculate the angular distance to another quaternion.
+
+        Returns the angle in radians (0 to pi).
+        Uses the formula: angle = acos((q1 . q2) / (|q1| * |q2|))
+
+        Note: We normalize the inputs to handle non-unit quaternions (Depth != 1).
+        We use acos(dot) treating them as 4D vectors for angular separation.
+        """
+        # Calculate magnitudes squared
+        mag_sq1 = self.w**2 + self.x**2 + self.y**2 + self.z**2
+        mag_sq2 = other.w**2 + other.x**2 + other.y**2 + other.z**2
+
+        if mag_sq1 == 0 or mag_sq2 == 0:
+            return 0.0 # Origin has 0 distance to everything angularly? Or undefined. Let's say 0.
+
+        denom = math.sqrt(mag_sq1 * mag_sq2)
+
+        d = self.dot(other) / denom
+
+        # Clamp to avoid numerical errors
+        d = max(-1.0, min(1.0, d))
+        return math.acos(d)
+
     def __repr__(self) -> str:
         return f"Quat({self.w:.3f}, {self.x:.3f}, {self.y:.3f}, {self.z:.3f})"
