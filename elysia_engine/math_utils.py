@@ -160,3 +160,70 @@ class Quaternion:
 
     def __repr__(self) -> str:
         return f"Quat({self.w:.3f}, {self.x:.3f}, {self.y:.3f}, {self.z:.3f})"
+
+
+@dataclass
+class Vector4:
+    """A 4D vector class for hyperspherical calculations."""
+
+    x: float
+    y: float
+    z: float
+    w: float
+
+    @property
+    def magnitude(self) -> float:
+        """Calculate the magnitude (length) of the vector."""
+        return math.sqrt(self.x**2 + self.y**2 + self.z**2 + self.w**2)
+
+    def normalize(self) -> Vector4:
+        """Return a unit vector in the same direction."""
+        m = self.magnitude
+        if m == 0:
+            return Vector4(0, 0, 0, 0)
+        return Vector4(self.x / m, self.y / m, self.z / m, self.w / m)
+
+    def __add__(self, other: Vector4) -> Vector4:
+        """Add two vectors."""
+        return Vector4(self.x + other.x, self.y + other.y, self.z + other.z, self.w + other.w)
+
+    def __sub__(self, other: Vector4) -> Vector4:
+        """Subtract two vectors."""
+        return Vector4(self.x - other.x, self.y - other.y, self.z - other.z, self.w - other.w)
+
+    def __mul__(self, scalar: Union[int, float]) -> Vector4:
+        """Multiply vector by a scalar."""
+        return Vector4(self.x * scalar, self.y * scalar, self.z * scalar, self.w * scalar)
+
+    def __rmul__(self, scalar: Union[int, float]) -> Vector4:
+        """Right multiply vector by a scalar."""
+        return self.__mul__(scalar)
+
+    def dot(self, other: Vector4) -> float:
+        """Calculate the dot product with another vector."""
+        return self.x * other.x + self.y * other.y + self.z * other.z + self.w * other.w
+
+    def distance_to(self, other: Vector4) -> float:
+        """Calculate the distance to another vector."""
+        return (self - other).magnitude
+
+    def lerp(self, other: Vector4, t: float) -> Vector4:
+        """
+        Linear interpolation between this vector and another.
+
+        Args:
+            other: Target vector
+            t: Interpolation factor (0-1)
+
+        Returns:
+            Interpolated vector
+        """
+        return Vector4(
+            self.x + (other.x - self.x) * t,
+            self.y + (other.y - self.y) * t,
+            self.z + (other.z - self.z) * t,
+            self.w + (other.w - self.w) * t,
+        )
+
+    def __repr__(self) -> str:
+        return f"Vec4({self.x:.3f}, {self.y:.3f}, {self.z:.3f}, {self.w:.3f})"
