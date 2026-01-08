@@ -184,15 +184,69 @@ class SoulProtocol:
         return (intent_vector, perception_depth)
 
 
+class TesseractVault:
+    """
+    Security Protocol for the Tesseract.
+    Prevents infinite recursion and entropy collapse in the fractal universe.
+    "The 1060 3GB Containment Field"
+    """
+    MAX_FRACTAL_DEPTH = 3
+    MAX_ENTITIES_PER_NODE = 1000
+
+    @staticmethod
+    def check_fractal_depth(content: Any, current_depth: int = 0) -> bool:
+        """
+        Recursively checks if the storage depth exceeds the safety limit.
+        """
+        if current_depth > TesseractVault.MAX_FRACTAL_DEPTH:
+            return False
+
+        if isinstance(content, HypersphereMemory):
+            # If we are storing a Universe, check its children
+            for _, pattern in content.patterns:
+                 if not TesseractVault.check_fractal_depth(pattern.content, current_depth + 1):
+                     return False
+        return True
+
+    @staticmethod
+    def analyze_entropy(memory: 'HypersphereMemory') -> str:
+        """
+        Checks the balance between Angels and Demons.
+        """
+        angel_energy = 0.0
+        demon_energy = 0.0
+
+        for _, pattern in memory.patterns:
+            freq = pattern.soul_tensor.frequency
+            if freq > 0:
+                angel_energy += freq
+            else:
+                demon_energy += abs(freq)
+
+        total = angel_energy + demon_energy
+        if total == 0:
+            return "Stable (Void)"
+
+        ratio = angel_energy / total if total > 0 else 0
+
+        if ratio > 0.9:
+            return "Warning: Light Saturation (Blinding)"
+        elif ratio < 0.1:
+            return "Warning: Abyss Collapse (Singularity)"
+        else:
+            return "Stable (Balanced)"
+
+
 class HypersphereMemory:
     """
     The 4D Hypersphere Memory System.
     Supports both Hyperspherical (Polar) and Tesseract (Cartesian) Coordinates.
     """
 
-    def __init__(self):
+    def __init__(self, depth: int = 0):
         self.patterns: List[Tuple[Union[HypersphericalCoord, TesseractCoord], MemoryPattern]] = []
         self.named_locations: Dict[str, Union[HypersphericalCoord, TesseractCoord]] = {}
+        self.depth = depth
 
     def store(
         self,
@@ -206,6 +260,18 @@ class HypersphereMemory:
         """
         Store a new memory pattern.
         """
+        # [Vault Protocol] Check Fractal Depth
+        if isinstance(content, HypersphereMemory):
+            # Calculate what the depth of the inserted content would be
+            # It starts at self.depth + 1
+            if not TesseractVault.check_fractal_depth(content, current_depth=self.depth + 1):
+                raise OverflowError(
+                    f"TesseractVault Protocol: Fractal Depth Exceeded! "
+                    f"Current Layer: {self.depth}, Max Allowed: {TesseractVault.MAX_FRACTAL_DEPTH}"
+                )
+            # Update the depth of the inserted universe to match its new location
+            content._update_depth(self.depth + 1)
+
         pattern = MemoryPattern(
             soul_tensor=soul_tensor,
             topology=topology,
@@ -313,6 +379,10 @@ class HypersphereMemory:
             "Intent_Active": 0, "Intent_Passive": 0
         }
         for coord, _ in self.patterns:
+            # Skip if using TesseractCoord (cannot analyze via Theta)
+            if isinstance(coord, TesseractCoord):
+                continue
+
             # Simple quadrant analysis
             if 0 <= coord.theta1 < math.pi: sectors["Logic_High"] += 1
             else: sectors["Logic_Low"] += 1
@@ -324,6 +394,16 @@ class HypersphereMemory:
             else: sectors["Intent_Passive"] += 1
 
         return sectors
+
+    def _update_depth(self, new_depth: int):
+        """
+        Recursively update the depth of this universe and its children.
+        Used when a universe is moved/stored into another.
+        """
+        self.depth = new_depth
+        for _, pattern in self.patterns:
+            if isinstance(pattern.content, HypersphereMemory):
+                pattern.content._update_depth(new_depth + 1)
 
 
 class PsychologyMapper:

@@ -5,7 +5,8 @@ from elysia_engine.hypersphere import (
     TesseractCoord,
     HypersphereMemory,
     SoulProtocol,
-    MemoryPattern
+    MemoryPattern,
+    TesseractVault
 )
 from elysia_engine.tensor import SoulTensor
 
@@ -76,3 +77,72 @@ def test_hypersphere_fractal_storage():
     assert isinstance(retrieved.content, HypersphereMemory)
     assert retrieved.content.patterns[0][1].content == "Angel Core"
     assert "Fractal" in retrieved.summary
+
+def test_tesseract_vault_safety():
+    """Test the safety limits of the Tesseract Vault."""
+
+    # 1. Test Entropy Analysis
+    memory = HypersphereMemory()
+    memory.store("Angel", TesseractCoord(0,0,0,0), SoulTensor(1, 7, 0)) # +7
+    memory.store("Demon", TesseractCoord(0,0,0,0), SoulTensor(1, -7, 0)) # -7
+    # Balanced (7 vs 7) -> 50% ratio
+    assert "Stable" in TesseractVault.analyze_entropy(memory)
+
+    memory_chaos = HypersphereMemory()
+    memory_chaos.store("Demon", TesseractCoord(0,0,0,0), SoulTensor(1, -7, 0))
+    # All negative -> Ratio 0
+    assert "Abyss Collapse" in TesseractVault.analyze_entropy(memory_chaos)
+
+    # 2. Test Max Fractal Depth
+    # Depth 0 (Main) -> Depth 1 (L1) -> Depth 2 (L2) -> Depth 3 (L3) -> Depth 4 (Overflow)
+
+    # Create layers
+    l3 = HypersphereMemory()
+    l2 = HypersphereMemory()
+    l1 = HypersphereMemory()
+    main = HypersphereMemory()
+
+    # Build from bottom up
+    # Note: store() doesn't recursively check *during* storage object creation,
+    # it checks when we try to put a universe into another.
+
+    # We need to simulate the recursion check directly or via store
+
+    # This should pass (Depth 0 storing Depth 1)
+    l2.store("Content", TesseractCoord(0,0,0,0), SoulTensor(1,1,1))
+    l1.store(l2, TesseractCoord(0,0,0,0), SoulTensor(1,1,1))
+
+    # Checking depth manually for clarity of test
+    # l1 contains l2. l1 is at depth 1.
+    assert TesseractVault.check_fractal_depth(l1, current_depth=1) == True
+
+    # Construct a chain that is too deep
+    # Root -> L1 -> L2 -> L3 -> L4 (Too Deep)
+
+    # Create independent universes (depth is initially 0 for all)
+    l4 = HypersphereMemory()
+    l3 = HypersphereMemory()
+    l2_deep = HypersphereMemory()
+    l1_deep = HypersphereMemory()
+    main = HypersphereMemory()
+
+    # Link them bottom-up.
+    # Store updates depth of the child.
+
+    l3.store(l4, TesseractCoord(0,0,0,0), SoulTensor(1,1,1))
+    # l3 is depth 0. l4 becomes depth 1 (relative to l3? No, l4 is depth 1 inside l3).
+    # Wait, l3 is standalone, depth=0. Inside l3, l4 is at l3.depth+1 = 1.
+
+    l2_deep.store(l3, TesseractCoord(0,0,0,0), SoulTensor(1,1,1))
+    # l2 is depth 0. l3 becomes depth 1. l4 becomes depth 2.
+
+    l1_deep.store(l2_deep, TesseractCoord(0,0,0,0), SoulTensor(1,1,1))
+    # l1 is depth 0. l2 becomes depth 1. l3 becomes depth 2. l4 becomes depth 3.
+
+    # Now try to store l1_deep into main.
+    # Main is depth 0. l1 will become depth 1.
+    # l2 -> 2. l3 -> 3. l4 -> 4.
+    # Max depth is 3. So l4 at depth 4 should fail.
+
+    with pytest.raises(OverflowError):
+        main.store(l1_deep, TesseractCoord(0,0,0,0), SoulTensor(1,1,1))
