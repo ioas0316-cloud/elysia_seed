@@ -9,6 +9,58 @@ from elysia_engine.math_utils import Quaternion
 from elysia_engine.tensor import SoulTensor
 
 
+class CelestialHierarchy:
+    """
+    Maps the Y-axis (Frequency Spectrum) to the 7 Angels and 7 Demons.
+    Range: -7.0 (Abyss) to +7.0 (Heaven).
+    """
+    # Frequency Thresholds
+    ARCHANGEL_LIMIT = 7.0
+    ARCHDEMON_LIMIT = -7.0
+
+    @staticmethod
+    def analyze_frequency(frequency: float) -> str:
+        """
+        Returns the celestial rank based on frequency (Y-axis).
+        """
+        if frequency >= 1.0:
+            rank = min(7, int(frequency))
+            return f"Angel Rank {rank} (High Frequency/Joy)"
+        elif frequency <= -1.0:
+            rank = min(7, int(abs(frequency)))
+            return f"Demon Rank {rank} (Low Frequency/Abyss)"
+        else:
+            return "Human/Void Plane (Neutral)"
+
+
+@dataclass
+class TesseractCoord:
+    """
+    The Tesseract-Soul Coordinate System.
+    Maps philosophical attributes directly to 4D Cartesian axes.
+    """
+    w: float  # Dimensional Fault (Scale: Self vs External)
+    z: float  # Vector of Intent (Directionality)
+    x: float  # Synesthetic Perception (Cognitive Map)
+    y: float  # Phase Hierarchy (7 Angels - 7 Demons)
+
+    def to_quaternion(self) -> Quaternion:
+        """
+        Direct mapping to Quaternion for physics compatibility.
+        """
+        # Normalizing to avoid physics explosions if values are large
+        # But conceptually, w,x,y,z ARE the quaternion components.
+        return Quaternion(self.w, self.x, self.y, self.z)
+
+    def distance_to(self, other: Union['HypersphericalCoord', 'TesseractCoord']) -> float:
+        q1 = self.to_quaternion()
+        q2 = other.to_quaternion()
+        return q1.angular_distance(q2)
+
+    def __repr__(self) -> str:
+        return f"Tesseract(Scale(w)={self.w:.2f}, Intent(z)={self.z:.2f}, Perception(x)={self.x:.2f}, Rank(y)={self.y:.2f})"
+
+
 @dataclass
 class HypersphericalCoord:
     """
@@ -104,19 +156,102 @@ class MemoryPattern:
         return f"[{self.topology}/{self.trajectory}] {str(self.content)[:30]}..."
 
 
+class SoulProtocol:
+    """
+    The Tesseract-Soul Protocol for processing inputs.
+    """
+    @staticmethod
+    def boundary_check(input_scale: float) -> float:
+        """
+        W-Axis: Measures the scale of the boundary.
+        Small values = Internal/Self, Large values = External/World.
+        """
+        return max(0.0, min(10.0, input_scale)) # Clamped for safety
+
+    @staticmethod
+    def frequency_scan(sentiment_score: float) -> float:
+        """
+        Y-Axis: Maps sentiment to Celestial Hierarchy (-7 to +7).
+        """
+        # Assuming sentiment_score is -1.0 to 1.0
+        return sentiment_score * 7.0
+
+    @staticmethod
+    def map_trajectory(intent_vector: float, perception_depth: float) -> Tuple[float, float]:
+        """
+        Maps Z (Intent) and X (Perception).
+        """
+        return (intent_vector, perception_depth)
+
+
+class TesseractVault:
+    """
+    Security Protocol for the Tesseract.
+    Prevents infinite recursion and entropy collapse in the fractal universe.
+    "The 1060 3GB Containment Field"
+    """
+    MAX_FRACTAL_DEPTH = 3
+    MAX_ENTITIES_PER_NODE = 1000
+
+    @staticmethod
+    def check_fractal_depth(content: Any, current_depth: int = 0) -> bool:
+        """
+        Recursively checks if the storage depth exceeds the safety limit.
+        """
+        if current_depth > TesseractVault.MAX_FRACTAL_DEPTH:
+            return False
+
+        if isinstance(content, HypersphereMemory):
+            # If we are storing a Universe, check its children
+            for _, pattern in content.patterns:
+                 if not TesseractVault.check_fractal_depth(pattern.content, current_depth + 1):
+                     return False
+        return True
+
+    @staticmethod
+    def analyze_entropy(memory: 'HypersphereMemory') -> str:
+        """
+        Checks the balance between Angels and Demons.
+        """
+        angel_energy = 0.0
+        demon_energy = 0.0
+
+        for _, pattern in memory.patterns:
+            freq = pattern.soul_tensor.frequency
+            if freq > 0:
+                angel_energy += freq
+            else:
+                demon_energy += abs(freq)
+
+        total = angel_energy + demon_energy
+        if total == 0:
+            return "Stable (Void)"
+
+        ratio = angel_energy / total if total > 0 else 0
+
+        if ratio > 0.9:
+            return "Warning: Light Saturation (Blinding)"
+        elif ratio < 0.1:
+            return "Warning: Abyss Collapse (Singularity)"
+        else:
+            return "Stable (Balanced)"
+
+
 class HypersphereMemory:
     """
     The 4D Hypersphere Memory System.
+    Supports both Hyperspherical (Polar) and Tesseract (Cartesian) Coordinates.
     """
 
-    def __init__(self):
-        self.patterns: List[Tuple[HypersphericalCoord, MemoryPattern]] = []
-        self.named_locations: Dict[str, HypersphericalCoord] = {}
+    def __init__(self, depth: int = 0):
+        self.patterns: List[Tuple[Union[HypersphericalCoord, TesseractCoord], MemoryPattern]] = []
+        self.named_locations: Dict[str, Union[HypersphericalCoord, TesseractCoord]] = {}
+        self.depth = depth
 
     def store(
         self,
         content: Any,
-        coord: HypersphericalCoord,
+        coord: Union[HypersphericalCoord, TesseractCoord],
         soul_tensor: SoulTensor,
         topology: str = "Point",
         trajectory: str = "Static",
@@ -125,6 +260,18 @@ class HypersphereMemory:
         """
         Store a new memory pattern.
         """
+        # [Vault Protocol] Check Fractal Depth
+        if isinstance(content, HypersphereMemory):
+            # Calculate what the depth of the inserted content would be
+            # It starts at self.depth + 1
+            if not TesseractVault.check_fractal_depth(content, current_depth=self.depth + 1):
+                raise OverflowError(
+                    f"TesseractVault Protocol: Fractal Depth Exceeded! "
+                    f"Current Layer: {self.depth}, Max Allowed: {TesseractVault.MAX_FRACTAL_DEPTH}"
+                )
+            # Update the depth of the inserted universe to match its new location
+            content._update_depth(self.depth + 1)
+
         pattern = MemoryPattern(
             soul_tensor=soul_tensor,
             topology=topology,
@@ -141,7 +288,7 @@ class HypersphereMemory:
 
     def query(
         self,
-        coord: HypersphericalCoord,
+        coord: Union[HypersphericalCoord, TesseractCoord],
         radius: float = 0.1,
         filter_pattern: Optional[Dict[str, Any]] = None
     ) -> List[MemoryPattern]:
@@ -166,7 +313,7 @@ class HypersphereMemory:
 
     def resonance_query(
         self,
-        coord: HypersphericalCoord,
+        coord: Union[HypersphericalCoord, TesseractCoord],
         soul_tensor: SoulTensor,
         radius: float = 0.5,
         resonance_threshold: float = 0.7
@@ -232,6 +379,10 @@ class HypersphereMemory:
             "Intent_Active": 0, "Intent_Passive": 0
         }
         for coord, _ in self.patterns:
+            # Skip if using TesseractCoord (cannot analyze via Theta)
+            if isinstance(coord, TesseractCoord):
+                continue
+
             # Simple quadrant analysis
             if 0 <= coord.theta1 < math.pi: sectors["Logic_High"] += 1
             else: sectors["Logic_Low"] += 1
@@ -243,6 +394,16 @@ class HypersphereMemory:
             else: sectors["Intent_Passive"] += 1
 
         return sectors
+
+    def _update_depth(self, new_depth: int):
+        """
+        Recursively update the depth of this universe and its children.
+        Used when a universe is moved/stored into another.
+        """
+        self.depth = new_depth
+        for _, pattern in self.patterns:
+            if isinstance(pattern.content, HypersphereMemory):
+                pattern.content._update_depth(new_depth + 1)
 
 
 class PsychologyMapper:
