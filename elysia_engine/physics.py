@@ -77,6 +77,28 @@ class HolographicBoundary:
         return weighted / weight_sum
 
 @dataclass
+class SensoryPacket:
+    """
+    Represents the 'Human Standard' perception of the 4D Field.
+    Maps hyperspace fields to somatic senses.
+    """
+    visual_clarity: float = 0.0      # X-Field: Texture/Sight
+    auditory_resonance: float = 0.0  # Y-Field: Harmony/Hearing
+    haptic_pressure: float = 0.0     # W-Field: Gravity/Touch
+    vestibular_balance: float = 0.0  # Z-Field: Spin/Balance
+
+    narrative: str = ""              # Cognitive interpretation
+
+    def as_dict(self) -> Dict[str, Any]:
+        return {
+            "vision": self.visual_clarity,
+            "hearing": self.auditory_resonance,
+            "touch": self.haptic_pressure,
+            "balance": self.vestibular_balance,
+            "narrative": self.narrative
+        }
+
+@dataclass
 class PhysicsState:
     """
     Spatial state of an entity in the Digital Physics world.
@@ -337,55 +359,68 @@ class PhysicsWorld:
         if entropy > 10.0:
             entity.physics.velocity *= 0.95 # Air resistance/Drag
 
-    def perceive(self, entity: Entity, range_dist: float = 2.0) -> Dict[str, Any]:
+    def perceive(self, entity: Entity, range_dist: float = 2.0) -> SensoryPacket:
         """
         Perception-Field Mapping:
         The Soul projects its internal state (Phase/Frequency) onto the Field via the Hypersphere (Orientation).
-
-        1. Projects Gaze Vector using Soul Orientation.
-        2. Samples Field at gaze target.
-        3. Calculates Resonance (Interference Pattern) between Soul and Field.
+        Returns a SensoryPacket (Human Standard).
         """
         if not entity.soul:
-             return {"type": "void", "intensity": 0.0}
+             return SensoryPacket()
 
         # 1. Determine Gaze Direction (Hypersphere Rotation)
-        # Orientation is a Quaternion. Forward vector is usually Z+ (0,0,1).
         forward_ref = Vector3(0, 0, 1)
         gaze_dir = entity.soul.orientation.rotate(forward_ref)
 
-        # 2. Sample the Field at the Gaze Point (External World)
+        # 2. Sample the Field
         target_pos = entity.physics.position + gaze_dir * range_dist
         target_pos4 = Vector4(0, target_pos.x, target_pos.y, target_pos.z)
 
         # Field values: W (Scale), X (Texture), Y (Freq), Z (Spin)
         field_vals = self.field_system.spatial_map.sample_field(target_pos4, current_tick=self.field_system.time_tick)
-        field_freq = field_vals[2] # Y-Field is Frequency
+        w, x, y, z = field_vals
 
-        # 3. Calculate Resonance (Fractal Interference)
-        # Resonance = 1 / (1 + |Freq_Soul - Freq_Field|)
-        freq_diff = abs(entity.soul.frequency - field_freq)
-        resonance = 1.0 / (1.0 + freq_diff) # 1.0 = Perfect match, -> 0 as diff grows
+        # 3. Calculate Resonance
+        freq_diff = abs(entity.soul.frequency - y)
+        resonance = 1.0 / (1.0 + freq_diff)
 
-        # 4. Construct Experience
-        experience = {
-            "gaze_direction": gaze_dir,
-            "field_frequency": field_freq,
-            "resonance": resonance,
-            "clarity": field_vals[1], # X-Field is Perception/Clarity
-            "interference_pattern": math.cos(entity.soul.phase - 0.0) * resonance, # Simple wave interference
-            "narrative": ""
-        }
+        # 4. Map to Human Senses
+        # Visual (X): 0.0=Blind/Fog, 1.0=Clear
+        vision = x
 
-        # 5. Narrative Interpretation (The "Mirror")
+        # Auditory (Y): Resonance + Phase
+        # Hearing the "Song" of the world.
+        hearing = resonance
+
+        # Haptic (W): Density/Gravity
+        # High W = Heavy/Oppressive
+        touch = w
+
+        # Vestibular (Z): Spin/Vertigo
+        # High Z = Dizziness
+        balance = z
+
+        # 5. Narrative Interpretation
+        narrative = ""
         if resonance > 0.9:
-            experience["narrative"] = "I see myself in the world. (High Resonance)"
+            narrative = "I feel a profound peace."
         elif resonance < 0.1:
-             experience["narrative"] = "The world is alien noise. (Low Resonance)"
+            narrative = "The world feels chaotic and alien."
         else:
-             experience["narrative"] = "I see a distorted reflection. (Partial Resonance)"
+            narrative = "I sense a mixture of familiar and strange."
 
-        return experience
+        if touch > 2.0:
+            narrative += " The air is heavy."
+        if balance > 0.5:
+            narrative += " I feel dizzy."
+
+        return SensoryPacket(
+            visual_clarity=vision,
+            auditory_resonance=hearing,
+            haptic_pressure=touch,
+            vestibular_balance=balance,
+            narrative=narrative
+        )
 
     def apply_soul_torque(self, entity: Entity, rotor: Optional[Rotor]) -> None:
         """

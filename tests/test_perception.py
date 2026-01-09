@@ -3,22 +3,21 @@ import os
 import math
 sys.path.append(os.getcwd())
 
-from elysia_engine.physics import PhysicsWorld
+from elysia_engine.physics import PhysicsWorld, Attractor
 from elysia_engine.entities import Entity, PhysicsState
 from elysia_engine.tensor import SoulTensor
 from elysia_engine.math_utils import Vector3, Quaternion
 
 def run_perception_test():
     print("\n" + "="*50)
-    print("👁️ [Elysia] Testing Perception-Field Mapping")
+    print("👁️ [Elysia] Testing Human Sensory Perception")
     print("="*50 + "\n")
 
     world = PhysicsWorld()
 
     # 1. Setup Entity (Observer)
-    # Frequency 100.0
     observer = Entity(
-        id="observer",
+        id="human_observer",
         physics=PhysicsState(position=Vector3(0,0,0)),
         soul=SoulTensor(
             amplitude=10.0,
@@ -29,67 +28,64 @@ def run_perception_test():
     )
     world.register_entity(observer)
 
-    # 2. Setup Field Targets (using manual Node Injection for test control)
-    # Target A (Front): Perfect Resonance (Freq 100) at (0,0,5)
-    # Target B (Back):  Dissonance (Freq 0) at (0,0,-5)
+    # 2. Setup Field Targets using Attractors to paint the field
 
-    # We use 'Attractors' to paint the field naturally
-    from elysia_engine.physics import Attractor
-
-    # "The Mirror" (Resonant Object)
-    mirror = Attractor(
-        id="mirror",
+    # "The Garden" (Resonant, Clear, Light, Balanced)
+    # Freq=100 (Resonant), Mass=Normal, Spin=0
+    garden = Attractor(
+        id="garden",
         position=Vector3(0,0,5),
-        mass=50.0,
-        soul=SoulTensor(amplitude=50.0, frequency=100.0, phase=0.0)
+        mass=10.0, # Light Touch
+        soul=SoulTensor(amplitude=10.0, frequency=100.0, phase=0.0)
     )
 
-    # "The Void" (Dissonant Object)
-    void_obj = Attractor(
-        id="void_obj",
+    # "The Storm" (Dissonant, Heavy, Spinning)
+    # Freq=0 (Dissonant), Mass=Huge (Heavy Touch), Spin=High
+    storm = Attractor(
+        id="storm",
         position=Vector3(0,0,-5),
-        mass=50.0,
-        soul=SoulTensor(amplitude=50.0, frequency=0.0, phase=0.0)
+        mass=1000.0, # Heavy Touch
+        soul=SoulTensor(amplitude=1000.0, frequency=0.0, phase=0.0, spin=10.0)
     )
 
-    world.add_attractor(mirror)
-    world.add_attractor(void_obj)
+    world.add_attractor(garden)
+    world.add_attractor(storm)
 
     # Update field to propagate values
     world.update_field()
 
-    print("🧪 Scenario 1: Looking at the Mirror (Resonance)")
-    # Observer faces +Z (Default)
-    # Mirror is at +Z
-    experience_1 = world.perceive(observer, range_dist=5.0)
+    print("🧪 Scenario 1: Gazing at The Garden")
+    # Facing +Z
+    senses_1 = world.perceive(observer, range_dist=5.0)
 
-    print(f"   - Gaze Direction: {experience_1['gaze_direction']}")
-    print(f"   - Field Frequency: {experience_1['field_frequency']:.2f}")
-    print(f"   - Resonance: {experience_1['resonance']:.4f}")
-    print(f"   - Narrative: {experience_1['narrative']}")
+    print(f"   [Vision] Clarity: {senses_1.visual_clarity:.2f}")
+    print(f"   [Hearing] Resonance: {senses_1.auditory_resonance:.2f}")
+    print(f"   [Touch] Pressure: {senses_1.haptic_pressure:.2f}")
+    print(f"   [Balance] Vertigo: {senses_1.vestibular_balance:.2f}")
+    print(f"   [Narrative] \"{senses_1.narrative}\"")
 
-    if experience_1['resonance'] > 0.9:
-        print("   ✅ SUCCESS: High resonance detected.")
+    if senses_1.auditory_resonance > 0.9:
+        print("   ✅ SUCCESS: High Harmony detected.")
     else:
-        print("   ❌ FAILURE: Resonance too low.")
+        print("   ❌ FAILURE: Harmony too low.")
 
-    print("\n🧪 Scenario 2: Looking at the Void (Dissonance)")
+    print("\n🧪 Scenario 2: Gazing at The Storm")
     # Rotate Observer to face -Z
-    # Axis (0,1,0) Angle PI
     rot_back = Quaternion.from_axis_angle(Vector3(0,1,0), math.pi)
     observer.soul.orientation = rot_back
 
-    experience_2 = world.perceive(observer, range_dist=5.0)
+    senses_2 = world.perceive(observer, range_dist=5.0)
 
-    print(f"   - Gaze Direction: {experience_2['gaze_direction']}")
-    print(f"   - Field Frequency: {experience_2['field_frequency']:.2f}")
-    print(f"   - Resonance: {experience_2['resonance']:.4f}")
-    print(f"   - Narrative: {experience_2['narrative']}")
+    print(f"   [Vision] Clarity: {senses_2.visual_clarity:.2f}")
+    print(f"   [Hearing] Resonance: {senses_2.auditory_resonance:.2f}")
+    print(f"   [Touch] Pressure: {senses_2.haptic_pressure:.2f}")
+    print(f"   [Balance] Vertigo: {senses_2.vestibular_balance:.2f}")
+    print(f"   [Narrative] \"{senses_2.narrative}\"")
 
-    if experience_2['resonance'] < 0.1:
-        print("   ✅ SUCCESS: Low resonance (Alien Noise) detected.")
+    if senses_2.haptic_pressure > 5.0 and senses_2.vestibular_balance > 0.1:
+        print("   ✅ SUCCESS: Heavy Pressure and Vertigo detected.")
     else:
-        print("   ❌ FAILURE: Resonance too high for void.")
+        print("   ❌ FAILURE: Storm not feeling heavy/spinning enough.")
 
     print("\n" + "="*50)
 
