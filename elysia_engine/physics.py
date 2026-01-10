@@ -244,7 +244,17 @@ class PhysicsWorld:
         if target_entity.soul and not target_entity.soul.is_collapsed:
              # Apply slight rotation to the soul orientation
              # We dampen the rotor effect to prevent chaos
-             dampened_rotor = Rotor(rotor.scalar, rotor.bivector_xy * 0.1, rotor.bivector_yz * 0.1, rotor.bivector_zx * 0.1)
+             # [FIX] Mapped correct Rotor attributes from math_utils (a, b_xy, b_yz, b_xz)
+             # Note: bivector_zx corresponds to -b_xz, but for dampening magnitude it doesn't matter much.
+             # We reconstruct a simplified rotor for dampening.
+             dampened_rotor = Rotor(
+                 a=rotor.a,
+                 b_wx=0, b_wy=0, b_wz=0, # Assuming mostly spatial rotation for torque
+                 b_xy=rotor.b_xy * 0.1,
+                 b_xz=rotor.b_xz * 0.1,
+                 b_yz=rotor.b_yz * 0.1,
+                 p=0
+             )
              # Note: Rotor application to Quaternion is complex.
              # Simpler approach: Rotate the velocity vector (Coriolis Effect)
 
