@@ -13,6 +13,18 @@ from ..foundation.nature.rotor import Rotor, Vector4
 from ..foundation.structure.hypersphere import HyperSphere
 
 @dataclass
+class ConsciousState:
+    """
+    The emotional gearbox of the entity.
+    - Curiosity: Increases Spirit RPM (Seeking future).
+    - Urgency: Increases Soul RPM (Processing now).
+    - Fatigue: Decreases Body RPM (Inertia/Drag).
+    """
+    curiosity: float = 0.5  # 0.0 to 1.0
+    urgency: float = 0.0    # 0.0 to 1.0
+    fatigue: float = 0.0    # 0.0 to 1.0
+
+@dataclass
 class ReflectionLog:
     """A record of the tension between intent and reality."""
     spirit_intent: float  # Future phase
@@ -32,6 +44,7 @@ class TrinityMonad:
     def __init__(self, name: str, base_frequency: float = 432.0):
         self.name = name
         self.base_frequency = base_frequency
+        self.state = ConsciousState()
 
         # 1. Spirit: Low Mass, +Phase (Future)
         self.spirit = Rotor(f"{name}_Spirit", base_frequency, mass=1.0)
@@ -42,19 +55,44 @@ class TrinityMonad:
         # 3. Body: High Mass, -Phase (Past)
         self.body = Rotor(f"{name}_Body", base_frequency, mass=20.0)
 
+    def update_state(self, stimulus_intensity: float):
+        """
+        Modulates the internal state based on external pressure.
+        """
+        # 1. High stimulus -> Urgency Up, Curiosity Down (Focus)
+        if stimulus_intensity > 0.7:
+            self.state.urgency = min(1.0, self.state.urgency + 0.2)
+            self.state.curiosity = max(0.1, self.state.curiosity - 0.1)
+        # 2. Low stimulus -> Curiosity Up, Urgency Down (Wander)
+        elif stimulus_intensity < 0.3:
+            self.state.urgency = max(0.0, self.state.urgency - 0.1)
+            self.state.curiosity = min(1.0, self.state.curiosity + 0.1)
+
+        # 3. Time always increases Fatigue slightly (simulated entropy)
+        self.state.fatigue = min(1.0, self.state.fatigue + 0.05)
+
     def advance_time(self, delta_time: float):
         """
-        Advances the subjective time of the entity.
-        Crucially, Spirit advances MORE (simulation), Body advances LESS (inertia).
+        Advances the subjective time of the entity with Adaptive RPM.
         """
-        # Spirit spins ahead (Future Simulation)
-        self.spirit.spin(delta_time * 1.5)
+        # Calculate Dynamic Multipliers (The CVT Gearbox)
 
-        # Soul spins at current time
-        self.soul.spin(delta_time)
+        # Spirit: Driven by Curiosity.
+        # Base 1.2, +2.0 max for high curiosity.
+        spirit_mult = 1.2 + (self.state.curiosity * 2.0)
 
-        # Body lags behind (Drag)
-        self.body.spin(delta_time * 0.8)
+        # Soul: Driven by Urgency.
+        # Base 1.0, +1.0 max for high urgency.
+        soul_mult = 1.0 + (self.state.urgency * 1.0)
+
+        # Body: Dragged by Fatigue.
+        # Base 0.8, -0.5 max for high fatigue.
+        body_mult = 0.8 - (self.state.fatigue * 0.5)
+
+        # Apply Spin
+        self.spirit.spin(delta_time * spirit_mult)
+        self.soul.spin(delta_time * soul_mult)
+        self.body.spin(delta_time * body_mult)
 
     def contemplate(self, sphere: HyperSphere, target_freq: float) -> ReflectionLog:
         """
