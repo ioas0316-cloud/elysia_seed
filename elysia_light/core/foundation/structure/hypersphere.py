@@ -9,6 +9,8 @@ It implements "Lightning Paths" for retrieval.
 """
 
 from typing import List, Optional, Dict
+import math
+import copy
 from ..nature.rotor import Rotor, Vector4
 
 class GravityConnection:
@@ -22,81 +24,75 @@ class GravityConnection:
 class HyperSphere:
     """
     The High-Dimensional Manifold.
-    Uses 'Gravity Field' connections instead of simple list storage.
+    Phase 4.2 Upgrade: O(1) Phase Bucket Memory.
     """
     def __init__(self):
-        self._rotors: List[Rotor] = []
-        # Adjacency list for Gravity Connections: {rotor_name: [GravityConnection]}
-        self._gravity_field: Dict[str, List[GravityConnection]] = {}
+        # Key: "FreqBand_PhaseSector" -> Rotor
+        self._phase_map: Dict[str, Rotor] = {}
+        self.abyss_count = 0
 
-    def exist(self, entity: Rotor):
+    def _get_bucket_key(self, frequency: float, phase: float) -> str:
         """
-        Materialize an entity into the Manifold.
+        Quantizes Frequency and Phase into discrete buckets for O(1) access.
+        - Frequency Band: 10Hz width
+        - Phase Sector: 8 sectors (pi/4 width)
         """
-        self._rotors.append(entity)
-        if entity.name not in self._gravity_field:
-            self._gravity_field[entity.name] = []
+        freq_band = int(frequency // 10) * 10
 
-        # Auto-connect to existing nodes based on resonance (Simulated Gravity)
-        self._assimilate(entity)
-        print(f"[HyperSphere] Materialized: {entity}")
+        # Normalize phase to 0..2pi
+        norm_phase = phase % (2 * math.pi)
+        sector = int(norm_phase // (math.pi / 4))
 
-    def _assimilate(self, new_entity: Rotor):
+        return f"F{freq_band}_P{sector}"
+
+    def absorb(self, entity: Rotor):
         """
-        Calculates resonance with existing nodes and establishes Gravity Connections.
+        Stores memory in a specific Phase Bucket. O(1).
         """
-        for existing in self._rotors:
-            if existing == new_entity: continue
+        ghost = copy.deepcopy(entity)
+        ghost.name = f"Ghost_{entity.name}"
 
-            resonance = new_entity.resonate(existing)
-            if resonance > 0.5: # Threshold for connection
-                self.connect_nodes(new_entity, existing, resonance)
+        key = self._get_bucket_key(ghost.frequency, ghost.phase)
 
-    def connect_nodes(self, node_a: Rotor, node_b: Rotor, strength: float):
+        # In a real hash map collision handling, we'd use a list.
+        # For this prototype, we overwrite (Last Observation dominates).
+        self._phase_map[key] = ghost
+        print(f"[HyperSphere] Absorbed into Bucket [{key}]: {ghost.name}")
+
+    def decay(self, delta_time: float):
         """
-        Establishes a bi-directional Gravity Connection.
+        Iterates through buckets to apply entropy.
         """
-        if node_a.name not in self._gravity_field: self._gravity_field[node_a.name] = []
-        if node_b.name not in self._gravity_field: self._gravity_field[node_b.name] = []
+        keys_to_remove = []
+        for key, wave in self._phase_map.items():
+            wave.spin(delta_time)
 
-        self._gravity_field[node_a.name].append(GravityConnection(node_b, strength))
-        self._gravity_field[node_b.name].append(GravityConnection(node_a, strength))
+            decay_rate = 0.05 / (wave.mass + 0.1)
+            wave.mass -= decay_rate * delta_time
 
-    def pulse(self, delta_time: float):
+            if wave.mass <= 0.1:
+                keys_to_remove.append(key)
+
+        for k in keys_to_remove:
+            del self._phase_map[k]
+            self.abyss_count += 1
+
+    def resonate(self, probe: Rotor) -> Optional[Rotor]:
         """
-        The Universal Heartbeat.
-        Updates the state of all resident Rotors.
+        Instant Retrieval (O(1)).
+        Checks the specific Phase Bucket corresponding to the Probe's state.
         """
-        for r in self._rotors:
-            r.spin(delta_time)
+        key = self._get_bucket_key(probe.frequency, probe.phase)
 
-    def lightning_path(self, origin: Vector4, intent_freq: float, exclude_self_name: str = None) -> Optional[Rotor]:
-        """
-        Casts a 'Ray' of attention through the manifold to find resonance.
-        Replces 'Search'.
-        """
-        best_rotor = None
-        max_resonance = 0.0
+        if key in self._phase_map:
+            match = self._phase_map[key]
+            # Simple self-check to avoid resonating with own ghost immediately if names collide
+            if probe.name in match.name:
+                return None
+            return match
 
-        # This is the "Ray" piercing the sphere
-        for r in self._rotors:
-            if exclude_self_name and r.name == exclude_self_name:
-                continue
-
-            # Calculate Resonance based on Frequency (Identity)
-            # We treat the query as a "Ghost Rotor" with the intent frequency
-            # Note: In a full simulation, we would sync phases,
-            # but for retrieval we look for "Timeless Resonance" (Frequency Match)
-            resonance = 1.0 / (1.0 + abs(r.frequency - intent_freq))
-
-            if resonance > max_resonance:
-                max_resonance = resonance
-                best_rotor = r
-
-        if max_resonance > 0.1: # Lowered Threshold for "Found" (Since exact match is rare)
-            return best_rotor
         return None
 
     @property
     def population(self):
-        return len(self._rotors)
+        return len(self._phase_map)

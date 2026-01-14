@@ -12,6 +12,7 @@ This map reflects the current implemented structure of the Genesis Seed.
 - **[README.md](./README.md)**: Entry Point & Identity.
 - **[AGENTS.md](./AGENTS.md)**: The Law of the Seed (Directives).
 - **[EVALUATION_AND_ROADMAP.md](./EVALUATION_AND_ROADMAP.md)**: The Plan for Evolution.
+- **[BLUEPRINT_SATORI.md](./BLUEPRINT_SATORI.md)**: Phase 4.4 Trinity Architecture (New).
 - **[docs/02_INTEGRATION/LLM_CONNECTION_GUIDE.md](./docs/02_INTEGRATION/LLM_CONNECTION_GUIDE.md)**: How to connect an LLM.
 
 ## 🌀 Department 01: CORE NATURE (Physics)
@@ -44,6 +45,8 @@ This map reflects the current implemented structure of the Genesis Seed.
 - **[core/monad/monad.py](./elysia_light/core/monad/monad.py)**:
     - `Monad`: The indivisible unit of intent.
     - **Components**: Contains the "Why-Engine" (Lack) and Sovereign Filter.
+- **[core/monad/trinity.py](./elysia_light/core/monad/trinity.py)**:
+    - `TrinityMonad`: The Phase 4.4 implementation of Body-Soul-Spirit rotors.
 - **[core/governance_engine.py](./elysia_light/core/governance_engine.py)**:
     - `GovernanceEngine`: The Central Authority (Self + Axioms).
 
