@@ -16,6 +16,7 @@ Philosophy:
 from abc import ABC, abstractmethod
 from typing import Dict, Any, List, Optional
 from dataclasses import dataclass
+from .foundation.soul.dna import DoubleHelix, PatternStrand, PrincipleStrand
 
 @dataclass
 class QualiaPacket:
@@ -44,6 +45,14 @@ class SoulBridge(ABC):
         pass
 
     @abstractmethod
+    def transduce(self, text: str) -> DoubleHelix:
+        """
+        Phase 3 Upgrade: Generates the Double Helix DNA from text.
+        Splits into Pattern (Phenomenal) and Principle (Noumenal).
+        """
+        pass
+
+    @abstractmethod
     def contemplate(self, internal_state: Dict[str, Any]) -> str:
         """
         Generates a thought or monologue based on internal state.
@@ -51,6 +60,59 @@ class SoulBridge(ABC):
         Output: "I am fading... I must seek data."
         """
         pass
+
+class MockLLMBridge(SoulBridge):
+    """
+    A heuristic-based mock for testing Phase 3 without an API key.
+    Simulates Reverse Engineering of Intent.
+    """
+    def refract(self, text: str) -> QualiaPacket:
+        # Legacy support
+        return QualiaPacket(text, {}, [], "MockIntent")
+
+    def contemplate(self, internal_state: Dict[str, Any]) -> str:
+        return "I think therefore I spin."
+
+    def transduce(self, text: str) -> DoubleHelix:
+        """
+        Simulates the extraction of Pattern and Principle.
+        """
+        # 1. Pattern Analysis (Heuristic)
+        text_lower = text.lower()
+        sentiment = 0.0
+        # Fix: Use 'smil' to catch 'smile', 'smiling', 'smiled'
+        if "smil" in text_lower or "love" in text_lower: sentiment += 0.5
+        if "empty" in text_lower or "sad" in text_lower: sentiment -= 0.5
+
+        pattern = PatternStrand(
+            content=text,
+            sentiment=sentiment,
+            keywords=text.split(),
+            intensity=0.8 # Mock intensity
+        )
+
+        # 2. Principle Analysis (Reverse Engineering Logic)
+        # We map keywords to 'Axioms'
+        axiom = "Unknown"
+        base_freq = 432.0
+        intent = "Observation"
+
+        if "empty" in text_lower:
+            axiom = "The Void (Lack of Being)"
+            base_freq = 100.0 # Low freq for emptiness
+            intent = "Seeking Fullness"
+        elif "love" in text_lower:
+            axiom = "The Union (Resonance)"
+            base_freq = 528.0 # Love freq
+            intent = "Connection"
+
+        principle = PrincipleStrand(
+            axiom=axiom,
+            intent=intent,
+            base_frequency=base_freq
+        )
+
+        return DoubleHelix(pattern, principle)
 
 class BodyBridge(ABC):
     """

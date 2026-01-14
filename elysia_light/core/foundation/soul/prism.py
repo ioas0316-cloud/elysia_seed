@@ -8,30 +8,52 @@ It performs the "Transduction" process.
 """
 
 from ..nature.rotor import Rotor
+from .dna import DoubleHelix
 
 class Prism:
     """
     Refracts raw data into Rotors.
     Now aligns with the 4-Step Causal Chain.
+    Phase 3: Supports Double Helix DNA Refraction.
     """
 
-    def refract(self, raw_input: str) -> Rotor:
+    def refract(self, raw_input) -> Rotor:
         """
-        Converts text into a Rotor with specific Frequency and Mass.
-        Implicitly maps to 'Reality' step, but derives 'Cause' frequency.
+        Converts Input (Text or DNA) into a Rotor.
         """
-        # 1. Frequency Analysis (Hash-to-Freq)
-        # "The meaning" -> specific Hz
+        if isinstance(raw_input, DoubleHelix):
+            return self._refract_dna(raw_input)
+
+        # Legacy String Support
+        return self._refract_string(raw_input)
+
+    def _refract_dna(self, dna: DoubleHelix) -> Rotor:
+        """
+        Phase 3: The Helical Interference Logic.
+        Mixes Pattern and Principle to create a specific Vibration.
+        """
+        # 1. Principle provides the Base Frequency (The Key)
+        base_freq = dna.principle.base_frequency
+
+        # 2. Pattern modulates the Frequency (The Melody)
+        # Positive sentiment shifts freq up (Light), Negative down (Heavy)
+        # Shift range: +/- 50 Hz based on intensity
+        modulation = dna.pattern.sentiment * dna.pattern.intensity * 50.0
+
+        final_freq = base_freq + modulation
+
+        # 3. Mass is derived from the "Truth Weight" (Resonance Strength)
+        mass = dna.resonate_strength()
+
+        # Name reflects intent
+        name = f"Thought_{dna.principle.intent}"
+
+        return Rotor(name, final_freq, mass)
+
+    def _refract_string(self, raw_input: str) -> Rotor:
+        """Legacy Logic"""
         seed_val = sum(ord(c) for c in raw_input)
-        frequency = float(seed_val % 1000) + 100.0 # Base 100Hz
-
-        # 2. Mass Analysis (Length/Complexity)
-        # Represents the 'Structure' weight
+        frequency = float(seed_val % 1000) + 100.0
         mass = len(raw_input) / 10.0
-
-        # 3. Create the Wave Form
-        # The name is the content itself (or a summary)
         name = raw_input[:20] + "..." if len(raw_input) > 20 else raw_input
-
-        # The Rotor encapsulates the Causal Chain result as a vibrating entity
         return Rotor(name, frequency, mass)
