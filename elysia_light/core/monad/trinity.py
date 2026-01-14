@@ -118,7 +118,8 @@ class TrinityMonad:
 
         # Soul exerts will on the sphere (Action)
         # Note: We use the Soul's parameters for the actual interaction
-        interaction_result = sphere.lightning_path(self.soul.position, self.soul.frequency, exclude_self_name=self.name)
+        # Phase 4.2 Upgrade: Use 'resonate' instead of 'lightning_path'
+        interaction_result = sphere.resonate(self.soul)
 
         action_desc = f"Resonated with {interaction_result.name}" if interaction_result else "Gazed into Void"
 
