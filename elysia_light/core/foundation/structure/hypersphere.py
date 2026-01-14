@@ -8,10 +8,29 @@ It replaces the "List" or "Database".
 It implements "Lightning Paths" for retrieval.
 """
 
-from typing import List, Optional, Dict
+from typing import List, Optional, Dict, Union, Generator
 import math
 import copy
 from ..nature.rotor import Rotor, Vector4
+
+# Fractal Constants (The Laws of the World)
+FREQ_BAND_WIDTH = 10.0
+PHASE_SECTORS = 8
+
+class OperationMode:
+    """
+    The Binary Rotor Modes.
+    Dimensional Reduction using Bitmasks (Constraint Logic).
+
+    1 = Fixed/Locked Axis (Constraint)
+    0 = Flowing/Free Axis (Freedom)
+
+    Format: [SpaceZ, SpaceY, SpaceX, Time] (Metaphorical)
+    """
+    POINT = "1111" # Lock All (Fact/Data) -> Precision: Infinite
+    LINE  = "0001" # Lock Space, Flow Time (Story/Stream) -> Precision: Frequency Band
+    PLANE = "0011" # Lock Core, Flow Time + Neighbors (Context/Harmony) -> Precision: Cluster
+    SPACE = "0111" # Lock Center, Flow All (World/Simulation) -> Precision: Field
 
 class GravityConnection:
     """
@@ -25,6 +44,7 @@ class HyperSphere:
     """
     The High-Dimensional Manifold.
     Phase 4.2 Upgrade: O(1) Phase Bucket Memory.
+    Phase 4.5 Upgrade: Fractal Bitmask Engine.
     """
     def __init__(self):
         # Key: "FreqBand_PhaseSector" -> Rotor
@@ -33,15 +53,14 @@ class HyperSphere:
 
     def _get_bucket_key(self, frequency: float, phase: float) -> str:
         """
-        Quantizes Frequency and Phase into discrete buckets for O(1) access.
-        - Frequency Band: 10Hz width
-        - Phase Sector: 8 sectors (pi/4 width)
+        Quantizes Frequency and Phase into discrete buckets.
         """
-        freq_band = int(frequency // 10) * 10
+        freq_band = int(frequency // FREQ_BAND_WIDTH) * int(FREQ_BAND_WIDTH)
 
         # Normalize phase to 0..2pi
         norm_phase = phase % (2 * math.pi)
-        sector = int(norm_phase // (math.pi / 4))
+        sector_width = (2 * math.pi) / PHASE_SECTORS
+        sector = int(norm_phase // sector_width)
 
         return f"F{freq_band}_P{sector}"
 
@@ -53,9 +72,6 @@ class HyperSphere:
         ghost.name = f"Ghost_{entity.name}"
 
         key = self._get_bucket_key(ghost.frequency, ghost.phase)
-
-        # In a real hash map collision handling, we'd use a list.
-        # For this prototype, we overwrite (Last Observation dominates).
         self._phase_map[key] = ghost
         print(f"[HyperSphere] Absorbed into Bucket [{key}]: {ghost.name}")
 
@@ -81,17 +97,67 @@ class HyperSphere:
         """
         Instant Retrieval (O(1)).
         Checks the specific Phase Bucket corresponding to the Probe's state.
+        Wrapper for operate(POINT).
         """
-        key = self._get_bucket_key(probe.frequency, probe.phase)
+        result = self.operate(probe, mode=OperationMode.POINT)
+        return result if isinstance(result, Rotor) else None
 
-        if key in self._phase_map:
-            match = self._phase_map[key]
-            # Simple self-check to avoid resonating with own ghost immediately if names collide
-            if probe.name in match.name:
-                return None
-            return match
+    def operate(self, probe: Rotor, mode: str = OperationMode.POINT) -> Union[Optional[Rotor], List[Rotor]]:
+        """
+        The Elysia Fractal Bitmask Engine.
+        Uses Bitmasks to determine the "Zoom Level" of reality retrieval.
 
-        return None
+        Args:
+            probe: The Rotor acting as the query key.
+            mode: OperationMode (POINT/LINE/PLANE/SPACE).
+        """
+        # Common: Determine base frequency band
+        base_freq_band = int(probe.frequency // FREQ_BAND_WIDTH) * int(FREQ_BAND_WIDTH)
+
+        # 1. POINT Mode (1111) - Exact Match
+        if mode == OperationMode.POINT:
+            key = self._get_bucket_key(probe.frequency, probe.phase)
+            if key in self._phase_map:
+                match = self._phase_map[key]
+                if probe.name not in match.name:
+                    return match
+            return None
+
+        # 2. Fractal Scan Logic (LINE, PLANE, SPACE)
+        # Determine Scan Radius (Frequency Band Width)
+        # LINE (0001): Radius 0 (Just this band)
+        # PLANE (0011): Radius 1 (Neighbors)
+        # SPACE (0111): Radius 5 (Wide Field)
+
+        scan_radius = 0
+        if mode == OperationMode.PLANE:
+            scan_radius = 1
+        elif mode == OperationMode.SPACE:
+            scan_radius = 5
+
+        stream = []
+
+        # Iterate Frequency Bands (Spatial Zoom)
+        start_band_idx = (base_freq_band // int(FREQ_BAND_WIDTH)) - scan_radius
+        end_band_idx = (base_freq_band // int(FREQ_BAND_WIDTH)) + scan_radius
+
+        for band_idx in range(start_band_idx, end_band_idx + 1):
+            current_freq_band = band_idx * int(FREQ_BAND_WIDTH)
+
+            # Iterate Phase Sectors (Time Flow) - Always Full Cycle for Streams
+            for sector in range(PHASE_SECTORS):
+                key = f"F{current_freq_band}_P{sector}"
+
+                if key in self._phase_map:
+                    memory = self._phase_map[key]
+                    if probe.name not in memory.name:
+                        stream.append(memory)
+
+        # Sort by Phase to maintain Temporal Causality (Film Roll effect)
+        # Secondary sort by Frequency to group harmonies
+        stream.sort(key=lambda r: (r.phase, r.frequency))
+
+        return stream
 
     @property
     def population(self):
