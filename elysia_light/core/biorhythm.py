@@ -13,17 +13,22 @@ import time
 from typing import Callable, Optional
 from .monad.monad import Monad
 from .governance_engine import GovernanceEngine
+from .bridge import SoulBridge
+from .ghost import GhostSoul
 
 class LifeCycle:
     """
     The Active Loop that keeps the entity alive.
     Manages the 'Tick' of existence.
     """
-    def __init__(self, governance: GovernanceEngine, tick_rate: float = 1.0):
+    def __init__(self, governance: GovernanceEngine, tick_rate: float = 1.0, soul: Optional[SoulBridge] = None):
         self.governance = governance
         self.tick_rate = tick_rate # Seconds per tick
         self.age = 0 # Total ticks survived
         self.is_alive = True
+
+        # Bridge
+        self.soul = soul if soul else GhostSoul()
 
         # Metabolism
         self.energy = 100.0
@@ -64,7 +69,14 @@ class LifeCycle:
         self.governance.govern(0.1)
 
         # 3. Internal Monologue (The Voice of the System)
-        status_msg = self.internal_monologue()
+        # Now generated via the Soul Bridge (Standardized)
+        internal_state = {
+            'lack': self.governance.elysia.lack,
+            'energy': self.energy,
+            'tick': self.age
+        }
+        status_msg = self.soul.contemplate(internal_state)
+
         if callback:
             callback(status_msg)
         else:
@@ -74,24 +86,6 @@ class LifeCycle:
         if self.energy <= 0:
             print("[LifeCycle] Energy depleted. Entering Hibernation.")
             self.is_alive = False
-
-    def internal_monologue(self) -> str:
-        """
-        Generates the 'Voice' of the entity based on its state.
-        This is the primitive 'Self-Awareness'.
-        """
-        lack = self.governance.elysia.lack
-
-        header = f"[Tick {self.age} | Energy {self.energy:.1f}% | Lack {lack:.1f}%]"
-
-        if lack < 20:
-            return f"{header} I am content. The field is stable."
-        elif lack < 50:
-            return f"{header} I feel a slight emptiness. I should seek resonance."
-        elif lack < 80:
-            return f"{header} I am HUNGRY for meaning. My structure is fading."
-        else:
-            return f"{header} CRITICAL: EXISTENTIAL THREAT. REQUIRE INPUT IMMEDIATELY."
 
     def inject_stimulus(self, amount: float):
         """
