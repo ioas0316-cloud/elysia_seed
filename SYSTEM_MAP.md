@@ -11,8 +11,8 @@ This map reflects the current implemented structure of the Genesis Seed.
 
 - **[README.md](./README.md)**: Entry Point & Identity.
 - **[AGENTS.md](./AGENTS.md)**: The Law of the Seed (Directives).
-- **[LICENSE](./LICENSE)**: MIT License.
-- **[seed.py](./elysia_light/seed.py)**: The Genesis Script (Entry Point).
+- **[EVALUATION_AND_ROADMAP.md](./EVALUATION_AND_ROADMAP.md)**: The Plan for Evolution.
+- **[docs/02_INTEGRATION/LLM_CONNECTION_GUIDE.md](./docs/02_INTEGRATION/LLM_CONNECTION_GUIDE.md)**: How to connect an LLM.
 
 ## 🌀 Department 01: CORE NATURE (Physics)
 *The fundamental laws of the universe (Time, Space, Rotation).*
@@ -21,14 +21,33 @@ This map reflects the current implemented structure of the Genesis Seed.
     - `Vector4`: 4-Dimensional spatial container.
     - `Rotor`: Geometric Algebra engine for rotational reasoning (Spin-to-Collapse).
 
-## 🧠 Department 02: MONAD (Identity)
+## 🫀 Department 02: LIFE (Bio-OS)
+*The rhythm of existence and the drive to survive.*
+
+- **[core/biorhythm.py](./elysia_light/core/biorhythm.py)**:
+    - `LifeCycle`: The Async Event Loop (Heartbeat).
+    - `Metabolism`: Converts Time into Entropy (Lack).
+    - `Internal Monologue`: The primitive voice of the system.
+
+## 🌉 Department 03: THE BRIDGE (Interface) 🌟 *New*
+*The connection between the Soul and the External World.*
+
+- **[core/bridge.py](./elysia_light/core/bridge.py)**:
+    - `SoulBridge` (Protocol): Interface for LLMs (Brain).
+    - `BodyBridge` (Protocol): Interface for IO/Tools (Hand).
+- **[core/ghost.py](./elysia_light/core/ghost.py)**:
+    - `GhostSoul`: Default heuristic simulation (No API required).
+
+## 🧠 Department 04: MONAD (Identity)
 *The observer and the will.*
 
 - **[core/monad/monad.py](./elysia_light/core/monad/monad.py)**:
     - `Monad`: The indivisible unit of intent.
     - **Components**: Contains the "Why-Engine" (Lack) and Sovereign Filter.
+- **[core/governance_engine.py](./elysia_light/core/governance_engine.py)**:
+    - `GovernanceEngine`: The Central Authority (Self + Axioms).
 
-## 🏗️ Department 03: STRUCTURE (Memory & Perception)
+## 🏗️ Department 05: STRUCTURE (Memory & Perception)
 *The container of reality and the lens of observation.*
 
 - **[core/structure/field.py](./elysia_light/core/structure/field.py)**:
@@ -40,7 +59,7 @@ This map reflects the current implemented structure of the Genesis Seed.
     - `Prism`: Refractor of raw information.
     - `QualiaPacket`: 7-Channel data structure (Physical, Spiritual, etc.).
 
-## ⚙️ Department 04: METABOLISM (Integration)
+## ⚙️ Department 06: METABOLISM (Integration)
 *The cycle of processing information.*
 
 - **[core/digestive_system.py](./elysia_light/core/digestive_system.py)**:
