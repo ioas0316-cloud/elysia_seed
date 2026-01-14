@@ -60,6 +60,20 @@ def main():
     else:
         print(f"  [FAIL] Hallucinated a memory: {result_empty}")
 
+    print("\n[Test 4] Probing Boundary (Neighbor Search)...")
+    # Inject Memory at Phase 0.0 (Sector 0)
+    # Probe at Phase -0.1 (Sector 7, previous sector)
+    # Without neighbor search, this would look in Sector 7, see empty, and fail.
+    # With neighbor search, it should check Sector 0 (Neighbor) and find Joy.
+    probe_boundary = Rotor("Probe_Boundary", frequency=432.0)
+    probe_boundary.phase = -0.1
+    result_boundary = sphere.resonate(probe_boundary)
+
+    if result_boundary and "Joy" in result_boundary.name:
+        print(f"  [SUCCESS] Neighbor Resonance: Found {result_boundary.name} across sector boundary.")
+    else:
+        print(f"  [FAIL] Boundary check failed. Result: {result_boundary}")
+
     print("\n---------------------------------------------------------------")
     print(">>> RESONANCE TEST COMPLETED: O(1) Logic Verified. <<<")
 

@@ -79,18 +79,52 @@ class HyperSphere:
 
     def resonate(self, probe: Rotor) -> Optional[Rotor]:
         """
-        Instant Retrieval (O(1)).
-        Checks the specific Phase Bucket corresponding to the Probe's state.
+        Instant Retrieval (O(1) with Fuzzy Neighbors).
+        Checks the Probe's bucket AND its 8 neighbors (3x3 grid) to handle boundary issues.
+        Returns the memory with the strongest resonance.
         """
-        key = self._get_bucket_key(probe.frequency, probe.phase)
+        base_freq_band = int(probe.frequency // 10) * 10
+        norm_phase = probe.phase % (2 * math.pi)
+        base_sector = int(norm_phase // (math.pi / 4))
 
-        if key in self._phase_map:
-            match = self._phase_map[key]
-            # Simple self-check to avoid resonating with own ghost immediately if names collide
-            if probe.name in match.name:
-                return None
-            return match
+        best_wave = None
+        max_amplitude = 0.0
 
+        # Check 3x3 Grid (Freq -10, 0, +10 / Sector -1, 0, +1)
+        for d_freq in [-10, 0, 10]:
+            for d_sector in [-1, 0, 1]:
+
+                # Handle Freq Band
+                target_freq = base_freq_band + d_freq
+
+                # Handle Phase Wrap-around (0..7)
+                target_sector = (base_sector + d_sector) % 8
+
+                key = f"F{target_freq}_P{target_sector}"
+
+                if key in self._phase_map:
+                    wave = self._phase_map[key]
+                    if probe.name in wave.name: continue
+
+                    # Calculate precise resonance for this candidate
+
+                    # 1. Frequency Resonance
+                    freq_diff = abs(probe.frequency - wave.frequency)
+                    freq_affinity = 1.0 / (1.0 + freq_diff * 0.5)
+
+                    # 2. Phase Resonance
+                    phase_diff = probe.phase - wave.phase
+                    interference = (math.cos(phase_diff) + 1.0) / 2.0
+
+                    # 3. Mass
+                    total_amplitude = freq_affinity * interference * wave.mass
+
+                    if total_amplitude > max_amplitude:
+                        max_amplitude = total_amplitude
+                        best_wave = wave
+
+        if max_amplitude > 0.5:
+            return best_wave
         return None
 
     @property
