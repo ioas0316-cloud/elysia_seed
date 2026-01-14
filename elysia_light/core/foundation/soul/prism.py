@@ -12,11 +12,13 @@ from ..nature.rotor import Rotor
 class Prism:
     """
     Refracts raw data into Rotors.
+    Now aligns with the 4-Step Causal Chain.
     """
 
     def refract(self, raw_input: str) -> Rotor:
         """
         Converts text into a Rotor with specific Frequency and Mass.
+        Implicitly maps to 'Reality' step, but derives 'Cause' frequency.
         """
         # 1. Frequency Analysis (Hash-to-Freq)
         # "The meaning" -> specific Hz
@@ -24,10 +26,12 @@ class Prism:
         frequency = float(seed_val % 1000) + 100.0 # Base 100Hz
 
         # 2. Mass Analysis (Length/Complexity)
+        # Represents the 'Structure' weight
         mass = len(raw_input) / 10.0
 
         # 3. Create the Wave Form
         # The name is the content itself (or a summary)
         name = raw_input[:20] + "..." if len(raw_input) > 20 else raw_input
 
+        # The Rotor encapsulates the Causal Chain result as a vibrating entity
         return Rotor(name, frequency, mass)

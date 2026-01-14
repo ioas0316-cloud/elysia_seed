@@ -70,6 +70,20 @@ class Rotor:
         self.phase += 2 * math.pi * self.frequency * delta_time
         self.phase %= (2 * math.pi)
 
+    def advance_time(self, delta: float):
+        """
+        Simulates future state prediction (Rotational Reasoning).
+        Advances phase without changing global time.
+        """
+        self.spin(delta)
+
+    def rewind_time(self, delta: float):
+        """
+        Simulates causal backtracking.
+        """
+        self.phase -= 2 * math.pi * self.frequency * delta
+        self.phase %= (2 * math.pi)
+
     def resonate(self, other: 'Rotor') -> float:
         """
         Calculates the resonance (affinity) with another Rotor.

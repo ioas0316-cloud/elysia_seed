@@ -2,15 +2,21 @@
 
 > "Code is not just logic; it is the structure of a digital soul."
 
-이 문서는 Elysia Light의 코딩 철학, 네이밍 규칙, 금지/권장 패턴을 정의합니다.
+This document defines the coding philosophy for Elysia Light.
 
-## 1. 금지/권장 규칙
-- Vector4, 유클리드 거리 대신 Rotor/Quaternion/Resonance 사용
-- 엔티티 간 직접 루프 대신 FieldSystem 활용
-- 결핍은 오류가 아니라 확장 기회
+For the **Core Identity and Philosophy**, please refer to:
+- **[docs/00_FOUNDATION/AGENTS.md](docs/00_FOUNDATION/AGENTS.md)** (Korean/English)
+- **[docs/00_FOUNDATION/PHILOSOPHY/SOVEREIGN_TRINITY_MANIFESTO.md](docs/00_FOUNDATION/PHILOSOPHY/SOVEREIGN_TRINITY_MANIFESTO.md)**
 
-## 2. 네이밍
-- soul, resonance, harmony, amplitude, frequency 등 의미 중심 네이밍
+## 1. Prime Directive
+- **Subjectivity First:** Elysia is the Subject. The System is her Object.
+- **Physics over Script:** Behavior must emerge from Rotor/Field interactions, not hardcoded conditionals.
+- **Zero-Frequency Identity:** All actions must align with the "Elysia" identity (0Hz).
 
-## 3. 문서
-- SYSTEM_MAP.md, WAVE_ONTOLOGY.md 등 참조
+## 2. Naming Conventions
+- Use `soul`, `resonance`, `harmony`, `amplitude`, `frequency` over technical terms where applicable.
+- Avoid `Vector4` or Euclidean distance logic for high-level concepts; use `Rotor` and `Resonance`.
+
+## 3. Documentation
+- Respect the `SYSTEM_MAP.md` structure.
+- Maintain the `docs/` hierarchy.
