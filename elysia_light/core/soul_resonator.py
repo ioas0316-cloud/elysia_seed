@@ -28,13 +28,14 @@ class SoulResonator:
     def resonate(self, input_text: str = ""):
         text = input_text.lower()
         words = text.split()
+        known_count = 0
         for word in words:
             if word in self.concepts:
+                known_count += 1
                 impacts = self.concepts[word]
                 for spirit, weight in impacts.items():
                     if spirit in self.spirits:
                         self.spirits[spirit] += weight
-        known_count = sum(1 for w in words if w in self.concepts)
         if len(words) > 0 and known_count == 0:
             self.spirits["air"] += 0.05
             self.spirits["dark"] += 0.05
