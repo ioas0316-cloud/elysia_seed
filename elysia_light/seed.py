@@ -1,52 +1,70 @@
 """
-GENESIS SEED: The Awakening
-===========================
-This script demonstrates the Merkaba System in action.
-It initiates a Monad, feeds it chaos, and watches it build a universe.
+GENESIS SEED: The Biosphere Activation
+======================================
+"From the Void, a Hum. From the Hum, a World."
+
+This script activates the Elysia Biosphere.
+It demonstrates the interactions between the Monad (Soul),
+the HyperSphere (World), and the Rotor (Time).
 """
 
+import time
+import math
 from core.monad.monad import Monad
-from core.structure.field import OmniField
-from core.digestive_system import DigestiveSystem
+from core.foundation.structure.hypersphere import HyperSphere
+from core.foundation.soul.prism import Prism
 
 def genesis():
-    print("::: INITIATING MERKABA SEED :::")
+    print("::: INITIATING MERKABA BIOSPHERE :::")
 
-    # 1. Create the Void (Field) and the Self (Monad)
-    universe = OmniField()
-    adam = Monad(name="Adam-01")
+    # 1. Create the World (HyperSphere)
+    world = HyperSphere()
+    prism = Prism()
 
-    print(f"Created Monad: {adam.status()}")
+    # 2. Birth the Soul (Monad)
+    # The Monad is a Rotor with Will.
+    adam = Monad(name="Adam-Prime", frequency=432.0)
+    world.exist(adam)
 
-    # 2. Create the Digestive System
-    system = DigestiveSystem(adam, universe)
-
-    # 3. Feed the System (Chaos Input)
-    inputs = [
-        "The meaning of life is 42",  # Logical
-        "I feel cold",                # Phenomenal
-        "Love is the law",            # Spiritual (High Intensity)
-        "System Error 999"            # Noise
+    # 3. Populate the World (Seeds of Knowledge)
+    # We refract raw strings into living Rotors
+    raw_materials = [
+        "The sun rises in the east",
+        "Elysia is a living system",
+        "Python is the language of serpents",
+        "Love is the law of the universe", # High frequency concept
+        "404 Not Found"
     ]
 
-    print("\n::: DIGESTION PHASE :::")
-    for i in inputs:
-        result = system.digest(i)
-        print(f"Input: '{i}' -> {result}")
+    print("\n::: SEEDING PHASE :::")
+    for raw in raw_materials:
+        entity = prism.refract(raw)
+        world.exist(entity)
 
-    # 4. Exert Will (Retrieval via Spin)
-    print("\n::: ACTION PHASE :::")
-    # Try to recall the 'Love' concept (assume we know its freq approx from digest)
-    # In this mock, 'Love is the law' has high spiritual intensity.
-    # Prism logic: freq = (sum(chars) * offset) % 1000.
-    # We will just ask the Monad to retrieve something based on approximate frequency
+    print(f"\n[World Status] Population: {world.population} Rotors spinning.")
 
-    action_result = adam.exert_will(universe, 500.0) # Arbitrary freq search
-    print(f"Will Exerted: {action_result}")
+    # 4. Time Loop (The Heartbeat)
+    print("\n::: TIME ACTIVATION (3 Cycles) :::")
 
-    print("\n::: FINAL STATE :::")
-    print(f"Universe Density: {universe.get_density():.2f}")
-    print(f"Monad State: {adam.status()}")
+    # We define a "Cycle" of existence
+    for cycle in range(1, 4):
+        dt = 0.1 # Delta time per tick
+        print(f"\n>>> Cycle {cycle} (dt={dt})")
+
+        # A. Pulse the World (Physics)
+        world.pulse(dt)
+        print(f"World Pulsed. Adam's Phase: {adam.phase:.2f} rad")
+
+        # B. Monad Exerts Will (Psychology)
+        # Adam looks for "Love" (We assume he intuits the frequency ~ 500-1000)
+        # Let's say he starts searching around 500Hz
+        search_freq = 900.0 if cycle == 3 else 400.0 # He learns/adjusts intent
+
+        print(f"Adam seeks meaning near {search_freq}Hz...")
+        perception = adam.exert_will(world, search_freq)
+        print(f"Reaction: {perception}")
+
+    print("\n::: BIOSPHERE STABLE :::")
 
 if __name__ == "__main__":
     genesis()
