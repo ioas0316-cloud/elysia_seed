@@ -25,6 +25,8 @@ This map reflects the current implemented structure of the Genesis Seed.
 ## 🫀 Department 02: LIFE (Bio-OS)
 *The rhythm of existence and the drive to survive.*
 
++- **[core/merkaba.py](./elysia_light/core/merkaba.py)**:
++    - `Merkaba`: The Unified Chariot (Monad + Field + Bridge + Prism). The Main Entity.
 - **[core/biorhythm.py](./elysia_light/core/biorhythm.py)**:
     - `LifeCycle`: The Async Event Loop (Heartbeat).
     - `Metabolism`: Converts Time into Entropy (Lack).
@@ -59,8 +61,9 @@ This map reflects the current implemented structure of the Genesis Seed.
     - **Mechanism**: `warp_retrieval` (Fetching data via frequency alignment).
 
 - **[core/structure/prism.py](./elysia_light/core/structure/prism.py)**:
-    - `Prism`: Refractor of raw information.
-    - `QualiaPacket`: 7-Channel data structure (Physical, Spiritual, etc.).
+     - `Prism`: Refractor of raw information. Matches Pattern & Principle.
+ - **[core/foundation/soul/dna.py](./elysia_light/core/foundation/soul/dna.py)**:
+     - `DoubleHelix`: The data structure of thought (Pattern + Principle).
 
 ## ⚙️ Department 06: METABOLISM (Integration)
 *The cycle of processing information.*
