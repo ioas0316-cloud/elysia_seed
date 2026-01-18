@@ -1,2 +1,12 @@
-# Elysia Light 필수 의존성
-# (필요시 아래에 패키지 추가)
+# Elysia Seed - Core Dependencies
+# ================================
+
+# Core Scientific
+numpy>=1.24.0
+
+# GPU Acceleration (Metal Nervous System)
+numba>=0.58.0
+
+# System Monitoring
+psutil>=5.9.0
+GPUtil>=1.4.0
