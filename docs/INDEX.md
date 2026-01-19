@@ -62,7 +62,8 @@ Elysia의 존재론적 원칙입니다.
 
 | 문서 | 설명 |
 | :--- | :--- |
-| [PRINCIPLES.md](4_PHILOSOPHY/PRINCIPLES.md) | 핵심 원칙 |
+| [GENESIS_ORIGIN.md](4_PHILOSOPHY/GENESIS_ORIGIN.md) | 존재론적 근간과 6차원 사고 원칙 |
+| [PRINCIPLES.md](4_PHILOSOPHY/PRINCIPLES.md) | 핵심 원칙과 하이퍼스피어 구조 |
 
 ---
 
