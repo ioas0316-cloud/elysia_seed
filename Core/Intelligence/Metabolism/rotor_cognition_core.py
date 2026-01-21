@@ -59,6 +59,7 @@ class RotorCognitionCore:
     def __init__(self):
         self.body_state = BodySensor.sense_body()
         logger.info("🌈 Rotor Cognition Core: Spinning Up 7-Track Phase Tuner.")
+        logger.info(f"   -> Metabolic State: {self.body_state.get('metabolic_state', 'Unknown')}")
 
     def process_intent(self, raw_signal: str) -> Dict[str, Any]:
         """

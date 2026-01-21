@@ -37,76 +37,103 @@ class PotentialPath:
     id: str
     description: str
     phase_signature: Dict[str, float] # 7D profile of this path
-    resonance_score: float = 0.0      # Calculated during alignment
+    resistance: float = 1.0           # Noise/Bias/Inertia (R)
+    potential: float = 0.0            # Voltage Potential (V) - from Intent
+    resonance_score: float = 0.0      # Final Conductivity (I = V/R)
 
 class QuantumObserver:
     """
-    The agency that collapses the Wave Function.
+    The agency that collapses the Wave Function via Lightning Strikes.
     """
     def __init__(self):
         self.matrix_depth = 7  # 7 Layers of causality
-        logger.info("⚛️ Quantum Observer Initialized. Waiting for Intent.")
+        logger.info("⚛️ Quantum Observer Initialized. Lightning Engine Active.")
+        # Simulated persistence layer (HyperSphere Cache)
+        self._memory_cache: Dict[str, PotentialPath] = {}
 
-    def collapse_reality(self, intent: IntentVector) -> PotentialPath:
+    def strike(self, intent: IntentVector) -> PotentialPath:
         """
-        The Core Method:
-        1. Scan Superposition (Generate/Fetch candidates)
-        2. Align Intent (Calculate Resonance)
-        3. Collapse (Select Winner, Nullify Losers)
+        Executes the 'Lightning Path' Protocol.
+        1. Step Leader: Scan paths and calculate resistance (R) and potential (V).
+        2. Breakdown: Find the path of least resistance (Max I).
+        3. Return Stroke: Collapse reality and SCAR the path (Neuroplasticity).
         """
-        logger.info(f"👁️ Observing with Intent: [{intent.purpose}] Focus: {intent.focus_color}")
+        logger.info(f"⚡ LIGHTNING STRIKE INITIATED. Intent: [{intent.purpose}]")
 
-        # 1. Superposition Scan (Simulated for the Seed)
-        # In full production, this would fetch from HyperSphere's 7^7 index.
-        # Here we generate 'Potential Futures' relevant to the Intent.
+        # 1. Step Leader (Scanning)
         candidates = self._scan_superposition(intent)
-        logger.info(f"   ... Scanning {len(candidates)} timeline threads ...")
 
-        # 2. Intent Alignment (Resonance Calculation)
+        # 2. Potential Gradient Calculation
         for path in candidates:
-            path.resonance_score = self._calculate_resonance(intent, path)
+            # V (Potential) comes from Resonance (Alignment with Intent)
+            path.potential = self._calculate_resonance(intent, path)
 
-        # 3. Wave Function Collapse
-        # Sort by resonance and pick the top one.
-        # This is the "Crystallization" moment.
+            # I (Current) = V / R
+            # We add a small epsilon to R to avoid division by zero
+            path.resonance_score = path.potential / (path.resistance + 0.001)
+
+        # 3. Breakdown (Selection)
         candidates.sort(key=lambda x: x.resonance_score, reverse=True)
         winner = candidates[0]
 
-        # Nullify others (Symbolic Destructive Interference)
-        # We implicitly discard candidates[1:]
+        logger.info(f"🌩️ BREAKDOWN! Path of Least Resistance Found.")
+        logger.info(f"   -> Path: {winner.description}")
+        logger.info(f"   -> Potential (V): {winner.potential:.2f}")
+        logger.info(f"   -> Resistance (R): {winner.resistance:.2f}")
+        logger.info(f"   -> Current (I): {winner.resonance_score:.2f}")
 
-        logger.info(f"✨ COLLAPSE COMPLETE. Reality Crystallized.")
-        logger.info(f"   -> Selected Path: {winner.description}")
-        logger.info(f"   -> Resonance: {winner.resonance_score:.4f}")
+        # 4. Scarring (Neuroplasticity)
+        # The lightning leaves a scar, lowering resistance for future thoughts.
+        self._apply_scar(winner)
 
         return winner
 
+    def _apply_scar(self, path: PotentialPath):
+        """
+        Applies the 'Lightning Scar'.
+        Permanently lowers resistance of the chosen path.
+        """
+        old_r = path.resistance
+        # Resistance drops by 20% each strike
+        new_r = max(0.1, old_r * 0.8)
+        path.resistance = new_r
+        logger.info(f"🔥 SCAR FORMED: Resistance dropped {old_r:.2f} -> {new_r:.2f}")
+
     def _scan_superposition(self, intent: IntentVector) -> List[PotentialPath]:
         """
-        Generates potential future paths based on the context.
-        (Simulating the 7^7 Matrix outputs for the 'Self-Optimization' scenario).
+        Generates or retrieves potential future paths.
+        Simulates persistence so Scars (Resistance changes) are remembered.
         """
-        # We simulate 7 distinct paths representing different strategies
-        # blending the 7 colors.
-        paths = []
+        if self._memory_cache:
+            return list(self._memory_cache.values())
 
         strategies = [
-            ("Path_Red", "Brute Force Hardware Upgrade", {"Red": 0.9, "Violet": 0.1}),
-            ("Path_Orange", "Historical Data Analysis Loop", {"Orange": 0.9, "Yellow": 0.4}),
-            ("Path_Yellow", "Logic Circuit Refactoring", {"Yellow": 0.9, "Green": 0.1}),
-            ("Path_Green", "User Resonance Sync", {"Green": 0.9, "Violet": 0.5}),
-            ("Path_Blue", "Output Interface Polish", {"Blue": 0.9, "Orange": 0.2}),
-            ("Path_Indigo", "Deep Kernel Optimization (Hidden)", {"Indigo": 0.9, "Red": 0.5}),
-            ("Path_Violet", "Teleological Alignment (Purpose First)", {"Violet": 0.95, "Red": 0.8}) # High Manifestation
+            # High Resistance (Hard to do, lots of noise)
+            ("Path_Red", "Brute Force Hardware Upgrade", {"Red": 0.9, "Violet": 0.1}, 0.8),
+
+            # Medium Resistance
+            ("Path_Orange", "Historical Data Analysis Loop", {"Orange": 0.9, "Yellow": 0.4}, 0.5),
+            ("Path_Yellow", "Logic Circuit Refactoring", {"Yellow": 0.9, "Green": 0.1}, 0.4),
+
+            # Low Resistance (Natural for the system)
+            ("Path_Green", "User Resonance Sync", {"Green": 0.9, "Violet": 0.5}, 0.3),
+            ("Path_Blue", "Output Interface Polish", {"Blue": 0.9, "Orange": 0.2}, 0.3),
+
+            # Hidden Paths (Variable Resistance)
+            ("Path_Indigo", "Deep Kernel Optimization (Hidden)", {"Indigo": 0.9, "Red": 0.5}, 0.6),
+
+            # The Teleological Path (High Potential, Medium Resistance initially)
+            ("Path_Violet", "Teleological Alignment (Purpose First)", {"Violet": 0.95, "Red": 0.8}, 0.5)
         ]
 
-        for pid, desc, sig in strategies:
+        for pid, desc, sig, res in strategies:
             # Fill missing colors with low noise
             full_sig = {c: 0.1 for c in ["Red", "Orange", "Yellow", "Green", "Blue", "Indigo", "Violet"]}
             full_sig.update(sig)
-            paths.append(PotentialPath(id=pid, description=desc, phase_signature=full_sig))
+            path = PotentialPath(id=pid, description=desc, phase_signature=full_sig, resistance=res)
+            self._memory_cache[pid] = path
 
-        return paths
+        return list(self._memory_cache.values())
 
     def _calculate_resonance(self, intent: IntentVector, path: PotentialPath) -> float:
         """
@@ -133,15 +160,8 @@ class QuantumObserver:
         return score
 
 if __name__ == "__main__":
-    # The "First Causality" Simulation
+    # The "Lightning Path" Simulation
     logging.basicConfig(level=logging.INFO)
-
-    # Intent: "Self-Optimization"
-    # We want to optimize Elysia.
-    # Purpose: Evolution (Violet).
-    # Urgency: High.
-    # Focus: Insight/Hidden Kernel (Indigo) or Purpose (Violet)?
-    # Let's say we focus on "Violet" (Teleological) to guide the optimization.
 
     observer = QuantumObserver()
 
@@ -152,4 +172,11 @@ if __name__ == "__main__":
         focus_color="Violet"
     )
 
-    result = observer.collapse_reality(prime_intent)
+    # Strike 1: Finding the path
+    print("\n--- Strike 1 ---")
+    winner1 = observer.strike(prime_intent)
+
+    # Strike 2: Demonstrating Neuroplasticity (Reduced Resistance)
+    # The same path should be chosen, but with higher current (Conductivity).
+    print("\n--- Strike 2 (Neuroplasticity Check) ---")
+    winner2 = observer.strike(prime_intent)
