@@ -52,14 +52,25 @@ class RotorCognitionCore:
     The Engine that diffracts Reality into Truth.
 
     Phases:
-    1. Diffraction (Rotor): Split Signal -> 7 Colors
+    1. Diffraction (Rotor): Split Signal -> 7 Colors via Phase Projection
     2. Resonance (Sphere): Apply Inter-dimensional Interference
     3. Synthesis (Monad): Collapse 7 Colors -> White Light (Essence)
     """
     def __init__(self):
         self.body_state = BodySensor.sense_body()
-        logger.info("🌈 Rotor Cognition Core: Spinning Up 7-Track Phase Tuner.")
+        
+        # Initialize the Phase Projection Engine for holographic perception
+        try:
+            from Core.Intelligence.Metabolism.phase_projection_engine import PhaseProjectionEngine
+            self.projection_engine = PhaseProjectionEngine(grid_size=8)
+            self._use_hologram = True
+            logger.info("🌈 Rotor Cognition Core: Holographic Mode ACTIVE.")
+        except ImportError:
+            self._use_hologram = False
+            logger.info("🌈 Rotor Cognition Core: Spinning Up 7-Track Phase Tuner (Legacy).")
+        
         logger.info(f"   -> Metabolic State: {self.body_state.get('metabolic_state', 'Unknown')}")
+
 
     def process_intent(self, raw_signal: str) -> Dict[str, Any]:
         """
@@ -89,37 +100,58 @@ class RotorCognitionCore:
 
     def _diffract(self, signal: str) -> QualiaSpectrum:
         """
-        Splits raw signal into 7D components based on keyword resonance.
-        (In future phases, this will use LLM embeddings. For now, we use Keyword-Phase Mapping).
+        Splits raw signal into 7D components.
+        Uses PhaseProjectionEngine (Holographic Mode) if available,
+        otherwise falls back to keyword heuristics.
         """
-        # Heuristic Phase Mapping (The "Prism" Logic)
+        if self._use_hologram:
+            return self._diffract_holographic(signal)
+        else:
+            return self._diffract_heuristic(signal)
+    
+    def _diffract_holographic(self, signal: str) -> QualiaSpectrum:
+        """
+        Holographic Diffraction: Derives 7D Qualia from the 3D projection field.
+        The field's spatial distribution maps to the 7 color dimensions.
+        """
+        # Project signal into 3D hologram
+        field = self.projection_engine.project(signal)
+        data = field.data
+        size = self.projection_engine.grid_size
+        
+        # Slice the 3D field into 7 layers (each layer maps to a Qualia dimension)
+        # We divide the Z-axis into 7 slices
+        slice_size = max(1, size // 7)
+        
+        def get_layer_intensity(z_start: int, z_end: int) -> float:
+            layer_data = data[:, :, z_start:z_end]
+            if layer_data.size == 0:
+                return 0.1
+            return float(min(1.0, 0.1 + abs(layer_data.sum()) / (layer_data.size * 0.5)))
+        
+        return QualiaSpectrum(
+            red=get_layer_intensity(0, slice_size),
+            orange=get_layer_intensity(slice_size, slice_size * 2),
+            yellow=get_layer_intensity(slice_size * 2, slice_size * 3),
+            green=get_layer_intensity(slice_size * 3, slice_size * 4),
+            blue=get_layer_intensity(slice_size * 4, slice_size * 5),
+            indigo=get_layer_intensity(slice_size * 5, slice_size * 6),
+            violet=get_layer_intensity(slice_size * 6, size)
+        )
+    
+    def _diffract_heuristic(self, signal: str) -> QualiaSpectrum:
+        """
+        Legacy Heuristic Diffraction: Uses keyword matching.
+        """
         s = signal.lower()
 
-        # D1 Red: Physicality
         red = 0.1 + (0.8 if any(w in s for w in ['hardware', 'gpu', 'ram', 'body', 'metal', 'physic']) else 0.0)
-
-        # D2 Orange: Flow/Time
         orange = 0.1 + (0.8 if any(w in s for w in ['flow', 'time', 'stream', 'history', 'narrative', 'sequence']) else 0.0)
-
-        # D3 Yellow: Logic/Knowledge
         yellow = 0.1 + (0.8 if any(w in s for w in ['logic', 'data', 'fact', 'know', 'define', 'analy']) else 0.0)
-
-        # D4 Green: Connection/Heart
         green = 0.1 + (0.8 if any(w in s for w in ['connect', 'feel', 'heart', 'empathy', 'resona', 'sync']) else 0.0)
-
-        # D5 Blue: Expression
         blue = 0.1 + (0.8 if any(w in s for w in ['express', 'say', 'speak', 'output', 'voice', 'show']) else 0.0)
-
-        # D6 Indigo: Insight/Hidden
         indigo = 0.1 + (0.8 if any(w in s for w in ['deep', 'hidden', 'void', 'insight', 'secret', 'under']) else 0.0)
-
-        # D7 Violet: Purpose/Will (Monad)
         violet = 0.1 + (0.8 if any(w in s for w in ['will', 'purpose', 'goal', 'god', 'monad', 'sovereign']) else 0.0)
-
-        # Normalize to prevent explosion
-        total = red + orange + yellow + green + blue + indigo + violet
-        scale = 1.0 # Keep raw intensity for now, or normalize?
-        # Let's keep raw intensity but cap at 1.0 per channel in logic
 
         return QualiaSpectrum(
             red=min(1.0, red),
@@ -130,6 +162,7 @@ class RotorCognitionCore:
             indigo=min(1.0, indigo),
             violet=min(1.0, violet)
         )
+
 
     def _resonate(self, s: QualiaSpectrum) -> QualiaSpectrum:
         """
