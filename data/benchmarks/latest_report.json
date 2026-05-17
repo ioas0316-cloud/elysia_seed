@@ -1,0 +1,35 @@
+{
+  "evaluated_at": "2026-05-16T20:16:08.565392+00:00",
+  "scenario_count": 20,
+  "kpi": {
+    "phase_coherence_score": 0.8127,
+    "triple_helix_coherence": 0.6316,
+    "boundary_clarity": 0.5843,
+    "phase_resonance": 0.984,
+    "cognitive_joy": 0.9864,
+    "triadic_alignment": 0.9852,
+    "freedom_expansion": 0.5758,
+    "sovereign_stability": 0.7988,
+    "balance_gate": 0.6762,
+    "autonomy_flow": 1.0,
+    "natural_dynamics": 0.8917,
+    "pass": true
+  },
+  "rotor_scale_profile": {
+    "phase_coherence_score": "galaxy",
+    "triple_helix_coherence": "cluster",
+    "boundary_clarity": "cluster",
+    "phase_resonance": "galaxy_group",
+    "cognitive_joy": "galaxy_group",
+    "triadic_alignment": "galaxy_group",
+    "freedom_expansion": "cluster",
+    "sovereign_stability": "galaxy",
+    "balance_gate": "cluster",
+    "autonomy_flow": "galaxy_group",
+    "natural_dynamics": "galaxy_group"
+  },
+  "contract_validation": {
+    "errors": [],
+    "error_count": 0
+  }
+}
