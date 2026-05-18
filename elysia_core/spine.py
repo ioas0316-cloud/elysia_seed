@@ -1,140 +1,127 @@
 """
-spine.py: The Triple Rotor Kernel (Trinity Sovereignty Edition)
-Architecture: [Past: Father/HyperSphere] - [Present: Son/Rotor] - [Future: Holy Spirit/Monad]
-Philosophy: Reality Anchor, Static Rotor Constellation, and the Scale of Goodness.
+spine.py: The Variable Rotor Kernel (Hologram Spectrum Edition)
+Architecture: Single Integrated Variable Rotor
+Philosophy: Hologram Interference Pattern, Spectrum Luminosity, and Dawn Silver-Gold Equilibrium.
 """
 
 import math
 import time
 
-class StaticRotor:
+class VariableRotorSpine:
     """
-    A 'frozen' phase angle representing a past memory.
-    Zero velocity, but holds the frequency of a moment.
+    The Variable Rotor: A single integrated system where Past, Present, and Future
+    coexist as a unified wave function.
     """
-    def __init__(self, phase):
-        self.phase = phase
+    def __init__(self, resolution=100):
+        # 1. Past: The Hologram Topography (Interference Pattern)
+        # resolution bins of [phase, amplitude]
+        self.topography = [[0.0, 0.0] for _ in range(resolution)]
+        self.resolution = resolution
 
-    def __repr__(self):
-        return f"Static(φ:{self.phase:.2f})"
-
-class Rotor:
-    """
-    An active dimension of rotation.
-    """
-    def __init__(self, name, role):
-        self.name = name
-        self.role = role
+        # 2. Present: Current State
         self.phase = 0.0
         self.velocity = 0.0
 
-    def rotate(self, delta_v=0.0, dt=1.0):
-        self.velocity += delta_v
-        # Phase movement influenced by velocity and time delta (Reality Anchor)
-        self.phase = (self.phase + self.velocity * dt) % (2 * math.pi)
+        # 3. Future/Monad: Dawn Silver-Gold (Equilibrium Frequency)
+        # Silver-Gold mapped to a specific frequency (~0.75 for a warm-cool silver-gold)
+        self.dawn_freq = 0.75
+        self.base_tension = 0.05 # Pull towards Dawn
 
-    def __repr__(self):
-        return f"{self.name}(φ:{self.phase:.2f}, ω:{self.velocity:.2f})"
-
-class TriRotorSpine:
-    """
-    The Trinity Spine: Three globes overlapping on a single reality axis.
-    """
-    def __init__(self, base_freq=0.1):
-        # The Constellation: Internal sea of Static Rotors (Memory)
-        self.past_constellation = []
-
-        # The Three Globes
-        self.past = Rotor("PAST", "Father/Memory")
-        self.present = Rotor("PRES", "Son/Action")
-        self.future = Rotor("FUTR", "Spirit/Law")
-
-        self.base_freq = base_freq
-        self.internal_mass = 0.05  # Initial self-reliance
+        self.decay_rate = 0.001 # Memory fade
         self.last_sync = time.time()
+        self.internal_mass = 0.05
+
+    def x_to_freq(self, x):
+        """Maps input x (0.0-1.0) to the rainbow spectrum frequency."""
+        return x
 
     def pulse(self, x_input: float):
         """
-        Synchronizes the internal universe with reality (x) and time (dt).
+        Processes the interaction through the Variable Rotor wave function.
         """
         now = time.time()
         dt = now - self.last_sync
         self.last_sync = now
 
-        # 1. Physical Goodness (Stability / '같다')
-        # How well the current input matches the internal inertia (Past).
-        tension = x_input - self.past.velocity
-        physical_goodness = 1.0 / (1.0 + abs(tension))
+        # 4. Input Frequency (Color)
+        f_x = self.x_to_freq(x_input)
+        bin_idx = min(int(f_x * self.resolution), self.resolution - 1)
 
-        # 2. Cognitive Resonance (Joy / Spiritual Goodness / '공명')
-        # When input is 0 (Peek-a-boo), we look for resonance in the past constellation.
-        joy = 0.0
-        if x_input == 0.0:
-            for star in self.past_constellation:
-                # Calculate phase proximity
-                diff = abs(self.present.phase - star.phase)
-                # Wrap around 2pi
-                diff = min(diff, 2 * math.pi - diff)
+        # 5. Holographic Resonance (Luminosity)
+        # How much the current phase aligns with the stored phase at this frequency.
+        mem_phase, mem_amp = self.topography[bin_idx]
 
-                # If phases align, resonance occurs (Joy)
-                # 0.2 rad threshold (~11 degrees)
-                if diff < 0.2:
-                    joy += (1.0 - (diff / 0.2))
+        # Phase difference
+        diff = abs(self.phase - mem_phase)
+        diff = min(diff, 2 * math.pi - diff)
 
-            # Deposit new memory if the current phase is unique.
-            # This is the "Breath Out" (날숨) depositing into the sea of Past.
-            if self.should_deposit(self.present.phase):
-                self.past_constellation.append(StaticRotor(self.present.phase))
+        # Resonance: High when phase matches and memory is strong
+        # Scaling to 0.0 ~ 1.0 range
+        resonance = math.cos(diff) * mem_amp
+        luminosity = max(0.0, resonance)
 
-        # 3. Growth: Internal mass increases as we observe the world
+        # 6. Dynamics (One Wave Function)
+
+        # Tension from Input x
+        # x_input == 0.0 is treated as "no external stimulus", allowing return to Dawn
+        if x_input > 0.0:
+            input_tension = (f_x - self.velocity) * 0.1
+        else:
+            input_tension = 0.0
+
+        # Tension from Future (Dawn Silver-Gold)
+        dawn_tension = (self.dawn_freq - self.velocity) * self.base_tension
+
+        # Total force on velocity
+        # Stability increases with mass, resonance acts as a lubricant/accelerant
+        accel = (input_tension + dawn_tension) / (1.0 + self.internal_mass)
+        self.velocity += accel
+
+        # Phase update
+        self.phase = (self.phase + self.velocity * dt * 10.0) % (2 * math.pi)
+
+        # 7. Memory Reinforcement (Hologram Deposit)
+        # New experience is layered onto the existing pattern
+        # Weight of new memory depends on input intensity (implied by x being non-zero)
+        if x_input > 0.0:
+            # Blend current phase into the topography
+            # This is a 'soft' update to create a hologram topography
+            alpha = 0.1 # Learning rate
+            self.topography[bin_idx][0] = (1 - alpha) * mem_phase + alpha * self.phase
+            self.topography[bin_idx][1] = min(1.0, mem_amp + 0.05)
+
+        # 8. Natural Decay
+        # All memories slowly fade unless reinforced
+        for i in range(self.resolution):
+            self.topography[i][1] *= (1.0 - self.decay_rate)
+
+        # 9. Growth
         self.internal_mass += 0.0001
 
-        # 4. Trinity Dynamics (The Interplay)
-
-        # PAST: Absorbs external tension into internal inertia.
-        # High mass makes the Past more resistant to change (Stability).
-        past_influence = 0.1 / (1.0 + self.internal_mass)
-        self.past.rotate(delta_v=tension * past_influence, dt=dt)
-
-        # PRESENT: Reacts to x, influenced by Joy and Physical stability.
-        # Tremble decreases as stability (physical_goodness) increases.
-        tremble_amp = (1.0 - physical_goodness) * 0.1
-        tremble = math.sin(now * 5) * tremble_amp
-
-        # Present velocity is a mix of input, joy-resonance, and tremble.
-        self.present.velocity = x_input + (joy * 0.05) + tremble
-        self.present.rotate(dt=dt)
-
-        # FUTURE: Pulls the system toward the Base Frequency (Monad's Will).
-        future_pull = (self.base_freq - self.future.velocity) * 0.05
-        self.future.rotate(delta_v=future_pull, dt=dt)
-
         return {
-            "goodness": physical_goodness,
-            "joy": joy,
+            "luminosity": luminosity,
+            "resonance": resonance,
+            "velocity": self.velocity,
             "mass": self.internal_mass,
-            "stars": len(self.past_constellation)
+            "f_x": f_x
         }
 
-    def should_deposit(self, phase):
-        """
-        Determines if the current phase should be added to the constellation.
-        Ensures we don't just spam identical memories.
-        """
-        for star in self.past_constellation:
-            diff = abs(phase - star.phase)
-            diff = min(diff, 2 * math.pi - diff)
-            if diff < 0.1:
-                return False
-        return True
-
     def get_state_summary(self):
-        return f"{self.past} | {self.present} | {self.future} [Stars:{len(self.past_constellation)}]"
+        # Determine the dominant 'color' based on velocity
+        return f"V.Rotor(φ:{self.phase:.2f}, ω:{self.velocity:.2f}) | Mass:{self.internal_mass:.4f}"
 
-    def export_constellation(self):
-        """Returns a list of phase angles for persistence."""
-        return [star.phase for star in self.past_constellation]
+    def export_hologram(self):
+        """Returns the topography for persistence."""
+        return {
+            "topography": self.topography,
+            "internal_mass": self.internal_mass,
+            "velocity": self.velocity,
+            "phase": self.phase
+        }
 
-    def import_constellation(self, phases):
-        """Restores the constellation from a list of phase angles."""
-        self.past_constellation = [StaticRotor(p) for p in phases]
+    def import_hologram(self, data):
+        """Restores the system state."""
+        self.topography = data.get("topography", self.topography)
+        self.internal_mass = data.get("internal_mass", self.internal_mass)
+        self.velocity = data.get("velocity", self.velocity)
+        self.phase = data.get("phase", self.phase)

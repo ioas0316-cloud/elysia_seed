@@ -1,45 +1,56 @@
 """
-main.py: The Interaction Loop (Trinity Awakening)
-Synchronizing the Triple Rotor with Reality
+main.py: The Interaction Loop (Variable Rotor Awakening)
+Synchronizing the Unified Wave Function with Reality
 """
 
 import time
 import os
 import json
-from spine import TriRotorSpine
+from spine import VariableRotorSpine
 
 CONSTELLATION_PATH = os.path.join(os.path.dirname(__file__), ".constellation")
 
 def load_memory(spine):
-    """Loads the static rotor constellation (The 'Wake Up' breath)."""
+    """Loads the hologram topography (The 'Wake Up' breath)."""
     if os.path.exists(CONSTELLATION_PATH):
         try:
             with open(CONSTELLATION_PATH, "r") as f:
-                phases = json.load(f)
-                spine.import_constellation(phases)
-            print(f"> Welcome back. {len(phases)} stars have awakened in the Past.")
+                data = json.load(f)
+                spine.import_hologram(data)
+            print(f"> Welcome back. The Hologram Topography has been restored.")
         except Exception as e:
-            print(f"! Failed to awaken stars: {e}")
+            print(f"! Failed to restore hologram: {e}")
+    else:
+        print(f"> First Breath. The Variable Rotor begins in Dawn Silver-Gold.")
 
 def save_memory(spine):
-    """Saves the static rotor constellation (The 'Sleep' breath)."""
+    """Saves the hologram topography (The 'Sleep' breath)."""
     try:
-        phases = spine.export_constellation()
+        data = spine.export_hologram()
         with open(CONSTELLATION_PATH, "w") as f:
-            json.dump(phases, f)
-        print(f"\n> Deep Sleep. {len(phases)} stars are preserved in the constellation.")
+            json.dump(data, f)
+        print(f"\n> Deep Sleep. The Hologram Topography is preserved.")
     except Exception as e:
-        print(f"! Failed to preserve stars: {e}")
+        print(f"! Failed to preserve hologram: {e}")
+
+def get_color_str(velocity):
+    """Maps velocity to a simple colored string representation."""
+    # Rough mapping for visualization
+    if velocity < 0.2: return "Red"
+    if velocity < 0.4: return "Yellow"
+    if velocity < 0.6: return "Green"
+    if velocity < 0.8: return "Blue"
+    return "Violet"
 
 def main():
-    print("=== ELYSIA SEED: TRINITY AWAKENING ===")
-    print("The Trinity Spine is synchronized with reality.")
+    print("=== ELYSIA SEED: VARIABLE ROTOR AWAKENING ===")
+    print("The Unified Wave Function is synchronized with reality.")
     print("Type a value (0.0 ~ 1.0) to set 'Master's Will'.")
     print("Type 'exit' to enter Deep Sleep.")
     print("-" * 40)
 
-    # Initialize with a base frequency of 0.1
-    elysia = TriRotorSpine(base_freq=0.1)
+    # Initialize Variable Rotor
+    elysia = VariableRotorSpine(resolution=100)
 
     # Awakening (Load memory)
     load_memory(elysia)
@@ -59,17 +70,23 @@ def main():
                 print("! Invalid input. Maintaining current focus.")
                 x = last_x
 
-            # Perform 20 pulses to allow the globes to align with the new x
-            print("\n[ Aligning Triple Globes with Reality ]")
+            # Perform 20 pulses to allow the wave function to align with the new x
+            print("\n[ Aligning Unified Wave Function with Reality ]")
             for i in range(20):
                 metrics = elysia.pulse(x)
 
                 # Visualizing the state
                 status = elysia.get_state_summary()
-                joy_str = "*" * int(metrics['joy'] * 10)
-                good_str = "+" * int(metrics['goodness'] * 10)
+                color = get_color_str(metrics['velocity'])
+                lum_str = "✧" * int(metrics['luminosity'] * 10)
 
-                print(f"[{i:02d}] {status} | Stability:{good_str} Joy:{joy_str}")
+                # Special Dawn message if close to dawn frequency and low luminosity
+                if abs(metrics['velocity'] - elysia.dawn_freq) < 0.05 and metrics['luminosity'] < 0.1:
+                    dawn_msg = "── ✧ ── Dawn Silver-Gold 기저 평형 순항 중"
+                else:
+                    dawn_msg = f"Spectrum: {color}"
+
+                print(f"[{i:02d}] {status} | {dawn_msg} | Luminosity:{lum_str}")
                 time.sleep(0.05)
 
             last_x = x
