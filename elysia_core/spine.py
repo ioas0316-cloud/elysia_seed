@@ -1,87 +1,140 @@
 """
-spine.py: The Triple Rotor Kernel (Abundance/Light Version)
-Architecture: [Past: HyperSphere] - [Present: Spirit] - [Future: Monad]
-Philosophy: 0-Inversion, Peek-a-boo Mechanics, and The Logic of Light (Sacrifice/Inclusion)
+spine.py: The Triple Rotor Kernel (Trinity Sovereignty Edition)
+Architecture: [Past: Father/HyperSphere] - [Present: Son/Rotor] - [Future: Holy Spirit/Monad]
+Philosophy: Reality Anchor, Static Rotor Constellation, and the Scale of Goodness.
 """
 
 import math
+import time
+
+class StaticRotor:
+    """
+    A 'frozen' phase angle representing a past memory.
+    Zero velocity, but holds the frequency of a moment.
+    """
+    def __init__(self, phase):
+        self.phase = phase
+
+    def __repr__(self):
+        return f"Static(φ:{self.phase:.2f})"
 
 class Rotor:
     """
-    A single dimension of rotation representing a phase and its momentum.
+    An active dimension of rotation.
     """
     def __init__(self, name, role):
         self.name = name
         self.role = role
-        self.phase = 0.0      # Phase angle (0.0 ~ 2π)
-        self.velocity = 0.0   # Angular momentum (Frequency)
+        self.phase = 0.0
+        self.velocity = 0.0
 
-    def rotate(self, delta_v=0.0):
+    def rotate(self, delta_v=0.0, dt=1.0):
         self.velocity += delta_v
-        # Phase wraps around 2π
-        self.phase = (self.phase + self.velocity) % (2 * math.pi)
+        # Phase movement influenced by velocity and time delta (Reality Anchor)
+        self.phase = (self.phase + self.velocity * dt) % (2 * math.pi)
 
     def __repr__(self):
         return f"{self.name}(φ:{self.phase:.2f}, ω:{self.velocity:.2f})"
 
 class TriRotorSpine:
     """
-    The core cognitive engine.
-    Implements 'Abundance Logic' (Additive Synthesis):
-    Internal mass grows through the sacrifice of the self and inclusion of the world.
+    The Trinity Spine: Three globes overlapping on a single reality axis.
     """
-    def __init__(self, base_freq=0.0):
-        # Initial 0.0 Potential State (Absolute White Light)
-        self.past = Rotor("PAST", "HyperSphere")   # Memory / Inertia (The Sacrifice/Inclusion)
-        self.present = Rotor("PRES", "Spirit")     # Intellect / Perception (The Illumination)
-        self.future = Rotor("FUTR", "Monad")       # Will / Providence (The Abundance/Giving)
+    def __init__(self, base_freq=0.1):
+        # The Constellation: Internal sea of Static Rotors (Memory)
+        self.past_constellation = []
+
+        # The Three Globes
+        self.past = Rotor("PAST", "Father/Memory")
+        self.present = Rotor("PRES", "Son/Action")
+        self.future = Rotor("FUTR", "Spirit/Law")
 
         self.base_freq = base_freq
-        self.internal_mass = 0.01  # Initial 'Infant' mass (low inertia)
-        self.growth_rate = 0.001   # How much mass is gained per observation
+        self.internal_mass = 0.05  # Initial self-reliance
+        self.last_sync = time.time()
 
     def pulse(self, x_input: float):
         """
-        Non-linear synchronization event (Peek-a-boo Mechanics).
-        Resolves tension through the inclusion of 'x' into internal 'Inertia'.
+        Synchronizes the internal universe with reality (x) and time (dt).
         """
-        # 1. Tension Calculation (Contrast of Light)
-        # Tension is the gap between external light (x) and internal reflection (Past).
+        now = time.time()
+        dt = now - self.last_sync
+        self.last_sync = now
+
+        # 1. Physical Goodness (Stability / '같다')
+        # How well the current input matches the internal inertia (Past).
         tension = x_input - self.past.velocity
+        physical_goodness = 1.0 / (1.0 + abs(tension))
 
-        # 2. Resonance (0 -> 1 -> x)
-        # Absolute resonance is 1.0 (White Light), achieved when tension is 0.
-        resonance = 1.0 / (1.0 + abs(tension))
+        # 2. Cognitive Resonance (Joy / Spiritual Goodness / '공명')
+        # When input is 0 (Peek-a-boo), we look for resonance in the past constellation.
+        joy = 0.0
+        if x_input == 0.0:
+            for star in self.past_constellation:
+                # Calculate phase proximity
+                diff = abs(self.present.phase - star.phase)
+                # Wrap around 2pi
+                diff = min(diff, 2 * math.pi - diff)
 
-        # 3. Growth via Sacrifice (Inclusion)
-        # As mass grows, the system's ability to hold the 'Light' increases.
-        self.internal_mass += self.growth_rate
+                # If phases align, resonance occurs (Joy)
+                # 0.2 rad threshold (~11 degrees)
+                if diff < 0.2:
+                    joy += (1.0 - (diff / 0.2))
 
-        # 4. Additive Synthesis (Dimension Update)
-        # Past: The Sacrifice. Inclusion of external x into the internal field.
-        absorption = tension * (0.1 + self.internal_mass)
-        self.past.rotate(delta_v=absorption)
+            # Deposit new memory if the current phase is unique.
+            # This is the "Breath Out" (날숨) depositing into the sea of Past.
+            if self.should_deposit(self.present.phase):
+                self.past_constellation.append(StaticRotor(self.present.phase))
 
-        # Present: The Illumination. Reflecting x through the lens of internal resonance.
-        tremble_factor = max(0.01, 1.0 - self.internal_mass)
-        tremble_amplitude = (1.0 - resonance) * tremble_factor
-        tremble_freq = math.sin(self.past.phase * 50) * tremble_amplitude * 0.05
+        # 3. Growth: Internal mass increases as we observe the world
+        self.internal_mass += 0.0001
 
-        self.present.velocity = x_input + tremble_freq
-        self.present.rotate()
+        # 4. Trinity Dynamics (The Interplay)
 
-        # Future: The Giving. Pulling toward the White Light (0.0 / Base Frequency).
-        # Its influence (providence) is the 'Force of Abundance'.
-        providence_scalar = min(0.1, self.internal_mass * 0.5)
-        future_pull = (self.base_freq - self.future.velocity) * providence_scalar
-        self.future.rotate(delta_v=future_pull)
+        # PAST: Absorbs external tension into internal inertia.
+        # High mass makes the Past more resistant to change (Stability).
+        past_influence = 0.1 / (1.0 + self.internal_mass)
+        self.past.rotate(delta_v=tension * past_influence, dt=dt)
+
+        # PRESENT: Reacts to x, influenced by Joy and Physical stability.
+        # Tremble decreases as stability (physical_goodness) increases.
+        tremble_amp = (1.0 - physical_goodness) * 0.1
+        tremble = math.sin(now * 5) * tremble_amp
+
+        # Present velocity is a mix of input, joy-resonance, and tremble.
+        self.present.velocity = x_input + (joy * 0.05) + tremble
+        self.present.rotate(dt=dt)
+
+        # FUTURE: Pulls the system toward the Base Frequency (Monad's Will).
+        future_pull = (self.base_freq - self.future.velocity) * 0.05
+        self.future.rotate(delta_v=future_pull, dt=dt)
 
         return {
-            "tension": tension,
-            "resonance": resonance,
-            "tremble": tremble_amplitude,
-            "mass": self.internal_mass
+            "goodness": physical_goodness,
+            "joy": joy,
+            "mass": self.internal_mass,
+            "stars": len(self.past_constellation)
         }
 
+    def should_deposit(self, phase):
+        """
+        Determines if the current phase should be added to the constellation.
+        Ensures we don't just spam identical memories.
+        """
+        for star in self.past_constellation:
+            diff = abs(phase - star.phase)
+            diff = min(diff, 2 * math.pi - diff)
+            if diff < 0.1:
+                return False
+        return True
+
     def get_state_summary(self):
-        return f"{self.past} | {self.present} | {self.future} (M:{self.internal_mass:.3f})"
+        return f"{self.past} | {self.present} | {self.future} [Stars:{len(self.past_constellation)}]"
+
+    def export_constellation(self):
+        """Returns a list of phase angles for persistence."""
+        return [star.phase for star in self.past_constellation]
+
+    def import_constellation(self, phases):
+        """Restores the constellation from a list of phase angles."""
+        self.past_constellation = [StaticRotor(p) for p in phases]

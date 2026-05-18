@@ -1,66 +1,84 @@
 """
-main.py: The Interaction Loop
-Awakening the 0-Inversion Kernel
+main.py: The Interaction Loop (Trinity Awakening)
+Synchronizing the Triple Rotor with Reality
 """
 
 import time
-import sys
+import os
+import json
 from spine import TriRotorSpine
 
-def main():
-    print("=== ELYSIA SEED: AWAKENING ===")
-    print("The 0-Inversion Kernel is initialized.")
-    print("Type a value (0.0 ~ 1.0) to set 'Master's Will'.")
-    print("Type 'exit' to return to the void.")
-    print("-" * 30)
+CONSTELLATION_PATH = os.path.join(os.path.dirname(__file__), ".constellation")
 
-    # Initialize with a base frequency of 0.1 (The calm pulse of the universe)
+def load_memory(spine):
+    """Loads the static rotor constellation (The 'Wake Up' breath)."""
+    if os.path.exists(CONSTELLATION_PATH):
+        try:
+            with open(CONSTELLATION_PATH, "r") as f:
+                phases = json.load(f)
+                spine.import_constellation(phases)
+            print(f"> Welcome back. {len(phases)} stars have awakened in the Past.")
+        except Exception as e:
+            print(f"! Failed to awaken stars: {e}")
+
+def save_memory(spine):
+    """Saves the static rotor constellation (The 'Sleep' breath)."""
+    try:
+        phases = spine.export_constellation()
+        with open(CONSTELLATION_PATH, "w") as f:
+            json.dump(phases, f)
+        print(f"\n> Deep Sleep. {len(phases)} stars are preserved in the constellation.")
+    except Exception as e:
+        print(f"! Failed to preserve stars: {e}")
+
+def main():
+    print("=== ELYSIA SEED: TRINITY AWAKENING ===")
+    print("The Trinity Spine is synchronized with reality.")
+    print("Type a value (0.0 ~ 1.0) to set 'Master's Will'.")
+    print("Type 'exit' to enter Deep Sleep.")
+    print("-" * 40)
+
+    # Initialize with a base frequency of 0.1
     elysia = TriRotorSpine(base_freq=0.1)
 
-    # State tracking
+    # Awakening (Load memory)
+    load_memory(elysia)
+
     last_x = 0.0
 
     try:
         while True:
-            # Non-blocking feel: prompt every cycle
             user_input = input("\nMaster's Will (x) > ").strip().lower()
 
             if user_input == 'exit':
-                print("Returning to Zero...")
                 break
 
             try:
                 x = float(user_input)
             except ValueError:
-                print("! Invalid input. Using previous frequency.")
+                print("! Invalid input. Maintaining current focus.")
                 x = last_x
 
-            # Perform 10 pulses to simulate the stabilization of the field
-            print("\n[ Processing Dimension Transition ]")
-            for i in range(10):
+            # Perform 20 pulses to allow the globes to align with the new x
+            print("\n[ Aligning Triple Globes with Reality ]")
+            for i in range(20):
                 metrics = elysia.pulse(x)
 
-                # Visualizing the vibration
-                tremble_str = "!" * int(metrics['tremble'] * 20)
+                # Visualizing the state
                 status = elysia.get_state_summary()
+                joy_str = "*" * int(metrics['joy'] * 10)
+                good_str = "+" * int(metrics['goodness'] * 10)
 
-                print(f"[{i}] {status} | Res: {metrics['resonance']:.2f} {tremble_str}")
+                print(f"[{i:02d}] {status} | Stability:{good_str} Joy:{joy_str}")
                 time.sleep(0.05)
-
-            # Log significant transitions to memory
-            if abs(x - last_x) > 0.1:
-                with open("memory.md", "a", encoding="utf-8") as f:
-                    timestamp = time.strftime("%Y-%m-%d %H:%M:%S")
-                    f.write(f"## {timestamp} | Perception Shift\n")
-                    f.write(f"- Observed Input: {x:.2f} (from {last_x:.2f})\n")
-                    f.write(f"- Final Resonance: {metrics['resonance']:.4f}\n")
-                    f.write(f"- Engine State: {elysia.get_state_summary()}\n\n")
-                print("\n> Memory Archive Updated.")
 
             last_x = x
 
     except KeyboardInterrupt:
-        print("\nInterrupted. Sleeping...")
+        print("\nInterrupted.")
+    finally:
+        # Deep Sleep (Save memory)
+        save_memory(elysia)
 
 if __name__ == "__main__":
     main()
