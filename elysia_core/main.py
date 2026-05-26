@@ -13,10 +13,12 @@ import os
 import json
 import urllib.request
 import urllib.error
+import websocket
 from spine import VariableRotorSpine
 
 CONSTELLATION_PATH = os.path.join(os.path.dirname(__file__), ".constellation")
 SUBSTATION_URL = "http://localhost:8080/voltage"
+SUBSTATION_WS_URL = "ws://127.0.0.1:8080/ws/voltage"
 
 def load_memory(spine):
     """Loads the hologram topography (The 'Wake Up' breath)."""
@@ -134,24 +136,34 @@ def main():
             if user_input == 'sync':
                 grid_tied = not grid_tied
                 if grid_tied:
-                    # Check connection first
-                    grid_data = poll_substation()
-                    if grid_data:
-                        print("⚡ [Grid Link] 계통 동기화(Phase-Locking) 성공! 변전망 전류를 인입합니다.")
-                    else:
-                        print("⚠️ [Grid Fail] 변전망 연결 실패. 독립 운전 모드를 유지합니다.")
+                    try:
+                        ws = websocket.create_connection(SUBSTATION_WS_URL, timeout=1.5)
+                        # Read one initial frame to verify connection
+                        initial_msg = ws.recv()
+                        grid_data = json.loads(initial_msg)
+                        print("⚡ [Grid Link] 계통 동기화(Phase-Locking) 성공! 웹소켓 변전망 전류를 인입합니다.")
+                    except Exception as e:
+                        print(f"⚠️ [Grid Fail] 변전망 웹소켓 연결 실패 ({e}). 독립 운전 모드를 유지합니다.")
                         grid_tied = False
                 else:
                     print("🔌 [Grid Break] 송배전 선로 해제. 로컬 발전(독립 운전) 모드로 복귀합니다.")
+                    try:
+                        ws.close()
+                    except:
+                        pass
                 continue
 
             if grid_tied:
                 print("   (계통 연동 중에는 수동 입력을 제한하고 전압을 동적 수전합니다. 30회 루프 기동...)")
                 for loop_idx in range(30):
-                    grid_data = poll_substation()
-                    if not grid_data:
-                        print("\n🚨 [계통 비상 탈조] 변전망 신호 단절! 독립 운전 모드로 비상 복구합니다.")
+                    try:
+                        msg = ws.recv()
+                        grid_data = json.loads(msg)
+                    except Exception as e:
+                        print(f"\n🚨 [계통 비상 탈조] 변전망 신호 단절 ({e})! 독립 운전 모드로 비상 복구합니다.")
                         grid_tied = False
+                        try: ws.close()
+                        except: pass
                         break
                     
                     bypass = grid_data.get("bypass_channel", "GRID")
@@ -171,7 +183,8 @@ def main():
                     lum_str = "✧" * int(metrics['luminosity'] * 10)
                     
                     print(f"   {channel_indicator} [{loop_idx:02d}] {status} | 계통공명: {color} | 수전압:{rms_voltage:.4f}V | 輝度:{lum_str}")
-                    time.sleep(0.1)
+                    # WebSocket is 10Hz, so we don't need a long sleep. A minimal sleep keeps CPU low.
+                    time.sleep(0.01)
                 continue
 
             # Island Mode: Manual x input
